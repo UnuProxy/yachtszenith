@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let yachtData = [];
 
   function loadYachts() {
-    yachtGrid.innerHTML = '';  // Clear existing yachts
+    yachtGrid.innerHTML = '';  
     yachtData.forEach(yacht => {
       const yachtCard = document.createElement('div');
       yachtCard.className = 'yacht-card';
@@ -37,17 +37,17 @@ document.addEventListener("DOMContentLoaded", function() {
       const yachtInfo = document.createElement('div');
       yachtInfo.className = 'yacht-info';
 
-      const yachtTitle = document.createElement('h2'); // New title element
+      const yachtTitle = document.createElement('h2'); 
       yachtTitle.textContent = yacht.name;
       yachtInfo.appendChild(yachtTitle);
 
-      const specsArray = yacht.specs.split(", ").map(spec => spec.trim()); // Split and trim the specs
+      const specsArray = yacht.specs.split(", ").map(spec => spec.trim()); 
 
       specsArray.forEach(spec => {
         const specItem = document.createElement('div');
         specItem.className = 'spec-item';
         specItem.textContent = spec;
-        specItem.style.color = 'white';  // Explicitly set the text color to white
+        specItem.style.color = 'white';  
         yachtInfo.appendChild(specItem);
       });
 
