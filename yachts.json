@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Mangusta 108",
-    "image": "img/Belisa.jpg",
+    "image": "Belisa.jpg",
     "specs": "32,92m, 12 guests, 3 crew",
     "price": "€11,000 per day",
     "cruisingArea": "Balearics",
@@ -199,7 +199,7 @@
     "specs": "19m, 12 guests, 2 crew",
     "price": "€6,500 per day",
     "description": "The Waterdream 65 California exemplifies sophistication and style, making it an ideal choice for a chic and relaxed day charter. Its design boasts a loungy layout complemented by a stylish centre console, creating an ultra-cool ambiance perfect for family gatherings or fun-filled days with friends. With the capacity to accommodate up to 12 guests for day charters, it promises an unforgettable experience on the water. Additionally, the charter includes two Seabobs, enhancing the allure and offering added value for an exhilarating day at sea. This yacht merges luxury with leisure, ensuring every outing is both exclusive and enjoyable.",
-    "interiorImages": ["img/SirHotel/65Waterdream28.jpg","img/SirHotel/65Waterdream27.jpg","img/SirHotel/65Waterdream26.jpg","img/SirHotel/65Waterdream25.jpg", "img/SirHotel/65Waterdream7.jpg"],
+    "interiorImages": ["SirHotel/65Waterdream28.jpg","SirHotel/65Waterdream27.jpg","SirHotel/65Waterdream26.jpg","SirHotel/65Waterdream25.jpg", "SirHotel/65Waterdream7.jpg"],
     "detailedSpecs": {
       "Length": "19m",
       "Guests": "12",
