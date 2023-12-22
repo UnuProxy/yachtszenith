@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <meta name="description" content="Experience luxury yacht chartering in Ibiza with Yachts Zenith. Explore our exclusive fleet and tailored services for an unforgettable voyage.">
+    <meta name="keywords" content="Yacht Charter, Luxury Yacht, Ibiza, Sailing, Sea Adventures, Yachts Zenith">
+    <meta name="author" content="Yachts Zenith Ibiza">
+    
+   
+    <meta property="og:title" content="Contact Yachts Zenith Ibiza - Luxury Yacht Charter">
+    <meta property="og:description" content="Connect with Yachts Zenith Ibiza for bespoke luxury yacht chartering experiences. Explore our services and fleet for your next sea adventure.">
+    <meta property="og:image" content="/Users/Julian/Desktop/yachtszenit.github.io/img/Nomad-130.jpg">
+    <meta property="og:url" content="wwww.yachtszenith.com">
+    <meta property="og:type" content="website">
+
+ 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Yachts Zenith Ibiza - Luxury Yacht Charter">
+    <meta name="twitter:description" content="Discover luxury yacht charter in Ibiza with Yachts Zenith. Tailored services for an unparalleled sailing experience.">
+   
+
+    <link rel="icon" href="img/LogoFooterBlue.png" type="image/x-icon">
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="azure.css">
+    <script src="script.js"></script>  
+    <title>Contact Yachts Zenith Ibiza - Luxury Yacht Charter</title>
+</head>
+
+  <body>
+  <!--  HEADER  -->
+    <div class="black-bg" id="sticky-section">
+      <nav class="position-header ">
+        <div class="logo"><a href="/"><h1>Yachts Zenith</h1></a></div>
+      <div class="openMenu"><i class="fa fa-bars"></i></div>
+      <ul class="mainMenu">
+        <li><a href="/Yacht-charter">Yacht Charter</a></li>
+        <li><a href="/Yacht-routes-ibiza">Destinations</a></li>
+        <li><a href="/about-us">About us</a></li>
+        <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
+    </ul>
+  </nav>
+  </div>
+
+ 
+<div class="contact-bg">
+    <div class="contact-wrapper">
+        <div class="contact-message">
+            <h1>Get in touch with our friendly team, we're here to help with all your enquiries.</h1>  
+            <p><span>Phone:</span> +34 692 688 348 </p>
+            <p><span>Email:</span> info@yachtszenith.com </p>
+        </div>
+        
+        <div class="contact-form-container">
+            <form id="myForm" class="contact-form-element" action="https://formspree.io/f/mgejjqgo" method="post">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="text" name="lastName" placeholder="Last name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Your message..." required></textarea>
+                <div class="consent-checkbox">
+                  <input type="checkbox" id="policyAgreement" name="policyAgreement" required>
+                  <label for="policyAgreement" class="consent-label">I have read and agree to the <a href="privacy-policy-url" class="policy-link">Privacy Policy</a> of Yachts Zenith</label>
+                </div>
+                <button type="submit">Submit enquiry</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+  $(document).ready(function() {
+      $('#myForm').submit(function(e) {
+          e.preventDefault(); 
+  
+          $.ajax({
+              url: $(this).attr('action'), 
+              method: 'POST',
+              data: $(this).serialize(), 
+              dataType: 'json',
+              success: function(data) {
+                  alert('Thank you for your enquiry!');
+                  $('#myForm').trigger("reset");
+              },
+              error: function(err) {
+                  // Handle error
+                  alert('Something went wrong, please try again.');
+              }
+          });
+      });
+  });
+  </script>
+  <!-- MATCH START AND END DATE WHEN BROWSING -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var startDateInput = document.getElementById('startDate');
+        var endDateInput = document.getElementById('endDate');
+    
+        startDateInput.addEventListener('change', function() {
+            var startDate = new Date(this.value);
+            var endDate = new Date(startDate);
+            endDate.setDate(startDate.getDate() + 1); // Set end date to one day after start date
+    
+            var month = ('0' + (endDate.getMonth() + 1)).slice(-2); // Ensure month is 2 digits
+            var day = ('0' + endDate.getDate()).slice(-2); // Ensure day is 2 digits
+            var formattedEndDate = endDate.getFullYear() + '-' + month + '-' + day;
+    
+            endDateInput.value = formattedEndDate;
+        });
+    });
+    </script>
+    
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo"> 
+      
+      <img src="img/LogoFooter.png" alt="Logo">
+      
+    </div>
+    
+    <div class="policy-links">
+      <h4>Data Policies</h4>
+      <div><a href="#cookies-policy">Cookies Policy</a></div>
+      <div><a href="#data-policy">Data Policy</a></div>
+      <div><a href="#data-protection">Data Protection</a></div>
+      <div><a href="#sitemap">Sitemap</a></div>
+    </div>
+    
+    <div class="company">
+      <h4>Company</h4>
+      <div><a href="Contact-us">Contact Us</a></div>
+      <div><a href="about-us">About Us</a></div>
+    </div>
+    
+    <div class="social-media">
+      <h4>Social Media</h4>
+      <div class="socials">
+      <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/yachtszenith/"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+    
+  </div>
+</footer>
+</body>
+</html>

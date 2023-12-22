@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <meta name="description" content="Discover Yachts Zenith, your premier choice for luxury yacht chartering in Ibiza. Learn about our story and commitment to unparalleled sailing experiences.">
+    <meta name="keywords" content="Luxury Yacht Charter, Ibiza, Sailing, Yacht Experiences, Yachts Zenith, About Yachts">
+    <meta name="author" content="Yachts Zenith">
+
+    
+    <meta property="og:title" content="About Yachts Zenith - Leading Luxury Yacht Charter in Ibiza">
+    <meta property="og:description" content="Step into the world of Yachts Zenith and explore our journey in offering the finest yacht charter experiences in Ibiza.">
+    <meta property="og:image" content="/Users/Julian/Desktop/yachtszenit.github.io/img/LogoFooterBlue.png">
+    <meta property="og:url" content="aboutus">
+    <meta property="og:type" content="website">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Yachts Zenith - Ibiza's Premier Luxury Yacht Charter">
+    <meta name="twitter:description" content="Discover the story of Yachts Zenith, leaders in luxury yacht chartering in Ibiza, and our passion for creating unforgettable sea adventures.">
+
+   
+    <link rel="icon" href="img/LogoFooterBlue.png " type="image/x-icon">
+
+    <!-- External Scripts and Stylesheets -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="azure.css">
+    <title>About Us - Yachts Zenith</title>
+</head>
+
+<body>
+
+    <!--  HEADER  -->
+    <div class="black-bg" id="sticky-section">
+        <nav class="position-header ">
+          <div class="logo">
+            <a href="/"><h1>Yachts Zenith</h1></a>
+        </div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
+          <li><a href="Yacht-charter">Yacht Charter</a></li>
+          <li><a href="Yacht-routes-ibiza">Destinations</a></li>
+          <li><a href="Contact-us">Contact us</a></li>
+          <li><a href="about-us">About us</a></li>
+          <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
+      </ul>
+    </nav>
+    </div>
+
+
+    <main>
+      <section id="our-story" class="narrative-section">
+        <h2  class="animated-h2">
+          Our Voyage
+      </h2>
+          <p>Yachts Zenith, birthed in London's dynamic core by the Thames, embarked on a mission to transform luxury yachting. Julian Pirvu, fuelled by his profound sea love, launched more than a charter service; he created a portal to the splendour of yachting for all. With a focus on excellence and discretion, Julian handpicked a fleet of elegant, high-performance yachts, chosen as much for their beauty as for the remarkable experiences they could offer.
+
+            Each Zenith voyage, whether a quaint gathering or a grand festivity, is tailored to its guests, embodying a philosophy that yachting is an exciting, inclusive journey. 
+            
+            Gaining renown for outstanding service and privacy, Yachts Zenith drew a worldwide clientele, attracted to its tailored experiences and unwavering discretion.</p>
+      </section>
+
+      <section id="our-mission" class="purpose-section">
+        <h2 class="animated-h2">
+          Unforgettable Experiences
+      </h2>
+          <div class="mission-content">
+              <p>Our mission is to offer unrivalled yacht charter experiences that seamlessly combine luxury, adventure, and relaxation.</p>
+              <img src="img/Bunker130.jpg" alt="Yacht in a beautiful location" class="mission-image">
+          </div>
+      </section>
+
+      <section id="our-fleet"class="armada-section">
+        <h2 class="animated-h2">
+          A Fleet Beyond Compare
+      </h2>
+        <p>Explore our exclusive selection of luxury yachts...</p>
+
+        <div class="gallery-container">
+            <div class="gallery-slider">
+                <div class="gallery-item">
+                    <img src="img/Belisa.jpg" alt="Mangusta 108">
+                    <h3>Mangusta 108</h3>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/Bunker.jpg" alt="CRN 130">
+                    <h3>CRN 130</h3>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/Persing90.jpg" alt="Persing 90">
+                    <h3>Persing 90</h3>
+                </div>
+               
+            </div>
+            <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
+            <div class="next" onclick="moveSlide(1)">&#10095;</div>
+        </div>
+    </section>
+
+    <div id="call-to-action" class="cta-section">
+      <h2 class="animated-h2">
+          Charter with Yachts Zenith
+      </h2>
+      <button type="button" id="planVoyageBtn" class="cta-button">Plan Your Voyage</button>
+  </div>
+
+
+     
+      <div id="voyageFormPopup" class="voyageFormPopup">
+        <div class="voyageFormPopup-content">
+            <span class="close-button">&times;</span>
+            <form action="https://formspree.io/f/mgejjqgo" method="post" class="voyage-form">
+               
+    
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="startVoyageDate">Preferred Start Voyage Date:</label>
+                <input type="date" id="startVoyageDate" name="startVoyageDate">
+    
+                <label for="endVoyageDate">Preferred End Voyage Date:</label>
+                <input type="date" id="endVoyageDate" name="endVoyageDate">
+    
+                <label for="numberOfGuests">Number of Guests:</label>
+                <input type="number" id="numberOfGuests" name="numberOfGuests">
+    
+                <label for="additionalRequests">Additional Requests:</label>
+                <textarea id="additionalRequests" name="additionalRequests"></textarea>
+    
+                <div class="voyage-privacy-check">
+                  <div class="voyage-checkbox-container">
+                      <input type="checkbox" id="voyageAgree" name="voyageAgree" required>
+                      <label for="voyageAgree"></label>
+                  </div>
+                  <div class="voyage-link-container">
+                      <a href="privacy-policy-url" class="voyage-privacy-link">I agree with the Privacy Policy</a>
+                  </div>
+              </div>
+              
+                <button type="submit" class="submit-button">Submit</button>   
+            </form>
+        </div>
+    </div>
+    
+  
+
+  <script>
+function showForm() {
+    var formContainer = document.getElementById('voyageFormPopup');
+    var button = document.getElementById('planVoyageBtn');
+
+    
+    formContainer.style.display = 'block';
+
+    
+    button.style.display = 'none';
+}
+
+
+function hideForm() {
+    var formContainer = document.getElementById('voyageFormPopup');
+    var button = document.getElementById('planVoyageBtn');
+
+   
+    formContainer.style.display = 'none';
+
+    button.style.display = 'block';
+}
+
+document.getElementById('planVoyageBtn').addEventListener('click', showForm);
+
+window.onclick = function(event) {
+    var formContainer = document.getElementById('voyageFormPopup');
+
+    
+    if (event.target == formContainer) {
+        hideForm();
+    }
+};
+
+var closeButton = document.querySelector('.close-button');
+if (closeButton) {
+    closeButton.addEventListener('click', hideForm);
+}
+
+document.getElementById('startVoyageDate').addEventListener('change', function() {
+  var startDate = new Date(this.value);
+  var endDateInput = document.getElementById('endVoyageDate');
+
+  endDateInput.valueAsDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + 1);
+});
+</script>
+<script>
+    var modal = document.getElementById("voyageFormPopup");
+    var btn = document.getElementById("planVoyageBtn");
+    var span = document.getElementsByClassName("close-button")[0];
+    modal.style.display = "none";
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    pan.onclick = function() {
+        modal.style.display = "none";
+    }
+  
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+  </script>
+  <script>
+    document.getElementById('voyageForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      var form = this;
+      var formData = new FormData(form);
+  
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+      }).then(response => {
+        if (response.ok) {
+          
+          document.getElementById('successMessage').style.display = 'block';
+  
+          
+          form.reset();
+  
+         
+        } else {
+          
+          alert("There was an error submitting the form. Please try again.");
+        }
+      }).catch(error => {
+        
+        alert("There was a network error. Please try again.");
+      });
+    });
+  </script>
+
+      
+    <script>
+        let currentIndex = 0;
+
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.gallery-item');
+    const totalSlides = slides.length;
+
+    currentIndex += direction;
+
+    if (currentIndex >= totalSlides) {
+        currentIndex = 0;
+    } else if (currentIndex < 0) {
+        currentIndex = totalSlides - 1;
+    }
+
+    const offset = currentIndex * -100;
+    const slider = document.querySelector('.gallery-slider');
+    slider.style.transform = `translateX(${offset}%)`;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const narrativeText = document.querySelector('.narrative-section p');
+    if (narrativeText) {
+        narrativeText.style.opacity = 1;
+        narrativeText.style.transform = 'translateY(0)';
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    const headers = document.querySelectorAll('h2.animated-h2');
+    headers.forEach(header => observer.observe(header));
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('.scroll-effect').forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const triggerPoint = window.innerHeight / 1.3;
+
+            if (sectionTop < triggerPoint) {
+                section.style.opacity = 1;
+                section.style.transform = 'translateY(0)';
+            }
+        });
+    });
+});
+  </script>
+        
+   <script src="script.js"></script>   
+    <footer>
+        <div class="footer-container">
+          <div class="footer-logo">    
+            <img src="img/LogoFooter.png" alt="Logo"> 
+          </div>
+          
+          <div class="policy-links">
+            <h4>Data Policies</h4>
+            <div><a href="#cookies-policy">Cookies Policy</a></div>
+            <div><a href="#data-policy">Data Policy</a></div>
+            <div><a href="#data-protection">Data Protection</a></div>
+            <div><a href="#sitemap">Sitemap</a></div>
+          </div>
+          
+          <div class="company">
+            <h4>Company</h4>
+            <div><a href="Contact-us">Contact Us</a></div>
+            <div><a href="about-us">About Us</a></div>
+          </div>
+          
+          <div class="social-media">
+            <h4>Social Media</h4>
+            <div class="socials">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/yachtszenith/"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+          
+        </div>
+      </footer>
+     
+
+</body>
+</html>

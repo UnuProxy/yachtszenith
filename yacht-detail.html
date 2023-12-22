@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the world of luxury yachting. Discover the finest yachts for charter. Experience the pinnacle of maritime luxury.">
+    <meta name="keywords" content="yachts, luxury yachting, yacht charter, maritime luxury">
+    <meta property="og:title" content="Luxury Yachting - Charter">
+    <meta property="og:description" content="Immerse yourself in the luxury yachting experience. Browse our exclusive collection of yachts for charter">
+    <meta property="og:image" content="/Users/Julian/Desktop/yachtszenit.github.io/img/LogoFooterBlue.png"> 
+    <meta property="og:url" content="https://www.yachtszenith.com">
+    <link rel="icon" type="image/png" href="img/LogoFooterBlue.png">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="azure.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+ 
+    <title>Yachting - Luxury Yachts for Charter</title>
+</head>
+<body>
+     <!--  HEADER  -->
+     <div class="black-bg" id="sticky-section">
+        <nav class="position-header ">
+          <div class="logo">
+            <a href="/"><h1>Yachts Zenith</h1></a>
+        </div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
+          <li><a href="Yacht-charter">Yacht Charter</a></li>
+          <li><a href="Yacht-routes-ibiza">Destinations</a></li>
+          <li><a href="Contact-us">Contact us</a></li>
+          <li><a href="about-us">About us</a></li>
+          <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
+      </ul>
+    </nav>
+    </div>
+    <!--  END HEADER  -->
+
+    <!--  YACHT DETAIL  -->
+   <div class="yacht-detail">
+  <img class="main-image" alt="Main Yacht Image">
+  <h1 class="yacht-name"></h1>
+  <div class="navigation-row">
+    <a href="#about" id="aboutLink">About</a>
+    <a href="#key-info">Specifications</a>
+    <a href="#interior">Images</a>
+    <a href="#price">Price</a>
+    <div id="enquire-now-container">
+      <a href="#" id="enquire-now-btn">Enquiry Now</a>
+  </div>
+  
+  </div>
+
+  <div id="enquire-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Contact us</h2>
+      <form id="enquiry-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+    <div id="about" class="yacht-description">
+      <!-- <h2>Description</h2> -->
+      <p class="description-text"></p>
+    </div>
+
+   
+    <div class="title-container">
+      <h2 class="section-title"><span></span>The Yacht</h2>
+    </div>
+    <div id="interior" class="yacht-carousel interior-carousel">
+      <!-- Interior images will be added here -->
+    </div>
+    
+    
+    
+    <div id="key-info" class="yacht-specs">
+      <h2>Main Specifications</h2>
+      <ul class="detailed-specs">
+        <!-- Detailed specs will be added here -->
+      </ul>
+    </div>
+
+    <div id="text-image-container">
+      <!-- Text and images will be added here -->
+    </div>
+    
+    
+   
+    <div id="extras-section">
+      <h2>On board</h2>
+      <ul id="extras-list">
+        <!-- Extras will be added here dynamically -->
+      </ul>
+    </div>
+  
+      <div id="price" class="yacht-price">
+        <h2> Rate From </h2>
+        <p class="price-text"></p>
+      </div>
+    
+    </div>
+
+
+   
+    <h2 class="carousel-title">Browse Similar Yachts</h2>
+    <div id="carousel-wrapper">
+        <button class="carousel-btn" id="prev-btn" onclick="move(-1)">❮</button>
+        <div id="carousel">
+          <div id="carousel-container">
+            <div class="carousel-item">1</div>
+            <div class="carousel-item">2</div>
+            <div class="carousel-item">3</div>
+            <div class="carousel-item">4</div>
+            <div class="carousel-item">5</div>
+          </div>
+        </div>
+        <button class="carousel-btn" id="next-btn" onclick="move(1)">❯</button>
+      </div>
+      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+ <script src="text_images.js"></script>
+      <script src="extras.js"></script>
+ <script src="yachtdetails.js"></script>
+    <script src="yacht.js"></script>
+    <script src="script.js"></script>
+    <script>
+      $(document).ready(function() {
+    
+          $('#enquire-now-btn').on('click', function(e) {
+              e.preventDefault(); 
+              $('#enquire-modal').show(); 
+          });
+      
+          
+          $('.close').on('click', function() {
+              $('#enquire-modal').hide(); 
+          });
+      
+        
+          $(window).on('click', function(e) {
+              if ($(e.target).is('#enquire-modal')) {
+                  $('#enquire-modal').hide(); 
+              }
+          });
+      
+          
+          $('#enquiry-form').submit(function(e) {
+              e.preventDefault(); 
+      
+              
+              $.ajax({
+                  url: 'https://formspree.io/f/mgejjqgo', 
+                  method: 'POST',
+                  data: {
+                      name: $('#name').val(),
+                      email: $('#email').val(),
+                      message: $('#message').val()
+                  },
+                  dataType: 'json',
+                  success: function(data) {
+                      alert('Thank you for your enquiry!');
+                      $('#enquiry-form').trigger("reset"); 
+                      $('#enquire-modal').hide(); 
+                  },
+                  error: function(err) {
+                      alert('Something went wrong, please try again.');
+                  }
+              });
+          });
+      });
+      </script>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-logo">    
+            <img src="img/LogoFooter.png" alt="Logo"> 
+          </div>
+          
+          <div class="policy-links">
+            <h4>Data Policies</h4>
+            <div><a href="#cookies-policy">Cookies Policy</a></div>
+            <div><a href="#data-policy">Data Policy</a></div>
+            <div><a href="#data-protection">Data Protection</a></div>
+            <div><a href="#sitemap">Sitemap</a></div>
+          </div>
+          
+          <div class="company">
+            <h4>Company</h4>
+            <div><a href="Contact-us">Contact Us</a></div>
+            <div><a href="about-us">About Us</a></div>
+          </div>
+          
+          <div class="social-media">
+            <h4>Social Media</h4>
+            <div class="socials">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/yachtszenith/"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+          
+        </div>
+      </footer>
+</body>
+</html>

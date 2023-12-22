@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover luxury yachts and superyachts for charter in Ibiza. Exclusive selection, personalised services, and unforgettable experiences with Yachts Zenith.">
+    <meta property="og:title" content="Yachts, Superyachts Charter in Ibiza - Yachts Zenith">
+    <meta property="og:description" content="Explore our exclusive collection of luxury yachts and superyachts for charter in Ibiza. Tailored experiences and premium services await you at Yachts Zenith.">
+    <meta property="og:image" content="[img/IbizaPortPanorama.jpg"> 
+    <meta property="og:url" content="/Users/Julian/Desktop/yachtszenit.github.io/img/Persing90.jpg">
+    <meta property="og:type" content="website">
+    <meta name="keywords" content="yacht charter, luxury yachts, Ibiza, superyacht, Yachts Zenith">
+    <link rel="icon" type="image/png" href="img/LogoFooterBlue.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="azure.css">
+    <title>Yachts, Superyachts Charter in Ibiza - Yachts Zenith</title>
+</head>
+  <body>
+  <!--  HEADER  -->
+    <div class="black-bg" id="sticky-section">
+      <nav class="position-header ">
+        <div class="logo">
+          <a href="/"><h1>Yachts Zenith</h1></a>
+      </div>  
+      <div class="openMenu"><i class="fa fa-bars"></i></div>
+      <ul class="mainMenu">
+        <li><a href="Yacht-charter">Yacht Charter</a></li>
+        <li><a href="Yacht-routes-ibiza">Destinations</a></li>
+        <li><a href="Contact-us">Contact us</a></li>
+        <li><a href="about-us">About us</a></li>
+        <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
+    </ul>
+  </nav>
+  </div>
+
+  <section>
+    <div class="video-container">
+      <video src="video/IbizaNightYacht.mp4" muted loop autoplay playsinline></video>
+      <div class="gradient-overlay"></div>
+      <div class="card-titles">
+        <h1 class="h1-iphone">Zenith Yacht Charter</h1>
+        <p>Unmatched availability of the finest yacht charter options.</p>
+      </div>
+    </div>
+  </section>
+  
+
+    <!-- Filter Bar -->
+    <div id="filter-bar" class="filter-bar">
+      <!-- Price Range Filter -->
+      <div>
+        <label for="priceFilter">Select Price Range: </label>
+        <select id="priceFilter">
+          <option value="all">All</option>
+          <option value="5000-10000">€5,000 - €10,000</option>
+          <option value="10001-20000">€10,001 - €20,000</option>
+        </select>
+      </div>
+    
+      <!-- Length Range Filter -->
+      <div>
+        <label for="lengthFilter">Select Length Range: </label>
+        <select id="lengthFilter">
+          <option value="all">All</option>
+          <option value="0-20">0 - 20 meters</option>
+          <option value="21-40">21 - 40 meters</option>
+        </select>
+      </div>
+    
+      <!-- Yacht Name Search -->
+      <div>
+        <label for="nameSearch">Search Yacht Name: </label>
+        <input type="text" id="nameSearch" placeholder="Enter Yacht Name">
+      </div>
+    
+      <!-- Reset Filters Button -->
+      <div>
+        <button id="resetFilters">Reset Filters</button>
+      </div>
+    </div>
+    <!-- <h3 class="available-yachts">120 Available Yachts</h3> -->
+    <div class="yacht-grid">
+      <!-- Yachts loading here -->
+    </div>
+    
+
+
+
+
+<script src="script.js"></script>  
+<script src="yacht.js"></script>
+<script>
+  
+</script>
+
+ 
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">    
+        <img src="img/LogoFooter.png" alt="Logo"> 
+      </div>
+      
+      <div class="policy-links">
+        <h4>Data Policies</h4>
+        <div><a href="#cookies-policy">Cookies Policy</a></div>
+        <div><a href="#data-policy">Data Policy</a></div>
+        <div><a href="#data-protection">Data Protection</a></div>
+        <div><a href="#sitemap">Sitemap</a></div>
+      </div>
+      
+      <div class="company">
+        <h4>Company</h4>
+        <div><a href="Contact-us">Contact Us</a></div>
+        <div><a href="about-us">About Us</a></div>
+      </div>
+      
+      <div class="social-media">
+        <h4>Social Media</h4>
+        <div class="socials">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/yachtszenith/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+      
+    </div>
+  </footer>
+ 
+    
+  </body>
+  </html>
