@@ -9,13 +9,11 @@
       modal.style.display = "block";
       modalImg.src = this.src;
       
-      // Get the data-beach attribute of the parent .beach element
+      
       const beachData = this.closest('.beach').getAttribute('data-beach');
       
-      // Find the corresponding .details element
       const details = document.querySelector(`.details[data-beach="${beachData}"]`);
       
-      // Set the description in the modal
       captionText.innerHTML = details.querySelector('p').innerHTML;
     }
   }
@@ -41,7 +39,6 @@ $(document).ready(function(){
   });
 });
 
-// Function to check if an element is in or near the viewport
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
@@ -55,7 +52,6 @@ function isInViewport(element) {
   );
 }
 
-// Function to check which boxes should be made visible
 function scrollHandler() {
   const beaches = document.querySelectorAll('.beach');
   beaches.forEach((beach) => {
@@ -65,7 +61,6 @@ function scrollHandler() {
   });
 }
 
-// Attach the scroll handler function to the scroll event
 window.addEventListener('scroll', scrollHandler);
 
 

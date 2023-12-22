@@ -171,9 +171,9 @@ fetch('yachts.json')
 
 
 // Function to populate the similar yachts grid with only 3 yachts
-function populateSimilarYachts(yachts, currentYachtId) {
+ function populateSimilarYachts(yachts, currentYachtId) {
 
-}
+} 
 
 // POPULATE CAROUSEL WITH YACHTS
 let position = 0;
@@ -195,61 +195,63 @@ if (position >= totalItems) {
 
 const offset = -position * itemWidth;
 container.style.transform = `translateX(${offset}px)`;
-}
+} 
 
-// Sample yachts data
+
 const yachtsData = [
 {
   "id": 1,
   "name": "Mangusta 108",
   "image": "Mangusta 108",
-      "image": "img/Nomad108.jpg",
-      // ... other details
+      "image": "Nomad108.jpg",
+      "link": "yacht-detail.html?id=1"
     },
     {
       "id": 2,
       "name": "CRN 130",
-      "image": "img/CRN130.jpg",
-      // ... other details
+      "image": "Bunker/CRN130Exterior28.jpg",
+      "link": "yacht-detail.html?id=3"
     },
     {
       "id": 3,
       "name": "Persing 90",
-      "image": "img/Persing90.jpg",
-      // ... other details
+      "image": "Persing90.jpg",
+      "link": "yacht-detail.html?id=2"
     }
-    // ... additional yachts
+    
   ];
 
 // Function to populate carousel with yachts
 function populateYachts(yachts) {
   const carouselContainer = document.getElementById('carousel-container');
-  carouselContainer.innerHTML = '';
+  carouselContainer.innerHTML = ''; // Clear existing content
 
   yachts.forEach(yacht => {
-    const yachtItem = document.createElement('div');
-    yachtItem.className = 'carousel-item';
+      const yachtItem = document.createElement('div');
+      yachtItem.className = 'carousel-item';
 
-    const yachtLink = document.createElement('a');
-    yachtLink.href = `yachtDetail.html?id=${yacht.id}`;
+      const yachtLink = document.createElement('a');
+      yachtLink.href = yacht.link; // Use the link from the yacht data
 
-    const yachtImage = document.createElement('img');
-    yachtImage.src = yacht.image;
-    yachtImage.alt = yacht.name;
+      const yachtImage = document.createElement('img');
+      yachtImage.src = yacht.image;
+      yachtImage.alt = yacht.name;
 
-    const yachtName = document.createElement('span');
-    yachtName.innerText = yacht.name;
+      yachtLink.appendChild(yachtImage);
 
-    yachtLink.appendChild(yachtImage);
-    yachtLink.appendChild(yachtName);
+      const yachtName = document.createElement('span');
+      yachtName.innerText = yacht.name;
+      yachtLink.appendChild(yachtName);
 
-    yachtItem.appendChild(yachtLink);
-    carouselContainer.appendChild(yachtItem);
+      yachtItem.appendChild(yachtLink);
+      carouselContainer.appendChild(yachtItem);
   });
 }
 
 // Populate the carousel when the page loads
-populateYachts(yachtsData);
+document.addEventListener('DOMContentLoaded', function() {
+  populateYachts(yachtsData);
+});
 
   
   

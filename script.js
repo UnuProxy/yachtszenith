@@ -97,25 +97,19 @@ function closePopup() {
     popup.style.display = "block";
   }
 
-  // Function to close the form popup
   function closePopup() {
     const popup = document.getElementById("inquiryPopup");
     popup.style.display = "none";
   }
-
-  // Add event listener to open the popup when "Inquiry Now" button is clicked
- 
   const inquiryButtons = document.querySelectorAll(".inquiry-button");
   inquiryButtons.forEach((button) => {
     button.addEventListener("click", openPopup);
   });
   
 
-  // Add event listener to close the popup when "X" button is clicked
   const closePopupButton = document.querySelector(".close-popup");
   closePopupButton.addEventListener("click", closePopup);
 
-  // Add event listener to close the popup when clicking outside the popup content
   window.addEventListener("click", function (event) {
     const popup = document.getElementById("inquiryPopup");
     if (event.target === popup) {
@@ -180,23 +174,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-//Mouse hover subtitles effect
-// document.querySelectorAll('.subtitle-left, .subtitle-right').forEach((subtitle) => {
-//   subtitle.addEventListener('mouseover', function () {
-//     this.classList.add('hovered');
-//     setTimeout(() => {
-//       this.querySelector('a').style.color = 'black';
-//     }, 500); // Match the transition duration in the CSS
-//   });
-//   subtitle.addEventListener('mouseout', function () {
-//     this.classList.remove('hovered');
-//     this.querySelector('a').style.color = 'white';
-//   });
-// });
-
-
-
 document.addEventListener('scroll', function() {
   var descriptions = document.querySelectorAll('.new-description');
 
@@ -205,7 +182,7 @@ document.addEventListener('scroll', function() {
     if (rect.top <= window.innerHeight * 0.1) {
       setTimeout(function() {
         description.classList.add('active');
-      }, index * 200); // 200ms delay between each
+      }, index * 200); 
     }
   });
 }); 
@@ -279,36 +256,33 @@ let isDragging = false;
 let initialClickOffset = 0;
 
 const customSlider = document.getElementById('custom-slider');
-const image1 = document.getElementById('image1'); // Added for height reference
+const image1 = document.getElementById('image1'); 
 const image2 = document.getElementById('image2');
-const indicator = document.querySelector('.indicator'); // Added for vertical centering
+const indicator = document.querySelector('.indicator'); 
 
-// Function to update the height of the custom slider and indicator
+
 function updateSliderHeight() {
-  const imgHeight = image1.offsetHeight; // Assuming image1 and image2 have the same height
+  const imgHeight = image1.offsetHeight; 
   customSlider.style.height = `${imgHeight}px`;
-  indicator.style.top = `${imgHeight / 2}px`; // Center the indicator vertically
+  indicator.style.top = `${imgHeight / 2}px`; 
 }
 
-// Initial setup on page load
 window.addEventListener('load', () => {
   updateSliderHeight();
 });
 
-// Update on window resize
+
 window.addEventListener('resize', updateSliderHeight);
 
-// For desktop interactions
 customSlider.addEventListener('mousedown', startDrag);
 window.addEventListener('mousemove', drag);
 window.addEventListener('mouseup', stopDrag);
 
-// For mobile interactions
 customSlider.addEventListener('touchstart', startDrag);
 window.addEventListener('touchmove', drag);
 window.addEventListener('touchend', stopDrag);
 
-// Start dragging
+
 function startDrag(event) {
   const clientX = event.clientX || event.touches[0].clientX;
   const sliderRect = customSlider.getBoundingClientRect();
@@ -316,7 +290,6 @@ function startDrag(event) {
   isDragging = true;
 }
 
-// During dragging
 
 function drag(event) {
   if (!isDragging) return;
@@ -333,13 +306,10 @@ function drag(event) {
   image2.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
 }
 
-// Stop dragging
 function stopDrag() {
   isDragging = false;
 }
 
-
-// Function to update the height of the custom slider and the container
 function updateSliderHeight() {
   const imgHeight = image1.offsetHeight;
   customSlider.style.height = `${imgHeight}px`;
@@ -366,7 +336,7 @@ document.addEventListener("DOMContentLoaded", function() {
       slideIns.forEach((slideIn, index) => {
         setTimeout(() => {
           slideIn.classList.add("slide-up");
-        }, 150 * index);  // Adding staggered effect
+        }, 150 * index);  
       });
     }
   }
@@ -377,16 +347,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
-//WHATSAPP BUTTON LINK
-/* document.getElementById('my-link').addEventListener('click', function(event) {
-  event.preventDefault();
-  window.open(this.href, '_blank');
-});*/
-
-
-
 //SLIDE IN TEXT UNDEARNEATH
 document.addEventListener('DOMContentLoaded', (event) => {
   const animateOnScroll = function (entries, observer) {
@@ -394,16 +354,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
 
-        // Stop observing the current target
         observer.unobserve(entry.target);
 
-        // If there's a next heading, start observing it
+    
         const nextHeading = headings[++currentHeadingIndex];
         if (nextHeading) {
-          // Start observing the next heading after a delay
+          
           setTimeout(() => {
             observer.observe(nextHeading);
-          }, 1000);  // Delay can be adjusted as per the animation time
+          }, 1000);  
         }
       }
     });
@@ -417,7 +376,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const headings = Array.from(document.querySelectorAll('.animate'));
   let currentHeadingIndex = 0;
 
-  // Start observing the first heading
+  
   observer.observe(headings[currentHeadingIndex]);
 }); 
 
@@ -431,7 +390,7 @@ window.addEventListener('scroll', function() {
   const scrollPosition = window.scrollY;
   const windowHeight = window.innerHeight;
   
-  // Adjust this value to change the trigger point
+  
   const triggerPoint = yachtingGuide.offsetTop - (windowHeight / 2);
   
   if (scrollPosition >= triggerPoint) {
@@ -456,9 +415,9 @@ window.addEventListener('scroll', function() {
 });
 
 function loadYachts(yachts) {
-  yachtGrid.innerHTML = ''; // Clear the current content
+  yachtGrid.innerHTML = ''; 
   yachts.forEach(yacht => {
-      // Create and append elements for each yacht
+      
       const yachtElement = document.createElement('div');
       yachtElement.innerHTML = `<h3>${yacht.name}</h3>`; // Add more details as needed
       yachtGrid.appendChild(yachtElement);
@@ -476,7 +435,7 @@ function applyFilters() {
       return matchesName && matchesLength;
   });
 
-  loadYachts(filteredYachts); // Load yachts based on filtered data
+  loadYachts(filteredYachts); 
 }
 
 // Fetching yacht data
@@ -484,10 +443,10 @@ fetch('yachts.json')
   .then(response => response.json())
   .then(data => {
       yachtData = data;
-      loadYachts(yachtData); // Initially load all yachts
+      loadYachts(yachtData); 
   });
 
-// Adding event listeners
+
 lengthFilter.addEventListener("change", applyFilters);
 nameSearch.addEventListener("keyup", applyFilters);
 
