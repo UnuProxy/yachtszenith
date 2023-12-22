@@ -2300,7 +2300,6 @@ form button {
   left: 0;
   width: 100%;
   height: 100%;
-
   z-index: 999;
   background-color: transparent;
 }
@@ -2312,9 +2311,28 @@ form button {
   transform: translate(-50%, -50%);
   width: 300px;
   padding: 20px;
-  background-color: #fff;
   border-radius: 8px;
+  color: white; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
+
+.popup-content label, .flex-container label {
+  color: white; 
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="number"],
+.popup-content input[type="date"],
+.popup-content input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid white; 
+  border-radius: 4px;
+  background-color: transparent;
+  color: white; 
+}
+
 
 .flex-container {
   display: flex;
@@ -2331,12 +2349,14 @@ form button {
   top: 10px;
   right: 10px;
   cursor: pointer;
-  color: #000;
+  color: white;
   background-color: transparent;
 }
 
 .popup-content h2 {
   background-color: transparent;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 
@@ -2766,12 +2786,11 @@ margin-top: 10px;
   justify-content: space-between;
   padding: 0 10px;
   overflow: hidden;
-  height: calc(100vh - 200px); 
 }
 
 .image-block {
   width: calc(33.333% - 10px);
-  height: auto;
+  max-height: 400px;
   overflow: hidden;
 }
 
@@ -2786,8 +2805,9 @@ margin-top: 10px;
 .destination-image {
   width: 100%;
   height: auto;
-  object-fit: cover; 
+  object-fit: cover;
   transition: transform 0.5s;
+  max-height: 100%;
 }
 
 .image-wrapper:hover .destination-image {
@@ -2891,7 +2911,8 @@ margin-top: 10px;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  background: linear-gradient(to bottom, #0B3355, #1A4B75);
+  background: linear-gradient(to top, #0B3355, #1A4B75);
+  
 }
 
 
@@ -2910,15 +2931,12 @@ margin-top: 10px;
   text-align: center;
   margin: 20px;
   font-size: var(--H1);
-  
 }
-
 
 
 .accordion {
   border-radius: 10px;
   overflow: hidden;
-
 }
 
 .accordion-item {
@@ -2996,7 +3014,7 @@ margin-top: 10px;
   #yachting-guide {
     padding: 10px;
     height: auto;
-    padding-top: 120px;
+    
     padding-bottom: 120px;
   }
   .guide-title {
@@ -3211,7 +3229,7 @@ button.next {
   height: 70vh;
   justify-content: space-between;
   flex-direction: column;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/IbizaPortPanorama.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('IbizaPortPanorama.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -3275,7 +3293,7 @@ button.next {
 @media screen and (max-width: 600px) {
   .wrapper {
     background-attachment: scroll;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/IbizaPortPanoramaIphone.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('IbizaPortPanoramaIphone.jpg');
     background-size: cover; 
     background-position: center center; 
     background-repeat: no-repeat; 
