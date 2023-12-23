@@ -372,7 +372,10 @@
 
 <script>
   $(document).ready(function() {
-    // AJAX form submission
+    
+    var today = new Date().toISOString().split('T')[0];
+    $('#startDate, #endDate').attr('min', today);
+
     $('#inquiryForm').submit(function(e) {
         e.preventDefault();
 
@@ -384,8 +387,7 @@
             success: function(data) {
                 alert('Thank you for your inquiry!');
                 $('#inquiryForm').trigger("reset");
-
-                $('#inquiryPopup').hide();
+                $('#inquiryPopup').hide(); 
             },
             error: function(err) {
                 alert('Something went wrong, please try again.');
