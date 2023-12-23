@@ -3429,7 +3429,7 @@ font-size: 16px;
 /* CONTACT US FORM  */
 .contact-bg {
   height: 100vh;
-  background-image: url('img/EsVedra.jpg');
+  background-image: url('EsVedra.jpg');
   background-size: cover;
   display: flex;
   align-items: center;
@@ -3481,7 +3481,7 @@ font-size: 16px;
   background-color: transparent;
 }
 
-.contact-form-element {
+/* .contact-form-element {
   display: flex;
   flex-direction: column;
   align-items: start;  
@@ -3547,7 +3547,41 @@ font-size: 16px;
 .privacy a {
   color: #AA8759;
   background-color: transparent;
+} */
+
+.new-contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  
 }
+.new-contact-form textarea{
+  color: white;
+}
+
+
+.new-checkbox-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+}
+
+.new-checkbox-area input[type="checkbox"] { 
+  margin: 0;
+}
+
+.new-consent-label {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.new-policy-link {
+  color: #AA8759;
+  background-color: transparent;
+}
+
 
 
 
