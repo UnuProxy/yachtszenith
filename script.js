@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   openMenu.addEventListener("click", show);
   closeMenu.addEventListener("click", close);
 
-  // close menu when you click on a menu item
+
   menu_items.forEach((item) => {
     item.addEventListener("click", function () {
       close();
@@ -234,7 +234,6 @@ window.addEventListener('scroll', handleScroll);
 
 
 // IBIZA GUIDE & TIPS
-
 function toggleGuide(element) {
   const content = element.querySelector('.accordion-content');
   if (element.classList.contains('active')) {
@@ -419,12 +418,12 @@ function loadYachts(yachts) {
   yachts.forEach(yacht => {
       
       const yachtElement = document.createElement('div');
-      yachtElement.innerHTML = `<h3>${yacht.name}</h3>`; // Add more details as needed
+      yachtElement.innerHTML = `<h3>${yacht.name}</h3>`; 
       yachtGrid.appendChild(yachtElement);
   });
 }
 
-function applyFilters() {
+/* function applyFilters() {
   const searchQuery = nameSearch.value.toLowerCase();
   const lengthFilterValue = lengthFilter.value;
 
@@ -448,7 +447,39 @@ fetch('yachts.json')
 
 
 lengthFilter.addEventListener("change", applyFilters);
-nameSearch.addEventListener("keyup", applyFilters);
+nameSearch.addEventListener("keyup", applyFilters); */
+
+
+// Function to apply filters
+function applyFilters() {
+  const searchName = nameSearch.value.toLowerCase();
+  const yachtCards = document.querySelectorAll('.yacht-card');
+
+  yachtCards.forEach(card => {
+    const yachtName = card.querySelector('.yacht-name').textContent.toLowerCase();
+    const nameMatches = searchName === '' || yachtName.includes(searchName);
+
+    // Add logic for price and length filters based on your HTML structure
+
+    card.style.display = nameMatches ? "" : "none"; // Adjust display based on filter match
+  });
+}
+
+// Function to reset filters
+function resetAllFilters() {
+  priceFilter.value = "all";
+  lengthFilter.value = "all";
+  nameSearch.value = "";
+  applyFilters(); // Reapply filters to show all cards
+}
+
+// Event Listeners
+priceFilter.addEventListener("change", applyFilters);
+lengthFilter.addEventListener("change", applyFilters);
+nameSearch.addEventListener("input", applyFilters);
+resetFilters.addEventListener("click", resetAllFilters);
+
+
 
 
 
