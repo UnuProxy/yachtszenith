@@ -3114,6 +3114,23 @@ margin-top: 10px;
   margin-bottom: 50px;
 }
 
+
+@media (max-width: 600px) {
+  .narrative-section h2 {
+    font-size: 1.5em; 
+    margin-top: 75px; 
+    margin-bottom: 15px;
+  }
+
+  .narrative-section p {
+    font-size: 1em; 
+    margin: 0 15px; 
+    padding: 10px 0; 
+  }
+}
+
+
+
 .armada-section p{
   margin-bottom: 40px;
 }
@@ -3724,7 +3741,7 @@ section {
 
 
 .cta-section {
-  background-image: url('img/Formentera\ aerial.jpg'); 
+  background-image: url('Formentera aerial.jpg'); 
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
