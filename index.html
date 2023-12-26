@@ -72,7 +72,7 @@
   </div>
   
     
- 
+  
   <section>
     <div class="video-container">
       <video src="video/Intro_Yachtszenith .mp4" muted loop autoplay playsinline></video>
@@ -86,6 +86,57 @@
       </div>
     </div>
   </section>
+
+  <div id="yzCookieConsentContainer" class="yz-cookie-consent-container">
+    <div class="yz-cookie-consent-content">
+        <p>This website uses <a href="cookies-policy"><strong class="cook-bold">cookies</strong></a> to improve your experience while you navigate through the website...</p>
+        <div class="yz-cookie-btn-container">
+            <button id="yzAcceptCookies" class="yz-cookie-btn">Accept</button>
+            <button id="yzCookieSettings" class="yz-cookie-btn">Cookies Settings</button>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Cookie Settings Modal -->
+<div id="cookieSettingsModal" class="cookie-settings-modal">
+  <div class="modal-content">
+      <h3>Cookie Settings</h3>
+      <p>Adjust your cookie preferences:</p>
+
+      <div class="cookie-category">
+          <input type="checkbox" id="analyticsCookies" name="analytics" checked>
+          <label for="analyticsCookies">Analytics Cookies</label>
+      </div>
+
+      <div class="cookie-category">
+          <input type="checkbox" id="functionalCookies" name="functional">
+          <label for="functionalCookies">Functional Cookies</label>
+      </div>
+
+      <div class="cookie-category">
+          <input type="checkbox" id="advertisingCookies" name="advertising">
+          <label for="advertisingCookies">Advertising Cookies</label>
+      </div>
+
+      <div class="cookie-category">
+          <input type="checkbox" id="socialMediaCookies" name="socialMedia">
+          <label for="socialMediaCookies">Social Media Cookies</label>
+      </div>
+
+      <div class="cookie-category">
+          <input type="checkbox" id="necessaryCookies" name="necessary" checked disabled>
+          <label for="necessaryCookies">Necessary Cookies</label>
+          <p class="cookie-description">These cookies are essential for the website to function properly and cannot be turned off in our systems.</p>
+      </div>
+      
+      <button id="saveCookieSettings" class="cookie-btn">Save Settings</button>
+  </div>
+</div>
+
+
+
   
 
   <!-- COMPANY INTRODUCTION -->
@@ -368,6 +419,63 @@
 </div>
 
 
+<script>
+  //ENABLE COOKIES BANNER 
+  window.onload = function() {
+    if (!localStorage.getItem('cookieConsent')) {
+        document.getElementById('cookieConsentContainer').style.display = 'block';
+    }
+
+    document.getElementById('acceptCookies').onclick = function() {
+        localStorage.setItem('cookieConsent', 'true');
+        document.getElementById('cookieConsentContainer').style.display = 'none';
+    };
+
+    // Implement the settings functionality for cookieSettings button
+    document.getElementById('cookieSettings').onclick = function() {
+        // You can expand this function to open a detailed cookie settings dialog
+        alert('Open cookie settings here.');
+    };
+};
+
+</script>
+
+<script>
+window.onload = function() {
+    if (!localStorage.getItem('yzCookieConsent')) {
+        document.getElementById('yzCookieConsentContainer').style.display = 'block';
+    } else {
+        document.getElementById('yzCookieConsentContainer').style.display = 'none';
+    }
+
+    document.getElementById('yzAcceptCookies').onclick = function() {
+        localStorage.setItem('yzCookieConsent', 'true');
+        document.getElementById('yzCookieConsentContainer').style.display = 'none';
+        document.getElementById('cookieSettingsModal').style.display = 'none';
+    };
+
+    document.getElementById('yzCookieSettings').onclick = function() {
+        document.getElementById('cookieSettingsModal').style.display = 'block';
+    };
+
+    document.getElementById('saveCookieSettings').onclick = function() {
+        
+        var analyticsConsent = document.getElementById('analyticsCookies').checked;
+        var functionalConsent = document.getElementById('functionalCookies').checked;
+        
+        
+        localStorage.setItem('yzAnalyticsConsent', analyticsConsent);
+        localStorage.setItem('yzFunctionalConsent', functionalConsent);
+        localStorage.setItem('yzCookieConsent', 'true'); 
+
+        document.getElementById('cookieSettingsModal').style.display = 'none';
+    };
+};
+
+
+
+</script>
+
   
 
 <script>
@@ -407,6 +515,8 @@
 });
 
   </script>
+
+ 
   
   
   
