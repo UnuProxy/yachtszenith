@@ -442,16 +442,23 @@
 
 <script>
 window.onload = function() {
+    var consentBanner = document.getElementById('yzCookieConsentContainer');
+    
     if (!localStorage.getItem('yzCookieConsent')) {
-        document.getElementById('yzCookieConsentContainer').style.display = 'block';
+        consentBanner.style.display = 'block';
+        setTimeout(function() {
+            consentBanner.style.bottom = '0'; 
+        }, 10); 
     } else {
-        document.getElementById('yzCookieConsentContainer').style.display = 'none';
+        consentBanner.style.display = 'none';
     }
 
     document.getElementById('yzAcceptCookies').onclick = function() {
         localStorage.setItem('yzCookieConsent', 'true');
-        document.getElementById('yzCookieConsentContainer').style.display = 'none';
-        document.getElementById('cookieSettingsModal').style.display = 'none';
+        consentBanner.style.bottom = '-100%'; 
+        setTimeout(function() {
+            consentBanner.style.display = 'none';
+        }, 500); 
     };
 
     document.getElementById('yzCookieSettings').onclick = function() {
@@ -459,20 +466,16 @@ window.onload = function() {
     };
 
     document.getElementById('saveCookieSettings').onclick = function() {
-        
         var analyticsConsent = document.getElementById('analyticsCookies').checked;
         var functionalConsent = document.getElementById('functionalCookies').checked;
         
-        
         localStorage.setItem('yzAnalyticsConsent', analyticsConsent);
         localStorage.setItem('yzFunctionalConsent', functionalConsent);
-        localStorage.setItem('yzCookieConsent', 'true'); 
+        localStorage.setItem('yzCookieConsent', 'true');
 
         document.getElementById('cookieSettingsModal').style.display = 'none';
     };
 };
-
-
 
 </script>
 
