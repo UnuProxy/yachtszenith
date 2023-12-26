@@ -767,7 +767,7 @@ color: var(--LOGO-COLOR);
 
 
 
-/*GRID PICTURES, SOMEHOW HELP MY 3 IMAGES*/
+/*GRID PICTURES, SOMEHOW HELPs MY 3 IMAGES*/
 .image-container img:nth-child(1) {
   grid-column: 1;
   width: 100%;
@@ -1413,7 +1413,7 @@ button:hover {
   height: 300px; 
 }
 
-/* Increase the size of individual images and make them clickable */
+
 .yacht-carousel.interior-carousel img {
   width: 450px;  
   height: 500px;
@@ -1422,7 +1422,7 @@ button:hover {
   object-fit: cover;
 }
 
-/* Hide scrollbar for all types of web browsers */
+
 .yacht-carousel.interior-carousel::-webkit-scrollbar {
   display: none;
 }
@@ -2660,7 +2660,7 @@ margin-top: 10px;
   text-decoration: underline;
 }
 
-/* Responsive Design for Mobile */
+
 @media screen and (max-width: 600px) {
   .voyage-privacy-check {
       flex-direction: column;
@@ -2759,7 +2759,7 @@ margin-top: 10px;
   animation: fadeIn 2s;
 }
 
-/* New Animation */
+
 @keyframes slideInFromTop {
   from {
     opacity: 0;
@@ -3739,6 +3739,60 @@ section {
   width: 100%;
 }
 
+
+/* COOKIES POLICY*/
+.cookies-top-space {
+  margin-top: 25px;
+  color: white;
+}
+
+.cookies-personalised {
+  color: white;
+}
+.cookies-main {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.cookies-section {
+  background: rgba(255, 255, 255, 0.08); 
+  margin-bottom: 25px;
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 4px solid #add8e6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+}
+
+.cookies-title {
+  color: #add8e6;
+  margin-bottom: 0.8em;
+  font-size: 1.8em;
+  background-color: transparent;
+}
+
+.cookies-heading {
+  color: #add8e6;
+  margin-bottom: 0.8em;
+  font-size: 1.4em;
+}
+
+.cookies-text {
+  margin-bottom: 18px;
+  font-size: 1.0em;
+  color: #dcdcdc;
+}
+
+.cookies-link {
+  color: #add8e6;
+  text-decoration: none;
+}
+
+.cookies-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
 
 .cta-section {
   background-image: url('FormenteraAerial.jpg'); 
