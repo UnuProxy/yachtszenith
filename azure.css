@@ -2341,6 +2341,14 @@ form button {
   background-color: transparent;
 }
 
+.popup button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+}
+
 
 
 
@@ -2368,12 +2376,12 @@ form button {
   .yacht-listings {
     padding: 0 10px; 
   }
-
-  button {
-    color: #333;
-  }
 } 
 
+/* GENERAL BUTTON OVERRIDE FOR NO BORDER RADIUS */
+button {
+  border-radius: 0 !important; 
+}
 
 
 /* ABOUT US AND CONTACT US ALONG WITH INTRODUCTION */
@@ -2474,76 +2482,30 @@ margin-top: 10px;
   text-align: center;
 }
 
-.voyage-form input, .voyage-form textarea, .voyage-form select {
+
+.voyage-form input,
+.voyage-form textarea,
+.voyage-form select {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
-  color: black; 
-  background-color: white; 
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  height: 40px;
 }
 
 .voyage-form button {
   padding: 10px 15px;
-  border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  color: white;
-  background-color: var(--LOGO-COLOR); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30%;
 }
-
-.privacy-policy-check a {
-  color: var(--LOGO-COLOR);
-}
-
-.voyageFormPopup-content h3 {
-  margin-bottom: 10px;
-}
-
-.privacy-policy-check {
-  display: grid;
-  grid-template-columns: auto auto; 
-  align-items: center; 
-  gap: 10px; 
-}
-
-.checkbox-label {
-  grid-column: 1; 
-  grid-row: 1; 
-}
-
-#agreeVoyage {
-  grid-column: 1; 
-  grid-row: 1; 
-}
-
-.privacy-policy-link {
-  grid-column: 2;
-  grid-row: 1; 
-}
-
-@media screen and (max-width: 600px) {
-  .privacy-policy-check {
-      grid-template-columns: 1fr; 
-      grid-template-areas:
-          "checkbox"
-          "link";
-  }
-
-  #agreeVoyage {
-      grid-area: checkbox;
-  }
-
-  .checkbox-label {
-      grid-area: checkbox;
-  }
-
-  .privacy-policy-link {
-      grid-area: link;
-      text-align: center; 
-  }
-}
-
 
 .close-button {
   position: absolute;
@@ -2554,54 +2516,12 @@ margin-top: 10px;
   color: white;
 }
 
-.privacy-policy-check input[type="checkbox"] {
-  margin-right: 10;
-}
-.privacy-policy-check input[type="checkbox"],
-.privacy-policy-check label {
-  
-  vertical-align: middle; 
-}
-.privacy-policy-check label {
-  margin: 0;
-  padding: 0;
-}
 
-
-
-@media screen and (max-width: 428px) {
-  .voyageFormPopup {
-    width: 95%; 
-    padding: 15px; 
-  }
-
-  .voyageFormPopup-content {
-    padding: 15px;
-  }
-
-  .voyage-form input, .voyage-form textarea, .voyage-form select {
-    padding: 8px; 
-    color: #000;
-  }
-
-  .voyage-form button {
-    padding: 10px; 
-    width: 100%; 
-  }
-  
-}
 .voyage-privacy-check {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
-  
-}
-.consent-checkbox {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px; 
-  background-color: transparent;
 }
 
 .policyAgreement {
@@ -2612,60 +2532,60 @@ margin-top: 10px;
 .consent-label {
   font-size: 16px;
   color: #333; 
-  line-height: 1.4; 
-  max-width: 90%; 
-}
-.consent-label a  {
-  background-color: transparent;
+  line-height: 1.4;
 }
 
-.consent-label {
-  font-size: 16px; 
-  color: var(--TEXT-LIGHTCOLOR); 
-}
-
-@media (max-width: 600px) {
-  .consent-checkbox {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  #policyAgreement {
-      margin-bottom: 10px; 
-  }
-
-  .consent-label {
-      font-size: 14px; 
-      max-width: 100%; 
-  }
-}
-
-.policy-link {
-  color: var(--LOGO-COLOR); 
-  text-decoration: none; 
-}
-
-.policy-link:hover {
-  text-decoration: underline; 
-}
-
-
-
+.policy-link,
 .voyage-privacy-link {
-  color: var(--LOGO-COLOR);
+  color: var(--LOGO-COLOR); 
   text-decoration: none;
 }
 
+.policy-link:hover,
 .voyage-privacy-link:hover {
   text-decoration: underline;
 }
 
+.voyage-form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none;
+}
 
 @media screen and (max-width: 600px) {
-  .voyage-privacy-check {
-      flex-direction: column;
+  .voyageFormPopup {
+    width: 95%; 
+    padding: 15px;
+  }
+
+  .voyage-form input,
+  .voyage-form textarea,
+  .voyage-form select {
+    padding: 8px; 
+  }
+
+  .voyage-form button {
+    width: 100%;
+  }
+
+  .voyage-privacy-check,
+  .consent-checkbox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .consent-label {
+    font-size: 14px;
   }
 }
+
 
 
 .outline-button {
@@ -3471,6 +3391,14 @@ font-size: 16px;
   background-color: transparent;
 }
 
+.contact-form-container button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+}
+
 .contact-message h1 {
   font-weight: 300;
   font-size: 2rem;
@@ -3478,8 +3406,6 @@ font-size: 16px;
   margin-bottom: 1.5rem;
   background-color: transparent;
 }
-
-
 
 .contact-message{
   background-color: transparent;
@@ -3498,73 +3424,6 @@ font-size: 16px;
   background-color: transparent;
 }
 
-/* .contact-form-element {
-  display: flex;
-  flex-direction: column;
-  align-items: start;  
-}
-
-.contact-form-element input,
-.contact-form-element textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: none;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  border-bottom: 2px solid #AA8759;
-  border-radius: 5px;
-  
-}
-
-.contact-form-element input:focus,
-.contact-form-element textarea:focus {
-    outline: none; 
-}
-
-.contact-form-element button {
-  background-color: #AA8759;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;  
-}
-
-.contact-form-element button:hover {
-  background-color: #8d6d4d;
-}
-
-.checkbox-container {
-  display: flex; 
-  align-items: center; 
-  gap: 10px; 
-}
-
-.contact-form-element {
-  padding-left: 0;
-}
-
-
-.checkbox-container input[type="checkbox"] { 
-  margin: 0;
-}
-
-
-
-.checkbox-container label.privacy {
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  display: inline; 
-}
-
-
-.privacy a {
-  color: #AA8759;
-  background-color: transparent;
-} */
 
 
 
@@ -3596,9 +3455,6 @@ font-size: 16px;
 }
 
 
-
-
-
 @media (max-width: 600px) {
   .contact-wrapper {
     grid-template-columns: 1fr;
@@ -3606,12 +3462,10 @@ font-size: 16px;
     width: 90%;
     padding: 1.5rem;
   }
-
   .new-checkbox-area {
     flex-direction: column;
     align-items: flex-start;
   }
-  
   .contact-message h1 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -3623,7 +3477,6 @@ font-size: 16px;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
-
   .new-consent-label {
     display: block; 
   }
@@ -3635,12 +3488,19 @@ font-size: 16px;
     flex-direction: row;
     gap: 10px;
   }
-
   .checkbox-container label.privacy {
     display: flex;
     align-items: center;
   }
 }
+
+@media (max-width: 1024px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr; 
+    padding: 2rem;  
+  }
+}
+
 
 
 /* ABOUT US PAGE STYLE  */
@@ -4510,7 +4370,6 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f4f4f4;
   padding: 0px;
   width: 80%;
   max-height: 90%;
@@ -4549,19 +4408,28 @@ section {
   border-radius: 4px; 
 }
 
-#enquiry-form button {
-  background-color: #224870; 
+#enquiry-form button { 
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  width: 100%; 
+  width: 30%;
+  margin: 10px 0;
+  align-self: flex-start; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
 }
 
-#enquiry-form button:hover {
-  background-color: #18395A; 
+@media (max-width: 600px) {
+  #enquiry-form button {
+    width: 30%; 
+  }
 }
+
+
 @media (max-width: 600px) {
   .modal-content {
     width: 90%; 
