@@ -99,45 +99,43 @@
 
 
      
-      <div id="voyageFormPopup" class="voyageFormPopup">
-        <div class="voyageFormPopup-content">
-            <span class="close-button">&times;</span>
-            <form action="https://formspree.io/f/mgejjqgo" method="post" class="voyage-form">
-               
-    
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-    
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-    
-                <label for="startVoyageDate">Preferred Start Voyage Date:</label>
-                <input type="date" id="startVoyageDate" name="startVoyageDate">
-    
-                <label for="endVoyageDate">Preferred End Voyage Date:</label>
-                <input type="date" id="endVoyageDate" name="endVoyageDate">
-    
-                <label for="numberOfGuests">Number of Guests:</label>
-                <input type="number" id="numberOfGuests" name="numberOfGuests">
-    
-                <label for="additionalRequests">Additional Requests:</label>
-                <textarea id="additionalRequests" name="additionalRequests"></textarea>
-    
-                <div class="voyage-privacy-check">
-                  <div class="voyage-checkbox-container">
-                      <input type="checkbox" id="voyageAgree" name="voyageAgree" required>
-                      <label for="voyageAgree"></label>
-                  </div>
-                  <div class="voyage-link-container">
-                      <a href="privacy-policy-url" class="voyage-privacy-link">I agree with the Privacy Policy</a>
-                  </div>
-              </div>
-              
-                <button type="submit" class="submit-button">Submit</button>   
-            </form>
-        </div>
+  <div id="voyageFormPopup" class="voyageFormPopup">
+    <div class="voyageFormPopup-content">
+        <span class="close-button">&times;</span>
+        <form action="https://formspree.io/f/mgejjqgo" method="post" class="voyage-form" id="voyageForm">
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="startVoyageDate">Preferred Start Voyage Date:</label>
+            <input type="date" id="startVoyageDate" name="startVoyageDate">
+
+            <label for="endVoyageDate">Preferred End Voyage Date:</label>
+            <input type="date" id="endVoyageDate" name="endVoyageDate">
+
+            <label for="numberOfGuests">Number of Guests:</label>
+            <input type="number" id="numberOfGuests" name="numberOfGuests">
+
+            <label for="additionalRequests">Additional Requests:</label>
+            <textarea id="additionalRequests" name="additionalRequests"></textarea>
+
+            <div class="voyage-privacy-check">
+                <div class="voyage-checkbox-container">
+                    <input type="checkbox" id="voyageAgree" name="voyageAgree" required>
+                    <label for="voyageAgree"></label>
+                </div>
+                <div class="voyage-link-container">
+                    <a href="privacy-policy-url" class="voyage-privacy-link">I agree with the Privacy Policy</a>
+                </div>
+            </div>
+          
+            <button type="submit" class="submit-button">Submit</button>   
+        </form>
     </div>
-    
+</div>
   
 
   <script>
@@ -205,32 +203,36 @@ document.getElementById('startVoyageDate').addEventListener('change', function()
     }
   </script>
   <script>
-    document.getElementById('voyageForm').addEventListener('submit', function(event) {
-      event.preventDefault(); 
-      var form = this;
-      var formData = new FormData(form);
-  
-      fetch(form.action, {
-        method: 'POST',
-        body: formData,
-      }).then(response => {
-        if (response.ok) {
-          
-          document.getElementById('successMessage').style.display = 'block';
-  
-          
-          form.reset();
-  
-         
-        } else {
-          
-          alert("There was an error submitting the form. Please try again.");
+    function setMinVoyageDate() {
+            var today = new Date().toISOString().split('T')[0];
+            document.getElementById("startVoyageDate").setAttribute("min", today);
+            document.getElementById("endVoyageDate").setAttribute("min", today);
         }
-      }).catch(error => {
-        
-        alert("There was a network error. Please try again.");
-      });
-    });
+
+        document.addEventListener('DOMContentLoaded', setMinVoyageDate);
+
+        document.getElementById('voyageForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            var form = this;
+            var formData = new FormData(form);
+      
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+            }).then(response => {
+                if (response.ok) {
+                    
+                    document.getElementById('successMessage').style.display = 'block';
+                    form.reset();
+                } else {
+                    
+                    alert("There was an error submitting the form. Please try again.");
+                }
+            }).catch(error => {
+                
+                alert("There was a network error. Please try again.");
+            });
+        });
   </script>
 
       
