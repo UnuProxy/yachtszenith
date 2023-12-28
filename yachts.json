@@ -175,7 +175,7 @@
     "description": "The Pershing 72 yacht, a symbol of luxury and performance, offers an exclusive charter experience in the beautiful waters of Ibiza. This 22.26-meter vessel boasts a striking design with a silver and black color scheme, and it's equipped with powerful twin MTU engines that enable a top speed of 45 knots. It comfortably accommodates up to 6 guests in 3 elegantly appointed cabins, including a spacious master suite. The yacht features a large sunbathing area, a well-equipped cockpit for dining and socialising, and a hydraulic swim platform for easy water access. With its combination of speed, style, and comfort, the Pershing 72 is perfect for guests seeking a thrilling yet luxurious boating adventure in Ibiza.",
     "interiorImages": ["Legendary/72Pershing6.jpg","Legendary/72Pershing9.jpg","Legendary/72Pershing4.jpg","Legendary/72Pershing11.jpg","Legendary/72Pershing7.jpg","Legendary/72Pershing2.jpg"],
     "detailedSpecs": {
-      "Length": "21m",
+      "Length": "21 m",
       "Guests": "12",
       "Crew": "3",
       "Cruising Area": "Balearics",
@@ -217,6 +217,58 @@
        "June / September": "€4,550 per day / €4,400 per day",
        "July / August": "€4,900 per day / €5,300 per day"
     
+    }
+  },
+  {
+    "id": 9,
+    "name": "Sunseeker 84",
+    "image": "Ariyas/84Sunseeker1.jpg",
+    "specs": "25,60 m, 12 guests, 3 crew",
+    "price": "€7,650 per day",
+    "description": "Discover Elegance at Sea: Sunseeker Predator 84,a yacht that redefines luxury and versatility. Ideal for both tranquil afternoons and lively gatherings, it combines high-speed cruising with supreme comfort. Its spacious outdoor decks and sportfly bridge are perfect for sunbathing and socialising, offering stunning sea views.The interior of is crafted with a refined palette of wood and beige, creating a serene ambience. It comfortably accommodates eight guests overnight in four well-appointed cabins, each with an en-suite bathroom.Equipped with modern amenities like stabilisers, a hydraulic bathing platform, BOSE sound system, Wi-Fi, and a variety of water toys.",
+    "interiorImages": ["Ariyas/84Sunseeker3.jpg","Ariyas/84Sunseeker.jpg4","Ariyas/84Sunseeker6.jpg","Ariyas/84Sunseeker7.jpg","Ariyas/84Sunseeker8.jpg","Ariyas/84Sunseeker13.jpg","Ariyas/84Sunseeker14.jpg","Ariyas/84Sunseeker15.jpg","Ariyas/84Sunseeker16.jpg","Ariyas/84Sunseeker17.jpg"],
+    "detailedSpecs": {
+      "Length": "25,60 m",
+      "Guests": "12",
+      "Crew": "3",
+      "Cruising Area": "Balearics",
+      "Price": "7,650 per day",
+      "Cruising Speed": "25 knots",
+      "Max Speed": "34 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x MTU",
+      "HP": "2 x 2434"
+     },
+     "seasonalPrices": {
+       "May / October": "€7,650 per day",
+       "June / September": "€7,650 per day",
+       "July / August": "€8,750 per day"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Leopard 27",
+    "image": "89Leopard/89Leopard6.jpg",
+    "specs": "27 m, 12 guests, 3 crew",
+    "price": "€7,000 per day",
+    "description": "Board the Leopard 27, a symbol of luxury ideal for day or week charters. Boasting an open layout and spacious outdoor areas, she offers an opulent ambience. Built in 2001 and regularly refitted, she combines timeless elegance with modern amenities.She accommodates up to 6 guests in 3 cabins, plus 2 in a convertible cinema room. Equipped with a jet tender, she's perfect for water sports like wakeboarding. A skilled crew of three ensures a bespoke and exquisite charter experience.",
+    "interiorImages": ["89Leopard/89Leopard1.jpg", "89Leopard/89Leopard3.jpg", "89Leopard/89Leopard4.jpg", "89Leopard/89Leopard6.jpg", "89Leopard/89Leopard8.jpg", "89Leopard/89Leopard11.jpg", "89Leopard/89Leopard16.jpg","89Leopard/89LeopardInterior6.jpg", "89Leopard/89LeopardInterior7.jpg", "89Leopard/89LeopardInterior8.jpg", "89Leopard/89LeopardInterior9.jpg", "89Leopard/89LeopardInterior10.jpg", "89Leopard/89LeopardInterior11.jpg", "89Leopard/89LeopardInterior12.jpg", "89Leopard/89LeopardInterior13.jpg", "89Leopard/89LeopardInterior14.jpg", "89Leopard/89LeopardInterior15.jpg"],
+    "detailedSpecs": {
+      "Length": "27 m",
+      "Guests": "12",
+      "Crew": "3",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "7,000 per day",
+      "Cruising Speed": "24 knots",
+      "Max Speed": "32 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x MTU 16v",
+      "HP": "2 x 2000"
+     },
+     "seasonalPrices": {
+       "May / October": "€7,000 per day",
+       "June / September": "€8,000 per day",
+       "July / August": "€9,000 per day"
     }
   }
 ]
