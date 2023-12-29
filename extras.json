@@ -31,6 +31,14 @@
     {
       "id": 8,
       "extras": ["Wi-Fi", "2 x SeaBob", "Air Conditioning" , "Snorkeling equipment" , "Stand up paddle board", "Music equipment" ]
+    },
+    {
+      "id": 9,
+      "extras": ["Wi-Fi", "Wakeboard", "Water Skies", "Snorkel Equipment", "Air Conditioning", "Stabilisers", "Bose Suround System" ]
+    },
+    {
+      "id": 10,
+      "extras": ["Wi-Fi", "Wakeboard", "1 x SeaBob", "Snorkel Equipment", "Air Conditioning", "Bose Suround System", "Stand up paddle board" ]
     }
   ]
   
