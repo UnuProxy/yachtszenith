@@ -318,6 +318,57 @@
        "June / September": "€4,000 per day / €3,900 per day" ,
        "July / August": "€4,400 per day / €4,750 per day"
     }
+  },
+  {
+    "id": 13,
+    "name": "Pardo 50",
+    "image": "Pardo50/50Pardo27.jpg",
+    "specs": "16,25 m, 12 guests, 1 crew",
+    "price": "€2,850 per day",
+    "description": "Yachts Zenith's Pardo 50 is a testament to luxury yachting in Ibiza. This 16-meter marvel accommodates up to 12 guests, offering a spacious deck with a lavish sundeck and a serene solarium at the aft. Inside, elegance abounds with two stylish cabins and two full bathrooms, complemented by a fully-equipped kitchen and modern comforts. Perfect for stylish Mediterranean adventures, its sleek design and advanced technology make it ideal for exploring the stunning coasts of Ibiza and Formentera.",
+    "interiorImages": ["Pardo50/50Pardo4.jpg", "Pardo50/50Pardo28.jpg","Pardo50/50Pardo23.jpg","Pardo50/50Pardo12.jpg","Pardo50/50Pardo10.jpg","Pardo50/50Pardo9.jpg","Pardo50/50Pardo8.jpg","Pardo50/50Pardo7.jpg", "Pardo50/50Pardo15.jpg","Pardo50/50Pardo14.jpg","Pardo50/50Pardo13.jpg"],
+    "detailedSpecs": {
+      "Length": "16,25 m",
+      "Guests": "12",
+      "Crew": "1",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "2,850 per day",
+      "Cruising Speed": "35 knots",
+      "Max Speed": "52 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x IPS 800",
+      "HP": "2 x 1.200"
+     },
+     "seasonalPrices": {
+       "May / October": "€2,850 per day / €2,750 per day",
+       "June / September": "€3,050 per day /€2,850 per day",
+       "July / August": "€3,450 per day / €3,650 per day"
+    }
+  },
+  {
+    "id": 14,
+    "name": "VanDutch 55",
+    "image": "VanDutch55/PAPERA19.jpg",
+    "specs": "16,25 m, 12 guests, 2 crew",
+    "price": "€3,499 per day",
+    "description": "Yachts Zenith presents the VanDutch 55, a sophisticated yacht for those looking to explore the beauty of Ibiza. This 55-foot yacht is perfect for cruising around the stunning Ibiza coastlines, offering space for up to 12 guests. Its powerful 900HP engines ensure a smooth sailing experience, combining speed with comfort. The yacht features a sleek design with a spacious cockpit and sunbathing area, ideal for relaxing under the Mediterranean sun. With two cabins, the VanDutch 55 is suitable for day trips or luxurious weekend getaways. This yacht is an excellent choice for anyone seeking a blend of luxury and performance in Ibiza's waters.",
+    "interiorImages": ["VanDutch55/PAPERA15.jpg", "VanDutch55/PAPERA16.jpg","VanDutch55/PAPERA19.jpg","VanDutch55/PAPERA20.jpg","VanDutch55/PAPERA21.jpg","VanDutch55/PAPERA22.jpg","VanDutch55/PAPERA23.jpg","VanDutch55/PAPERA66.jpg"],
+    "detailedSpecs": {
+      "Length": "16,25 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "2,850 per day",
+      "Cruising Speed": "35 knots",
+      "Max Speed": "52 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x IPS 800"
+     },
+     "seasonalPrices": {
+       "May / October": "€2,850 per day / €2,750 per day",
+       "June / September": "€3,050 per day /€2,850 per day",
+       "July / August": "€3,450 per day / €3,650 per day"
+    }
   }
 ]
 
