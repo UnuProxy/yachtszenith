@@ -270,6 +270,54 @@
        "June / September": "€8,000 per day",
        "July / August": "€9,000 per day"
     }
+  },
+  {
+    "id": 11,
+    "name": "58 Vanquish",
+    "image": "MiParaiso/58Vanquish10.jpg",
+    "specs": "17,95 m, 12 guests, 2 crew",
+    "price": "€4,000 per day",
+    "description": "Experience elegance at sea with the VQ58. Crafted by Vanquish, known for bold designs, this yacht merges sleek style with supreme comfort. Relax on spacious decks or in the cool, air-conditioned cabin. This Vanquish 58 is more than a yacht – it's a luxurious escape on the waves, ready to elevate your sea journey.",
+    "interiorImages": ["MiParaiso/58Vanquish5.jpg","MiParaiso/58Vanquish6.jpg","MiParaiso/58Vanquish7.jpg","MiParaiso/58Vanquish8.jpg","MiParaiso/58Vanquish9.jpg","MiParaiso/58Vanquish4.jpg","MiParaiso/58Vanquish2.jpg", "MiParaiso/58Vanquish3.jpg","MiParaiso/58Vanquish1.jpg"],
+    "detailedSpecs": {
+      "Length": "17,95 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "4,000 per day",
+      "Max Speed": "38 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 X VOLVO PENTA IPS950"
+     },
+     "seasonalPrices": {
+       "May / October": "€4,000 per day / €3,650 per day",
+       "June / September": "€4,550 per day / €4,400 per day ",
+       "July / August": "€4,950 per day / €5,300 per day"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Pershing 5X",
+    "image": "Pershing5X/Pershing(5X)6.JPG",
+    "specs": "16,51 m, 10 guests, 2 crew",
+    "price": "€3,600 per day",
+    "description": "Discover Pershing 5X at Yachts Zenith. With its spacious deck, adorned with plush cushions at the bow and a shaded seating area, it's crafted for sublime comfort and elegance. Ideal for charter, this yacht promises an impeccable day on the water, blending luxury with a touch of sophistication. The Pershing 5X is perfect for those seeking a refined, memorable experience at sea.",
+    "interiorImages": ["Pershing5X/Pershing(5X)1.jpg", "Pershing5X/Pershing(5X)3.jpg","Pershing5X/Pershing(5X)4.jpg","Pershing5X/Pershing(5X)5.jpg","Pershing5X/Pershing(5X)7.jpg","Pershing5X/Pershing(5X)8.jpg"],
+    "detailedSpecs": {
+      "Length": "16,51 m",
+      "Guests": "10",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "3,600 per day",
+      "Max Speed": "38 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 X VOLVO D11 IPS 950"
+     },
+     "seasonalPrices": {
+       "May / October": "€3,600 per day / €3,250 per day",
+       "June / September": "€4,000 per day / €3,900 per day" ,
+       "July / August": "€4,400 per day / €4,750 per day"
+    }
   }
 ]
 
