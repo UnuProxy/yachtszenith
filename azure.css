@@ -1121,7 +1121,7 @@ button:hover {
 
 .yacht-card {
   width: calc(33.3333% - 20px); 
-  height: 400px;
+  height: 470px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
@@ -1140,7 +1140,7 @@ button:hover {
 .yacht-info {
   position: relative;  
   z-index: 3;  
-  padding: 15px;
+  padding: 20px;
   text-align: left;
   color: var(--LOGO-COLOR);
   background-color: transparent;
