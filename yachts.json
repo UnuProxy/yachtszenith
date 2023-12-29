@@ -175,7 +175,7 @@
     "description": "The Pershing 72 yacht, a symbol of luxury and performance, offers an exclusive charter experience in the beautiful waters of Ibiza. This 22.26-meter vessel boasts a striking design with a silver and black color scheme, and it's equipped with powerful twin MTU engines that enable a top speed of 45 knots. It comfortably accommodates up to 6 guests in 3 elegantly appointed cabins, including a spacious master suite. The yacht features a large sunbathing area, a well-equipped cockpit for dining and socialising, and a hydraulic swim platform for easy water access. With its combination of speed, style, and comfort, the Pershing 72 is perfect for guests seeking a thrilling yet luxurious boating adventure in Ibiza.",
     "interiorImages": ["Legendary/72Pershing6.jpg","Legendary/72Pershing9.jpg","Legendary/72Pershing4.jpg","Legendary/72Pershing11.jpg","Legendary/72Pershing7.jpg","Legendary/72Pershing2.jpg"],
     "detailedSpecs": {
-      "Length": "21m",
+      "Length": "21 m",
       "Guests": "12",
       "Crew": "3",
       "Cruising Area": "Balearics",
@@ -252,7 +252,9 @@
     "specs": "27 m, 12 guests, 3 crew",
     "price": "€7,000 per day",
     "description": "Board the Leopard 27, a symbol of luxury ideal for day or week charters. Boasting an open layout and spacious outdoor areas, she offers an opulent ambience. Built in 2001 and regularly refitted, she combines timeless elegance with modern amenities.She accommodates up to 6 guests in 3 cabins, plus 2 in a convertible cinema room. Equipped with a jet tender, she's perfect for water sports like wakeboarding. A skilled crew of three ensures a bespoke and exquisite charter experience.",
+
     "interiorImages": ["89Leopard/89Leopard1.jpg", "89Leopard/89Leopard3.jpg", "89Leopard/89Leopard4.jpg", "89Leopard/89Leopard6.jpg", "89Leopard/89Leopard8.jpg", "89Leopard/89Leopard11.jpg", "89Leopard/89Leopard16.jpg","89Leopard/89LeopardInterior6.jpg", "89Leopard/89LeopardInterior7.jpg", "89Leopard/89LeopardInterior8.jpg", "89Leopard/89LeopardInterior9.jpg", "89Leopard/89LeopardInterior10.jpg", "89Leopard/89LeopardInterior11.jpg", "89Leopard/89LeopardInterior12.jpg", "89Leopard/89LeopardInterior13.jpg", "89Leopard/89LeopardInterior14.jpg", "89Leopard/89LeopardInterior15.jpg", "89Leopard/89LeopardIBedrooms1.jpg", "89Leopard/89LeopardIBedrooms10.jpg","89Leopard/89LeopardIBedrooms12.jpg"],
+
     "detailedSpecs": {
       "Length": "27 m",
       "Guests": "12",
