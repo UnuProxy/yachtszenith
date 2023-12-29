@@ -2582,7 +2582,9 @@ margin-top: 10px;
   overflow: hidden;
   transition: color 0.3s ease-in-out;
   color: var(--LOGO-COLOR);
-  padding: 8px;
+
+  padding: 10px;
+
 }
 
 .outline-button::before {
