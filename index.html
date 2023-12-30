@@ -479,9 +479,25 @@ window.onload = function() {
 
 <script>
   $(document).ready(function() {
+
+   
+    function setMinDate() {
+        var today = new Date().toISOString().split('T')[0];
+        $('#startDate, #endDate').attr('min', today);
+    }
+
+   
+    setMinDate();
+
+    
+    if (!Modernizr.inputtypes.date) {
+       
+    }
+
     
     var today = new Date().toISOString().split('T')[0];
     $('#startDate, #endDate').attr('min', today);
+
 
     // Handle form submission
     $('#inquiryForm').submit(function(e) {
@@ -511,6 +527,7 @@ window.onload = function() {
         $('#yachtNameInput').val(yachtName);
         $('#inquiryPopup').show();
     });
+
 
     $('.close-popup').on('click', function() {
         $('#inquiryPopup').hide();
