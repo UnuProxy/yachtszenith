@@ -479,8 +479,19 @@ window.onload = function() {
 
 <script>
   $(document).ready(function() {
-    var today = new Date().toISOString().split('T')[0];
-    $('#startDate, #endDate').attr('min', today);
+   
+    function setMinDate() {
+        var today = new Date().toISOString().split('T')[0];
+        $('#startDate, #endDate').attr('min', today);
+    }
+
+   
+    setMinDate();
+
+    
+    if (!Modernizr.inputtypes.date) {
+       
+    }
 
     
     $('#inquiryForm').submit(function(e) {
@@ -509,7 +520,7 @@ window.onload = function() {
         $('#inquiryPopup').show();
     });
 
-   
+    
     $('.close-popup').on('click', function() {
         $('#inquiryPopup').hide();
     });
