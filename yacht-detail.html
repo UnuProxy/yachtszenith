@@ -147,63 +147,15 @@
     <script src="script.js"></script>
     <script>
       $(document).ready(function() {
-    var boatsData = [];
-
     
-    function fetchBoatsData() {
-        $.ajax({
-            url: 'yachtszenith/yachts.json',
-            method: 'GET',
-            dataType: 'json',
-            success: function(data) {
-                boatsData = data;
-            },
-            error: function(err) {
-                console.error('Error fetching boats data', err);
-            }
-        });
+    function getQueryParam(name) {
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        return results ? decodeURIComponent(results[1]) : null;
     }
 
-    function getBoatNameById(id) {
-        var boat = boatsData.find(boat => boat.id === parseInt(id, 10));
-        return boat ? boat.name : '';
-    }
-
-    function getQueryParam(param) {
-        var urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param);
-    }
-
-    $('#enquiry-form').submit(function(e) {
-        e.preventDefault();
-
-        var boatId = getQueryParam('boatId');
-        var boatName = getBoatNameById(boatId);
-        var formData = $(this).serialize() + '&boatName=' + encodeURIComponent(boatName);
-
-        $.ajax({
-            url: 'https://formspree.io/f/mgejjqgo', 
-            method: 'POST',
-            data: formData,
-            dataType: 'json',
-            success: function(data) {
-                alert('Thank you for your enquiry!');
-                $('#enquiry-form').trigger("reset");
-                $('#enquire-modal').hide(); 
-            },
-            error: function(err) {
-                alert('Something went wrong, please try again.');
-            }
-        });
-    });
-
-  
-    $('.enquire-now-btn').on('click', function(e) {
-        e.preventDefault();
-        var boatId = getQueryParam('boatId');
-        var boatName = getBoatNameById(boatId);
-        $('#boat-name').val(boatName); 
-        $('#enquire-modal').show();
+    $('#enquire-now-btn').on('click', function(e) {
+        e.preventDefault(); 
+        $('#enquire-modal').show(); 
     });
 
     $('.close').on('click', function() {
@@ -216,7 +168,35 @@
         }
     });
 
-    fetchBoatsData(); 
+    $('#enquiry-form').submit(function(e) {
+        e.preventDefault();
+
+       
+        var yachtName = getQueryParam('yachtName');
+
+        var formData = {
+            name: $('#name').val(),
+            email: $('#email').val(),
+            message: $('#message').val(),
+            yachtName: yachtName 
+            
+        };
+
+        $.ajax({
+            url: 'https://formspree.io/f/mgejjqgo',
+            method: 'POST',
+            data: formData,
+            dataType: 'json',
+            success: function(data) {
+                alert('Thank you for your enquiry!');
+                $('#enquiry-form').trigger("reset");
+                $('#enquire-modal').hide();
+            },
+            error: function(err) {
+                alert('Something went wrong, please try again.');
+            }
+        });
+    });
 });
 
       </script>
