@@ -84,9 +84,9 @@
          <a href="Yacht-charter"><p class="subtitle-left">Yacht Charter Ibiza</p></a>
          <a href="Yacht-routes-ibiza"><p class="subtitle-right">Explore Destinations</p></a>
         </div>
-      </div>
     </div>
-  </section>
+</section>
+
 
   <div id="yzCookieConsentContainer" class="yz-cookie-consent-container">
     <div class="yz-cookie-consent-content">
@@ -140,7 +140,7 @@
   <div class="container">
     <div class="column">
       <h2 class="animate slide-in-1">Premium Luxury Yacht</h2>
-        <p>Welcome to Yachts Zenith</strong> – the place to elevate your yachting experience.</p>
+        <p><strong>Welcome to Yachts Zenith</strong> – the place to elevate your yachting experience.</p>
     </div>
 
     <div class="column">
@@ -153,8 +153,8 @@
         <p>Our comprehensive, personalised luxury yacht services set us apart from the rest. At <strong>Yachts Zenith</strong>, we take pride in our work.</p>
         
         <div class="button-container">
-         <a href="Contact-us"> <button  class="outline-button">Contact Us</button></a>
-          <a href="about-us"><button class="outline-button">About Us</button></a>
+          <a href="Contact-us" class="outline-button">Contact</a>
+          <a href="about-us" class="outline-button">About</a>
       </div>
       
     </div>
@@ -235,7 +235,7 @@
 
   <div class="yacht yacht-slide-in">
     <div class="yacht-image">
-      <img src="Danzas/PershingNavigating(90)16.jpg" alt="Yacht Persing 90" loading="lazy">
+      <img src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/566dd7df-9556-4a22-c1d1-bb71a710d500/public" alt="Yacht Persing 90" loading="lazy">
     </div>
     <div class="yacht-details">
       <h2>Persing 90</h2>
@@ -479,6 +479,7 @@ window.onload = function() {
 
 <script>
   $(document).ready(function() {
+
    
     function setMinDate() {
         var today = new Date().toISOString().split('T')[0];
@@ -494,6 +495,11 @@ window.onload = function() {
     }
 
     
+    var today = new Date().toISOString().split('T')[0];
+    $('#startDate, #endDate').attr('min', today);
+
+
+    // Handle form submission
     $('#inquiryForm').submit(function(e) {
         e.preventDefault();
 
@@ -502,6 +508,9 @@ window.onload = function() {
             method: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
+            headers: {
+                'Accept': 'application/json', 
+            },
             success: function(data) {
                 alert('Thank you for your inquiry!');
                 $('#inquiryForm').trigger("reset");
@@ -513,19 +522,17 @@ window.onload = function() {
         });
     });
 
-    
     $('.inquiry-button').on('click', function() {
         var yachtName = $(this).data('yacht-name');
         $('#yachtNameInput').val(yachtName);
         $('#inquiryPopup').show();
     });
 
-    
+
     $('.close-popup').on('click', function() {
         $('#inquiryPopup').hide();
     });
 });
-
 
   </script>
 
@@ -558,9 +565,7 @@ window.onload = function() {
         <div><a href="about-us">About Us</a></div>
       </div>
 
-      <div>
-        <h1></h1>
-      </div>
+     
       
       <div class="social-media">
         <h4>Social Media</h4>

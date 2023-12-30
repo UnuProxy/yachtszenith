@@ -1121,7 +1121,7 @@ button:hover {
 
 .yacht-card {
   width: calc(33.3333% - 20px); 
-  height: 400px;
+  height: 470px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
@@ -1131,7 +1131,7 @@ button:hover {
 
 .yacht-card img {
   width: 100%; 
-  height: 60%; 
+  height: 65%; 
   object-fit: cover; 
   position: relative;
   z-index: 0;
@@ -1140,7 +1140,7 @@ button:hover {
 .yacht-info {
   position: relative;  
   z-index: 3;  
-  padding: 15px;
+  padding: 20px;
   text-align: left;
   color: var(--LOGO-COLOR);
   background-color: transparent;
@@ -2433,6 +2433,16 @@ margin-top: 10px;
   margin-top: 20px;
 }
 
+
+/* LOGO STYLE */
+.footer-logo img {
+  width: 150px; 
+  height: auto; 
+}
+
+
+
+
 /* PLAN YOUR VOYAGE FORM */
 .voyageFormPopup {
   width: 90%;
@@ -2572,6 +2582,9 @@ margin-top: 10px;
   overflow: hidden;
   transition: color 0.3s ease-in-out;
   color: var(--LOGO-COLOR);
+
+  padding: 10px;
+
 }
 
 .outline-button::before {
@@ -3169,26 +3182,42 @@ button.next {
   align-items: center;
 }
 
- a {
+a {
   margin: 0;
   color: white;
   text-decoration: none;
 }
 
-.contact-links  {
-  background-color: transparent;
-}
-.broker1  {
-  background-color: transparent;
-}
-.broker2  {
+.contact-links {
   background-color: transparent;
 }
 
-.contact-links a{
+.broker1 {
   background-color: transparent;
 }
-.contact-links p{
+
+.broker2 {
+  background-color: transparent;
+}
+
+.contact-links a {
+  background-color: transparent;
+  color: #fff; 
+  font-weight: bold; 
+  text-decoration: none; 
+  display: flex; 
+  align-items: center; 
+ 
+}
+
+.contact-links a:hover {
+  color: var(--LOGO-COLOR); 
+  transition: color 0.3s ease; 
+}
+
+
+
+.contact-links p {
   background-color: transparent;
 }
 
@@ -3209,28 +3238,24 @@ button.next {
     white-space: nowrap; 
   }
 
-  .branding h2{
-    font-size: 16px;
+  .branding h2, .contact h2 {
+    font-size: 18px; 
     font-weight: lighter;
+    line-height: 1.4; 
   }
 
   .half.contact h2 {
     margin-bottom: 150px;
   }
+
   .contact-links {
     display: flex;
-    gap: 80px; 
+    gap: 40px; 
     flex-direction: row;
     transform: translateY(-120px);
     font-weight: bolder;
   }
-   .contact-links p{
-    background-color: transparent;
-  }
-
 }
-
-
 
 @media (min-width: 768px) {
   .wrapper {
@@ -3245,9 +3270,7 @@ button.next {
   .branding {
     align-items: flex-start;
   }
- .test{
-font-size: 16px;
- }
+
   .contact {
     align-items: flex-start;
   }
@@ -3256,7 +3279,6 @@ font-size: 16px;
     flex-direction: row;
     justify-content: flex-end;
   }
-  
 }
 
 
@@ -3572,38 +3594,6 @@ section {
 }
 
   /* COOKIES CONSENT BANNER  */
-  .cookie-consent-container {
-    display: none; 
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: white;
-    padding: 15px 10px;
-    text-align: center;
-    z-index: 1000;
-}
-
-.cookie-consent-content p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0 0 10px;
-}
-
-.cookie-consent-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;;
-}
-
-.cookie-btn-container {
-    display: flex;
-    justify-content: center;
-}
-
-
-/* COOKIES SETTINGS MODAL */
 .yz-cookie-consent-container {
   display: none; 
   position: fixed;
@@ -3611,10 +3601,12 @@ section {
   left: 0;
   width: 100%;
   color: white;
-  padding: 15px 10px;
+  padding: 10px 5px;
   text-align: center;
   z-index: 10001;
 }
+
+
 
 .yz-cookie-consent-content p {
   font-size: 14px;
@@ -3625,19 +3617,21 @@ section {
 .yz-cookie-btn-container {
   display: flex;
   justify-content: center;
+  font-size: 14px;
 }
 
 .yz-cookie-btn {
   color: white;
   border: none;
-  padding: 8px 15px;
+  padding: 5px 10px; /* Adjust button padding to reduce height */
+  font-size: 14px;
   margin: 5px; 
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-
+/* COOKIES SETTINGS MODAL */
 .cookie-settings-modal {
   display: none;
   position: fixed;
@@ -3662,7 +3656,6 @@ section {
   bottom: -100%;
   left: 0;
   width: 100%;
-  background-color: rgba(11, 51, 85, 0.9);
   color: white;
   padding: 15px 10px;
   text-align: center;
