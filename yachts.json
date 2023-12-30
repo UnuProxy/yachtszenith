@@ -354,7 +354,9 @@
     "specs": "16,25 m, 12 guests, 2 crew",
     "price": "€3,499 per day",
     "description": "Yachts Zenith presents the VanDutch 55, a sophisticated yacht for those looking to explore the beauty of Ibiza. This 55-foot yacht is perfect for cruising around the stunning Ibiza coastlines, offering space for up to 12 guests. Its powerful 900HP engines ensure a smooth sailing experience, combining speed with comfort. The yacht features a sleek design with a spacious cockpit and sunbathing area, ideal for relaxing under the Mediterranean sun. With two cabins, the VanDutch 55 is suitable for day trips or luxurious weekend getaways. This yacht is an excellent choice for anyone seeking a blend of luxury and performance in Ibiza's waters.",
-    "interiorImages": ["https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/566dd7df-9556-4a22-c1d1-bb71a710d500/public", "VanDutch55/PAPERA16.jpg","VanDutch55/PAPERA19.jpg","VanDutch55/PAPERA20.jpg","VanDutch55/PAPERA21.jpg","VanDutch55/PAPERA22.jpg","VanDutch55/PAPERA23.jpg","VanDutch55/PAPERA66.jpg"],
+
+    "interiorImages": ["VanDutch55/PAPERA16.jpg","VanDutch55/PAPERA19.jpg","VanDutch55/PAPERA20.jpg","VanDutch55/PAPERA21.jpg","VanDutch55/PAPERA22.jpg","VanDutch55/PAPERA23.jpg","VanDutch55/PAPERA66.jpg"],
+
     "detailedSpecs": {
       "Length": "16,25 m",
       "Guests": "12",
@@ -373,7 +375,6 @@
     }
   }
 ]
-
 
 
   

@@ -484,10 +484,11 @@ window.onload = function() {
 
 <script>
   $(document).ready(function() {
+    
     var today = new Date().toISOString().split('T')[0];
     $('#startDate, #endDate').attr('min', today);
 
-    
+    // Handle form submission
     $('#inquiryForm').submit(function(e) {
         e.preventDefault();
 
@@ -496,6 +497,9 @@ window.onload = function() {
             method: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
+            headers: {
+                'Accept': 'application/json', 
+            },
             success: function(data) {
                 alert('Thank you for your inquiry!');
                 $('#inquiryForm').trigger("reset");
@@ -507,19 +511,16 @@ window.onload = function() {
         });
     });
 
-    
     $('.inquiry-button').on('click', function() {
         var yachtName = $(this).data('yacht-name');
         $('#yachtNameInput').val(yachtName);
         $('#inquiryPopup').show();
     });
 
-   
     $('.close-popup').on('click', function() {
         $('#inquiryPopup').hide();
     });
 });
-
 
   </script>
 
