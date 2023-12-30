@@ -171,7 +171,7 @@
     $('#enquiry-form').submit(function(e) {
         e.preventDefault();
 
-       
+        
         var yachtName = getQueryParam('yachtName');
 
         var formData = {
@@ -179,7 +179,6 @@
             email: $('#email').val(),
             message: $('#message').val(),
             yachtName: yachtName 
-            
         };
 
         $.ajax({
@@ -198,6 +197,7 @@
         });
     });
 });
+
 
       </script>
 
