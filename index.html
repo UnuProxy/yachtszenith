@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://www.yachtszenith.com/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.yachtszenith.com/LogoFooterBlue.png">
-    <link rel="icon" href="FooterBlue.png" type="image/x-icon">
+    <link rel="icon" href="LogoFooterBlue.png" type="image/x-icon">
     <link rel="stylesheet" href="azure.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -235,7 +235,7 @@
 
   <div class="yacht yacht-slide-in">
     <div class="yacht-image">
-      <img src="Danzas/PershingNavigating(90)16.jpg" alt="Yacht Persing 90" loading="lazy">
+      <img src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/566dd7df-9556-4a22-c1d1-bb71a710d500/public" alt="Yacht Persing 90" loading="lazy">
     </div>
     <div class="yacht-details">
       <h2>Persing 90</h2>
@@ -479,11 +479,10 @@ window.onload = function() {
 
 <script>
   $(document).ready(function() {
-    // Set the minimum date for date pickers to today
     var today = new Date().toISOString().split('T')[0];
     $('#startDate, #endDate').attr('min', today);
 
-    // Form submission with AJAX
+    
     $('#inquiryForm').submit(function(e) {
         e.preventDefault();
 
@@ -503,14 +502,14 @@ window.onload = function() {
         });
     });
 
-    // Open the popup when an inquiry button is clicked
+    
     $('.inquiry-button').on('click', function() {
         var yachtName = $(this).data('yacht-name');
         $('#yachtNameInput').val(yachtName);
         $('#inquiryPopup').show();
     });
 
-    // Close the popup
+   
     $('.close-popup').on('click', function() {
         $('#inquiryPopup').hide();
     });
