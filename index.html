@@ -479,50 +479,62 @@ window.onload = function() {
 
 <script>
   $(document).ready(function() {
-    
-    function setMinDate() {
-        var today = new Date().toISOString().split('T')[0];
-        $('#startDate, #endDate').attr('min', today);
+
+// Function to set the minimum date for start and end dates
+function setMinDate() {
+    var today = new Date().toISOString().split('T')[0];
+    $('#startDate, #endDate').attr('min', today);
+}
+
+setMinDate();
+
+// Function to validate email format
+function isValidEmail(email) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// Form submission handling with enhanced validation
+$('#inquiryForm').submit(function(e) {
+    e.preventDefault();
+
+    var email = $('#email').val();
+    if (!isValidEmail(email)) {
+        alert('Please enter a valid email address.');
+        return;
     }
 
-    
-    setMinDate();
-
-    
-    $('#inquiryForm').submit(function(e) {
-        e.preventDefault();
-
-        $.ajax({
-            url: $(this).attr('action'),
-            method: 'POST',
-            data: $(this).serialize(),
-            dataType: 'json',
-            headers: {
-                'Accept': 'application/json', 
-            },
-            success: function(data) {
-                alert('Thank you for your inquiry!');
-                $('#inquiryForm').trigger("reset");
-                $('#inquiryPopup').hide(); 
-            },
-            error: function(err) {
-                alert('Something went wrong, please try again.');
-            }
-        });
-    });
-
-    // Event handler for opening the inquiry popup
-    $('.inquiry-button').on('click', function() {
-        var yachtName = $(this).data('yacht-name');
-        $('#yachtNameInput').val(yachtName);
-        $('#inquiryPopup').show();
-    });
-
-    // Event handler for closing the popup
-    $('.close-popup').on('click', function() {
-        $('#inquiryPopup').hide();
+    $.ajax({
+        url: $(this).attr('action'),
+        method: 'POST',
+        data: $(this).serialize(),
+        dataType: 'json',
+        headers: {
+            'Accept': 'application/json', 
+        },
+        success: function(data) {
+            alert('Thank you for your inquiry!');
+            $('#inquiryForm').trigger("reset");
+            $('#inquiryPopup').hide(); 
+        },
+        error: function(err) {
+            alert('Something went wrong, please try again.');
+        }
     });
 });
+
+// Event handlers for opening and closing the inquiry popup
+$('.inquiry-button').on('click', function() {
+    var yachtName = $(this).data('yacht-name');
+    $('#yachtNameInput').val(yachtName);
+    $('#inquiryPopup').show();
+});
+
+$('.close-popup').on('click', function() {
+    $('#inquiryPopup').hide();
+});
+});
+
 
 
   </script>
