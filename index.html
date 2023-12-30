@@ -479,27 +479,16 @@ window.onload = function() {
 
 <script>
   $(document).ready(function() {
-
-   
+    
     function setMinDate() {
         var today = new Date().toISOString().split('T')[0];
         $('#startDate, #endDate').attr('min', today);
     }
 
-   
+    
     setMinDate();
 
     
-    if (!Modernizr.inputtypes.date) {
-       
-    }
-
-    
-    var today = new Date().toISOString().split('T')[0];
-    $('#startDate, #endDate').attr('min', today);
-
-
-    // Handle form submission
     $('#inquiryForm').submit(function(e) {
         e.preventDefault();
 
@@ -522,17 +511,19 @@ window.onload = function() {
         });
     });
 
+    // Event handler for opening the inquiry popup
     $('.inquiry-button').on('click', function() {
         var yachtName = $(this).data('yacht-name');
         $('#yachtNameInput').val(yachtName);
         $('#inquiryPopup').show();
     });
 
-
+    // Event handler for closing the popup
     $('.close-popup').on('click', function() {
         $('#inquiryPopup').hide();
     });
 });
+
 
   </script>
 
