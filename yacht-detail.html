@@ -148,7 +148,6 @@
     <script>
       $(document).ready(function() {
     
-    
     function getQueryParam(name) {
         var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
         return results ? decodeURIComponent(results[1]) : null;
@@ -172,15 +171,15 @@
     $('#enquiry-form').submit(function(e) {
         e.preventDefault();
 
-        
+       
         var yachtName = getQueryParam('yachtName');
 
         var formData = {
             name: $('#name').val(),
             email: $('#email').val(),
-            phone: $('#phone').val(), 
-            message: $('#message').val(), 
+            message: $('#message').val(),
             yachtName: yachtName 
+            
         };
 
         $.ajax({
@@ -199,7 +198,6 @@
         });
     });
 });
-
 
       </script>
 
