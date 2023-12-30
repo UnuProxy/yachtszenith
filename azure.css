@@ -1119,22 +1119,54 @@ button:hover {
   padding: 10px; 
 }
 
-
 .yacht-card {
   width: calc(33.3333% - 20px); 
+  height: 470px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
   transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+  position: relative;
 }
-
 
 .yacht-card img {
   width: 100%; 
-  height: auto; 
+  height: 65%; 
   object-fit: cover; 
+  position: relative;
+  z-index: 0;
 }
 
+.yacht-info {
+  position: relative;  
+  z-index: 3;  
+  padding: 20px;
+  text-align: left;
+  color: var(--LOGO-COLOR);
+  background-color: transparent;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  overflow: hidden; 
+}
+
+.yacht-card:hover {
+  transform: translateY(-8px);  
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); 
+}
+
+/* Pseudo-element for gradient background */
+.yacht-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70%;  
+  background: linear-gradient(to top, rgba(5, 25, 42, 0.8), rgba(11, 51, 85, 0));
+  z-index: 1;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .yacht-card {
@@ -1147,63 +1179,15 @@ button:hover {
   }
 }
 
-
-
-.yacht-card:hover {
-  transform: translateY(-8px);  
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); 
+@media (max-width: 768px) {
+  .yacht-card {
+    width: 100%;
+  }
 }
 
-
-.yacht-card img {
-  max-width: 100%;
-  height: auto;
-  flex-grow: 1;
-}
-
-
-.yacht-card {
-  position: relative;
-}
-
-/* Pseudo-element for gradient background */
-.yacht-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 80%;  
-  background: linear-gradient(to top, rgba(5, 25, 42, 0.8), rgba(11, 51, 85, 0));
-  z-index: 1;
-}
-
-
-.yacht-card img {
-  position: relative;
-  z-index: 0;
-}
-
-
-
-.yacht-info {
-  position: relative;  
-  z-index: 3;  
-  padding: 20px;
-  text-align: left;
-  color: var(--LOGO-COLOR);
-  background-color: transparent;
-}
-
-.yacht-card :nth-of-type(1) {
-  background: transparent; 
-}
-.yacht-card :nth-of-type(2) {
-  background: transparent; 
-}
-.yacht-card :nth-of-type(3) {
-  background: transparent; 
-}
+.yacht-card :nth-of-type(1),
+.yacht-card :nth-of-type(2),
+.yacht-card :nth-of-type(3),
 .yacht-card :nth-of-type(4) {
   background: transparent; 
 }
@@ -1213,22 +1197,12 @@ button:hover {
   margin-bottom: 8px;
   color: var(--LOGO-COLOR);  
   background: transparent;
-
 }
-
 
 .specs-row {
   display: flex;
   flex-direction: row;
   gap: 10px;
-}
-
-
-
-@media (max-width: 768px) {
-  .yacht-card {
-    width: 100%;
-  }
 }
 
 .main-image {
@@ -1238,14 +1212,12 @@ button:hover {
 }
 
 @media only screen and (max-width: 395px) { 
-  
-.main-image {
-  height: auto;
-  width: 100%;
+  .main-image {
+    height: auto;
+    width: 100%;
+  }
 }
 
-
-}
 
      
 .carousel-title {
@@ -2461,6 +2433,16 @@ margin-top: 10px;
   margin-top: 20px;
 }
 
+
+/* LOGO STYLE */
+.footer-logo img {
+  width: 150px; 
+  height: auto; 
+}
+
+
+
+
 /* PLAN YOUR VOYAGE FORM */
 .voyageFormPopup {
   width: 90%;
@@ -2600,7 +2582,9 @@ margin-top: 10px;
   overflow: hidden;
   transition: color 0.3s ease-in-out;
   color: var(--LOGO-COLOR);
+
   padding: 10px;
+
 }
 
 .outline-button::before {
@@ -3198,26 +3182,42 @@ button.next {
   align-items: center;
 }
 
- a {
+a {
   margin: 0;
   color: white;
   text-decoration: none;
 }
 
-.contact-links  {
-  background-color: transparent;
-}
-.broker1  {
-  background-color: transparent;
-}
-.broker2  {
+.contact-links {
   background-color: transparent;
 }
 
-.contact-links a{
+.broker1 {
   background-color: transparent;
 }
-.contact-links p{
+
+.broker2 {
+  background-color: transparent;
+}
+
+.contact-links a {
+  background-color: transparent;
+  color: #fff; 
+  font-weight: bold; 
+  text-decoration: none; 
+  display: flex; 
+  align-items: center; 
+ 
+}
+
+.contact-links a:hover {
+  color: var(--LOGO-COLOR); 
+  transition: color 0.3s ease; 
+}
+
+
+
+.contact-links p {
   background-color: transparent;
 }
 
@@ -3238,28 +3238,24 @@ button.next {
     white-space: nowrap; 
   }
 
-  .branding h2{
-    font-size: 16px;
+  .branding h2, .contact h2 {
+    font-size: 18px; 
     font-weight: lighter;
+    line-height: 1.4; 
   }
 
   .half.contact h2 {
     margin-bottom: 150px;
   }
+
   .contact-links {
     display: flex;
-    gap: 80px; 
+    gap: 40px; 
     flex-direction: row;
     transform: translateY(-120px);
     font-weight: bolder;
   }
-   .contact-links p{
-    background-color: transparent;
-  }
-
 }
-
-
 
 @media (min-width: 768px) {
   .wrapper {
@@ -3274,9 +3270,7 @@ button.next {
   .branding {
     align-items: flex-start;
   }
- .test{
-font-size: 16px;
- }
+
   .contact {
     align-items: flex-start;
   }
@@ -3285,7 +3279,6 @@ font-size: 16px;
     flex-direction: row;
     justify-content: flex-end;
   }
-  
 }
 
 
@@ -3601,38 +3594,6 @@ section {
 }
 
   /* COOKIES CONSENT BANNER  */
-  .cookie-consent-container {
-    display: none; 
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: white;
-    padding: 15px 10px;
-    text-align: center;
-    z-index: 1000;
-}
-
-.cookie-consent-content p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0 0 10px;
-}
-
-.cookie-consent-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;;
-}
-
-.cookie-btn-container {
-    display: flex;
-    justify-content: center;
-}
-
-
-/* COOKIES SETTINGS MODAL */
 .yz-cookie-consent-container {
   display: none; 
   position: fixed;
@@ -3640,10 +3601,12 @@ section {
   left: 0;
   width: 100%;
   color: white;
-  padding: 15px 10px;
+  padding: 10px 5px;
   text-align: center;
   z-index: 10001;
 }
+
+
 
 .yz-cookie-consent-content p {
   font-size: 14px;
@@ -3654,19 +3617,21 @@ section {
 .yz-cookie-btn-container {
   display: flex;
   justify-content: center;
+  font-size: 14px;
 }
 
 .yz-cookie-btn {
   color: white;
   border: none;
-  padding: 8px 15px;
+  padding: 5px 10px; /* Adjust button padding to reduce height */
+  font-size: 14px;
   margin: 5px; 
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-
+/* COOKIES SETTINGS MODAL */
 .cookie-settings-modal {
   display: none;
   position: fixed;
@@ -3691,7 +3656,6 @@ section {
   bottom: -100%;
   left: 0;
   width: 100%;
-  background-color: rgba(11, 51, 85, 0.9);
   color: white;
   padding: 15px 10px;
   text-align: center;
