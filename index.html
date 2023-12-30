@@ -20,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-  
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
     <script type="application/ld+json">
       {
           "@context": "http://schema.org",
@@ -479,16 +479,25 @@ window.onload = function() {
 
 <script>
   $(document).ready(function() {
-    
+    // Check if the device is iOS
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+    // Function to set the minimum date for non-iOS devices
     function setMinDate() {
         var today = new Date().toISOString().split('T')[0];
         $('#startDate, #endDate').attr('min', today);
     }
 
-    
-    setMinDate();
+    // Use Pikaday for iOS devices, setMinDate for others
+    if (isIOS) {
+        // Example using Pikaday (make sure to include Pikaday library)
+        new Pikaday({ field: document.getElementById('startDate'), minDate: new Date() });
+        new Pikaday({ field: document.getElementById('endDate'), minDate: new Date() });
+    } else {
+        setMinDate();
+    }
 
-    
+    // Handle form submission
     $('#inquiryForm').submit(function(e) {
         e.preventDefault();
 
@@ -498,7 +507,7 @@ window.onload = function() {
             data: $(this).serialize(),
             dataType: 'json',
             headers: {
-                'Accept': 'application/json', 
+                'Accept': 'application/json',
             },
             success: function(data) {
                 alert('Thank you for your inquiry!');
@@ -511,19 +520,17 @@ window.onload = function() {
         });
     });
 
-    // Event handler for opening the inquiry popup
+    // Event handlers for opening and closing the inquiry popup
     $('.inquiry-button').on('click', function() {
         var yachtName = $(this).data('yacht-name');
         $('#yachtNameInput').val(yachtName);
         $('#inquiryPopup').show();
     });
 
-    // Event handler for closing the popup
     $('.close-popup').on('click', function() {
         $('#inquiryPopup').hide();
     });
 });
-
 
   </script>
 
