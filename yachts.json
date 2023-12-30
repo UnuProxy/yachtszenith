@@ -175,7 +175,7 @@
     "description": "The Pershing 72 yacht, a symbol of luxury and performance, offers an exclusive charter experience in the beautiful waters of Ibiza. This 22.26-meter vessel boasts a striking design with a silver and black color scheme, and it's equipped with powerful twin MTU engines that enable a top speed of 45 knots. It comfortably accommodates up to 6 guests in 3 elegantly appointed cabins, including a spacious master suite. The yacht features a large sunbathing area, a well-equipped cockpit for dining and socialising, and a hydraulic swim platform for easy water access. With its combination of speed, style, and comfort, the Pershing 72 is perfect for guests seeking a thrilling yet luxurious boating adventure in Ibiza.",
     "interiorImages": ["Legendary/72Pershing6.jpg","Legendary/72Pershing9.jpg","Legendary/72Pershing4.jpg","Legendary/72Pershing11.jpg","Legendary/72Pershing7.jpg","Legendary/72Pershing2.jpg"],
     "detailedSpecs": {
-      "Length": "21m",
+      "Length": "21 m",
       "Guests": "12",
       "Crew": "3",
       "Cruising Area": "Balearics",
@@ -218,8 +218,160 @@
        "July / August": "€4,900 per day / €5,300 per day"
     
     }
+  },
+  {
+    "id": 9,
+    "name": "Sunseeker 84",
+    "image": "Ariyas/84Sunseeker1.jpg",
+    "specs": "25,60 m, 12 guests, 3 crew",
+    "price": "€7,650 per day",
+    "description": "Discover Elegance at Sea: Sunseeker Predator 84, a yacht that redefines luxury and versatility. Ideal for both tranquil afternoons and lively gatherings, it combines high-speed cruising with supreme comfort. Its spacious outdoor decks and sportfly bridge are perfect for sunbathing and socialising, offering stunning sea views.The interior of is crafted with a refined palette of wood and beige, creating a serene ambience. It comfortably accommodates eight guests overnight in four well-appointed cabins, each with an en-suite bathroom.Equipped with modern amenities like stabilisers, a hydraulic bathing platform, BOSE sound system, Wi-Fi, and a variety of water toys.",
+    "interiorImages": ["Ariyas/84Sunseeker3.jpg","Ariyas/84Sunseeker6.jpg","Ariyas/84Sunseeker7.jpg","Ariyas/84Sunseeker8.jpg","Ariyas/84Sunseeker13.jpg","Ariyas/84Sunseeker14.jpg","Ariyas/84Sunseeker15.jpg","Ariyas/84Sunseeker16.jpg","Ariyas/84Sunseeker17.jpg"],
+    "detailedSpecs": {
+      "Length": "25,60 m",
+      "Guests": "12",
+      "Crew": "3",
+      "Cruising Area": "Balearics",
+      "Price": "7,650 per day",
+      "Cruising Speed": "25 knots",
+      "Max Speed": "34 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x MTU",
+      "HP": "2 x 2434"
+     },
+     "seasonalPrices": {
+       "May / October": "€7,650 per day",
+       "June / September": "€7,650 per day",
+       "July / August": "€8,750 per day"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Leopard 27",
+    "image": "89Leopard/89Leopard6.jpg",
+    "specs": "27 m, 12 guests, 3 crew",
+    "price": "€7,000 per day",
+    "description": "Board the Leopard 27, a symbol of luxury ideal for day or week charters. Boasting an open layout and spacious outdoor areas, she offers an opulent ambience. Built in 2001 and regularly refitted, she combines timeless elegance with modern amenities.She accommodates up to 6 guests in 3 cabins, plus 2 in a convertible cinema room. Equipped with a jet tender, she's perfect for water sports like wakeboarding. A skilled crew of three ensures a bespoke and exquisite charter experience.",
+
+    "interiorImages": ["89Leopard/89Leopard1.jpg", "89Leopard/89Leopard3.jpg", "89Leopard/89Leopard4.jpg", "89Leopard/89Leopard6.jpg", "89Leopard/89Leopard8.jpg", "89Leopard/89Leopard11.jpg", "89Leopard/89Leopard16.jpg","89Leopard/89LeopardInterior6.jpg", "89Leopard/89LeopardInterior7.jpg", "89Leopard/89LeopardInterior8.jpg", "89Leopard/89LeopardInterior9.jpg", "89Leopard/89LeopardInterior10.jpg", "89Leopard/89LeopardInterior11.jpg", "89Leopard/89LeopardInterior12.jpg", "89Leopard/89LeopardInterior13.jpg", "89Leopard/89LeopardInterior14.jpg", "89Leopard/89LeopardInterior15.jpg", "89Leopard/89LeopardIBedrooms1.jpg", "89Leopard/89LeopardIBedrooms10.jpg","89Leopard/89LeopardIBedrooms12.jpg"],
+
+    "detailedSpecs": {
+      "Length": "27 m",
+      "Guests": "12",
+      "Crew": "3",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "7,000 per day",
+      "Cruising Speed": "24 knots",
+      "Max Speed": "32 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x MTU 16v",
+      "HP": "2 x 2000"
+     },
+     "seasonalPrices": {
+       "May / October": "€7,000 per day",
+       "June / September": "€8,000 per day",
+       "July / August": "€9,000 per day"
+    }
+  },
+  {
+    "id": 11,
+    "name": "58 Vanquish",
+    "image": "MiParaiso/58Vanquish10.jpg",
+    "specs": "17,95 m, 12 guests, 2 crew",
+    "price": "€4,000 per day",
+    "description": "Experience elegance at sea with the VQ58. Crafted by Vanquish, known for bold designs, this yacht merges sleek style with supreme comfort. Relax on spacious decks or in the cool, air-conditioned cabin. This Vanquish 58 is more than a yacht – it's a luxurious escape on the waves, ready to elevate your sea journey.",
+    "interiorImages": ["MiParaiso/58Vanquish5.jpg","MiParaiso/58Vanquish6.jpg","MiParaiso/58Vanquish7.jpg","MiParaiso/58Vanquish8.jpg","MiParaiso/58Vanquish9.jpg","MiParaiso/58Vanquish4.jpg","MiParaiso/58Vanquish2.jpg", "MiParaiso/58Vanquish3.jpg","MiParaiso/58Vanquish1.jpg"],
+    "detailedSpecs": {
+      "Length": "17,95 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "4,000 per day",
+      "Max Speed": "38 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 X VOLVO PENTA IPS950"
+     },
+     "seasonalPrices": {
+       "May / October": "€4,000 per day / €3,650 per day",
+       "June / September": "€4,550 per day / €4,400 per day ",
+       "July / August": "€4,950 per day / €5,300 per day"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Pershing 5X",
+    "image": "Pershing5X/Pershing(5X)2.jpg",
+    "specs": "16,51 m, 10 guests, 2 crew",
+    "price": "€3,600 per day",
+    "description": "Discover Pershing 5X at Yachts Zenith. With its spacious deck, adorned with plush cushions at the bow and a shaded seating area, it's crafted for sublime comfort and elegance. Ideal for charter, this yacht promises an impeccable day on the water, blending luxury with a touch of sophistication. The Pershing 5X is perfect for those seeking a refined, memorable experience at sea.",
+    "interiorImages": ["Pershing5X/Pershing(5X)1.jpg", "Pershing5X/Pershing(5X)3.jpg","Pershing5X/Pershing(5X)4.jpg","Pershing5X/Pershing(5X)5.jpg","Pershing5X/Pershing(5X)7.jpg","Pershing5X/Pershing(5X)8.jpg"],
+    "detailedSpecs": {
+      "Length": "16,51 m",
+      "Guests": "10",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "3,600 per day",
+      "Max Speed": "38 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 X VOLVO D11 IPS 950"
+     },
+     "seasonalPrices": {
+       "May / October": "€3,600 per day / €3,250 per day",
+       "June / September": "€4,000 per day / €3,900 per day" ,
+       "July / August": "€4,400 per day / €4,750 per day"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Pardo 50",
+    "image": "Pardo50/50Pardo27.jpg",
+    "specs": "16,25 m, 12 guests, 1 crew",
+    "price": "€2,850 per day",
+    "description": "Yachts Zenith's Pardo 50 is a testament to luxury yachting in Ibiza. This 16-meter marvel accommodates up to 12 guests, offering a spacious deck with a lavish sundeck and a serene solarium at the aft. Inside, elegance abounds with two stylish cabins and two full bathrooms, complemented by a fully-equipped kitchen and modern comforts. Perfect for stylish Mediterranean adventures, its sleek design and advanced technology make it ideal for exploring the stunning coasts of Ibiza and Formentera.",
+    "interiorImages": ["Pardo50/50Pardo4.jpg", "Pardo50/50Pardo28.jpg","Pardo50/50Pardo23.jpg","Pardo50/50Pardo12.jpg","Pardo50/50Pardo10.jpg","Pardo50/50Pardo9.jpg","Pardo50/50Pardo8.jpg","Pardo50/50Pardo7.jpg", "Pardo50/50Pardo15.jpg","Pardo50/50Pardo14.jpg","Pardo50/50Pardo13.jpg"],
+    "detailedSpecs": {
+      "Length": "16,25 m",
+      "Guests": "12",
+      "Crew": "1",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "2,850 per day",
+      "Cruising Speed": "35 knots",
+      "Max Speed": "52 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x IPS 800",
+      "HP": "2 x 1.200"
+     },
+     "seasonalPrices": {
+       "May / October": "€2,850 per day / €2,750 per day",
+       "June / September": "€3,050 per day /€2,850 per day",
+       "July / August": "€3,450 per day / €3,650 per day"
+    }
+  },
+  {
+    "id": 14,
+    "name": "VanDutch 55",
+    "image": "VanDutch55/PAPERA19.jpg",
+    "specs": "16,25 m, 12 guests, 2 crew",
+    "price": "€3,499 per day",
+    "description": "Yachts Zenith presents the VanDutch 55, a sophisticated yacht for those looking to explore the beauty of Ibiza. This 55-foot yacht is perfect for cruising around the stunning Ibiza coastlines, offering space for up to 12 guests. Its powerful 900HP engines ensure a smooth sailing experience, combining speed with comfort. The yacht features a sleek design with a spacious cockpit and sunbathing area, ideal for relaxing under the Mediterranean sun. With two cabins, the VanDutch 55 is suitable for day trips or luxurious weekend getaways. This yacht is an excellent choice for anyone seeking a blend of luxury and performance in Ibiza's waters.",
+    "interiorImages": ["VanDutch55/PAPERA16.jpg","VanDutch55/PAPERA19.jpg","VanDutch55/PAPERA20.jpg","VanDutch55/PAPERA21.jpg","VanDutch55/PAPERA22.jpg","VanDutch55/PAPERA23.jpg","VanDutch55/PAPERA66.jpg"],
+    "detailedSpecs": {
+      "Length": "16,25 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "2,850 per day",
+      "Cruising Speed": "35 knots",
+      "Max Speed": "52 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x IPS 800"
+     },
+     "seasonalPrices": {
+       "May / October": "€2,850 per day / €2,750 per day",
+       "June / September": "€3,050 per day /€2,850 per day",
+       "July / August": "€3,450 per day / €3,650 per day"
+    }
   }
 ]
-
 
   
