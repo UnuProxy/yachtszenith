@@ -148,6 +148,7 @@
     <script>
       $(document).ready(function() {
     
+    // Function to extract query parameters from the URL
     function getQueryParam(name) {
         var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
         return results ? decodeURIComponent(results[1]) : null;
@@ -171,14 +172,15 @@
     $('#enquiry-form').submit(function(e) {
         e.preventDefault();
 
-        
+        // Extract yacht name from URL parameter
         var yachtName = getQueryParam('yachtName');
 
         var formData = {
             name: $('#name').val(),
             email: $('#email').val(),
-            message: $('#message').val(),
-            yachtName: yachtName 
+            phone: $('#phone').val(), // Include phone number in form data
+            message: $('#message').val(), // Include message in form data
+            yachtName: yachtName // Include yacht name in form data
         };
 
         $.ajax({
@@ -197,6 +199,7 @@
         });
     });
 });
+
 
 
       </script>
