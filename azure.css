@@ -2281,11 +2281,13 @@ form button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
+  width: 90%; /* Adjusted for smaller screens */
+  max-width: 500px; /* Maximum width for larger screens */
   padding: 20px;
   border-radius: 8px;
   color: white; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: #000; /* Add a background color for readability */
 }
 
 .popup-content label, .flex-container label {
@@ -2305,7 +2307,6 @@ form button {
   color: white; 
 }
 
-
 .flex-container {
   display: flex;
   align-items: center;
@@ -2313,16 +2314,24 @@ form button {
   background-color: transparent;
 }
 
-.popup button{
+.popup button {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 30%;
+  padding: 10px; /* Added padding for button */
+  font-size: 16px; /* Increased font size for better readability */
+  border-radius: 4px; /* Added border radius for aesthetics */
+  cursor: pointer; /* Added cursor pointer */
+  border: none; /* Removed border */
+  background-color: var(--BUTTON-COLOR); /* Adjust button color */
+  color: white;
 }
 
-
-
+.popup button:hover {
+  background-color: var(--BUTTON-HOVER-COLOR); /* Button hover effect */
+}
 
 .close-popup {
   position: absolute;
@@ -2344,8 +2353,32 @@ form button {
   color: var(--LOGO-COLOR);
 }
 
+@media screen and (max-width: 600px) {
+  .popup-content {
+    width: 85%;
+    padding: 15px;
+  }
 
- @media screen and (max-width: 1024px) {
+  .popup-content input[type="text"],
+  .popup-content input[type="number"],
+  .popup-content input[type="date"],
+  .popup-content input[type="email"] {
+    padding: 8px;
+    font-size: 14px; /* Adjust font size for readability on small screens */
+  }
+
+  .popup button {
+    width: 100%; /* Full width for easier touch access */
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .close-popup {
+    font-size: 24px; /* Larger close button for easier touch access */
+  }
+}
+
+@media screen and (max-width: 1024px) {
   .yacht {
     flex-basis: 100%;  
     margin: 10px 0;  
@@ -2353,7 +2386,10 @@ form button {
   .yacht-listings {
     padding: 0 10px; 
   }
-} 
+}
+
+/* Add any additional CSS rules or media queries as needed */
+
 
 /* GENERAL BUTTON OVERRIDE FOR NO BORDER RADIUS */
 button {
