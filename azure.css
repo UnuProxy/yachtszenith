@@ -2281,13 +2281,12 @@ form button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%; /* Adjusted for smaller screens */
-  max-width: 500px; /* Maximum width for larger screens */
+  width: 90%; 
+  max-width: 500px; 
   padding: 20px;
   border-radius: 8px;
   color: white; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  background-color: #000; /* Add a background color for readability */
 }
 
 .popup-content label, .flex-container label {
@@ -2320,17 +2319,16 @@ form button {
   align-items: center;
   text-align: center;
   width: 30%;
-  padding: 10px; /* Added padding for button */
-  font-size: 16px; /* Increased font size for better readability */
-  border-radius: 4px; /* Added border radius for aesthetics */
-  cursor: pointer; /* Added cursor pointer */
-  border: none; /* Removed border */
-  background-color: var(--BUTTON-COLOR); /* Adjust button color */
+  padding: 10px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border: none; 
+  background-color: var(--BUTTON-COLOR); 
   color: white;
 }
 
 .popup button:hover {
-  background-color: var(--BUTTON-HOVER-COLOR); /* Button hover effect */
+  background-color: var(--BUTTON-HOVER-COLOR); 
 }
 
 .close-popup {
@@ -2364,17 +2362,17 @@ form button {
   .popup-content input[type="date"],
   .popup-content input[type="email"] {
     padding: 8px;
-    font-size: 14px; /* Adjust font size for readability on small screens */
+    font-size: 14px; 
   }
 
   .popup button {
-    width: 100%; /* Full width for easier touch access */
+    width: 100%; 
     padding: 10px;
     font-size: 16px;
   }
 
   .close-popup {
-    font-size: 24px; /* Larger close button for easier touch access */
+    font-size: 24px;
   }
 }
 
@@ -2388,7 +2386,7 @@ form button {
   }
 }
 
-/* Add any additional CSS rules or media queries as needed */
+
 
 
 /* GENERAL BUTTON OVERRIDE FOR NO BORDER RADIUS */
@@ -4421,10 +4419,10 @@ section {
 
 /* CONTACT US FORM FOR YACHT DETAIL */
 .modal-content {
-  color: white; 
-  padding: 20px; 
-  border-radius: 8px; 
-  width: 50%; 
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%; 
   max-width: 500px; 
 }
 
@@ -4433,12 +4431,13 @@ section {
 #enquiry-form input[type="tel"],
 #enquiry-form input[type="date"], 
 #enquiry-form textarea {
-  width: calc(100% - 20px); 
-  padding: 10px; 
-  margin: 10px 0; 
-  border: 1px solid white; 
-  color: #CCC;  
-  border-radius: 4px; 
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid white;
+  color: #CCC;
+  border-radius: 4px;
+  background-color: transparent; 
 }
 
 #enquiry-form button { 
@@ -4447,29 +4446,26 @@ section {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  width: 30%;
+  width: 100%; 
   margin: 10px 0;
-  align-self: flex-start; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  text-align: center; 
+  align-self: center; 
+  background-color: var(--BUTTON-COLOR); 
 }
+
 #enquiry-form input:focus, 
 #enquiry-form textarea:focus {
-  outline: none; 
+  outline: none;
+  border-color: var(--HIGHLIGHT-COLOR); 
 }
 
 .modal-content h2 {
   color: var(--LOGO-COLOR);
 }
 
-
-.start-date-header{
+.start-date-header {
   margin-bottom: 15px;
   color: var(--TEXT-DARKCOLOR);
 }
-
 
 .data-policy-overview {
   display: none;
@@ -4479,7 +4475,8 @@ section {
   transform: translate(-50%, -50%); 
   padding: 15px;
   z-index: 100; 
-  width: 300px; 
+  width: 90%; 
+  max-width: 500px; 
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
 }
 
@@ -4490,28 +4487,16 @@ section {
   color: white;
 }
 
-
-@media (max-width: 600px) {
-  #enquiry-form button {
-    width: 30%; 
-  }
-}
-
-
 @media (max-width: 600px) {
   .modal-content {
     width: 90%; 
-    max-width: none; 
   }
 
-  #enquiry-form input[type="text"],
-  #enquiry-form input[type="email"],
-  #enquiry-form input[type="tel"],
-  #enquiry-form input[type="date"],
-  #enquiry-form textarea {
-    width: calc(100% - 20px); 
+  #enquiry-form button {
+    width: 100%; 
   }
 }
+
 
 
 .modal-content img {
