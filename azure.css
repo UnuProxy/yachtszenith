@@ -10,7 +10,7 @@
    font-family: Helvetica, sans-serif;
    overflow-x: hidden;
   }
-
+  contact-form-container
   h1, h2, h3 {
    font-family: Helvetica, sans-serif;
   }
@@ -2272,7 +2272,7 @@ form button {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 999;
+  z-index: 10;
   background-color: transparent;
 }
 
@@ -2281,7 +2281,7 @@ form button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
+  width: 500px;
   padding: 20px;
   border-radius: 8px;
   color: white; 
@@ -2326,17 +2326,22 @@ form button {
 
 .close-popup {
   position: absolute;
-  top: 10px;
+  top: 24px;
+  font-size: 20px;
   right: 10px;
   cursor: pointer;
   color: white;
   background-color: transparent;
 }
 
+.close-popup:hover, .close-popup:focus {
+  color: var(--LOGO-COLOR);
+}
+
 .popup-content h2 {
   background-color: transparent;
-  text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  color: var(--LOGO-COLOR);
 }
 
 
@@ -3418,9 +3423,6 @@ a {
   background-color: transparent;
 }
 
-
-
-
 .new-checkbox-area {
   display: flex;
   align-items: center;
@@ -3446,6 +3448,36 @@ a {
   color: #AA8759;
   margin-left: 5px;                       
   background-color: transparent;
+}
+
+.contact-form-container input[type="text"], 
+.contact-form-container input[type="email"], 
+.contact-form-container input[type="tel"], 
+.contact-form-container textarea {
+  color: #FFF; 
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none; 
+  padding: 10px; 
+  margin-bottom: 15px; 
+  outline: 1px solid white;
+}
+
+
+.contact-form-container input::placeholder, 
+.contact-form-container textarea::placeholder {
+  color: #CCC; 
+  opacity: 1; 
+}
+
+.contact-form-container input:focus, 
+.contact-form-container textarea:focus {
+  outline: 1px solid var(--LOGO-COLOR); 
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+.new-checkbox-area input[type="checkbox"] { 
+  margin: 0;
+  padding-right: 5px; 
+  outline: none;
 }
 
 
@@ -4362,14 +4394,14 @@ section {
 
 #enquiry-form input[type="text"],
 #enquiry-form input[type="email"],
-#enquiry-form input[type="tel"], 
+#enquiry-form input[type="tel"],
+#enquiry-form input[type="date"], 
 #enquiry-form textarea {
   width: calc(100% - 20px); 
   padding: 10px; 
   margin: 10px 0; 
   border: 1px solid white; 
-  background-color: transparent; 
-  color: white; 
+  color: #CCC;  
   border-radius: 4px; 
 }
 
@@ -4387,6 +4419,41 @@ section {
   align-items: center; 
   text-align: center; 
 }
+#enquiry-form input:focus, 
+#enquiry-form textarea:focus {
+  outline: none; 
+}
+
+.modal-content h2 {
+  color: var(--LOGO-COLOR);
+}
+
+
+.start-date-header{
+  margin-bottom: 15px;
+  color: var(--TEXT-DARKCOLOR);
+}
+
+
+.data-policy-overview {
+  display: none;
+  position: fixed;
+  left: 50%; 
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  padding: 15px;
+  z-index: 100; 
+  width: 300px; 
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+
+.close-policy-overview {
+  cursor: pointer;
+  float: right;
+  font-size: 20px;
+  color: white;
+}
+
 
 @media (max-width: 600px) {
   #enquiry-form button {
@@ -4404,6 +4471,7 @@ section {
   #enquiry-form input[type="text"],
   #enquiry-form input[type="email"],
   #enquiry-form input[type="tel"],
+  #enquiry-form input[type="date"],
   #enquiry-form textarea {
     width: calc(100% - 20px); 
   }
@@ -4444,11 +4512,10 @@ section {
   top: 20px;
   right: 35px;
   color: #f1f1f1;
-  font-size: 40px;
+  font-size: 25px;
   font-weight: bold;
-  z-index: 1001;
   background-color: transparent;
-  transform: translateY(-16px);
+  transform: translateY(-2px);
 }
 
 .close {

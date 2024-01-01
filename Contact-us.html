@@ -50,14 +50,17 @@
         </div>
         
         <div class="contact-form-container">
-          <form id="myForm" class="new-contact-form" action="https://formspree.io/f/mgejjqgo" method="post">
+          <form id="myForm" class="new-contact-form" action="https://usebasin.com/f/5901228062f3" method="post">
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="text" name="lastName" placeholder="Last name" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <textarea name="message" placeholder="Your message..." required></textarea>
                 <div class="new-checkbox-area">
                   <input type="checkbox" id="newPolicyAgreement" name="policyAgreement" required>
-                  <label for="newPolicyAgreement" class="new-consent-label">I have read and agree to the <a href="privacy-policy-url" class="new-policy-link">Privacy Policy</a> of Yachts Zenith</label>
+                  <label for="newPolicyAgreement" class="new-consent-label">
+                      I have read and agree to the 
+                      <a href="#!" class="new-policy-link" onclick="showDataPolicyOverview()"> Data Policy </a>  of Yachts Zenith
+                  </label>
               </div>
                 <button type="submit">Submit enquiry</button>
             </form>
@@ -65,6 +68,27 @@
     </div>
 </div>
 
+<div id="dataPolicyOverview" class="data-policy-overview">
+  <span class="close-policy-overview" onclick="closeDataPolicyOverview()">&times;</span>
+  <section class="cookies-section cookies-top-space">
+    <h1 class="cookies-title">Data Policy for Yachts Zenith</h1>
+    <p class="cookies-text">Welcome to Yachts Zenith. This Data Policy explains how Yachts Zenith (referred to as "we", "us", or "our") collects, uses, shares, and safeguards your personal information when you visit our yacht charter website at <a href="http://www.yachtszenith.com" class="cookies-link">www.yachtszenith.com</a>. We are committed to protecting your privacy and ensuring the security of your data in compliance with the General Data Protection Regulation (GDPR) and Spanish data protection laws.</p>
+</section>
+<a href="data-policy">Read more here</a>
+
+</div>
+
+
+
+<script>
+   function showDataPolicyOverview() {
+    document.getElementById('dataPolicyOverview').style.display = 'block';
+}
+
+function closeDataPolicyOverview() {
+    document.getElementById('dataPolicyOverview').style.display = 'none';
+}
+</script>
 
 <script>
  $(document).ready(function() {
