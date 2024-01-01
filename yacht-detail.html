@@ -65,22 +65,44 @@
     <div id="enquire-now-container">
       <a href="#" id="enquire-now-btn">Enquiry Now</a>
   </div>
-  
   </div>
 
-  <div id="enquire-modal" class="modal">
+
+ <div id="enquire-modal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Contact us</h2>
-      <form id="enquiry-form">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <input type="tel" id="phone" placeholder="Your Phone Number"> 
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Submit</button>
-    </form>
+        <span class="close">&times;</span>
+        <h2>Request Yacht Charter Details</h2>
+        <form id="enquiry-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="tel" id="phone" placeholder="Your Phone Number">
+            <p class="start-date-header">Please select below your preferred charter dates</p>
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" required>
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" required><textarea id="message" placeholder="Your Message" required></textarea>
+            <input type="hidden" id="yacht-name" name="yachtName">
+             <div class="new-checkbox-area">
+                <input type="checkbox" id="newPolicyAgreement" name="policyAgreement" required>
+                <label for="newPolicyAgreement" class="new-consent-label">
+                    I have read and agree to the 
+                    <a href="#!" class="new-policy-link" onclick="showDataPolicyOverview()"> Data Policy </a>  of Yachts Zenith
+                </label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
     </div>
-  </div>
+</div>
+  <div id="dataPolicyOverview" class="data-policy-overview">
+    <span class="close-policy-overview" onclick="closeDataPolicyOverview()">&times;</span>
+    <section class="cookies-section cookies-top-space">
+      <h1 class="cookies-title">Data Policy for Yachts Zenith</h1>
+      <p class="cookies-text">Welcome to Yachts Zenith. This Data Policy explains how Yachts Zenith (referred to as "we", "us", or "our") collects, uses, shares, and safeguards your personal information when you visit our yacht charter website at <a href="http://www.yachtszenith.com" class="cookies-link">www.yachtszenith.com</a>. We are committed to protecting your privacy and ensuring the security of your data in compliance with the General Data Protection Regulation (GDPR) and Spanish data protection laws.</p>
+  </section>
+<a href="data-policy">Read more here</a>
+  
+</div>
+
 
     <div id="about" class="yacht-description">
       
@@ -147,15 +169,24 @@
     <script src="script.js"></script>
     <script>
       $(document).ready(function() {
-    
-    // Function to extract query parameters from the URL
-    function getQueryParam(name) {
-        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-        return results ? decodeURIComponent(results[1]) : null;
+    var yachtData = [];
+
+    fetch('yachts.json')
+        .then(response => response.json())
+        .then(data => {
+            yachtData = data;
+        });
+
+    function getYachtNameById(yachtId) {
+        const yacht = yachtData.find(yacht => yacht.id === parseInt(yachtId, 10));
+        return yacht ? yacht.name : '';
     }
 
     $('#enquire-now-btn').on('click', function(e) {
         e.preventDefault(); 
+        var yachtId = new URLSearchParams(window.location.search).get('id');
+        var yachtName = getYachtNameById(yachtId); 
+        $('#yacht-name').val(yachtName); 
         $('#enquire-modal').show(); 
     });
 
@@ -170,21 +201,21 @@
     });
 
     $('#enquiry-form').submit(function(e) {
-        e.preventDefault();
+    e.preventDefault();
 
-        // Extract yacht name from URL parameter
-        var yachtName = getQueryParam('yachtName');
-
-        var formData = {
-            name: $('#name').val(),
-            email: $('#email').val(),
-            phone: $('#phone').val(), // Include phone number in form data
-            message: $('#message').val(), // Include message in form data
-            yachtName: yachtName // Include yacht name in form data
-        };
+    var formData = {
+        name: $('#name').val(),
+        email: $('#email').val(),
+        phone: $('#phone').val(),
+        startDate: $('#start-date').val(),
+        endDate: $('#end-date').val(),
+        message: $('#message').val(),
+        yachtName: $('#yacht-name').val(),
+        policyAgreement: $('#newPolicyAgreement').is(':checked') 
+    };
 
         $.ajax({
-            url: 'https://formspree.io/f/mgejjqgo',
+            url: 'https://usebasin.com/f/5901228062f3',
             method: 'POST',
             data: formData,
             dataType: 'json',
@@ -199,10 +230,19 @@
         });
     });
 });
+</script>
+
+<script>
+  function showDataPolicyOverview() {
+    document.getElementById('dataPolicyOverview').style.display = 'block';
+}
+
+function closeDataPolicyOverview() {
+    document.getElementById('dataPolicyOverview').style.display = 'none';
+}
 
 
-
-      </script>
+</script>
 
   
     <footer>

@@ -135,12 +135,12 @@
       </section>
 
 
-      <!-- The form popup -->
+  <!-- The form popup -->
 <div id="inquiryPopup" class="popup">
   <div class="popup-content">
     <span class="close-popup">&times;</span>
-    <h2>Inquiry Form</h2>
-    <form id="inquiryForm" action="https://formspree.io/f/mgejjqgo" method="post">
+    <h2>Request Yacht Charter Information </h2>
+    <form id="inquiryForm" action="https://usebasin.com/f/5901228062f3" method="post">
       <input type="hidden" id="yachtNameInput" name="yachtName" value="CRN 130">
       <label for="fullName">Full Name:</label>
       <input type="text" id="fullName" name="fullName" required>
@@ -152,12 +152,41 @@
       <input type="date" id="endDate" name="endDate" required>
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
+      <div class="new-checkbox-area">
+        <input type="checkbox" id="newPolicyAgreement" name="policyAgreement" required>
+        <label for="newPolicyAgreement" class="new-consent-label">
+            I have read and agree to the 
+            <a href="#!" class="new-policy-link" onclick="showDataPolicyOverview()"> Data Policy </a>  of Yachts Zenith
+        </label>
+    </div>
       <button type="submit">Submit</button>
     </form>
   </div>
 </div>
+</div>
+
+<div id="dataPolicyOverview" class="data-policy-overview">
+  <span class="close-policy-overview" onclick="closeDataPolicyOverview()">&times;</span>
+  <section class="cookies-section cookies-top-space">
+    <h1 class="cookies-title">Data Policy for Yachts Zenith</h1>
+    <p class="cookies-text">Welcome to Yachts Zenith. This Data Policy explains how Yachts Zenith (referred to as "we", "us", or "our") collects, uses, shares, and safeguards your personal information when you visit our yacht charter website at <a href="http://www.yachtszenith.com" class="cookies-link">www.yachtszenith.com</a>. We are committed to protecting your privacy and ensuring the security of your data in compliance with the General Data Protection Regulation (GDPR) and Spanish data protection laws.</p>
+</section>
+<a href="data-policy">Read more here</a>
+
+</div>
       
-      
+     
+
+<script>
+   function showDataPolicyOverview() {
+    document.getElementById('dataPolicyOverview').style.display = 'block';
+}
+
+function closeDataPolicyOverview() {
+    document.getElementById('dataPolicyOverview').style.display = 'none';
+}
+</script>
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver((entries) => {
