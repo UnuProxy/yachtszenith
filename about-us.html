@@ -15,7 +15,7 @@
     <meta name="twitter:title" content="About Yachts Zenith - Ibiza's Luxury Yachting Experience">
     <meta name="twitter:description" content="Discover Yachts Zenith's passion for luxury yacht charters in Ibiza and our commitment to excellence in yachting experiences.">
     <link rel="icon" href="LogoFooterBlue.png" type="image/x-icon">
-    <link rel="canonical" href="https://www.yachtszenith.com/aboutus">
+    <link rel="canonical" href="https://www.yachtszenith.com/about-us.html">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
@@ -102,7 +102,7 @@
   <div id="voyageFormPopup" class="voyageFormPopup">
     <div class="voyageFormPopup-content">
         <span class="close-button">&times;</span>
-        <form action="https://formspree.io/f/mgejjqgo" method="post" class="voyage-form" id="voyageForm">
+        <form action="https://usebasin.com/f/5901228062f3" method="post" class="voyage-form" id="voyageForm">
             
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
@@ -122,20 +122,41 @@
             <label for="additionalRequests">Additional Requests:</label>
             <textarea id="additionalRequests" name="additionalRequests"></textarea>
 
-            <div class="voyage-privacy-check">
-                <div class="voyage-checkbox-container">
-                    <input type="checkbox" id="voyageAgree" name="voyageAgree" required>
-                    <label for="voyageAgree"></label>
-                </div>
-                <div class="voyage-link-container">
-                    <a href="privacy-policy-url" class="voyage-privacy-link">I agree with the Privacy Policy</a>
-                </div>
+            <div class="new-checkbox-area">
+                <input type="checkbox" id="newPolicyAgreement" name="policyAgreement" required>
+                <label for="newPolicyAgreement" class="new-consent-label">
+                    I have read and agree to the 
+                    <a href="#!" class="new-policy-link" onclick="showDataPolicyOverview()"> Data Policy </a>  of Yachts Zenith.
+                </label>
             </div>
+            
           
             <button type="submit" class="submit-button">Submit</button>   
         </form>
     </div>
 </div>
+
+
+<div id="dataPolicyOverview" class="data-policy-overview">
+    <span class="close-policy-overview" onclick="closeDataPolicyOverview()">&times;</span>
+    <section class="cookies-section cookies-top-space">
+      <h1 class="cookies-title">Data Policy for Yachts Zenith</h1>
+      <p class="cookies-text">Welcome to Yachts Zenith. This Data Policy explains how Yachts Zenith (referred to as "we", "us", or "our") collects, uses, shares, and safeguards your personal information when you visit our yacht charter website at <a href="http://www.yachtszenith.com" class="cookies-link">www.yachtszenith.com</a>. We are committed to protecting your privacy and ensuring the security of your data in compliance with the General Data Protection Regulation (GDPR) and Spanish data protection laws.</p>
+  </section>
+  <a href="data-policy">Read more here</a>
+  
+  </div>
+
+
+  <script>
+    function showDataPolicyOverview() {
+      document.getElementById('dataPolicyOverview').style.display = 'block';
+  }
+  
+  function closeDataPolicyOverview() {
+      document.getElementById('dataPolicyOverview').style.display = 'none';
+  }
+  </script>
   
 
   <script>

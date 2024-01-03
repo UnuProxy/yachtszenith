@@ -2580,6 +2580,12 @@ margin-top: 10px;
   appearance: none;
 }
 
+.voyage-form input[type="checkbox"] {
+  width: auto; 
+  height: auto; 
+}
+
+
 @media screen and (max-width: 600px) {
   .voyageFormPopup {
     width: 95%; 
@@ -4478,7 +4484,7 @@ section {
   top: 50%;
   transform: translate(-50%, -50%); 
   padding: 15px;
-  z-index: 100; 
+  z-index: 10000; 
   width: 90%; 
   max-width: 500px; 
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
