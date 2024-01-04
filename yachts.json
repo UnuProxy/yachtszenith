@@ -354,9 +354,7 @@
     "specs": "16,25 m, 12 guests, 2 crew",
     "price": "€3,499 per day",
     "description": "Yachts Zenith presents the VanDutch 55, a sophisticated yacht for those looking to explore the beauty of Ibiza. This 55-foot yacht is perfect for cruising around the stunning Ibiza coastlines, offering space for up to 12 guests. Its powerful 900HP engines ensure a smooth sailing experience, combining speed with comfort. The yacht features a sleek design with a spacious cockpit and sunbathing area, ideal for relaxing under the Mediterranean sun. With two cabins, the VanDutch 55 is suitable for day trips or luxurious weekend getaways. This yacht is an excellent choice for anyone seeking a blend of luxury and performance in Ibiza's waters.",
-
     "interiorImages": ["VanDutch55/PAPERA16.jpg","VanDutch55/PAPERA19.jpg","VanDutch55/PAPERA20.jpg","VanDutch55/PAPERA21.jpg","VanDutch55/PAPERA22.jpg","VanDutch55/PAPERA23.jpg","VanDutch55/PAPERA66.jpg"],
-
     "detailedSpecs": {
       "Length": "16,25 m",
       "Guests": "12",
@@ -372,6 +370,32 @@
        "May / October": "€2,850 per day / €2,750 per day",
        "June / September": "€3,050 per day /€2,850 per day",
        "July / August": "€3,450 per day / €3,650 per day"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Princess V72",
+    "image": "RubyTuesday/V72Princess7.jpg",
+    "specs": "22 m, 12 guests, 2 crew",
+    "price": "€5,450 per day",
+    "description": "The Princess V72 yacht charter in Ibiza is an epitome of luxury and speed. This yacht boasts a remarkable power of 3,600 HP, enabling it to glide across the waters at an exhilarating speed. It’s perfect for swiftly cruising from Ibiza to Formentera, offering guests a blend of thrill and elegance. The yacht's interior is sleek and sophisticated, complete with a retractable sunroof, providing an intimate setting for both daytime exploration and overnight escapades in the beautiful Mediterranean.This yachts is ideal for those seeking a personal and upscale yachting experience in the stunning Ibiza and Formentera waters.",
+    "interiorImages": ["RubyTuesday/V72Princess10.jpg", "RubyTuesday/V72Princess9.jpg","RubyTuesday/V72Princess8.jpg","RubyTuesday/V72Princess6.jpg","RubyTuesday/V72Princess5.jpg","RubyTuesday/V72Princess4.jpg","RubyTuesday/V72Princess3.jpg","RubyTuesday/V72Princess2.jpg","RubyTuesday/V72Princess1.jpg"],
+    "detailedSpecs": {
+      "Length": "22 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "5,450 per day",
+      "Cruising Speed": "25 knots",
+      "Max Speed": "35 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x CARTERPILLAR",
+      "HP": "2 x 1.800"
+     },
+     "seasonalPrices": {
+       "May / October": "€5,450 per day",
+       "June / September": "€5,450 per day",
+       "July / August": "€6,800 per day / €3,650 per day"
     }
   }
 ]
