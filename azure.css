@@ -659,7 +659,7 @@ nav .mainMenu .closeMenu,
 
 
     
-  .yacht-listings {
+.yacht-listings {
   perspective: 1px;
   overflow: hidden;
 }
@@ -689,6 +689,19 @@ nav .mainMenu .closeMenu,
 
 .yacht-image img {
   transform: translateZ(-1px) scale(1.2);
+}
+
+.yacht-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  .yacht-image img {
+      width: 100%;
+  }
 }
 
 .inquiry-button{
