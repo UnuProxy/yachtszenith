@@ -2939,6 +2939,7 @@ margin-top: 10px;
 
 .accordion-content p, strong {
   background: inherit;
+  margin-top: 8px;
 }
 
 
