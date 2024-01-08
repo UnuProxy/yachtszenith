@@ -267,7 +267,7 @@ nav .mainMenu .closeMenu,
     background-color: transparent;
   }
 
-  .video-container .h1-iphone {
+  .video-container .h-iphone {
     background-color: transparent;
   }
   
@@ -349,7 +349,7 @@ nav .mainMenu .closeMenu,
     color: #fff;
   }
   
-  .h1-iphone {
+  .h-iphone {
     font-size: 46px;
     margin-bottom: 20px;
     color: #fff;
@@ -446,7 +446,7 @@ nav .mainMenu .closeMenu,
     }
   }
   
-  .h1-iphone {
+  .h-iphone {
     animation: slideUp 1s ease-out forwards; 
   }
   
@@ -497,7 +497,7 @@ nav .mainMenu .closeMenu,
     .social-icons{
       margin-left: 5%;
     }
-    .h1-iphone {
+    .h-iphone {
       font-size: 20px; 
       margin-bottom: 90px; 
     }
@@ -3362,7 +3362,7 @@ a {
     text-align: center;
   }
 
-  .h1-iphone {
+  .h-iphone {
     font-size: 22px;
     margin-bottom: 5px;
   }
@@ -3414,7 +3414,7 @@ a {
     object-fit: cover;
   }
 
-  .h1-iphone {
+  .h-iphone {
     margin-bottom: 30px; 
    
   }
