@@ -267,9 +267,6 @@ nav .mainMenu .closeMenu,
     background-color: transparent;
   }
 
-  .video-container .h-iphone {
-    background-color: transparent;
-  }
   
   .video-container video {
     position: absolute;
@@ -513,6 +510,9 @@ nav .mainMenu .closeMenu,
     }
   }
 
+  .video-container .h-iphone {
+    background-color: transparent;
+  }
   
 
   /* SLIDE PICTURE */
