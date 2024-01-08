@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Yachts Zenith's journey in luxury yacht chartering in Ibiza, offering personalised and unforgettable yachting experiences.">
+    <meta name="keywords" content="Luxury Yacht Charter, Ibiza Yachting, Personalised Yacht Services, Yachts Zenith, Charter Experiences">
+    <meta name="author" content="Yachts Zenith">
+    <meta property="og:title" content="About Yachts Zenith - Your Luxury Yacht Experience in Ibiza">
+    <meta property="og:description" content="Learn about Yachts Zenith's dedication to providing unique and luxury yacht charter experiences in Ibiza.">
+    <meta property="og:image" content="https://www.yachtszenith.com/LogoFooterBlue.png">
+    <meta property="og:url" content="https://www.yachtszenith.com/about-us">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Yachts Zenith - Ibiza's Luxury Yachting Experience">
+    <meta name="twitter:description" content="Discover Yachts Zenith's passion for luxury yacht charters in Ibiza and our commitment to excellence in yachting experiences.">
+    <link rel="icon" href="LogoFooterBlue.png" type="image/x-icon">
+    <link rel="canonical" href="https://www.yachtszenith.com/about-us.html">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="azure.css">
+    <title>About Yachts Zenith - Ibiza's Premier Luxury Yacht Charter</title>
+</head>
+
+<body>
+
+    <!--  HEADER  -->
+    <div class="black-bg" id="sticky-section">
+        <nav class="position-header ">
+          <div class="logo">
+            <a href="/"><h1>Yachts Zenith</h1></a>
+        </div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
+          <li><a href="Yacht-charter">Yacht Charter</a></li>
+          <li><a href="Yacht-routes-ibiza">Destinations</a></li>
+          <li><a href="Contact-us">Contact us</a></li>
+          <li><a href="about-us">About us</a></li>
+          <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
+      </ul>
+    </nav>
+    </div>
+
+
+    <main>
+      <section id="our-story" class="narrative-section">
+        <h2  class="animated-h2">
+          Our Voyage
+      </h2>
+          <p>Yachts Zenith, deeply rooted in London, now embraces the sunny shores of Ibiza, offering exceptional yacht hire experiences. We connect the Thames' rich history with Ibiza's relaxed luxury. Julian Pirvu, a true sea lover, crafts unique journeys that combine these worlds. Our fleet does more than just boat rental in Ibiza; it's about high-quality, discreet service in the stunning waters of Ibiza.</p>
+      </section>
+
+      <section id="our-mission" class="purpose-section">
+        <h2 class="animated-h2">
+          Unforgettable Experiences
+      </h2>
+          <div class="mission-content">
+              <p>Our mission is to offer unrivalled yacht charter experiences in Ibiza, seamlessly combining luxury, adventure, and relaxation for those looking to hire a yacht in this breathtaking destination.</p>
+              <img src="Nomad-130.jpg" alt="Mangusta 130" class="mission-image">
+          </div>
+      </section>
+
+      <section id="our-fleet"class="armada-section">
+        <h2 class="animated-h2">
+          A Fleet Beyond Compare
+      </h2>
+        <p><p>At Yachts Zenith, we specialise in <strong>yacht and boat rentals in Ibiza</strong>, offering a bespoke selection to meet every type preference.</p>
+    </p>
+
+        <div class="gallery-container">
+            <div class="gallery-slider">
+                <div class="gallery-item">
+                    <img src="SirHotel/65Waterdream24.jpg" alt="Waterdream 65">
+                    <h3>Waterdream 65</h3>
+                </div>
+                <div class="gallery-item">
+                    <img src="SeaStory/VQ82SeaStory84.jpg" alt="Vanquish 82">
+                    <h3>Vanquish 82</h3>
+                </div>
+                <div class="gallery-item">
+                    <img src="Danzas/PershingNavigating(90)45.jpg" alt="Persing 90">
+                    <h3>Persing 90</h3>
+                </div>
+               
+            </div>
+            <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
+            <div class="next" onclick="moveSlide(1)">&#10095;</div>
+        </div>
+    </section>
+
+    <div id="call-to-action" class="cta-section">
+      <h2 class="animated-h2">
+          Charter with Yachts Zenith
+      </h2>
+      <button type="button" id="planVoyageBtn" class="cta-button">Plan Your Voyage</button>
+  </div>
+
+
+     
+  <div id="voyageFormPopup" class="voyageFormPopup">
+    <div class="voyageFormPopup-content">
+        <span class="close-button">&times;</span>
+        <form action="https://usebasin.com/f/5901228062f3" method="post" class="voyage-form" id="voyageForm">
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="startVoyageDate">Preferred Start Voyage Date:</label>
+            <input type="date" id="startVoyageDate" name="startVoyageDate">
+
+            <label for="endVoyageDate">Preferred End Voyage Date:</label>
+            <input type="date" id="endVoyageDate" name="endVoyageDate">
+
+            <label for="numberOfGuests">Number of Guests:</label>
+            <input type="number" id="numberOfGuests" name="numberOfGuests">
+
+            <label for="additionalRequests">Additional Requests:</label>
+            <textarea id="additionalRequests" name="additionalRequests"></textarea>
+
+            <div class="new-checkbox-area">
+                <input type="checkbox" id="newPolicyAgreement" name="policyAgreement" required>
+                <label for="newPolicyAgreement" class="new-consent-label">
+                    I have read and agree to the 
+                    <a href="#!" class="new-policy-link" onclick="showDataPolicyOverview()"> Data Policy </a>  of Yachts Zenith.
+                </label>
+            </div>
+            
+          
+            <button type="submit" class="submit-button">Submit</button>   
+        </form>
+    </div>
+</div>
+
+
+<div id="dataPolicyOverview" class="data-policy-overview">
+    <span class="close-policy-overview" onclick="closeDataPolicyOverview()">&times;</span>
+    <section class="cookies-section cookies-top-space">
+      <h1 class="cookies-title">Data Policy for Yachts Zenith</h1>
+      <p class="cookies-text">Welcome to Yachts Zenith. This Data Policy explains how Yachts Zenith (referred to as "we", "us", or "our") collects, uses, shares, and safeguards your personal information when you visit our yacht charter website at <a href="http://www.yachtszenith.com" class="cookies-link">www.yachtszenith.com</a>. We are committed to protecting your privacy and ensuring the security of your data in compliance with the General Data Protection Regulation (GDPR) and Spanish data protection laws.</p>
+  </section>
+  <a href="data-policy">Read more here</a>
+  
+  </div>
+
+
+  <script>
+    function showDataPolicyOverview() {
+      document.getElementById('dataPolicyOverview').style.display = 'block';
+  }
+  
+  function closeDataPolicyOverview() {
+      document.getElementById('dataPolicyOverview').style.display = 'none';
+  }
+  </script>
+  
+
+  <script>
+function showForm() {
+    var formContainer = document.getElementById('voyageFormPopup');
+    var button = document.getElementById('planVoyageBtn');
+
+    
+    formContainer.style.display = 'block';
+
+    
+    button.style.display = 'none';
+}
+
+
+function hideForm() {
+    var formContainer = document.getElementById('voyageFormPopup');
+    var button = document.getElementById('planVoyageBtn');
+
+   
+    formContainer.style.display = 'none';
+
+    button.style.display = 'block';
+}
+
+document.getElementById('planVoyageBtn').addEventListener('click', showForm);
+
+window.onclick = function(event) {
+    var formContainer = document.getElementById('voyageFormPopup');
+
+    
+    if (event.target == formContainer) {
+        hideForm();
+    }
+};
+
+var closeButton = document.querySelector('.close-button');
+if (closeButton) {
+    closeButton.addEventListener('click', hideForm);
+}
+
+document.getElementById('startVoyageDate').addEventListener('change', function() {
+  var startDate = new Date(this.value);
+  var endDateInput = document.getElementById('endVoyageDate');
+
+  endDateInput.valueAsDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + 1);
+});
+</script>
+<script>
+    var modal = document.getElementById("voyageFormPopup");
+    var btn = document.getElementById("planVoyageBtn");
+    var span = document.getElementsByClassName("close-button")[0];
+    modal.style.display = "none";
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    pan.onclick = function() {
+        modal.style.display = "none";
+    }
+  
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+  </script>
+  <script>
+    function setMinVoyageDate() {
+            var today = new Date().toISOString().split('T')[0];
+            document.getElementById("startVoyageDate").setAttribute("min", today);
+            document.getElementById("endVoyageDate").setAttribute("min", today);
+        }
+
+        document.addEventListener('DOMContentLoaded', setMinVoyageDate);
+
+        document.getElementById('voyageForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            var form = this;
+            var formData = new FormData(form);
+      
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+            }).then(response => {
+                if (response.ok) {
+                    
+                    document.getElementById('successMessage').style.display = 'block';
+                    form.reset();
+                } else {
+                    
+                    alert("There was an error submitting the form. Please try again.");
+                }
+            }).catch(error => {
+                
+                alert("There was a network error. Please try again.");
+            });
+        });
+  </script>
+
+      
+    <script>
+        let currentIndex = 0;
+
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.gallery-item');
+    const totalSlides = slides.length;
+
+    currentIndex += direction;
+
+    if (currentIndex >= totalSlides) {
+        currentIndex = 0;
+    } else if (currentIndex < 0) {
+        currentIndex = totalSlides - 1;
+    }
+
+    const offset = currentIndex * -100;
+    const slider = document.querySelector('.gallery-slider');
+    slider.style.transform = `translateX(${offset}%)`;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const narrativeText = document.querySelector('.narrative-section p');
+    if (narrativeText) {
+        narrativeText.style.opacity = 1;
+        narrativeText.style.transform = 'translateY(0)';
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    const headers = document.querySelectorAll('h2.animated-h2');
+    headers.forEach(header => observer.observe(header));
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('.scroll-effect').forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const triggerPoint = window.innerHeight / 1.3;
+
+            if (sectionTop < triggerPoint) {
+                section.style.opacity = 1;
+                section.style.transform = 'translateY(0)';
+            }
+        });
+    });
+});
+  </script>
+        
+   <script src="script.js"></script>   
+    <footer>
+        <div class="footer-container">
+          <div class="footer-logo">    
+            <img src="LogoFooter.png" alt="Yachts Zenith Logo"> 
+          </div>
+          
+          <div class="policy-links">
+            <h4>Data Policies</h4>
+            <div><a href="cookies-policy">Cookies Policy</a></div>
+            <div><a href="data-policy">Data Policy</a></div>
+          </div>
+          
+          <div class="company">
+            <h4>Company</h4>
+            <div><a href="Contact-us">Contact Us</a></div>
+            <div><a href="about-us">About Us</a></div>
+          </div>
+          
+          <div class="social-media">
+            <h4>Social Media</h4>
+            <div class="socials">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/yachtszenith/"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+          
+        </div>
+      </footer>
+     
+
+</body>
+</html>

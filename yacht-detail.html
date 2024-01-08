@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibiza Luxury Yacht Charters | Exclusive Yachts in Ibiza for Rent</title>
+    <meta name="description" content="Explore top luxury yacht charters in Ibiza. Book exclusive yachts for an unforgettable yachting experience in the Balearic Islands.">
+    <meta name="keywords" content="yachts, luxury yachting, yacht charter, maritime luxury, Ibiza yacht charter, yacht rental Ibiza">
+    <meta property="og:title" content="Luxury Yachting - Charter in Ibiza">
+    <meta property="og:description" content="Immerse yourself in the luxury yachting experience in Ibiza. Browse our exclusive collection of yachts for charter in the Balearic Islands">
+    <meta property="og:image" content="https://www.yachtszenith.com/Persing90.jpg">
+    <link rel="canonical" href="https://www.yachtszenith.com/yacht-detail.html">
+    <link rel="icon" type="image/png" href="LogoFooterBlue.png">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="azure.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+     <!--  HEADER  -->
+     <div class="black-bg" id="sticky-section">
+        <nav class="position-header ">
+          <div class="logo">
+            <a href="/"><h1>Yachts Zenith</h1></a>
+        </div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
+          <li><a href="Yacht-charter">Yacht Charter</a></li>
+          <li><a href="Yacht-routes-ibiza">Destinations</a></li>
+          <li><a href="Contact-us">Contact us</a></li>
+          <li><a href="about-us">About us</a></li>
+          <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
+      </ul>
+    </nav>
+    </div>
+   
+
+    <!--  YACHT DETAIL  -->
+   <div class="yacht-detail">
+  <img class="main-image" alt="Main Yacht Image">
+  <h1 class="yacht-name"></h1>
+  <div class="navigation-row">
+    <a href="#about" id="aboutLink">About</a>
+    <a href="#key-info">Specifications</a>
+    <a href="#interior">Images</a>
+    <a href="#price">Price</a>
+    <div id="enquire-now-container">
+      <a href="#" id="enquire-now-btn">Enquiry Now</a>
+  </div>
+  </div>
+
+
+ <div id="enquire-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Enquire About Yacht Rentals in Ibiza</h2>
+        <form id="enquiry-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="tel" id="phone" placeholder="Your Phone Number">
+            <p class="start-date-header">Please select below your preferred charter dates</p>
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" required>
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" required><textarea id="message" placeholder="Your Message" required></textarea>
+            <input type="hidden" id="yacht-name" name="yachtName">
+             <div class="new-checkbox-area">
+                <input type="checkbox" id="newPolicyAgreement" name="policyAgreement" required>
+                <label for="newPolicyAgreement" class="new-consent-label">
+                    I have read and agree to the 
+                    <a href="#!" class="new-policy-link" onclick="showDataPolicyOverview()"> Data Policy </a>  of Yachts Zenith
+                </label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+  <div id="dataPolicyOverview" class="data-policy-overview">
+    <span class="close-policy-overview" onclick="closeDataPolicyOverview()">&times;</span>
+    <section class="cookies-section cookies-top-space">
+      <h1 class="cookies-title">Data Policy for Yachts Zenith</h1>
+      <p class="cookies-text">Welcome to Yachts Zenith. This Data Policy explains how Yachts Zenith (referred to as "we", "us", or "our") collects, uses, shares, and safeguards your personal information when you visit our yacht charter website at <a href="http://www.yachtszenith.com" class="cookies-link">www.yachtszenith.com</a>. We are committed to protecting your privacy and ensuring the security of your data in compliance with the General Data Protection Regulation (GDPR) and Spanish data protection laws.</p>
+  </section>
+<a href="data-policy">Read more here</a>
+  
+</div>
+
+
+    <div id="about" class="yacht-description">
+      
+      <p class="description-text"></p>
+    </div>
+
+   
+    <div class="title-container">
+      <h2 class="section-title"><span></span>The Yacht</h2>
+    </div>
+
+    <div id="interior" class="yacht-carousel interior-carousel"> 
+    </div>
+    
+    
+    
+    <div id="key-info" class="yacht-specs">
+      <h2>Main Specifications</h2>
+      <ul class="detailed-specs">
+      </ul>
+    </div>
+
+    <div id="text-image-container">
+    </div>
+    
+    
+   
+    <div id="extras-section">
+      <h2>On board</h2>
+      <ul id="extras-list">  
+      </ul>
+    </div>
+  
+      <div id="price" class="yacht-price">
+        <h2> Rate From </h2>
+        <p class="price-text"></p>
+      </div>
+    
+    </div>
+
+
+   
+    <h2 class="carousel-title">Browse Similar Yachts</h2>
+    <div id="carousel-wrapper">
+        <button class="carousel-btn" id="prev-btn" onclick="move(-1)">❮</button>
+        <div id="carousel">
+          <div id="carousel-container">
+            <div class="carousel-item">1</div>
+            <div class="carousel-item">2</div>
+            <div class="carousel-item">3</div>
+            <div class="carousel-item">4</div>
+            <div class="carousel-item">5</div>
+          </div>
+        </div>
+        <button class="carousel-btn" id="next-btn" onclick="move(1)">❯</button>
+      </div>
+      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+ <script src="text_images.js"></script>
+      <script src="extras.js"></script>
+ <script src="yachtdetails.js"></script>
+    <script src="yacht.js"></script>
+    <script src="script.js"></script>
+    <script>
+      $(document).ready(function() {
+    var yachtData = [];
+
+    fetch('yachts.json')
+        .then(response => response.json())
+        .then(data => {
+            yachtData = data;
+        });
+
+    function getYachtNameById(yachtId) {
+        const yacht = yachtData.find(yacht => yacht.id === parseInt(yachtId, 10));
+        return yacht ? yacht.name : '';
+    }
+
+    $('#enquire-now-btn').on('click', function(e) {
+        e.preventDefault(); 
+        var yachtId = new URLSearchParams(window.location.search).get('id');
+        var yachtName = getYachtNameById(yachtId); 
+        $('#yacht-name').val(yachtName); 
+        $('#enquire-modal').show(); 
+    });
+
+    $('.close').on('click', function() {
+        $('#enquire-modal').hide(); 
+    });
+
+    $(window).on('click', function(e) {
+        if ($(e.target).is('#enquire-modal')) {
+            $('#enquire-modal').hide(); 
+        }
+    });
+
+    $('#enquiry-form').submit(function(e) {
+    e.preventDefault();
+
+    var formData = {
+        name: $('#name').val(),
+        email: $('#email').val(),
+        phone: $('#phone').val(),
+        startDate: $('#start-date').val(),
+        endDate: $('#end-date').val(),
+        message: $('#message').val(),
+        yachtName: $('#yacht-name').val(),
+        policyAgreement: $('#newPolicyAgreement').is(':checked') 
+    };
+
+        $.ajax({
+            url: 'https://usebasin.com/f/5901228062f3',
+            method: 'POST',
+            data: formData,
+            dataType: 'json',
+            success: function(data) {
+                alert('Thank you for your enquiry!');
+                $('#enquiry-form').trigger("reset");
+                $('#enquire-modal').hide();
+            },
+            error: function(err) {
+                alert('Something went wrong, please try again.');
+            }
+        });
+    });
+});
+</script>
+
+<script>
+  function showDataPolicyOverview() {
+    document.getElementById('dataPolicyOverview').style.display = 'block';
+}
+
+function closeDataPolicyOverview() {
+    document.getElementById('dataPolicyOverview').style.display = 'none';
+}
+
+
+</script>
+
+  
+    <footer>
+        <div class="footer-container">
+          <div class="footer-logo">    
+            <img src="LogoFooter.png" alt="Yachts Zenith Logo"> 
+          </div>
+          
+          <div class="policy-links">
+            <h4>Data Policies</h4>
+            <div><a href="cookies-policy">Cookies Policy</a></div>
+            <div><a href="data-policy">Data Policy</a></div>
+          </div>
+          
+          <div class="company">
+            <h4>Company</h4>
+            <div><a href="Contact-us">Contact Us</a></div>
+            <div><a href="about-us">About Us</a></div>
+          </div>
+          
+          <div class="social-media">
+            <h4>Social Media</h4>
+            <div class="socials">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/yachtszenith/"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+          
+        </div>
+      </footer>
+</body>
+</html>
