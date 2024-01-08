@@ -357,7 +357,6 @@ nav .mainMenu .closeMenu,
   
   .h-iphone {
     font-size: 46px;
-    white-space: nowrap;
     text-align: center;
     display: flex;
     justify-content: center;
