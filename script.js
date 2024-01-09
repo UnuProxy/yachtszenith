@@ -259,28 +259,29 @@ const image1 = document.getElementById('image1');
 const image2 = document.getElementById('image2');
 const indicator = document.querySelector('.indicator'); 
 
-
 function updateSliderHeight() {
   const imgHeight = image1.offsetHeight; 
   customSlider.style.height = `${imgHeight}px`;
   indicator.style.top = `${imgHeight / 2}px`; 
+  const imageSliderContainer = document.querySelector('.image-slider-container');
+  imageSliderContainer.style.height = `${imgHeight}px`;
 }
 
 window.addEventListener('load', () => {
   updateSliderHeight();
 });
 
-
 window.addEventListener('resize', updateSliderHeight);
 
+// Mouse event listeners
 customSlider.addEventListener('mousedown', startDrag);
 window.addEventListener('mousemove', drag);
 window.addEventListener('mouseup', stopDrag);
 
-customSlider.addEventListener('touchstart', startDrag);
-window.addEventListener('touchmove', drag);
-window.addEventListener('touchend', stopDrag);
-
+// Touch event listeners with passive option
+customSlider.addEventListener('touchstart', startDrag, { passive: true });
+window.addEventListener('touchmove', drag, { passive: true });
+window.addEventListener('touchend', stopDrag, { passive: true });
 
 function startDrag(event) {
   const clientX = event.clientX || event.touches[0].clientX;
@@ -288,7 +289,6 @@ function startDrag(event) {
   initialClickOffset = clientX - sliderRect.left;
   isDragging = true;
 }
-
 
 function drag(event) {
   if (!isDragging) return;
@@ -309,15 +309,6 @@ function stopDrag() {
   isDragging = false;
 }
 
-function updateSliderHeight() {
-  const imgHeight = image1.offsetHeight;
-  customSlider.style.height = `${imgHeight}px`;
-  indicator.style.top = `${imgHeight / 2}px`;
-  
-  
-  const imageSliderContainer = document.querySelector('.image-slider-container');
-  imageSliderContainer.style.height = `${imgHeight}px`;
-}
 
 
 
