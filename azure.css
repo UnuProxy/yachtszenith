@@ -287,6 +287,8 @@ nav .mainMenu .closeMenu,
     z-index: 1;
 }
 
+
+
 @media screen and (max-width: 768px) {
   .video-container video {
     width: 100%;
