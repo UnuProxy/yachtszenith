@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -89,16 +90,18 @@
   
   <section>
     <div class="video-container">
-      <video src="video/IntroYachtsZenith.mp4" muted loop autoplay playsinline poster="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/2fe62038-8d82-46d4-41a6-a0b91b002900/680x1200"></video>
-      <div class="gradient-overlay"></div>
-      <div class="card-titles">
-        <h1 class="h-iphone">Welcome Aboard Yachts Zenith - Premier Yacht Rentals in Ibiza</h1>
-        <div class="subtitles">
-         <a href="Yacht-charter"><p class="subtitle-left">Yacht Charter Ibiza </p></a>
-         <a href="Yacht-routes-ibiza"><p class="subtitle-right">Explore Destinations</p></a>
+        <video src="video/IntroYachtsZenith.mp4" muted loop autoplay playsinline poster="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/2fe62038-8d82-46d4-41a6-a0b91b002900/680x1200"></video>
+        <div class="gradient-overlay"></div>
+        <div class="card-titles">
+            <h1 class="h-iphone">Welcome Aboard Yachts Zenith - Premier Yacht Rentals in Ibiza</h1>
+            <div class="subtitles">
+                <a href="Yacht-charter"><p class="subtitle-left">Yacht Charter Ibiza </p></a>
+                <a href="Yacht-routes-ibiza"><p class="subtitle-right">Explore Destinations</p></a>
+            </div>
         </div>
     </div>
 </section>
+
 
 
   <div id="yzCookieConsentContainer" class="yz-cookie-consent-container">
@@ -274,35 +277,37 @@
 
 
 
-<!-- The form popup -->
-<div id="inquiryPopup" class="popup">
-  <div class="popup-content">
-    <span class="close-popup">&times;</span>
-    <h2>Enquire About Yacht Rentals in Ibiza </h2>
-    <form id="inquiryForm" action="https://usebasin.com/f/5901228062f3" method="post">
-      <input type="hidden" id="yachtNameInput" name="yachtName" value="CRN 130">
-      <label for="fullName">Full Name:</label>
-      <input type="text" id="fullName" name="fullName" required>
-      <label for="persons">Number of Persons:</label>
-      <input type="number" id="persons" name="persons" min="1" required>
-      <label for="startDate">Start Date:</label>
-      <input type="date" id="startDate" name="startDate" required>
-      <label for="endDate">End Date:</label>
-      <input type="date" id="endDate" name="endDate" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <div class="new-checkbox-area">
-        <input type="checkbox" id="newPolicyAgreement" name="policyAgreement" required>
-        <label for="newPolicyAgreement" class="new-consent-label">
-            I have read and agree to the 
-            <a href="#!" class="new-policy-link" onclick="showDataPolicyOverview()"> Data Policy </a>  of Yachts Zenith.
-        </label>
+  <div>
+    <!-- The form popup -->
+    <div id="inquiryPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <h2>Enquire About Yacht Rentals in Ibiza</h2>
+            <form id="inquiryForm" action="https://usebasin.com/f/5901228062f3" method="post">
+                <input type="hidden" id="yachtNameInput" name="yachtName" value="CRN 130">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <label for="persons">Number of Persons:</label>
+                <input type="number" id="persons" name="persons" min="1" required>
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div class="new-checkbox-area">
+                    <input type="checkbox" id="newPolicyAgreement" name="policyAgreement" required>
+                    <label for="newPolicyAgreement" class="new-consent-label">
+                        I have read and agree to the 
+                        <a href="#!" class="new-policy-link" onclick="showDataPolicyOverview()">Data Policy</a> of Yachts Zenith.
+                    </label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
 </div>
-</div>
+
 
 <div id="dataPolicyOverview" class="data-policy-overview">
   <span class="close-policy-overview" onclick="closeDataPolicyOverview()">&times;</span>
@@ -362,60 +367,48 @@
 <!-- YACHTING GUIDE & TIPS -->
 <section id="yachting-guide">
   <h2 class="guide-title">Tips for Yacht and Boat Rental in Ibiza</h2>
-<div class="accordion">
-  <div class="accordion-item" onclick="toggleGuide(this)">
-    <div class="accordion-header">
-      <h3>Before You Embark</h3>
+  <div class="accordion">
+    <!-- Accordion Item 1 -->
+    <div class="accordion-item" onclick="toggleGuide(this)">
+      <div class="accordion-header">
+        <h3>Before You Embark</h3>
+      </div>
+      <div class="accordion-content">
+        <p><strong>Selecting the Right Yacht:</strong> When considering a yacht charter in Ibiza, the choice of vessel is paramount. Reflect on the following:</p>
+        <p><strong>Number of Passengers:</strong> The right boat hire in Ibiza should have enough cabins and space to comfortably accommodate everyone in your party.</p>
+        <p><strong>Destination:</strong> Each destination, whether it's the tranquil waters of Formentera or the iconic Es Vedra, may influence your choice of boat rental in Ibiza. As you plan to hire a yacht in Ibiza, consider the diverse experiences each area offers. The serene beaches of Formentera are perfect for leisurely cruises, while the mystique of Es Vedra calls for more adventurous explorations.</p>
+        <p><strong>Preferences and Amenities:</strong> From water toys to fine dining, identify what services and amenities you'd like included in your Ibiza boat charter.</p>
+        <p><strong>Duration:</strong> For extended yacht charters in Ibiza, comfort and onboard amenities become increasingly important. Opt for yachts that offer luxurious accommodations, spacious decks, and advanced navigation technology for longer stays.</p>
+        <p><strong>Specific Needs:</strong> Any particular requirements, such as accessibility or dietary preferences, should be specified when arranging your boat rental in Ibiza.</p>
+      </div>
     </div>
-    <div class="accordion-content">
-      <p><strong>Selecting the Right Yacht:</strong> When considering a yacht charter in Ibiza, the choice of vessel is paramount. Reflect on the following:</p>
-      <p><strong>Number of Passengers:</strong> The right boat hire in Ibiza should have enough cabins and space to comfortably accommodate everyone in your party.</p>
-      <p><strong>Destination:</strong> Each destination, whether it's the tranquil waters of Formentera or the iconic Es Vedra, may influence your choice of boat rental in Ibiza. As you plan to hire a yacht in Ibiza, consider the diverse experiences each area offers. The serene beaches of Formentera are perfect for leisurely cruises, while the mystique of Es Vedra calls for more adventurous explorations.</p>
-      <p><strong>Preferences and Amenities:</strong> From water toys to fine dining, identify what services and amenities you'd like included in your Ibiza boat charter.</p>
-      <p><strong>Duration:</strong> For extended yacht charters in Ibiza, comfort and onboard amenities become increasingly important. Opt for yachts that offer luxurious accommodations, spacious decks, and advanced navigation technology for longer stays.</p>
 
-      <p><strong>Specific Needs:</strong> Any particular requirements, such as accessibility or dietary preferences, should be specified when arranging your boat rental in Ibiza.</p>
+    <!-- Accordion Item 2 -->
+    <div class="accordion-item" onclick="toggleGuide(this)">
+      <div class="accordion-header">
+        <h3>VAT and Yacht Fuel Consumption</h3>
+      </div>
+      <div class="accordion-content">
+        <p><strong>VAT</strong> Remember that is applicable to yacht charters in Ibiza. The standard rate is 21%, so it's important to factor this into your overall budget.</p>
+        <p><strong>APA (Advance Provisioning Allowance):</strong> Typically for boat rentals in Ibiza, the base rate doesn't cover fuel. Instead, you'll pay an APA, generally around 20-30% of the charter fee. This allowance is used to estimate and prepay for fuel, provisions, and berthing charges, ensuring a seamless experience on your Ibiza yacht hire.</p>
+        <p><strong>Fuel Considerations:</strong> In most yacht charters in Ibiza, the cost of fuel is not included in the base charter fee. This approach allows for more flexibility and customisation of your journey, whether you're exploring the tranquil waters of Ibiza or venturing to the scenic cliffs of Es Vedra.</p>
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="accordion-item" onclick="toggleGuide(this)">
-  <div class="accordion-header">
-    <h3>VAT and Yacht Fuel Consumption</h3>
-  </div>
-  <div class="accordion-content">
-    <p><strong>VAT</strong> Remember that is applicable to yacht charters in Ibiza. The standard rate is 21%, so it's important to factor this into your overall budget. </p><br>
-    <p><strong>APA (Advance Provisioning Allowance):</strong> Typically for boat rentals in Ibiza, the base rate doesn't cover fuel. Instead, you'll pay an APA, generally around 20-30% of the charter fee. This allowance is used to estimate and prepay for fuel, provisions, and berthing charges, ensuring a seamless experience on your Ibiza yacht hire.</p><br>
-    <p><strong>Fuel Considerations:</strong> In most yacht charters in Ibiza, the cost of fuel is not included in the base charter fee. This approach allows for more flexibility and customisation of your journey, whether you're exploring the tranquil waters of Ibiza or venturing to the scenic cliffs of Es Vedra.</p><br>
-  </div>
-</div>
-
+    <!-- Accordion Item 3 -->
     <div class="accordion-item" onclick="toggleGuide(this)">
       <div class="accordion-header">
         <h3>Ibiza Routes</h3>
       </div>
       <div class="accordion-content">
-        <p><strong>1. Ibiza Town to Formentera</strong></p><br>
-        <p>Start: Ibiza Town</p>
-        <p>Stops: Formentera</p>
-        <p>Highlights: Vibrant nightlife in Ibiza Town, pristine beaches of Formentera, natural mud baths at Es Palmador.</p>
-      <p>Duration: 1 day</p><br>
-
-      <p><strong>2. Ibiza to Mallorca</strong></p><br>
-      <p>Start: Ibiza Town</p>
-      <p>Stops: Formentera, Cabrera National Park, Palma de Mallorca</p>
-      <p>Highlights: Inter-island exploration, wildlife in Cabrera, historical sights in Palma, luxury shopping.</p>
-      <p>Duration: 7 days</p><br>
-      <p><strong>3. Bespoke Luxury Route</strong></p><br>
-      <p>Start and End: Tailored to preferences</p>
-      <p>Stops: Customized based on interests, such as gourmet dining experiences, exclusive beach clubs, wellness retreats, or nature exploration.</p>
-      <p>
-        Highlights: Personalized itinerary catering to luxury and unique experiences.</p>
-        <p>Duration: Custom</p>
+        <p><strong>1. Ibiza Town to Formentera:</strong> Start: Ibiza Town. Stops: Formentera. Highlights: Vibrant nightlife in Ibiza Town, pristine beaches of Formentera, natural mud baths at Es Palmador. Duration: 1 day.</p>
+        <p><strong>2. Ibiza to Mallorca:</strong> Start: Ibiza Town. Stops: Formentera, Cabrera National Park, Palma de Mallorca. Highlights: Inter-island exploration, wildlife in Cabrera, historical sights in Palma, luxury shopping. Duration: 7 days.</p>
+        <p><strong>3. Bespoke Luxury Route:</strong> Start and End: Tailored to preferences. Stops: Customized based on interests, such as gourmet dining experiences, exclusive beach clubs, wellness retreats, or nature exploration. Highlights: Personalized itinerary catering to luxury and unique experiences. Duration: Custom.</p>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
@@ -613,10 +606,17 @@ $('.close-popup').on('click', function() {
       <div class="social-media">
         <h4>Social Media</h4>
         <div class="socials">
-        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/yachtszenith"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com/" aria-label="Follow us on Facebook">
+              <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://twitter.com" aria-label="Follow us on Twitter">
+              <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com/yachtszenith" aria-label="Follow us on Instagram">
+              <i class="fab fa-instagram"></i>
+          </a>
       </div>
+      
     </div>
       
     </div>
