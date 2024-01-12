@@ -771,14 +771,14 @@ color: var(--LOGO-COLOR);
   display: flex;
   align-self: center;
   justify-content: center;
- margin-top: 40px;
+  margin-top: 40px;
   margin-bottom: 100px;
 }
 
 .see-all-container a.see-all-link {
   position: relative;
   text-decoration: none;
-  color: var(--TEXT-DARKCOLOR);
+  color: #fff;
   padding-right: 25px;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -794,7 +794,7 @@ color: var(--LOGO-COLOR);
   top: 50%;
   transform: translateY(-50%) rotate(90deg);
   font-size: 26px;
-  color: var(--TEXT-DARKCOLOR);
+  color: #fff;
   line-height: 1.2;
   text-shadow: none;
   transition: transform 0.3s ease;
@@ -802,10 +802,15 @@ color: var(--LOGO-COLOR);
 
 .see-all-container a.see-all-link:hover::after {
   transform: translateX(5px) translateY(-50%) rotate(90deg);
+  color: #000;
 }
 
-.see-all-container a.see-all-link:hover {
-  background: linear-gradient(to right, var(--LOGO-COLOR), white); 
+.see-all-container a:hover{
+color: #000;
+}
+
+.see-all-container a.see-all-link:hover { 
+  background: linear-gradient(to right, var(--LOGO-COLOR), rgb(255, 255, 255)); 
   border: 1px solid linear-gradient(to right, var(--LOGO-COLOR), white);
 }
 
