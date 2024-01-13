@@ -69,6 +69,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+
 </head>
 
   <body>
@@ -100,7 +102,7 @@
   
 <section>
     <div class="video-container">
-        <video src="video/IntroYachtsZenith.mp4" muted loop autoplay playsinline poster="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/2fe62038-8d82-46d4-41a6-a0b91b002900/680x1200"></video>
+      <video data-dashjs-player autoplay muted loop playsinline poster="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/2fe62038-8d82-46d4-41a6-a0b91b002900/680x1200"></video>
         <div class="gradient-overlay"></div>
         <div class="card-titles">
             <h1 class="h-iphone">Welcome Aboard Yachts Zenith - Premier Yacht Rentals in Ibiza</h1>
@@ -449,6 +451,14 @@
 </div>
 </div>
 
+
+<script>
+  (function() {
+    var url = "https://customer-5k0bsc7p70xd6ttv.cloudflarestream.com/ccbc09d4f1a364f073163d0c3b2c7c2e/manifest/video.mpd";
+    var player = dashjs.MediaPlayer().create();
+    player.initialize(document.querySelector("video"), url, true);
+  })();
+</script>
 
 <script>
   //ENABLE COOKIES BANNER 
