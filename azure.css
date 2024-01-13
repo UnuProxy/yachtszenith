@@ -276,6 +276,7 @@ nav .mainMenu .closeMenu,
     object-fit: cover; 
 }
 
+
   
   .gradient-overlay {
     position: absolute;
@@ -892,6 +893,18 @@ button:hover {
     background-position: left center; 
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
 /* YACHT CHARTER BROWSER */
 .filter-bar {
   margin: 10px;
@@ -1209,6 +1222,8 @@ button:hover {
     width: 100%;
   }
 }
+
+
 
 
      
