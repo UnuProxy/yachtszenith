@@ -18,10 +18,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://yachtszenith.com/azure.css">
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
     <title>Ibiza Yacht Routes - Yachts Zenith</title>
 </head>
-
-
    <body>
     <div class="black-bg" id="sticky-section">
         <nav class="position-header ">
@@ -38,11 +37,9 @@
     </nav>
     </div>
 
-
-
     <section>
       <div class="video-container">
-        <video src="video/IbizaNightYacht.mp4" muted loop autoplay playsinline></video>
+        <video muted loop autoplay playsinline></video>
         <div class="gradient-overlay"></div>
         div class="carousel">
         <div class="carousel-slide active">
@@ -59,7 +56,6 @@
         </div>
      </div>
     </section>
-
 
      <div class="yachtContainer">
       <div class="breadcrumb">
@@ -78,30 +74,29 @@
       </div>
   </div>
   <script src="script.js" defer></script>
-   <script src="yacht.js"></script>
-
-
+   <script src="yacht.js" defer></script>
+   <script>
+    (function() {
+      var url = "https://customer-5k0bsc7p70xd6ttv.cloudflarestream.com/99fd0728160ccac4d4fbd28dfb98ae88/manifest/video.mpd";
+      var player = dashjs.MediaPlayer().create();
+      player.initialize(document.querySelector("video"), url, true);
+    })();
+  </script>
    <footer>
     <div class="footer-container">
       <div class="footer-logo">    
         <img src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/ef6abc91-76d1-42e5-3358-ab391e2df600/680x1200" width="57" height="100" alt="Yachts Zenith Logo" loading="lazy"> 
-    </div>
-    
-      
+    </div> 
       <div class="policy-links">
         <h4>Data Policies</h4>
         <div><a href="cookies-policy">Cookies Policy</a></div>
         <div><a href="data-policy">Data Policy</a></div>
       </div>
-      
       <div class="company">
         <h4>Company</h4>
         <div><a href="Contact-us">Contact Us</a></div>
         <div><a href="about-us">About Us</a></div>
       </div>
-
-     
-      
       <div class="social-media">
         <h4>Social Media</h4>
         <div class="socials">
@@ -114,10 +109,8 @@
           <a href="https://instagram.com/yachtszenith" aria-label="Follow us on Instagram">
               <i class="fab fa-instagram"></i>
           </a>
-      </div>
-      
-    </div>
-      
+      </div>   
+    </div>   
     </div>
   </footer>
 </body>

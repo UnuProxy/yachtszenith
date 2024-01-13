@@ -18,6 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
 </head>
 
   <body>
@@ -40,7 +41,7 @@
 
   <section>
     <div class="video-container">
-      <video src="video/IbizaNightYacht.mp4" muted loop autoplay playsinline></video>
+      <video muted loop autoplay playsinline></video>
       <div class="gradient-overlay"></div>
       <div class="card-titles">
         <h1 class="h-iphone">Yachts Charter Ibiza </h1>
@@ -49,10 +50,7 @@
     </div>
   </section>
   
-
-    <!-- Filter Bar -->
     <div id="filter-bar" class="filter-bar">
-      <!-- Price Range Filter -->
       <div>
         <label for="priceFilter">Select Price Range: </label>
         <select id="priceFilter">
@@ -62,7 +60,6 @@
         </select>
       </div>
     
-      <!-- Length Range Filter -->
       <div>
         <label for="lengthFilter">Select Length Range: </label>
         <select id="lengthFilter">
@@ -72,54 +69,50 @@
         </select>
       </div>
     
-      <!-- Yacht Name Search -->
       <div>
         <label for="nameSearch">Search Yacht Name: </label>
         <input type="text" id="nameSearch" placeholder="Enter Yacht Name">
       </div>
-    
-      <!-- Reset Filters Button -->
+  
       <div>
         <button id="resetFilters">Reset Filters</button>
       </div>
     </div>
     
     <div class="yacht-grid">
-      <!-- Yachts loading here -->
     </div>
     
-
-
-
-
 <script src="script.js" defer></script>
 <script src="yacht.js"></script>
 <script>
-  
 </script>
+<script>
+  (function() {
+    var url = "https://customer-5k0bsc7p70xd6ttv.cloudflarestream.com/99fd0728160ccac4d4fbd28dfb98ae88/manifest/video.mpd";
+    var videoElement = document.querySelector("video");
+    var player = dashjs.MediaPlayer().create();
+    player.initialize(videoElement, url, true);
 
- 
+    videoElement.onended = function() {
+      videoElement.play();
+    };
+  })();
+</script>
   <footer>
     <div class="footer-container">
       <div class="footer-logo">    
         <img src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/ef6abc91-76d1-42e5-3358-ab391e2df600/680x1200" width="57" height="100" alt="Yachts Zenith Logo" loading="lazy"> 
-    </div>
-    
-      
+    </div> 
       <div class="policy-links">
         <h4>Data Policies</h4>
         <div><a href="cookies-policy">Cookies Policy</a></div>
         <div><a href="data-policy">Data Policy</a></div>
-      </div>
-      
+      </div> 
       <div class="company">
         <h4>Company</h4>
         <div><a href="Contact-us">Contact Us</a></div>
         <div><a href="about-us">About Us</a></div>
       </div>
-
-     
-      
       <div class="social-media">
         <h4>Social Media</h4>
         <div class="socials">
@@ -132,13 +125,9 @@
           <a href="https://instagram.com/yachtszenith" aria-label="Follow us on Instagram">
               <i class="fab fa-instagram"></i>
           </a>
-      </div>
-      
-    </div>
-      
+      </div>  
+    </div> 
     </div>
   </footer>
- 
-    
   </body>
   </html>
