@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
     <title>Es Vedra Boat Rental - Yachts Zenith</title>
 </head>
 
@@ -42,7 +43,7 @@
 
     <section>
         <div class="video-container">
-          <video src="video/EsVedraSunsetYacht.mp4" muted loop autoplay playsinline></video>
+          <video muted loop autoplay playsinline></video>
           <div class="gradient-overlay"></div>
           <div class="card-titles">
             <h1 class="h-iphone">Watch the Es Vedra Sunset with Yachts Zenith in Ibiza</h1>
@@ -65,7 +66,6 @@
         </div>
       </section>
       
-      
       <section class="spacer">
         <div class="centered-paragraph">
           <p class="custom-text">
@@ -77,7 +77,6 @@
        </div>
        <h3 class="custom-title"> Your desire, our mission </h3> 
       </section>
-      
       
       <!-- YACHT LISTINGS  -->
       <section id="yacht-listings" class="yacht-listings">
@@ -96,8 +95,7 @@
             </ul>
             <button class="inquiry-button" data-yacht-name="Yacht Waterdream 65" aria-label="Inquiry for Waterdream 65">Enquiry here</button>
           </div>
-        </div>
-      
+        </div>    
         <div class="yacht">
           <div class="yacht-image">
             <img src="SeaStory/VQ82SeaStory87.jpg" alt="Yacht Vanquish VQ82" loading="lazy">
@@ -114,8 +112,6 @@
             <button class="inquiry-button" data-yacht-name="Vanquish VQ82" aria-label="Inquiry for Vanquish VQ82">Enquiry here</button>
           </div>
         </div>
-      
-      
         <div class="yacht">
           <div class="yacht-image">
             <img src="Danzas/PershingNavigating(90)45.jpg" alt="Yacht Persing 90" loading="lazy">
@@ -133,8 +129,6 @@
           </div>
         </div>
       </section>
-
-
   <!-- The form popup -->
 <div id="inquiryPopup" class="popup">
   <div class="popup-content">
@@ -172,21 +166,27 @@
     <p class="cookies-text">Welcome to Yachts Zenith. This Data Policy explains how Yachts Zenith (referred to as "we", "us", or "our") collects, uses, shares, and safeguards your personal information when you visit our yacht charter website at <a href="https://yachtszenith.com/" class="cookies-link">www.yachtszenith.com</a>. We are committed to protecting your privacy and ensuring the security of your data in compliance with the General Data Protection Regulation (GDPR) and Spanish data protection laws.</p>
 </section>
 <a href="data-policy">Read more here</a>
-
 </div>
-      
-     
+<script>
+  (function() {
+    var url = "https://customer-5k0bsc7p70xd6ttv.cloudflarestream.com/39d356953abafdda4608f1606fb3df81/manifest/video.mpd";
+    var videoElement = document.querySelector("video");
+    var player = dashjs.MediaPlayer().create();
+    player.initialize(videoElement, url, true);
 
+    videoElement.onended = function() {
+      videoElement.play();
+    };
+  })();
+</script>
 <script>
    function showDataPolicyOverview() {
     document.getElementById('dataPolicyOverview').style.display = 'block';
 }
-
 function closeDataPolicyOverview() {
     document.getElementById('dataPolicyOverview').style.display = 'none';
 }
 </script>
-
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver((entries) => {
@@ -202,21 +202,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }, {
     threshold: 0.5 
   });
-
   document.querySelectorAll('.charter-section').forEach(section => {
     observer.observe(section);
   });
 });
 </script>
 <script>
-  $(document).ready(function() {
-    
+  $(document).ready(function() {  
     var today = new Date().toISOString().split('T')[0];
     $('#startDate, #endDate').attr('min', today);
 
     $('#inquiryForm').submit(function(e) {
         e.preventDefault();
-
         $.ajax({
             url: $(this).attr('action'),
             method: 'POST',
@@ -232,28 +229,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
     $('.inquiry-button').on('click', function() {
         var yachtName = $(this).data('yacht-name');
         $('#yachtNameInput').val(yachtName);
         $('#inquiryPopup').show();
     });
-
     $('.close-popup').on('click', function() {
         $('#inquiryPopup').hide();
     });
 });
-
   </script>
-<script src="script.js"></script>
-
+<script src="script.js" defer></script>
 <footer>
   <div class="footer-container">
     <div class="footer-logo">    
       <img src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/ef6abc91-76d1-42e5-3358-ab391e2df600/680x1200" width="57" height="100" alt="Yachts Zenith Logo" loading="lazy"> 
   </div>
   
-    
     <div class="policy-links">
       <h4>Data Policies</h4>
       <div><a href="cookies-policy">Cookies Policy</a></div>
@@ -265,7 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
       <div><a href="Contact-us">Contact Us</a></div>
       <div><a href="about-us">About Us</a></div>
     </div>
-
     
     <div class="social-media">
       <h4>Social Media</h4>
@@ -279,12 +270,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="https://instagram.com/yachtszenith" aria-label="Follow us on Instagram">
             <i class="fab fa-instagram"></i>
         </a>
-    </div>
-    
-  </div>
-    
+    </div>  
+  </div>  
   </div>
 </footer>
-
 </body>
 </html>

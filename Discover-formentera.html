@@ -12,6 +12,7 @@
     <meta property="og:description" content="Discover the unspoiled beauty of Formentera with our bespoke yacht charters. Set sail for an unforgettable adventure.">
     <meta property="og:image" content="https://yachtszenith.com/Formenterabeach.jpg">
     <meta property="og:url" content="https://yachtszenith.com/Discover-formentera">
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
     <meta property="og:type" content="website">
     <script type="application/ld+json">
       {
@@ -38,13 +39,10 @@
             "https://www.instagram.com/yachtszenith"
         ]
     }
-    
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://yachtszenith.com/azure.css">
 </head>
-
-
 
   <body>
     <div class="page-container">
@@ -69,7 +67,7 @@
 
  <section>
   <div class="video-container">
-    <video src="video/FormenteraIlletas.mp4" muted loop autoplay playsinline></video>
+    <video muted loop autoplay playsinline></video>
     <div class="gradient-overlay"></div>
     <div class="card-titles">
       <h1 class="h-iphone">Discover Formentera with Yachts Zenith Ibiza</h1>
@@ -134,7 +132,7 @@
 <div id="myModal" class="modal">
     <span class="close">&times;</span>
     <div class="modal-content">
-        <img class="modal-image" id="img01">
+        <img class="modal-image" id="img01" alt="Formentera">
         <p id="caption"></p>
     </div>
 </div>
@@ -150,7 +148,6 @@
    </div>
    <h3 class="custom-title"> Your desire, our mission </h3> 
   </section>
-  
   
   <!-- YACHT LISTINGS  -->
   <section id="yacht-listings" class="yacht-listings">
@@ -187,7 +184,6 @@
         <button class="inquiry-button" data-yacht-name="CRN 130" aria-label="Inquiry for CRN 130">Enquiry here</button>
       </div>
     </div>
-  
   
     <div class="yacht">
       <div class="yacht-image">
@@ -244,25 +240,19 @@
     <p class="cookies-text">Welcome to Yachts Zenith. This Data Policy explains how Yachts Zenith (referred to as "we", "us", or "our") collects, uses, shares, and safeguards your personal information when you visit our yacht charter website at <a href="https://yachtszenith.com/" class="cookies-link">www.yachtszenith.com</a>. We are committed to protecting your privacy and ensuring the security of your data in compliance with the General Data Protection Regulation (GDPR) and Spanish data protection laws.</p>
 </section>
 <a href="data-policy">Read more here</a>
-
 </div>
-  
   
     <div class="see-all-container">
       <a href="Yacht-charter" class="see-all-link"> View all Yachts for Charter </a>
     </div>
-
-
     <script>
        function showDataPolicyOverview() {
     document.getElementById('dataPolicyOverview').style.display = 'block';
 }
-
 function closeDataPolicyOverview() {
     document.getElementById('dataPolicyOverview').style.display = 'none';
 }
     </script>
-
   <script>
     $(document).ready(function() {
     var today = new Date().toISOString().split('T')[0];
@@ -270,7 +260,6 @@ function closeDataPolicyOverview() {
 
     $('#inquiryForm').submit(function(e) {
         e.preventDefault();
-
         $.ajax({
             url: $(this).attr('action'),
             method: 'POST',
@@ -286,49 +275,42 @@ function closeDataPolicyOverview() {
             }
         });
     });
-
     $('.inquiry-button').on('click', function() {
         var yachtName = $(this).data('yacht-name');
         $('#yachtNameInput').val(yachtName);
         $('#inquiryPopup').show();
     });
-
     $('.close-popup').on('click', function() {
         $('#inquiryPopup').hide();
     });
 });
-
-
     </script>
-      
-
-
-   
-
-<script src="scriptdiscover.js" ></script>
+<script src="scriptdiscover.js" defer></script>
 <script src="script.js" defer></script>
  
 </div>
+<script>
+  (function() {
+    var url = "https://customer-5k0bsc7p70xd6ttv.cloudflarestream.com/3dc44445b140da593dd40a21168efd74/manifest/video.mpd";
+    var player = dashjs.MediaPlayer().create();
+    player.initialize(document.querySelector("video"), url, true);
+  })();
+</script>
 <footer>
   <div class="footer-container">
     <div class="footer-logo">    
       <img src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/ef6abc91-76d1-42e5-3358-ab391e2df600/680x1200" width="57" height="100" alt="Yachts Zenith Logo" loading="lazy"> 
   </div>
-  
-    
     <div class="policy-links">
       <h4>Data Policies</h4>
       <div><a href="cookies-policy">Cookies Policy</a></div>
       <div><a href="data-policy">Data Policy</a></div>
     </div>
-    
     <div class="company">
       <h4>Company</h4>
       <div><a href="Contact-us">Contact Us</a></div>
       <div><a href="about-us">About Us</a></div>
     </div>
-
-    
     <div class="social-media">
       <h4>Social Media</h4>
       <div class="socials">
@@ -341,10 +323,8 @@ function closeDataPolicyOverview() {
         <a href="https://instagram.com/yachtszenith" aria-label="Follow us on Instagram">
             <i class="fab fa-instagram"></i>
         </a>
-    </div>
-    
+    </div> 
   </div>
-    
   </div>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
