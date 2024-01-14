@@ -14,7 +14,7 @@
     <link rel="canonical" href="https://yachtszenith.com/Yacht-charter">
     <link rel="icon" type="image/png" href="https://yachtszenith.com/LogoFooterBlue.png">
     <link rel="stylesheet" href="https://yachtszenith.com/azure.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
@@ -83,7 +83,7 @@
     </div>
     
 <script src="script.js" defer></script>
-<script src="yacht.js"></script>
+<script src="yacht.js" defer></script>
 <script>
 </script>
 <script>
@@ -92,7 +92,6 @@
     var videoElement = document.querySelector("video");
     var player = dashjs.MediaPlayer().create();
     player.initialize(videoElement, url, true);
-
     videoElement.onended = function() {
       videoElement.play();
     };
