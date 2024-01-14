@@ -127,16 +127,13 @@
                 <input type="checkbox" id="newPolicyAgreement" name="policyAgreement" required>
                 <label for="newPolicyAgreement" class="new-consent-label">
                     I have read and agree to the 
-                    <a href="#!" class="new-policy-link" onclick="showDataPolicyOverview()"> Data Policy </a>  of Yachts Zenith.
+                    <a href="#!" class="new-policy-link" onclick="showDataPolicyOverview()" rel="nofollow">Data Policy</a>  of Yachts Zenith.
                 </label>
             </div>
-            
-          
             <button type="submit" class="submit-button">Submit</button>   
         </form>
     </div>
 </div>
-
 
 <div id="dataPolicyOverview" class="data-policy-overview">
     <span class="close-policy-overview" onclick="closeDataPolicyOverview()">&times;</span>
@@ -148,57 +145,38 @@
   
   </div>
 
-
   <script>
     function showDataPolicyOverview() {
       document.getElementById('dataPolicyOverview').style.display = 'block';
   }
-  
   function closeDataPolicyOverview() {
       document.getElementById('dataPolicyOverview').style.display = 'none';
   }
   </script>
-  
-
   <script>
 function showForm() {
     var formContainer = document.getElementById('voyageFormPopup');
-    var button = document.getElementById('planVoyageBtn');
-
-    
+    var button = document.getElementById('planVoyageBtn');   
     formContainer.style.display = 'block';
-
-    
     button.style.display = 'none';
 }
-
-
 function hideForm() {
     var formContainer = document.getElementById('voyageFormPopup');
     var button = document.getElementById('planVoyageBtn');
-
-   
     formContainer.style.display = 'none';
-
     button.style.display = 'block';
 }
-
 document.getElementById('planVoyageBtn').addEventListener('click', showForm);
-
 window.onclick = function(event) {
     var formContainer = document.getElementById('voyageFormPopup');
-
-    
     if (event.target == formContainer) {
         hideForm();
     }
 };
-
 var closeButton = document.querySelector('.close-button');
 if (closeButton) {
     closeButton.addEventListener('click', hideForm);
 }
-
 document.getElementById('startVoyageDate').addEventListener('change', function() {
   var startDate = new Date(this.value);
   var endDateInput = document.getElementById('endVoyageDate');
@@ -230,54 +208,41 @@ document.getElementById('startVoyageDate').addEventListener('change', function()
             document.getElementById("startVoyageDate").setAttribute("min", today);
             document.getElementById("endVoyageDate").setAttribute("min", today);
         }
-
         document.addEventListener('DOMContentLoaded', setMinVoyageDate);
-
         document.getElementById('voyageForm').addEventListener('submit', function(event) {
             event.preventDefault(); 
             var form = this;
             var formData = new FormData(form);
-      
             fetch(form.action, {
                 method: 'POST',
                 body: formData,
             }).then(response => {
-                if (response.ok) {
-                    
+                if (response.ok) {            
                     document.getElementById('successMessage').style.display = 'block';
                     form.reset();
-                } else {
-                    
+                } else {                
                     alert("There was an error submitting the form. Please try again.");
                 }
-            }).catch(error => {
-                
+            }).catch(error => {            
                 alert("There was a network error. Please try again.");
             });
         });
-  </script>
-
-      
+  </script>   
     <script>
         let currentIndex = 0;
-
 function moveSlide(direction) {
     const slides = document.querySelectorAll('.gallery-item');
     const totalSlides = slides.length;
-
     currentIndex += direction;
-
     if (currentIndex >= totalSlides) {
         currentIndex = 0;
     } else if (currentIndex < 0) {
         currentIndex = totalSlides - 1;
     }
-
     const offset = currentIndex * -100;
     const slider = document.querySelector('.gallery-slider');
     slider.style.transform = `translateX(${offset}%)`;
 }
-
 document.addEventListener('DOMContentLoaded', function() {
     const narrativeText = document.querySelector('.narrative-section p');
     if (narrativeText) {
@@ -285,8 +250,6 @@ document.addEventListener('DOMContentLoaded', function() {
         narrativeText.style.transform = 'translateY(0)';
     }
 });
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -315,27 +278,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
   </script>
         
-   <script src="script.js"></script>   
+   <script src="script.js" defer></script>   
    <footer>
     <div class="footer-container">
       <div class="footer-logo">    
         <img src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/ef6abc91-76d1-42e5-3358-ab391e2df600/680x1200" width="57" height="100" alt="Yachts Zenith Logo" loading="lazy"> 
     </div>
-    
-      
       <div class="policy-links">
         <h4>Data Policies</h4>
         <div><a href="cookies-policy">Cookies Policy</a></div>
         <div><a href="data-policy">Data Policy</a></div>
       </div>
-      
       <div class="company">
         <h4>Company</h4>
         <div><a href="Contact-us">Contact Us</a></div>
         <div><a href="about-us">About Us</a></div>
       </div>
-
-      
       <div class="social-media">
         <h4>Social Media</h4>
         <div class="socials">
@@ -349,12 +307,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
               <i class="fab fa-instagram"></i>
           </a>
       </div>
-      
-    </div>
-      
+    </div>  
     </div>
   </footer>
-     
-
 </body>
 </html>

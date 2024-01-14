@@ -1,3 +1,6 @@
+console.log("Modal should be displayed now");
+modal.style.display = "block";
+
 (function() {
   var modal = document.getElementById("myModal");
   var img = document.getElementsByClassName("small-img");

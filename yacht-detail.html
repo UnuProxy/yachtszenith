@@ -31,7 +31,6 @@
       </ul>
     </nav>
     </div>
-   
 
     <!--  YACHT DETAIL  -->
   <div class="yacht-detail">
@@ -46,7 +45,6 @@
       <a href="#" id="enquire-now-btn">Enquiry Now</a>
   </div>
   </div>
-
 
  <div id="enquire-modal" class="modal">
     <div class="modal-content">
@@ -66,7 +64,7 @@
                 <input type="checkbox" id="newPolicyAgreement" name="policyAgreement" required>
                 <label for="newPolicyAgreement" class="new-consent-label">
                     I have read and agree to the 
-                    <a href="#!" class="new-policy-link" onclick="showDataPolicyOverview()"> Data Policy </a>  of Yachts Zenith
+                    <a href="#!" class="new-policy-link" onclick="showDataPolicyOverview()" rel="nofollow">Data Policy</a> of Yachts Zenith
                 </label>
             </div>
             <button type="submit">Submit</button>
@@ -82,22 +80,17 @@
 <a href="data-policy">Read more here</a>
   
 </div>
-
-
     <div id="about" class="yacht-description">
       
       <p class="description-text"></p>
     </div>
 
-   
     <div class="title-container">
       <h2 class="section-title"><span></span>The Yacht</h2>
     </div>
 
     <div id="interior" class="yacht-carousel interior-carousel"> 
     </div>
-    
-    
     
     <div id="key-info" class="yacht-specs">
       <h2>Main Specifications</h2>
@@ -108,8 +101,6 @@
     <div id="text-image-container">
     </div>
     
-    
-   
     <div id="extras-section">
       <h2>On board</h2>
       <ul id="extras-list">  
@@ -120,11 +111,7 @@
         <h2> Rate From </h2>
         <p class="price-text"></p>
       </div>
-    
     </div>
-
-
-   
     <h2 class="carousel-title">Browse Similar Yachts</h2>
     <div id="carousel-wrapper">
         <button class="carousel-btn" id="prev-btn" onclick="move(-1)">❮</button>
@@ -140,13 +127,12 @@
         <button class="carousel-btn" id="next-btn" onclick="move(1)">❯</button>
       </div>
       
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-   
- <script src="text_images.js"></script>
-      <script src="extras.js"></script>
- <script src="yachtdetails.js"></script>
-    <script src="yacht.js"></script>
-    <script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" async></script>
+<script src="text_images.js" defer></script>
+<script src="extras.js" defer></script>
+<script src="yachtdetails.js" defer></script>
+<script src="yacht.js" defer></script>
+<script src="script.js" defer></script>
     <script>
       $(document).ready(function() {
     var yachtData = [];
@@ -156,12 +142,10 @@
         .then(data => {
             yachtData = data;
         });
-
     function getYachtNameById(yachtId) {
         const yacht = yachtData.find(yacht => yacht.id === parseInt(yachtId, 10));
         return yacht ? yacht.name : '';
     }
-
     $('#enquire-now-btn').on('click', function(e) {
         e.preventDefault(); 
         var yachtId = new URLSearchParams(window.location.search).get('id');
@@ -169,20 +153,16 @@
         $('#yacht-name').val(yachtName); 
         $('#enquire-modal').show(); 
     });
-
     $('.close').on('click', function() {
         $('#enquire-modal').hide(); 
     });
-
     $(window).on('click', function(e) {
         if ($(e.target).is('#enquire-modal')) {
             $('#enquire-modal').hide(); 
         }
     });
-
     $('#enquiry-form').submit(function(e) {
     e.preventDefault();
-
     var formData = {
         name: $('#name').val(),
         email: $('#email').val(),
@@ -193,7 +173,6 @@
         yachtName: $('#yacht-name').val(),
         policyAgreement: $('#newPolicyAgreement').is(':checked') 
     };
-
         $.ajax({
             url: 'https://usebasin.com/f/5901228062f3',
             method: 'POST',
@@ -211,20 +190,14 @@
     });
 });
 </script>
-
 <script>
   function showDataPolicyOverview() {
     document.getElementById('dataPolicyOverview').style.display = 'block';
 }
-
 function closeDataPolicyOverview() {
     document.getElementById('dataPolicyOverview').style.display = 'none';
 }
-
-
 </script>
-
-  
 <footer>
   <div class="footer-container">
     <div class="footer-logo">    
@@ -258,10 +231,8 @@ function closeDataPolicyOverview() {
         <a href="https://instagram.com/yachtszenith" aria-label="Follow us on Instagram">
             <i class="fab fa-instagram"></i>
         </a>
-    </div>
-    
+    </div>  
   </div>
-    
   </div>
 </footer>
 </body>
