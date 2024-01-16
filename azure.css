@@ -3026,27 +3026,22 @@ margin-top: 10px;
   background-color: transparent;
 }
 
-
 .gallery-container {
   position: relative;
   width: 100%;
   overflow: hidden; 
 }
 
-
 .gallery-slider {
   display: flex;
   transition: transform 0.5s ease;
 }
 
-
 .gallery-item {
   flex: 0 0 100%; 
   text-align: center;
   box-sizing: border-box;
- 
 }
-
 
 .gallery-item img {
   max-width: 100%; 
@@ -3064,7 +3059,6 @@ margin-top: 10px;
 .gallery-item img, .gallery-item h3 {
   background-color: transparent;
 }
-
 
 .narrative-section h2 {
   font-size: 2.5em; 
@@ -3667,7 +3661,6 @@ font-size: 36px;
 
 .purpose-section {
   background: linear-gradient(to bottom, #0B3355, #1A4B75);
-  
 }
 .mission-content {
   background-color: inherit;
