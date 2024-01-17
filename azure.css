@@ -4404,6 +4404,17 @@ section {
   z-index: 1;
   background-color: transparent;
 }
+.btn {
+  background-color: var(--LOGO-COLOR); 
+  padding: 10px 15px; 
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: background-color 0.3s; 
+}
+
+.btn:hover {
+  background-color: var(--BG-COLOUR); 
+}
 
 
 .seasonal-guide-new, .image-text {
