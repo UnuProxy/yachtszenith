@@ -159,35 +159,42 @@
   }
   </script>
   <script>
-function showForm() {
-    var formContainer = document.getElementById('voyageFormPopup');
-    var button = document.getElementById('planVoyageBtn');   
-    formContainer.style.display = 'block';
-    button.style.display = 'none';
-}
-function hideForm() {
-    var formContainer = document.getElementById('voyageFormPopup');
-    var button = document.getElementById('planVoyageBtn');
-    formContainer.style.display = 'none';
-    button.style.display = 'block';
-}
-document.getElementById('planVoyageBtn').addEventListener('click', showForm);
-window.onclick = function(event) {
-    var formContainer = document.getElementById('voyageFormPopup');
-    if (event.target == formContainer) {
-        hideForm();
+document.addEventListener('DOMContentLoaded', function() {
+    function showForm() {
+        var formContainer = document.getElementById('voyageFormPopup');
+        var button = document.getElementById('planVoyageBtn');   
+        formContainer.style.display = 'block';
+        button.style.display = 'none';
     }
-};
-var closeButton = document.querySelector('.close-button');
-if (closeButton) {
-    closeButton.addEventListener('click', hideForm);
-}
-document.getElementById('startVoyageDate').addEventListener('change', function() {
-  var startDate = new Date(this.value);
-  var endDateInput = document.getElementById('endVoyageDate');
-
-  endDateInput.valueAsDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + 1);
+    function hideForm() {
+        var formContainer = document.getElementById('voyageFormPopup');
+        var button = document.getElementById('planVoyageBtn');
+        formContainer.style.display = 'none';
+        button.style.display = 'block';
+    }
+    document.getElementById('planVoyageBtn').addEventListener('click', showForm);
+    window.onclick = function(event) {
+        var formContainer = document.getElementById('voyageFormPopup');
+        if (event.target == formContainer) {
+            hideForm();
+        }
+    };
+    var closeButton = document.querySelector('.close-button');
+    if (closeButton) {
+        closeButton.addEventListener('click', hideForm);
+    }
+    document.getElementById('startVoyageDate').addEventListener('change', function() {
+        var startDate = new Date(this.value);
+        var endDateInput = document.getElementById('endVoyageDate');
+        endDateInput.valueAsDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + 1);
+    });
+    setMinVoyageDate();
 });
+function setMinVoyageDate() {
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById('startVoyageDate').setAttribute('min', today);
+    document.getElementById('endVoyageDate').setAttribute('min', today);
+}
 </script>
 <script>
     var modal = document.getElementById("voyageFormPopup");
@@ -200,7 +207,6 @@ document.getElementById('startVoyageDate').addEventListener('change', function()
     pan.onclick = function() {
         modal.style.display = "none";
     }
-  
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
