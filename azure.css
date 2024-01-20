@@ -257,7 +257,6 @@ nav .mainMenu .closeMenu,
   }
 }
 
-  
   /*VIDEO START WEB, TITLE AND SUBTITLES*/
   .video-container {
     position: relative;
@@ -1342,9 +1341,6 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
-
-
-
 
 .section-title::before,
 .section-title::after {
@@ -2516,6 +2512,7 @@ margin-top: 10px;
   overflow: hidden;
   z-index: 1000;
   color: white;
+  display: none;
 }
 
 .voyageFormPopup-content {
@@ -4174,7 +4171,7 @@ section {
 .contentWrapper {
   display: flex;
   align-items: center;       
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .title {
@@ -4209,6 +4206,41 @@ section {
   }
 }
 
+.yacht-charter-wrapper {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+}
+
+.yacht-charter-title {
+  width: 100%; 
+  margin-bottom: 20px;
+}
+
+.yacht-charter-info, .yacht-charter-image {
+  flex: 1; 
+  padding: 10px; 
+}
+
+.yacht-charter-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .yacht-charter-wrapper {
+      display: block;
+  }
+
+  .yacht-charter-info, .yacht-charter-image {
+      width: 100%; 
+  }
+}
 
 
 
@@ -4428,7 +4460,6 @@ section {
   transform: translateY(0);
 }
 
-
 .guide-section {
   max-width: 800px;
   margin: 40px auto;
@@ -4559,6 +4590,45 @@ justify-content: space-between;
 align-items: center;
 padding: 15px 30px;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.call-to-action {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.call-to-action p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.call-to-action .cta-button-link {
+  color: var(--LOGO-COLOR);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid var(--LOGO-COLOR);
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+.call-to-action .cta-button-link:hover {
+  background-color: var(--LOGO-COLOR);
+  color: var(--BG-COLOUR);
+}
+
+@media screen and (max-width: 768px) {
+  .call-to-action p {
+    font-size: 0.9rem;
+  }
+
+  .call-to-action {
+    padding: 15px;
+  }
 }
 
 

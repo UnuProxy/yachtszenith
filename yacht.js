@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
     yachtData.forEach(yacht => {
       const yachtCard = document.createElement('div');
       yachtCard.className = 'yacht-card';
-      // Add click event to redirect to detail page with yacht id
       yachtCard.addEventListener('click', function() {
         window.location.href = `yacht-detail.html?id=${yacht.id}`;
       });
