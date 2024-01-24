@@ -275,18 +275,14 @@ nav .mainMenu .closeMenu,
     object-fit: cover; 
 }
 
-  
   .gradient-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 50%;  
     background: linear-gradient(to bottom, rgba(11, 51, 85, 0) 10%, rgba(11, 51, 85, 0.3) 40%, rgba(11, 51, 85, 0.9) 100%);
     z-index: 1;
 }
-
-
 
 @media screen and (max-width: 768px) {
   .video-container video {
@@ -336,7 +332,7 @@ nav .mainMenu .closeMenu,
     color: #fff;
     opacity: 0; 
     animation: slideUp 1s ease-out forwards;
-    font-weight: lighter;
+    font-family: 'Lora', serif;
     text-shadow: 0px 0px 5px #f1f1f1(0,0,0,0.6);
     font-size: 46px;
     text-align: center;
@@ -363,10 +359,7 @@ nav .mainMenu .closeMenu,
   .subtitles .subtitle-left {
     background-color: transparent;
   }
-  .subtitles .subtitle-right {
-    background-color: transparent;
-  }
-
+ 
   .subtitle-left, .subtitle-right {
     margin: 0;
     padding: 0;
@@ -398,8 +391,6 @@ nav .mainMenu .closeMenu,
     transition: all 0.2s linear; 
   }
   
-
-
   .subtitle-left:hover::before, .subtitle-right:hover::before {
     transform: scaleX(1);
   }
@@ -413,7 +404,7 @@ nav .mainMenu .closeMenu,
     color: #fff;
     border: 1px solid var(--LOGO-COLOR);
   }
-  /* ANIMATION TEXT VIDEO */
+  
   @keyframes slideUp {
     from {
       transform: translateY(100%);
@@ -431,61 +422,57 @@ nav .mainMenu .closeMenu,
   
   .subtitles {
     animation: slideUp 1s ease-out forwards 0.5s; }
-  
 
-
-@media screen and (max-width: 480px) { 
-  
-  .card-titles h1 {
-    font-size: 1.5em;
+  .card-titles h2 { 
+   background-color: transparent;
+   margin-bottom: 120px;
+   font-weight: lighter;
+   font-size: 28px;
+   font-family: 'Lato', sans-serif;
+   text-shadow: 1px 1px rgba(0, 0, 0, 0.521);
   }
 
-    .social-icons {
-      bottom: 10px; 
+
+  @media screen and (max-width: 600px) { 
+    .card-titles h2 {
+      font-size: 16px; 
+      margin-bottom: 15px; 
+      margin-bottom: 120px;
     }
-    .subtitles {
-      padding: 10px;
-      white-space: nowrap;
+  }
+
+@media screen and (max-width: 480px) { 
+  .subtitles {
+    padding: 10px;
+    white-space: nowrap;
     }
   .subtitle-left{
   font-size: 12px;
   padding: 5px;
   background: #fff;
 }
-.subtitle-right {
-  font-size: 12px;
-  padding: 5px;
-  background: #fff;
+  .subtitle-right {
+    font-size: 12px;
+    padding: 5px;
+    background: #fff;
 }
-
 }
 
  @media only screen and (max-width: 767px) {
     .video-container {
       padding-top: 100%;
     }
-
-    .card-titles h1 {
-      font-size: 30px;
-    }
-  
-    .card-titles,
-    .social-icons {
-      bottom: 150px; 
-    }
-    .social-icons{
-      margin-left: 5%;
-    }
     .h-iphone {
-      font-size: 20px; 
+      font-size: 18px; 
       margin-bottom: 90px; 
     }
-  
+    .subtitle-header h2 {
+      font-size: 12px;
+      font-weight: lighter;
+    }
     .p-iphone {
       font-size: 14px;
     }
-  
-    /* ADJUSTING VIDEO FOR MOBILE SCREEN */
     .video-container video {
       max-height: calc(100vh - 50px);
       height: auto;
@@ -494,9 +481,7 @@ nav .mainMenu .closeMenu,
 
  
   
-
   /* SLIDE PICTURE */
-  
     .image-slider-container {
       position: relative;
       width: 100%;
@@ -670,6 +655,8 @@ nav .mainMenu .closeMenu,
 .yacht-image img {
   transform: translateZ(-1px) scale(1.2);
 }
+
+
 
 @media (max-width: 768px) {
   .yacht-image img {
@@ -2679,6 +2666,9 @@ margin-top: 10px;
   .container {
       flex-direction: column;
   }
+  .outline-button{
+    padding: 5px;
+  }
 
   .column {
       margin-bottom: 40px;
@@ -2691,12 +2681,18 @@ margin-top: 10px;
   }
 }
 
+@media (max-width: 600px) {
+  .button-container .outline-button:nth-child(2) {
+      margin-left: 20px; 
+  }
+}
 
 /* IBIZA POPULAR DESTINATION*/
 .destination-container {
   overflow: hidden;
   text-align: center;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   height: auto; 
 }
 
@@ -2807,6 +2803,11 @@ margin-top: 10px;
   margin: 10px;
   background-color: transparent;
 }
+@media screen and (max-width: 768px) {
+  .destination-container {
+    width: 100%; 
+  }
+}
 
 .content-box {
   display: flex;
@@ -2821,6 +2822,96 @@ margin-top: 10px;
   color: #FFF;
   max-width: 800px;
 }
+
+
+#unique-yacht-charter {
+  margin-top: 180px;
+}
+
+#unique-yacht-charter .charter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.charter-title {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-align: left;  
+}
+
+.charter-description {
+  color: white;
+  line-height: 1.6;
+  text-align: left;  
+}
+
+.charter-inquiry-btn{
+  border: 1px solid var(--LOGO-COLOR);
+  padding: 2px;
+  margin-top: 5px;
+}
+
+.charter-inquiry-btn:hover {
+  background-color: var(--LOGO-COLOR);
+  color: var(--BG-COLOUR);
+}
+
+#yachts-zenith-section {
+  background: linear-gradient(to bottom, #0B3355, #1A4B75);
+  padding: 40px 0;
+}
+
+.yachts-zenith-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  text-align: center;
+  background-color: transparent;
+}
+.charter-container {
+  max-width: 300px;
+}
+
+.yachts-zenith-title {
+  font-size: 2.2em;
+  color: white;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+.yachts-zenith-description {
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  background-color: transparent;
+}
+.yachts-zenith-container {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+   
+}
+.yachts-zenith-text {
+  background-color: transparent;
+  margin-right: 40px;
+}
+
+.yachts-zenith-text, .yachts-zenith-image {
+  flex: 1; 
+}
+
+.yachts-zenith-image img {
+  width: 100%; /* This ensures the image takes the full width of its container */
+  height: auto; /* This maintains the aspect ratio of the image */
+}
+@media screen and (max-width: 768px) {
+  .yachts-zenith-container {
+    flex-direction: column;
+  }
+}
+
 
 
 @media (max-width: 1024px) {
@@ -4007,7 +4098,6 @@ section {
 }
 
 .carousel-slide h2 {
-  font-weight: 400;
   background-color: transparent;
 }
 
@@ -4050,6 +4140,11 @@ section {
 }
 .carousel-slide {
   background-color: transparent;
+}
+.carousel-slide h1{
+  background-color: transparent;
+  font-size: 48px;
+  font-weight: lighter;
 }
 
 .carousel-controls button {
@@ -4107,7 +4202,8 @@ section {
 }
 
 .carousel-slide h2 {
-  font-size: 36px; 
+  font-size: 48px; 
+  font-weight: lighter;
 }
 
 .carousel-slide button {
@@ -4120,6 +4216,11 @@ section {
   .carousel-slide h2 {
     font-size: 28px; 
   }
+  .carousel-slide h1{
+    font-size: 28px;
+  
+  }
+  
   .carousel-slide button {
     font-size: 18px; 
   }
@@ -4645,8 +4746,6 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
 }
 
-
-
 /* DESTINATION PICTURE AND TEXT */
 .charter-section {
   display: flex;
@@ -4672,8 +4771,6 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 .charter-text p {
   background: transparent;
 }
-
-
 
 .charter-text,
 .charter-image {
@@ -4741,7 +4838,6 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     height: auto;
   }
 }
-
 
 /* POP UP LARGE IMAGE WHEN CLICKED  */
 .modal {
@@ -4819,7 +4915,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 
 .modal-content h2 {
   color: var(--LOGO-COLOR);
-  font-size: clamp(18px, 2.5vw, 22px); /* Adjust font sizes to match the previous form */
+  font-size: clamp(18px, 2.5vw, 22px); 
   word-wrap: break-word;
   margin: 0 0 15px 0;
 }
@@ -4858,8 +4954,6 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     width: 100%; 
   }
 }
-
-
 
 .modal-content img {
   width: 100%;
@@ -4910,14 +5004,6 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   text-decoration: none;
   cursor: pointer;
 }
-
-
-
-
-
-
-
-
 /* YACHT CHARTER PAGE */
 .yachtListContainer {
   margin: 0 15%; 
@@ -4927,12 +5013,10 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   margin-top: 200px;
 }
 
-
 .yachtCard {
   flex-basis: calc(30% - 20px); 
   margin: 10px;
 }
-
 
 @media screen and (max-width: 768px) {
   .yachtCard {
@@ -4949,20 +5033,14 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   overflow: hidden;  
 }
 
-
 .yachtImage img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
-
 .yachtDetail {
   padding: 20px;
 }
-
-
-
-
 
 /* FOOTER STYLES */
 footer {
@@ -5060,8 +5138,41 @@ h4 {
   align-self: flex-start;
   margin-top: 20px;
 }
+.company-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transform: translateY(22%); 
+}
+.company-info h4 {
+  font-size: 16px; 
+  color: white;
+  margin-bottom: 10px;
+}
 
+.company-info p {
+  margin-bottom: 5px;
+  font-size: 14px; 
+  color: white;
+}
 
+.company-info address {
+  color: #FFF;
+  font-weight: lighter;
+}
+@media (max-width: 768px) {
+  .company-info {
+    grid-column: 1 / 3; 
+    grid-row: 4 / 5; 
+    transform: translateY(0%); 
+  }
+  .company-info h4 {
+    font-size: 14px; 
+  }
+  .company-info p {
+    font-size: 12px; 
+  }
+}
 @media (max-width: 768px) {
   .footer-container {
     display: grid;
@@ -5069,57 +5180,45 @@ h4 {
     grid-gap: 15px;
     overflow: hidden;
   }
-
   .footer-logo {
     grid-column: 1 / 3; 
     grid-row: 1 / 2;    
     margin-bottom: 15px; 
   }
-
   .policy-links {
     grid-column: 1 / 2;
     grid-row: 2 / 3;    
     margin-bottom: -10px;
   }
-
   .company {
     grid-column: 2 / 3;
     grid-row: 2 / 3;    
   }
-
   .social-media {
     grid-column: 1 / 2; 
     grid-row: 3 / 4;    
     padding-bottom: 40px; 
-  
   }
-
   h4 {
     font-size: 14px;
     margin-bottom: 10px;
   }
-
   .policy-links a, .company a {
     font-size: 12px;
   }
-
   .social-icons {
     gap: 20px;
   }
-
   .social-media a {
     font-size: 20px;
   }
-
   .copy {
     margin-top: 20px;
     font-size: 12px;
   }
-
   .policy-links, .company, .social-media, .footer-logo {
     margin-bottom: 15px;
   }
-
   .footer-logo {
     align-items: center;
   }
