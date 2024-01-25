@@ -328,11 +328,11 @@ nav .mainMenu .closeMenu,
   }
   
   .h-iphone {
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     color: #fff;
     opacity: 0; 
+    font-weight: 500;
     animation: slideUp 1s ease-out forwards;
-    font-family: 'Lora', serif;
     text-shadow: 0px 0px 5px #f1f1f1(0,0,0,0.6);
     font-size: 46px;
     text-align: center;
@@ -341,7 +341,6 @@ nav .mainMenu .closeMenu,
     background-color: transparent;
   }
   
-
   .subtitles {
     display: flex;
     justify-content: center; 
