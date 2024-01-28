@@ -131,11 +131,11 @@
     })(window,document,'script','dataLayer','GTM-M3FMH2BD');
   </script>    
   <link rel="icon" href="LogoFooterBlue.png" type="image/x-icon">
-  <link rel="stylesheet" href="azure.css">
+  <link rel="preload" href="/azure.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/azure.css"></noscript>
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></noscript>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
 </head>
@@ -503,10 +503,8 @@ window.onload=function(){var e=document.getElementById("yzCookieConsentContainer
   $(document).ready(function(){var t;t=(new Date).toISOString().split("T")[0],$("#startDate, #endDate").attr("min",t),$("#inquiryForm").submit(function(t){t.preventDefault(),function(t){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t)}($("#email").val())?$.ajax({url:$(this).attr("action"),method:"POST",data:$(this).serialize(),dataType:"json",headers:{Accept:"application/json"},success:function(t){alert("Thank you for your inquiry!"),$("#inquiryForm").trigger("reset"),$("#inquiryPopup").hide()},error:function(t){alert("Something went wrong, please try again.")}}):alert("Please enter a valid email address.")}),$(".inquiry-button").on("click",function(){var t=$(this).data("yacht-name");$("#yachtNameInput").val(t),$("#inquiryPopup").show()}),$(".close-popup").on("click",function(){$("#inquiryPopup").hide()})});
 </script>
     
-<script src="script.js" defer></script>    
+<script src="https://github.com/UnuProxy/yachtszenith/blob/main/script.js" defer></script>    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" defer></script> -->
-
 <footer>
   <div class="footer-container">
     <div class="footer-logo">
