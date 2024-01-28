@@ -424,10 +424,8 @@ nav .mainMenu .closeMenu,
    margin-bottom: 120px;
    font-weight: lighter;
    font-size: 28px;
-   font-family: 'Lato', sans-serif;
    text-shadow: 1px 1px rgba(0, 0, 0, 0.521);
   }
-
 
   @media screen and (max-width: 600px) { 
     .card-titles h2 {
@@ -451,6 +449,9 @@ nav .mainMenu .closeMenu,
     font-size: 12px;
     padding: 5px;
     background: #fff;
+}
+.card-titles p {
+  font-size: 16px;
 }
 }
 
@@ -715,7 +716,6 @@ color: var(--LOGO-COLOR);
   font-weight: 900;
   color: #FFF;
 }
-
    .custom-hr {
     width: 50%;
     position: absolute;
@@ -733,10 +733,6 @@ color: var(--LOGO-COLOR);
         font-size: 24px;
       }
     }
-
-
-
-
 /*GRID PICTURES, SOMEHOW HELPs MY 3 IMAGES*/
 .image-container img:nth-child(1) {
   grid-column: 1;
@@ -744,10 +740,6 @@ color: var(--LOGO-COLOR);
   height: 100%;
   display: block;
 }
-
-
-
-
 /* SEE MORE WITH HYPER ARROW */
 .see-all-container {
   display: flex;
@@ -797,7 +789,6 @@ color: #000;
 }
 
 
-
 /* YACHT CHARTER PRESENTATION */
 .yacht-listings {
   display: flex;
@@ -807,11 +798,9 @@ color: #000;
 }
 
 .yacht {
-  flex-basis: calc(31% - 12px);
-  margin: 20px 6px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  box-sizing: border-box; 
+  flex: 0 0 calc(33.33% - 18px); 
+  margin: 8px; 
   background-color: #fff;
   background-color: transparent;
 }
@@ -884,7 +873,11 @@ button:hover {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-
+@media screen and (max-width: 1024px) { 
+  .yacht {
+      flex: 0 0 100%; 
+  }
+}
 /* YACHT CHARTER BROWSER */
 .filter-bar {
   margin: 10px;
@@ -1098,14 +1091,17 @@ button:hover {
 .yacht-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; 
-  justify-content: flex-start;
-  padding: 10px; 
+  gap: 20px;
+  justify-content: space-between; /* Distribute space evenly */
+  padding: 10px; /* Padding only at the top and bottom */
+  margin: 0; /* No additional margin */
+  box-sizing: border-box; /* Include padding and border in the element's width and height */
 }
 
 .yacht-card {
-  width: calc(33.3333% - 20px); 
-  height: 470px;
+  width: calc((100% / 3) - (2 * 20px / 3)); /* Adjust the width calculation */
+  height: auto; /* Use auto height for flexibility */
+  box-sizing: border-box; /* Include padding and border */
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
@@ -1151,21 +1147,18 @@ button:hover {
   background: linear-gradient(to top, rgba(5, 25, 42, 0.8), rgba(11, 51, 85, 0));
   z-index: 1;
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .yacht-card {
-    width: calc(50% - 15px); 
-    margin-bottom: 30px; 
-  }
-
-  .yacht-card:nth-of-type(2n+1) {
-    margin-right: 30px;
+    width: calc((100% / 2) - (20px / 2)); /* Adjust for two items per row */
+    /* No need for nth-of-type margin adjustments */
   }
 }
 
+
 @media (max-width: 768px) {
   .yacht-card {
-    width: 100%;
+    width: 100%; /* Full width for single column layout */
+    /* Remove margin-right rule if not necessary */
   }
 }
 
