@@ -880,7 +880,8 @@ button:hover {
 }
 /* YACHT CHARTER BROWSER */
 .filter-bar {
-  margin: 10px;
+  margin: 10px auto; /* Auto margins for horizontal centering */
+  max-width: 1200px; /* Max width of 1200px */
   padding: 10px;
   background-color: transparent;
   display: flex;
@@ -890,6 +891,7 @@ button:hover {
   align-items: center;
   margin-bottom: 60px;
 }
+
 
 .filter-bar div {
   display: flex;
@@ -1092,16 +1094,16 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between; /* Distribute space evenly */
-  padding: 10px; /* Padding only at the top and bottom */
-  margin: 0; /* No additional margin */
-  box-sizing: border-box; /* Include padding and border in the element's width and height */
+  justify-content: space-between; 
+  padding: 10px; 
+  margin: 0; 
+  box-sizing: border-box; 
 }
 
 .yacht-card {
-  width: calc((100% / 3) - (2 * 20px / 3)); /* Adjust the width calculation */
-  height: auto; /* Use auto height for flexibility */
-  box-sizing: border-box; /* Include padding and border */
+  width: calc((100% / 3) - (2 * 20px / 3)); 
+  height: auto; 
+  box-sizing: border-box; 
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
@@ -1463,6 +1465,70 @@ button:hover {
   color: var(--LOGO-COLOR);  
   margin-bottom: 20px;  
   transition: color 0.3s ease-in-out;  
+}
+
+
+.main-wrapper {
+  max-width: 1200px; 
+  margin: auto;
+  padding: 20px;
+}
+
+.page-heading h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #FFF;
+  margin-bottom: 10px;
+}
+
+.title-accent-line {
+  height: 3px;
+  width: 80px; 
+  background-color: var(--LOGO-COLOR);
+  margin: 20px auto;
+}
+
+.details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; 
+}
+
+.charter-details, .yacht-selection {
+  flex: 1;
+}
+
+.charter-details h2, .yacht-selection h2 {
+  color: #f5f5f5;
+  margin-bottom: 10px;
+}
+.details-wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.charter-details p, .yacht-selection p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #D3D3D3;
+  text-align: justify;
+}
+.charter-details, .yacht-selection {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+@media screen and (max-width: 768px) {
+  .details-wrapper {
+      flex-direction: column;
+  }
 }
 
 /* PRICE PRESENTATION */
