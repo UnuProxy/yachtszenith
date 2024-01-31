@@ -129,7 +129,7 @@
     gtag('js', new Date());
     gtag('config', 'G-NC5H3T00BD');
   </script>  
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <script>
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -141,17 +141,22 @@
   <link rel="preload" href="/azure.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style" onload="this.rel='stylesheet'"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+  <script defer src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+
 </head>
   <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3FMH2BD"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!--  HEADER  -->
-    <div class="black-bg" id="sticky-section">
-      <nav class="position-header">
-        <div class="logo">
-          <a href="./"><p>Yachts Zenith</p></a>
-        </div>        
+  <div class="black-bg" id="sticky-section">
+    <nav class="position-header">
+      <div class="logo">
+        <a href="./">
+          <svg width="200" height="50" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="40" font-family="Arial" font-size="24" fill="white">Yachts Zenith</text>
+          </svg>
+        </a>
+      </div>        
       <div class="openMenu"><i class="fa fa-bars"></i></div>
       <ul class="mainMenu">
         <li><a href="boat-rental-ibiza">Yacht Charter</a></li>
@@ -160,8 +165,9 @@
         <li><a href="about-us">About us</a></li>
         <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
       </ul>
-      </nav>
-    </div>
+    </nav>
+  </div>
+  
     <section>
       <div class="video-container">
         <video muted loop autoplay playsinline title="Yacht Sailing in Ibiza">
@@ -484,7 +490,10 @@
 </div>
 
 <script>
- dashjs.MediaPlayer().create().initialize(document.querySelector("video"),"https://customer-5k0bsc7p70xd6ttv.cloudflarestream.com/0541ddca73666485fbc8c5793bb3aefd/manifest/video.mpd",!0);
+  document.addEventListener('DOMContentLoaded', function () {
+    var player = dashjs.MediaPlayer().create();
+    player.initialize(document.querySelector("video"), "https://customer-5k0bsc7p70xd6ttv.cloudflarestream.com/0541ddca73666485fbc8c5793bb3aefd/manifest/video.mpd", true);
+  });
 </script>
 <script>
   window.onload=function(){localStorage.getItem("cookieConsent")||(document.getElementById("cookieConsentContainer").style.display="block"),document.getElementById("acceptCookies").onclick=function(){localStorage.setItem("cookieConsent","true"),document.getElementById("cookieConsentContainer").style.display="none"},document.getElementById("cookieSettings").onclick=function(){alert("Open cookie settings here.")}};
