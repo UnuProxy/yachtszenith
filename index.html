@@ -129,7 +129,6 @@
     gtag('js', new Date());
     gtag('config', '  ');
   </script>  
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <script>
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -139,9 +138,9 @@
   </script>    
   <link rel="icon" href="LogoYZsmall.png" type="image/x-icon">
   <link rel="stylesheet" href="azure.css">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
-  <script defer src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
 </head>
   <body>
@@ -152,12 +151,9 @@
     <nav class="position-header">
       <div class="logo">
         <a href="./">
-          <svg width="200" height="50" xmlns="http://www.w3.org/2000/svg">
-            <title>Yachts Zenith Logo</title>
-            <text x="0" y="40" font-family="Arial" font-size="24" fill="white">Yachts Zenith</text>
-          </svg>
+          <p class="logo-text">Yachts Zenith</p>
         </a>
-      </div>        
+      </div>       
       <div class="openMenu"><i class="fa fa-bars"></i></div>
       <ul class="mainMenu">
         <li><a href="boat-rental-ibiza">Yacht Charter</a></li>
@@ -172,9 +168,19 @@
   
     <section>
       <div class="video-container">
-        <video muted loop autoplay playsinline title="Yacht Sailing in Ibiza">
-          <source src="https://customer-5k0bsc7p70xd6ttv.cloudflarestream.com/0541ddca73666485fbc8c5793bb3aefd/manifest/video.m3u8" type="video/mp4"> <track kind="captions" src="ibiza-yacht-captions.vtt" srclang="en" label="English captions">
-        </video>
+        <video
+        id="heroVideo"
+        muted
+        loop
+        autoplay
+        playsinline
+        title="Yacht Sailing in Ibiza"
+        preload="auto"
+        controls
+    >
+        <source src="https://customer-5k0bsc7p70xd6ttv.cloudflarestream.com/0541ddca73666485fbc8c5793bb3aefd/manifest/video.m3u8" type="application/x-mpegURL">
+        <track kind="captions" src="ibiza-yacht-captions.vtt" srclang="en" label="English captions">
+    </video>
         <div class="gradient-overlay"></div>
         <div class="card-titles">
           <h1 class="h-iphone">Premier Yacht Charters in Ibiza </h1>
@@ -259,7 +265,7 @@
 <section id="unique-yacht-charter">
   <div class="charter-container">
     <h2 class="charter-title">Unleash Ibiza's Magic with Premier Yacht Rentals</h2>
-    <p class="charter-description">Set sail on an unforgettable Ibiza yacht charter adventure. Our fleet of luxury yachts, handpicked for excellence, promises unmatched quality. Whether you fancy a sun-soaked day trip or a week-long exploration, you're assured of a five-star experience with our top-tier yachts and crew.</p>
+    <p class="charter-description">Set sail on an unforgettable <a href="boat-rental-ibiza"> <strong> Yacht Ibiza Charter</strong></a> adventure. Our fleet of luxury yachts, handpicked for excellence, promises unmatched quality. Whether you fancy a sun-soaked day trip or a week-long exploration, you're assured of a five-star experience with our top-tier yachts and crew.</p>
     <p class="charter-description">Looking for a unique way to experience Ibiza's vibrant parties? Or perhaps you prefer a serene sail to secluded coves? Our yacht hires in Ibiza offer versatility to suit your every mood. Enjoy the perfect blend of excitement and tranquillity as you cruise the Mediterranean in style.</p>
     <p class="charter-description">More than just a boat rental, our yacht charters in Ibiza are an opportunity to indulge in luxury. From bespoke catering onboard to discovering hidden gems along the coast, every element of your journey is tailored to your desires. It's not just a trip; it's an experience designed for those who seek both adventure and relaxation.</p>
     <a href="Contact-us" class="charter-inquiry-btn">Start Your Yachting Adventure</a> 
@@ -493,8 +499,17 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var player = dashjs.MediaPlayer().create();
-    player.initialize(document.querySelector("video"), "https://customer-5k0bsc7p70xd6ttv.cloudflarestream.com/0541ddca73666485fbc8c5793bb3aefd/manifest/video.mpd", true);
+    var video = document.getElementById('heroVideo');
+    if (video.canPlayType('application/vnd.apple.mpegurl') === "") {
+      var hls = new Hls();
+      hls.loadSource(video.querySelector('source').src);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED,function() {
+        video.play();
+      });
+    } else {
+      video.play();
+    }
   });
 </script>
 <script>
