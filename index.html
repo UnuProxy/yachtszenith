@@ -127,7 +127,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-NC5H3T00BD');
+    gtag('config', '  ');
   </script>  
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <script>
@@ -138,8 +138,7 @@
     })(window,document,'script','dataLayer','GTM-M3FMH2BD');
   </script>    
   <link rel="icon" href="LogoYZsmall.png" type="image/x-icon">
-  <link rel="preload" href="azure.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="azure.css"></noscript>
+  <link rel="stylesheet" href="azure.css">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
   <script defer src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
@@ -499,7 +498,11 @@
   });
 </script>
 <script>
-  window.onload=function(){localStorage.getItem("cookieConsent")||(document.getElementById("cookieConsentContainer").style.display="block"),document.getElementById("acceptCookies").onclick=function(){localStorage.setItem("cookieConsent","true"),document.getElementById("cookieConsentContainer").style.display="none"},document.getElementById("cookieSettings").onclick=function(){alert("Open cookie settings here.")}};
+  window.onload = function() {
+  setTimeout(function() {
+    document.getElementById('yzCookieConsentContainer').classList.add('show-cookie-consent');
+  }, 1000); 
+};
 </script>
 <script>
 function showDataPolicyOverview(){document.getElementById("dataPolicyOverview").style.display="block"}function closeDataPolicyOverview(){document.getElementById("dataPolicyOverview").style.display="none"}
