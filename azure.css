@@ -3728,6 +3728,10 @@ font-size: 36px;
   z-index: 10001;
 }
 
+.show-cookie-consent {
+  display: block;
+}
+
 .yz-cookie-consent-content p {
   font-size: 14px;
   line-height: 1.5;
