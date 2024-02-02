@@ -121,7 +121,6 @@
         ]
     }
     </script>
-   
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NC5H3T00BD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -129,13 +128,26 @@
     gtag('js', new Date());
     gtag('config', '  ');
   </script>  
-  <script>
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M3FMH2BD');
-  </script>    
+<script>
+  function loadGTM() {
+      (function(w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({
+              'gtm.start': new Date().getTime(),
+              event: 'gtm.js'
+          });
+          var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-M3FMH2BD');
+  }
+  document.getElementById('yourButtonId').addEventListener('click', function() {
+      loadGTM();
+  });
+  </script>
   <link rel="icon" href="LogoYZsmall.png" type="image/x-icon">
   <link rel="stylesheet" href="azure.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -251,9 +263,19 @@
 <!-- TWO ARROW SLIDE IMAGES -->
  <div class="image-slider-container">
   <div class="images">
-    <img id="image1" src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/d04596ca-b7ad-44f1-a17e-b17720d29200/public" alt="Astondoa 102" title="yacht sunset cruise ibiza" loading="lazy">
-    <img id="image2" src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/d2070756-47d2-4867-8542-42c71af39100/public" alt="Formentera Beach" title="Boat trip" loading="lazy">
-  </div>
+    <img id="image1" 
+         src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/d04596ca-b7ad-44f1-a17e-b17720d29200/public" 
+         srcset="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/d04596ca-b7ad-44f1-a17e-b17720d29200/Iphone 500w,
+                https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/d04596ca-b7ad-44f1-a17e-b17720d29200/680x1200 1000w,
+                 https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/d04596ca-b7ad-44f1-a17e-b17720d29200/public 1500w"
+         sizes="(max-width: 500px) 500px,
+                (max-width: 1000px) 1000px,
+                1500px"
+         alt="Astondoa 102" title="yacht sunset cruise ibiza" loading="lazy">
+    <img id="image2" 
+         src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/d2070756-47d2-4867-8542-42c71af39100/public" 
+         alt="Formentera Beach" title="Boat trip" loading="lazy">
+</div>
   <div id="custom-slider" class="custom-slider">
     <div class="indicator">
   <div class="arrow-container"><span class="left-arrow">&#60;</span></div>
@@ -528,7 +550,7 @@ window.onload=function(){var e=document.getElementById("yzCookieConsentContainer
   $(document).ready(function(){var t;t=(new Date).toISOString().split("T")[0],$("#startDate, #endDate").attr("min",t),$("#inquiryForm").submit(function(t){t.preventDefault(),function(t){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t)}($("#email").val())?$.ajax({url:$(this).attr("action"),method:"POST",data:$(this).serialize(),dataType:"json",headers:{Accept:"application/json"},success:function(t){alert("Thank you for your inquiry!"),$("#inquiryForm").trigger("reset"),$("#inquiryPopup").hide()},error:function(t){alert("Something went wrong, please try again.")}}):alert("Please enter a valid email address.")}),$(".inquiry-button").on("click",function(){var t=$(this).data("yacht-name");$("#yachtNameInput").val(t),$("#inquiryPopup").show()}),$(".close-popup").on("click",function(){$("#inquiryPopup").hide()})});
 </script>
     
-<script src="script.js"></script>
+<script src="script.js" defer></script>
  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
 <footer>
