@@ -174,7 +174,6 @@
     </div>
     </div>
   </section>
-
   <div class="main-wrapper">
     <header class="page-heading">
         <h2>Yachts for Charter</h2>
@@ -191,7 +190,6 @@
         </div>
     </div>
 </div>
-
       <div id="filter-bar" class="filter-bar">
       <div>
         <label for="priceFilter">Select Price Range: </label>
@@ -231,7 +229,6 @@
       bounding.top < window.innerHeight
     );
   };
-
   const addVisibleClass = () => {
     elements.forEach((el) => {
       if (isVisible(el) && !el.classList.contains('visible')) {
@@ -241,13 +238,11 @@
       }
     });
   };
-
   window.addEventListener('scroll', addVisibleClass);
   window.addEventListener('touchmove', addVisibleClass);
 
   addVisibleClass();
 });
-
 </script>
 <script>
 </script>
