@@ -1,0 +1,5137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0B3355;
+  }
+
+  body {
+   font-family: Helvetica, sans-serif;
+   overflow-x: hidden;
+  }
+  contact-form-container
+  h1, h2, h3 {
+   font-family: Helvetica, sans-serif;
+  }
+
+  :root {
+    /* Font colour */
+    --LOGO-COLOR: #B89769;
+    --BG-LINEARCOLLOR: linear-gradient(to right, #000000 0%, #5e5e5e 100%, #ffffff 90%);
+    --TEXT-DARKCOLOR: #666;
+    --TEXT-HARDDARKCOLR: #000;
+    --TEXT-LIGHTCOLOR: #fff;
+    --BG-COLOUR: #0B3355;
+    --MAIN-GRADIENT: linear-gradient(to bottom, #0B3355, #1A4B75);
+
+    /*Font size*/
+    --H1: 2rem;
+    --BOX-SHADOW: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --TEXT-SHADOW: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    --H2-FONTSIZE: 1.5em;
+    --H3-YACHTMAIN: 36px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+   /* HEADER */
+.position-header {
+  background-color: var(--BG-COLOUR);
+  margin: 10px;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  overflow: hidden;
+}
+
+.position-header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
+  z-index: 2;
+}
+
+.black-bg {
+  background: var(--BG-COLOUR);
+  z-index: 999;
+  position: relative;
+  top: 0;
+}
+ 
+.logo  p {
+  margin: 0;
+  font-size: 30px;
+  color: #fff; 
+  font-weight: 700;
+  line-height: 50px;
+  margin-left: 28px;  
+}
+
+@keyframes color-change {
+  0% { color: white; }
+  50% { color: var(--LOGO-COLOR); }
+  100% { color: white; }
+}
+
+
+#sticky-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transition: transform 1s ease;
+}
+
+#sticky-section.hide-header {
+  transform: translateY(-100%);
+  transition: transform 1s ease;
+}
+
+.mainMenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  transition: top 0.7s ease;
+  top: -100%;
+}
+
+.mainMenu li:last-child {
+  margin-right: 0;
+}
+
+.mainMenu a {
+  text-decoration: none;
+  position: relative;
+}
+
+.mainMenu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #AA8759 50%, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.mainMenu a:hover::after {
+  opacity: 1;
+}
+
+
+
+  nav {
+    background-color: black;
+    color: var(--LOGO-COLOR);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 30px;
+  }
+
+  nav .mainMenu {
+    display: flex;
+    list-style: none;
+  }
+
+  .mainMenu li {
+    padding: 1rem;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+
+  .mainMenu li a {
+     padding: 0 15px;
+    line-height: 5px;
+    margin-top: 5px;
+  }
+ 
+ nav.position-header ul.mainMenu li a {
+    color: #E0E0E0 ;
+}
+
+  nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: normal;
+    color: #888888;
+    font-size: 18px;
+    transition: 0.2s ease;
+  }
+  
+  nav .openMenu {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu,
+.icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+  nav .logo {
+    margin: 6px;
+    cursor: pointer;
+    text-transform: normal;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+  
+
+/* HAMBURGER MENU FOR TABLET AND MOBILE  */
+@media (max-width: 800px) {
+    nav .mainMenu {
+      height: 100%;
+      position: fixed;
+      top: -100%; 
+      right: 0;
+      left: 0;
+      z-index: 20;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      display: none;
+      overflow: hidden;
+     
+    } 
+    nav .mainMenu li a {
+      background-color: transparent;
+      
+    }
+  
+   
+    nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    nav .openMenu {
+      display: block;
+    }
+
+    .icons i {
+      display: inline-block;
+      padding: 12px;
+    }
+  
+  nav .openMenu li a {
+    background-color: transparent;
+  }
+
+  .card-titles {
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  nav .mainMenu {
+    top: 0;
+    background-color: var(--BG-COLOUR);
+  }
+}
+
+  /*VIDEO START WEB, TITLE AND SUBTITLES*/
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 0; 
+    padding-bottom: 56.25%; 
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+  .gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(11, 51, 85, 0) 10%, rgba(11, 51, 85, 0.3) 40%, rgba(11, 51, 85, 0.9) 100%);
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .video-container video {
+    width: 100%;
+  }
+
+  .carousel .carousel-slide h2,
+  .carousel .carousel-slide a button {
+    font-size: 16px; 
+    padding: 10px; 
+  }
+
+  .carousel-controls .control-btn {
+    font-size: 20px;
+  }
+}
+ 
+  
+  .card-titles {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    background-color: transparent;
+    font-size: calc(1rem + 1vw);
+  }
+  .card-titles p {
+    background-color: transparent;
+  }
+  
+  .centered-content {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0px;
+    color: #fff;
+  }
+  
+  .h-iphone {
+    margin-bottom: 80px;
+    color: #fff;
+    opacity: 0; 
+    font-weight: 500;
+    animation: slideUp 1s ease-out forwards;
+    text-shadow: 0px 0px 5px #f1f1f1(0,0,0,0.6);
+    font-size: 46px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+  }
+  
+
+  .subtitles {
+    display: flex;
+    justify-content: center; 
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: slideUp 1s ease-out forwards 1.5s; 
+    background-color: transparent;
+  }
+
+   .subtitles a {
+    background-color: transparent;
+  }
+  
+  .subtitles .subtitle-left {
+    background-color: transparent;
+  }
+ 
+  .subtitle-left, .subtitle-right {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    text-shadow: none;
+    text-align: left;
+  }
+  
+  .subtitle-left {
+    margin-right: 15px;
+  }
+  
+  .subtitle-left::before, .subtitle-right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: var(--LOGO-COLOR);
+    width: 100%;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: all 0.2s linear; 
+  }
+  
+  .subtitle-left:hover::before, .subtitle-right:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .subtitle-left:not(:hover)::before, .subtitle-right:not(:hover)::before {
+    width: 0%;
+    transition: width 0s; 
+  }
+  
+  .subtitle-left:hover, .subtitle-right:hover {
+    color: #fff;
+    border: 1px solid var(--LOGO-COLOR);
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .h-iphone {
+    animation: slideUp 1s ease-out forwards; 
+  }
+  
+  .subtitles {
+    animation: slideUp 1s ease-out forwards 0.5s; }
+
+  .card-titles h2 { 
+   background-color: transparent;
+   margin-bottom: 120px;
+   font-weight: lighter;
+   font-size: 28px;
+   text-shadow: 1px 1px rgba(0, 0, 0, 0.521);
+  }
+
+  @media screen and (max-width: 600px) { 
+    .card-titles h2 {
+      font-size: 16px; 
+      margin-bottom: 15px; 
+      margin-bottom: 120px;
+    }
+  }
+
+@media screen and (max-width: 480px) { 
+  .subtitles {
+    padding: 10px;
+    white-space: nowrap;
+    }
+  .subtitle-left{
+  font-size: 12px;
+  padding: 5px;
+  background: #fff;
+}
+  .subtitle-right {
+    font-size: 12px;
+    padding: 5px;
+    background: #fff;
+}
+.card-titles p {
+  font-size: 16px;
+}
+}
+
+ @media only screen and (max-width: 767px) {
+    .video-container {
+      padding-top: 100%;
+    }
+    .h-iphone {
+      font-size: 18px; 
+      margin-bottom: 90px; 
+    }
+    .subtitle-header h2 {
+      font-size: 12px;
+      font-weight: lighter;
+    }
+    .p-iphone {
+      font-size: 14px;
+    }
+    .video-container video {
+      max-height: calc(100vh - 50px);
+      height: auto;
+    }
+  }
+
+ 
+  
+  /* SLIDE PICTURE */
+    .image-slider-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+    
+    .images {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    
+    #image1, #image2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+    }
+    
+    #image2 {
+      clip-path: inset(0 50% 0 0);
+    }
+
+    
+    
+    .custom-slider {
+      width: 10px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      background-color: var(--BG-COLOUR);
+      cursor: ew-resize;
+      z-index: 1;
+    }
+
+    
+
+    .custom-slider .left-arrow {
+      background-color: transparent;
+    }
+
+    .custom-slider .right-arrow {
+      background-color: transparent;
+    }
+    .indicator {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;  
+      height: 60px;  
+      border-radius: 50%;  
+      background-color: white;
+      display: flex; 
+      align-items: center;  
+      z-index: 2;
+      border: 5px solid var(--BG-COLOUR);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .arrow-container {
+      display: flex;
+      justify-content: center; 
+      align-items: center;  
+      margin: 0 4px;  
+    }
+    
+   
+    .image-slider-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70vh;  
+    }
+    
+    .indicator .arrow-container {
+      background-color: transparent;
+    }
+    
+    .indicator span {
+      font-size: 32px;  
+      color: var(--BG-COLOUR);
+      font-weight: bold;
+    }
+    
+    .left-indicator {
+      left: -30px;
+    }
+    
+    .right-indicator {
+      right: -30px;
+    }  
+
+    .explore-title{
+      margin-left: 20px;
+      font-size: 46px;
+      color: var(--TEXT-LIGHTCOLOR);
+    }
+    
+   
+    
+    #text1, #text2 {
+      clip-path: inset(0 50% 0 0);  
+    }
+
+    .custom-slider, .custom-slider * {
+      -webkit-user-select: none;
+      -moz-user-select: none; 
+      -ms-user-select: none; 
+      user-select: none; 
+    }
+    
+  
+    
+    @media (max-width: 768px) {
+      .image-slider-container { 
+        min-height: 200px;  
+      }
+      
+      #image1, #image2 {
+        object-fit: cover; 
+        height: 300px; 
+      }
+    
+      .indicator {
+        width: 40px;  
+        height: 40px;  
+        border: 3px solid var(--BG-COLOUR); 
+      }
+    
+      .indicator span {
+        font-size: 18px; 
+      }
+    }
+    
+
+
+    
+.yacht-listings {
+  perspective: 1px;
+  overflow: hidden;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+.yacht-slide-in {
+  transform-origin: 50% 50%;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+}
+
+.yacht-slide-in.slide-up {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.yacht-image img {
+  transform-origin: 50% 50%;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.yacht-image img {
+  transform: translateZ(-1px) scale(1.2);
+}
+
+
+
+@media (max-width: 768px) {
+  .yacht-image img {
+      width: 100%;
+  }
+}
+
+.inquiry-button{
+  color: white;
+}
+@media (max-width: 768px) {
+  .yacht-slide-in {
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.5s ease;
+  }
+}
+
+/* H3 AND PARAGRAPH */
+.spacer {
+  margin-top: 160px;
+  margin-bottom: 20px;
+}
+
+.spacer p{
+  color: var(--TEXT-HARDDARKCOLR);
+  font-weight: 400;
+}
+
+.centered-paragraph {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.centered-paragraph p {
+  color: #fff;
+}
+
+.custom-title {
+font-size: 16px;
+font-weight:lighter;
+display: flex;
+justify-content: center;
+margin-top: 5px;
+margin-bottom: 10px;
+color: var(--LOGO-COLOR);
+}
+
+.custom-title h3 {
+  display: flex;
+  text-align: center;
+}
+.hr-container hr{
+  position: relative;
+}
+
+.custom-text {
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #FFF;
+}
+   .custom-hr {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+    height: 7px;
+    background-color: var(--LOGO-COLOR);
+    border: none;
+    }
+
+    @media screen and (max-width: 390px) {
+      .custom-text {
+        font-size: 24px;
+      }
+    }
+/*GRID PICTURES, SOMEHOW HELPs MY 3 IMAGES*/
+.image-container img:nth-child(1) {
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* SEE MORE WITH HYPER ARROW */
+.see-all-container {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.see-all-container a.see-all-link {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  padding-right: 25px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  border: 2px solid var(--LOGO-COLOR);
+  padding: 10px;
+  padding-right: 30px;
+}
+
+.see-all-container a.see-all-link::after {
+  content: "\2227";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-size: 26px;
+  color: #fff;
+  line-height: 1.2;
+  text-shadow: none;
+  transition: transform 0.3s ease;
+}
+
+.see-all-container a.see-all-link:hover::after {
+  transform: translateX(5px) translateY(-50%) rotate(90deg);
+  color: #000;
+}
+
+.see-all-container a:hover{
+color: #000;
+}
+
+.see-all-container a.see-all-link:hover { 
+  background: linear-gradient(to right, var(--LOGO-COLOR), rgb(255, 255, 255)); 
+  border: 1px solid linear-gradient(to right, var(--LOGO-COLOR), white);
+}
+
+
+/* YACHT CHARTER PRESENTATION */
+.yacht-listings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 80px;
+}
+
+.yacht {
+  box-sizing: border-box; 
+  flex: 0 0 calc(33.33% - 18px); 
+  margin: 8px; 
+  background-color: #fff;
+  background-color: transparent;
+}
+
+.yacht-image {
+  margin-bottom: 10px;
+  height: 250px; 
+  overflow: hidden; 
+}
+
+.yacht-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.yacht-image:hover img {
+    transform: scale(1.1);  
+}
+
+.yacht-details h2 {
+  margin-top: 0;
+  color: var(--LOGO-COLOR);
+  font-size: 20px;
+  text-align: start;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  font-weight: lighter;
+  color: #fff;
+}
+
+ul li {
+  margin-bottom: 5px;
+  text-align: start;
+  font-size: 16px;
+}
+
+button {
+  background: linear-gradient(to right, #9E7D5A, #B89769, #D9C2A1);
+  border: none;
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+  transition: background 0.3s ease;
+  background-size: 200% 100%; 
+  background-position: right center;
+  color: var(--TEXT-LIGHTCOLOR);
+}
+
+button:hover {
+    background-position: left center; 
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media screen and (max-width: 1024px) { 
+  .yacht {
+      flex: 0 0 100%; 
+  }
+}
+/* YACHT CHARTER BROWSER */
+.filter-bar {
+  margin: 10px auto; /* Auto margins for horizontal centering */
+  max-width: 1200px; /* Max width of 1200px */
+  padding: 10px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+
+.filter-bar div {
+  display: flex;
+  align-items: center;
+}
+.card-titles p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+
+.filter-bar label {
+  margin-right: 20px;
+  font-weight: 350; 
+  color: var(--TEXT-LIGHTCOLOR); 
+  background-color: transparent;
+}
+
+#priceFilter, #lengthFilter, #nameSearch {
+  outline: none;
+  padding: 4px 20px;
+  border: 1px solid var(--LOGO-COLOR); 
+  border-radius: 3px; 
+  background: transparent; 
+  color: var(--TEXT-LIGHTCOLOR); 
+  font-size: 16px;
+}
+
+.available-yachts {
+  color: var(--LOGO-COLOR);
+  margin-bottom: 40px ;
+  padding: 10px;
+  margin-left: 75px;
+}
+
+#nameSearch {
+  width: 240px; 
+}
+
+.yachtWrapper h2 {
+  color: var(--LOGO-COLOR);
+  font-size: 20px;
+  text-align: start;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.yachtContainer img {
+  width: 500px; 
+  height: 200px;  
+  object-fit: cover; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.yachtContainer:hover img {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+}
+
+.yachtCatalog {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.yachtWrapper {
+  flex-basis: calc(33.33% - 30px);  
+  margin: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.yachtContainer img {
+  max-width: 100%;
+  height: auto;
+}
+
+.yachtDescription {
+  text-align: center;
+}
+
+.hidden {
+  display: none;  
+}
+
+.hiddenImg {
+  display: none;
+}
+
+#yachtDetails {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(255,255,255,0.9); 
+  overflow-y: auto; 
+  z-index: 1000; 
+  display: none; 
+}
+
+
+#yachtDetails:not(.hidden) {
+  display: block;
+}
+
+
+.slideshow {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .yachtWrapper {
+    flex-basis: calc(100% - 20px);
+  }
+  
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: center; 
+    padding: 10px; 
+  }
+
+  .filter-bar > div {
+    width: 100%; 
+    max-width: 500px; 
+    margin-bottom: 10px; 
+  }
+
+  .filter-bar label,
+  #priceFilter,
+  #lengthFilter,
+  #nameSearch {
+    width: 100%; 
+    box-sizing: border-box; 
+  }
+
+  .filter-bar label {
+    margin-bottom: 5px; 
+  }
+  .available-yachts{
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .yachtWrapper,
+  .yachtContainer {
+    width: 100%;  
+    flex-basis: auto; 
+    margin: 5px 0;  
+    box-sizing: border-box;  
+  }
+ .yachtWrapper {
+  width: 100%;
+  padding: 0;
+ 
+ }
+
+  .filter-bar {
+    flex-direction: column;
+    align-items: flex-start;  
+    gap: 10px;
+    padding-left: 20px;
+    padding-left: 20px;
+  }
+
+  .filter-bar label {
+    min-width: 150px; 
+    display: inline-block;
+  }
+
+  #priceFilter, #lengthFilter, #nameSearch {
+    width: calc(100% - 150px);  
+  }
+
+  .yachtWrapper img {
+    width: 100%;
+  }
+ 
+}
+
+/* YACHT CHARTER MAIN PAGE*/
+.yacht-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between; 
+  padding: 10px; 
+  margin: 0; 
+  box-sizing: border-box; 
+}
+
+.yacht-card {
+  width: calc((100% / 3) - (2 * 20px / 3)); 
+  height: auto; 
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+  transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+  position: relative;
+}
+
+.yacht-card img {
+  width: 100%; 
+  height: 65%; 
+  object-fit: cover; 
+  position: relative;
+  z-index: 0;
+}
+
+.yacht-info {
+  position: relative;  
+  z-index: 3;  
+  padding: 20px;
+  text-align: left;
+  color: var(--LOGO-COLOR);
+  background-color: transparent;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  overflow: hidden; 
+}
+
+.yacht-card:hover {
+  transform: translateY(-8px);  
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); 
+}
+
+/* Pseudo-element for gradient background */
+.yacht-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70%;  
+  background: linear-gradient(to top, rgba(5, 25, 42, 0.8), rgba(11, 51, 85, 0));
+  z-index: 1;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .yacht-card {
+    width: calc((100% / 2) - (20px / 2)); /* Adjust for two items per row */
+    /* No need for nth-of-type margin adjustments */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .yacht-card {
+    width: 100%; /* Full width for single column layout */
+    /* Remove margin-right rule if not necessary */
+  }
+}
+
+.yacht-card :nth-of-type(1),
+.yacht-card :nth-of-type(2),
+.yacht-card :nth-of-type(3),
+.yacht-card :nth-of-type(4) {
+  background: transparent; 
+}
+
+.yacht-info h2 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  color: var(--LOGO-COLOR);  
+  background: transparent;
+}
+
+.specs-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.main-image {
+  width: 100%;
+  height: 92vh;
+  object-fit: cover;  
+}
+
+@media only screen and (max-width: 395px) { 
+  .main-image {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.carousel-title {
+  color: var(--LOGO-COLOR);
+  text-align: center;
+  margin-top: 200px;
+  font-size: medium;
+  margin-bottom: 20px;
+}
+
+#carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+#carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+#carousel-container {
+  display: flex;
+  transition: all 0.5s ease;
+  margin-left: 60px;
+}
+
+.carousel-item {
+  flex: 0 0 calc(33.333% - 20px);
+  height: 300px;
+  text-align: center;
+  line-height: 300px;
+  box-sizing: border-box;
+  padding: 10px;
+
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  color: var(--LOGO-COLOR);
+}
+
+#prev-btn {
+  left: 10px;
+}
+
+#next-btn {
+  right: 10px;
+}
+.carousel-item {
+  flex: 0 0 calc(33.333% - 20px);
+  height: 300px;
+  position: relative;
+  overflow: hidden; 
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.carousel-item span {
+  position: absolute;
+  bottom: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  color: var(--TEXT-LIGHTCOLOR);
+  font-family: 'Helvetica Neue', sans-serif;
+  padding: 5px;
+}
+
+.carousel-title {
+  font-size: 28px; 
+  text-align: center; 
+  color: var(--LOGO-COLOR); 
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1); 
+  margin-bottom: 20px; 
+  padding: 10px 0; 
+ 
+}
+
+#interior img {
+  width: 700px;  
+  height: 500px;  
+  margin: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+/*  THE YACHT AND CAROUSEL MEDIA GALLERY */
+.section-title {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--TEXT-LIGHTCOLOR);
+  font-size: var(--H3-YACHTMAIN);
+  margin-top: 120px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  position: absolute;
+  border: 2px solid var(--LOGO-COLOR);
+  width: 0;
+  height: 0;
+  transition: all 0.8s ease-out;
+}
+
+.section-title::before {
+  left: 0;
+  top: 0;
+  border-bottom: none;
+  border-right: none;
+}
+
+.section-title::after {
+  right: 0;
+  bottom: 0;
+  border-top: none;
+  border-left: none;
+}
+
+.section-title.active::before,
+.section-title.active::after {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px){
+  .section-title{
+    font-size: 25px !important;
+  }
+}
+
+/* YACHT CAROUSEL  */
+.yacht-carousel.interior-carousel {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 300px; 
+}
+
+
+.yacht-carousel.interior-carousel img {
+  width: 450px;  
+  height: 500px;
+  margin: 10px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+
+.yacht-carousel.interior-carousel::-webkit-scrollbar {
+  display: none;
+}
+.yacht-carousel.interior-carousel::-webkit-scrollbar-thumb {
+  display: none;
+}
+.yacht-carousel.interior-carousel::-webkit-scrollbar-track {
+  display: none;
+}
+.fullscreen-modal {
+  text-align: center; 
+  display: flex; 
+  align-items: center;  
+  justify-content: center;  
+}
+
+
+#interior {
+  height: 600px;
+}
+
+#interior img {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+
+@media (max-width: 768px) {
+  .carousel-item {
+    flex: 0 0 100%;
+    margin-left: 0 !important; 
+  }
+  #carousel-container {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  #interior img {
+    width: 100%; 
+    height: auto; 
+    margin: 5px;
+  }
+  
+  .yacht-carousel.interior-carousel {
+    height: auto; 
+  }
+  
+  #interior {
+    height: auto;
+  }
+}
+
+.navigation-row{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 10px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.fullscreen-image {
+  width: 80%;
+  height: auto; 
+  object-fit: cover; 
+}
+
+
+.exit-button, .next-button, .prev-button {
+  z-index: 1001; 
+  background-color: transparent;
+}
+
+
+#interior img, #exterior img {
+  object-fit: cover;  
+}
+
+.yacht-description {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px; 
+  padding: 20px 0;  
+  margin: 40px 0; 
+  transition: all 0.3s ease-in-out;
+}
+
+
+.yacht-description::after {
+  bottom: 0; 
+}
+
+.yacht-description h2 {
+  color: var(--LOGO-COLOR);  
+  margin-bottom: 20px;  
+  transition: color 0.3s ease-in-out;  
+}
+
+
+.main-wrapper {
+  max-width: 1200px; 
+  margin: auto;
+  padding: 20px;
+}
+
+.page-heading h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #FFF;
+  margin-bottom: 10px;
+}
+
+.title-accent-line {
+  height: 3px;
+  width: 80px; 
+  background-color: var(--LOGO-COLOR);
+  margin: 20px auto;
+}
+
+.details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; 
+}
+
+.charter-details, .yacht-selection {
+  flex: 1;
+}
+
+.charter-details h2, .yacht-selection h2 {
+  color: #f5f5f5;
+  margin-bottom: 10px;
+}
+.details-wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.charter-details p, .yacht-selection p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #D3D3D3;
+  text-align: justify;
+}
+.charter-details, .yacht-selection {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+@media screen and (max-width: 768px) {
+  .details-wrapper {
+      flex-direction: column;
+  }
+}
+
+/* PRICE PRESENTATION */
+.yacht-price {
+  font-size: 16px;
+  margin-top: 10px;
+  color: var(--TEXT-LIGHTCOLOR);
+  margin-bottom: 5px;
+  text-align: center; 
+}
+
+
+#price h2 {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+
+#price h2::before,
+#price h2::after {
+  content: "";
+  position: absolute;
+  border: 2px solid var(--LOGO-COLOR);
+  width: 0;
+  height: 0;
+  transition: all 0.8s ease-out;
+}
+
+#price h2::before {
+  left: 0;
+  top: 0;
+  border-bottom: none;
+  border-right: none;
+}
+
+#price h2::after {
+  right: 0;
+  bottom: 0;
+  border-top: none;
+  border-left: none;
+}
+
+#price h2.active::before,
+#price h2.active::after {
+  width: 100%;
+  height: 100%;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; 
+}
+
+.seasonal-price-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.seasonal-price-item {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;  
+  margin-right: 15px;  
+  position: relative;  
+}
+
+.inline-months {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.season-label, .season-price {
+  flex: 1;
+}
+
+.season-label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.border-right::after {
+  content: "";  
+  position: absolute;  
+  right: -15px; 
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #ccc;  
+}
+
+@media screen and (max-width: 768px) {
+  .seasonal-price-columns {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap; 
+  }
+
+  .seasonal-price-item {
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative; 
+  }
+
+  .inline-months {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .yacht-price {
+    font-size: 18px;
+  }
+
+  .border-right::after {
+    display: none; 
+   
+  }
+}
+
+/* MAIN SPECIFICATION AND DETAILED SPECIFICATION LIST */
+#yacht-specs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.yacht-specs {
+  background: linear-gradient(to bottom, #0B3355, #1A4B75);
+}
+
+#key-info, .detailed-specs, .detailed-specs li {
+  background-color: inherit;
+}
+
+#key-info {
+  display: flex;
+  flex-direction: column; 
+  background-color: transparent;
+}
+
+
+.yacht-specs h2 {
+  display: inline-block;
+  width: fit-content;
+  position: relative;
+  padding: 10px;
+  font-size: var(--H3-YACHTMAIN);
+  margin-bottom: 50px !important;
+}
+
+.yacht-specs h2.active::before,
+.yacht-specs h2.active::after {
+  width: 100%;
+  opacity: 1; 
+}
+
+
+.yacht-specs h2.active {
+  box-shadow: -2px 0 0 var(--LOGO-COLOR), 2px 0 0 var(--LOGO-COLOR);
+}
+
+.yacht-specs h2::before,
+.yacht-specs h2::after {
+  content: '';
+  position: absolute;
+  background: var(--LOGO-COLOR);
+  transition: all 0.8s;
+  opacity: 0; 
+}
+
+.yacht-specs h2::before,
+.yacht-specs h2::after {
+  width: 0;
+  height: 2px;
+}
+
+.yacht-specs h2::before {
+  top: 0;
+  left: 0;
+}
+
+.yacht-specs h2::after {
+  bottom: 0;
+  right: 0;
+}
+
+.yacht-specs h2.active::before,
+.yacht-specs h2.active::after {
+  width: 100%;
+  opacity: 1; 
+}
+
+
+#key-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+  flex-direction: column;
+}
+#key-info .detailed-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(30px, auto); 
+  gap: 0px 40px; 
+  margin-bottom: 50px;
+}
+
+
+.detailed-specs li {
+  font-size: 18px;
+  padding: 10px;
+  list-style-type: none;
+  transition: background 0.3s;
+  display: inline;
+  border-bottom: 2px solid #AAA;
+  opacity: 0;  
+  transform: translateY(20px); 
+  transition: opacity 0.5s, transform 0.5s;  
+}
+.detailed-specs li span {
+  position: relative;
+}
+
+.detailed-specs li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;  
+}
+
+
+.detailed-specs li.reveal {
+  opacity: 1;  
+  transform: translateY(0);  
+}
+
+.yacht-specs {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+.yacht-specs h2 {
+  margin-bottom: 130px;
+}
+
+@media only screen and (max-width: 768px) {
+  #key-info .detailed-specs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #key-info .detailed-specs li {
+    flex: 1;
+    min-width: calc(50% - 10px);
+    margin: 5px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  #key-info .detailed-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-auto-rows: minmax(10px, auto); 
+    gap: 10px; 
+  }
+}
+
+/* BULLET POINTS IN EXTRAS */
+#extras-section {
+  text-align: center; 
+  margin-bottom: 200px;
+  background: linear-gradient(to bottom, #0B3355, #1A4B75); 
+}
+
+
+#extras-section h2 {
+  text-align: center;  
+  color: var(--TEXT-LIGHTCOLOR);
+  font-size: 36px;
+  margin-top: 200px;
+  margin-left: auto; 
+  margin-right: auto; 
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: inherit;
+}
+
+#extras-section h2::before,
+#extras-section h2::after {
+  content: "";
+  position: absolute;
+  border: 2px solid var(--LOGO-COLOR);
+  width: 0;
+  height: 0;
+  transition: all 0.8s ease-out;
+}
+
+#extras-section h2::before {
+  left: 0;
+  top: 0;
+  border-bottom: none;
+  border-right: none;
+}
+
+#extras-section h2::after {
+  right: 0;
+  bottom: 0;
+  border-top: none;
+  border-left: none;
+}
+
+#extras-section h2.active::before,
+#extras-section h2.active::after {
+  width: 100%;
+  height: 100%;
+}
+
+#extras-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;  
+}
+
+#extras-list ul {
+  list-style: none;
+  margin: 60px;
+  padding: 0;
+  background: inherit;
+}
+
+#extras-list li {
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 20px;
+}
+
+#extras-list li:before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: var(--LOGO-COLOR);
+}
+
+#extras-section #extras-list, #extras-section #extras-list li {
+  background-color: inherit;
+}
+
+
+@media screen and (max-width: 767px) {
+  #extras-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;  
+  }
+
+  #extras-list ul {
+    margin: 0 10px 0 0;  
+    padding: 10px;
+    list-style: none;
+    margin-bottom: 30px;
+  }
+
+  #extras-section h2 {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+
+/* TEXT AND IMAGE IN MAIN DESCRIPTION YACHT */
+#text-image-container {
+  display: flex;
+  justify-content: flex-start;  
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;  
+  margin-bottom: 90px;
+}
+
+.text {
+  flex: 1;  
+  padding: 10px;
+  max-width: 30%;  
+  color: var(--TEXT-LIGHTCOLOR) !important;
+}
+
+.text h3 {  
+  margin-bottom: 20px; 
+  font-size: 36px;
+  position: relative;
+}
+
+.text p {
+  color: var(--TEXT-LIGHTCOLOR); 
+  font-size: small;
+}
+
+.underline::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--LOGO-COLOR);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 1s cubic-bezier(0.68, -0.55, 0.27, 1.55); 
+}
+
+.underline.active::after {
+  width: 50%;  
+}
+
+
+.image {
+  flex: 2; 
+  text-align: right;
+  position: relative;
+}
+
+
+.image img {
+  max-width: 80%;
+  max-height: 400px;  
+  position: relative; 
+  z-index: 0;  
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 
+              0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 768px) {
+  #text-image-container {
+    flex-direction: column;
+  }
+  
+  .text, .image {
+    flex: unset;
+    width: 100%;
+  }
+
+  .image {
+    margin-right: 0; 
+    margin-bottom: 20px;  
+  }
+  .underline::after {
+    height: 2px;  
+    transition: width 0.5s ease;  
+  }
+
+  .underline.active::after {
+    width: 100%; 
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #text-image-container {
+    flex-direction: column;
+    align-items: center;  
+  }
+  
+  .text, .image {
+    flex: unset;
+    max-width: 100%; 
+    margin-bottom: 20px;  
+  
+  }
+
+  .image {
+    text-align: center;  
+  }
+
+  .image img {
+    height: auto;  
+    max-width: 100%;
+    max-height: 100%;  
+  }
+} 
+
+.yacht-carousel.interior-carousel img {
+  transform: scale(0.4); 
+  transition: transform 1.5s ease-out;
+}
+
+.yacht-carousel.interior-carousel img.zoom-to-normal {
+  transform: scale(1); 
+}
+
+@media (max-width: 600px) {
+  .detailed-specs {
+    grid-template-columns: 1fr;
+  }
+}
+
+.description-text {
+  color: #EAEAEA;  
+  font-size: 1.1em;  
+  line-height: 1.6;  
+  letter-spacing: 0.05em;  
+  text-align: justify;
+  margin: 0 auto; 
+  max-width: 800px;  
+  font-weight: 100;  
+  padding: 0 20px;  
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.description-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.description-text::first-letter {
+  font-size: 1.5em;  
+  float: left;
+  margin-right: 0.2em;  
+  line-height: 1;  
+  color: #AA8759;  
+}
+
+/* Enquire Now Button */
+#enquire-now-container {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  z-index: 19;
+  border: 1px solid white;
+  font-size: 14px;
+}
+
+#enquire-now-btn {
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block; 
+  width: 100%;  
+  height: 100%;  
+  box-sizing: border-box;  
+}
+
+#enquire-now-btn:hover {
+  background-color: white;
+  color: var(--LOGO-COLOR);
+}
+
+@media (max-width: 780px){
+  #enquire-now-btn{
+    font-size: small;
+    padding: 5px;
+  } 
+}
+
+.active-link {
+  color: #AA8759; 
+}
+.navigation-row {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-row a {
+  padding: 0 10px;  
+  position: relative;
+}
+
+.navigation-row a:not(:last-child):after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 50%;
+  border-right: 1px solid #AA8759;  
+  transform: translateY(-50%);
+}
+
+.navigation-row {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;  
+}
+
+.centered-nav {
+  justify-content: center;  
+}
+.yacht-name {
+  position: absolute;
+  background: var(--LOGO-COLOR);
+  color: white;
+  padding: 8px;
+  transition: left 1s ease-in-out;  
+  z-index: 10;
+  bottom: 100px;
+  left: -200px; 
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+#key-info h2, .detailed-specs {
+  margin-left: 10px;
+  color: var(--TEXT-LIGHTCOLOR);
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .navigation-row {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+  }
+  .yacht-name {
+    font-size: 12px; 
+    bottom: 280px;
+    padding: 5px;
+  }
+
+  .description-text {
+    color: #ffffff;  
+    text-align: justify;  
+    margin: 15px;
+  }
+
+  .main-image {
+    height: 70vh;
+  }
+  
+  .action-icons {
+    float: right; 
+  }
+  
+  .action-icons a {
+    margin-left: 15px;
+    font-size: 18px; 
+  }
+  
+  .section-title {
+    font-size: 1.2em;  
+  }
+
+  .yacht-carousel.interior-carousel {
+    height: auto;
+  }
+  
+  .yacht-carousel.interior-carousel img {
+    width: 100%;
+    margin: 5px auto;
+  }
+ 
+  
+  .fullscreen-image {
+    width: 95%;
+  }
+  
+  .exit-button, .next-button, .prev-button {
+    font-size: 1.5em;
+  }
+
+  .yacht-name {
+    font-size: 1.2em;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  #interior, #exterior {
+    height: auto; 
+  }
+
+  .yacht-carousel.interior-carousel, .yacht-carousel.exterior-carousel {
+    height: 100%; 
+  }
+}
+
+@media (max-width: 398px){
+  .yacht-name {
+    font-size: 12px; 
+    bottom: 150px;
+    padding: 5px;
+  }
+  .body{
+    overflow-x: hidden;
+  }
+}
+
+/* FORM STYLE */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+form label {
+  margin-bottom: 5px;
+  background-color: transparent;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+form button {
+  background-color: var(--LOGO-COLOR);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* POPUP STYLES */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: transparent;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; 
+  max-width: 500px; 
+  padding: 20px;
+  border-radius: 8px;
+  color: white; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content label, .flex-container label {
+  color: white; 
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="number"],
+.popup-content input[type="date"],
+.popup-content input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid white; 
+  border-radius: 4px;
+  background-color: transparent;
+  color: white; 
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+  background-color: transparent;
+}
+
+.popup button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+  padding: 10px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border: none; 
+  background-color: var(--BUTTON-COLOR); 
+  color: white;
+}
+
+.popup button:hover {
+  background-color: var(--BUTTON-HOVER-COLOR); 
+}
+
+.close-popup {
+  position: absolute;
+  top: 24px;
+  font-size: 20px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+}
+
+.close-popup:hover, .close-popup:focus {
+  color: var(--LOGO-COLOR);
+}
+
+.popup-content h2 {
+  background-color: transparent;
+  margin-bottom: 10px;
+  color: var(--LOGO-COLOR);
+  font-size: 18px;
+  max-width: calc(100% - 40px);
+  padding-right: 30px; 
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 428px) {
+  .popup-content h2 {
+    font-size: calc(1.2em + 1vw); 
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .popup-content {
+    width: 85%;
+    padding: 15px;
+  }
+
+  .popup-content input[type="text"],
+  .popup-content input[type="number"],
+  .popup-content input[type="date"],
+  .popup-content input[type="email"] {
+    padding: 8px;
+    font-size: 14px; 
+  }
+
+  .popup button {
+    width: 100%; 
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .close-popup {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .yacht {
+    flex-basis: 100%;  
+    margin: 10px 0;  
+  }
+  .yacht-listings {
+    padding: 0 10px; 
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .popup-content h2 {
+    font-size: 22px; 
+  }
+}
+
+/* GENERAL BUTTON OVERRIDE FOR NO BORDER RADIUS */
+button {
+  border-radius: 0 !important; 
+}
+
+/* ABOUT US AND CONTACT US ALONG WITH INTRODUCTION */
+.gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;  
+  background: linear-gradient(to top, rgba(11, 51, 85, 1), rgba(11, 51, 85, 0));
+  z-index: 2;
+}
+
+.card-titles h1, .card-titles p {
+  color: #FFFFFF; 
+  text-shadow: 
+      1px 1px 2px rgba(0, 0, 0, 0.4),   
+      2px 2px 4px rgba(0, 0, 0, 0.2),   
+      3px 3px 6px rgba(0, 0, 0, 0.1);   
+}
+
+
+.background-introduction::before {
+  content: '';
+  position: absolute;
+  top: -5%; 
+  left: 0;
+  right: 0;
+  height: 15%;  
+  background: linear-gradient(to bottom, rgba(11, 51, 85, 0), rgba(11, 51, 85, 1));
+  z-index: 1; 
+}
+
+
+
+.background-introduction {
+  position: relative;  
+  color: #fff; 
+  padding-bottom: 120px;
+  overflow: hidden;
+}
+
+.animate {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.container {
+  display: flex;
+  margin: auto;
+  padding: 20px;
+  transform: translateY(80px);
+}
+
+.column {
+  flex: 1;
+  margin: 0 30px;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.column p {
+margin-top: 10px;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+/* LOGO STYLE */
+.footer-logo img {
+  width: 150px; 
+  height: auto; 
+}
+
+
+
+
+/* PLAN YOUR VOYAGE FORM */
+.voyageFormPopup {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 1000;
+  color: white;
+  display: none;
+}
+
+.voyageFormPopup-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.voyage-form input,
+.voyage-form textarea,
+.voyage-form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  height: 40px;
+}
+
+.voyage-form button {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+
+.voyage-privacy-check {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.policyAgreement {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.consent-label {
+  font-size: 16px;
+  color: #333; 
+  line-height: 1.4;
+}
+
+.policy-link,
+.voyage-privacy-link {
+  color: var(--LOGO-COLOR); 
+  text-decoration: none;
+}
+
+.policy-link:hover,
+.voyage-privacy-link:hover {
+  text-decoration: underline;
+}
+
+.voyage-form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none;
+}
+
+.voyage-form input[type="checkbox"] {
+  width: auto; 
+  height: auto; 
+}
+
+
+@media screen and (max-width: 600px) {
+  .voyageFormPopup {
+    width: 95%; 
+    padding: 15px;
+  }
+
+  .voyage-form input,
+  .voyage-form textarea,
+  .voyage-form select {
+    padding: 8px; 
+  }
+
+  .voyage-form button {
+    width: 100%;
+  }
+
+  .voyage-privacy-check,
+  .consent-checkbox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .consent-label {
+    font-size: 14px;
+  }
+}
+
+.outline-button {
+  border: 1px solid transparent;
+  position: relative;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid var(--LOGO-COLOR);
+  outline: none;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+  color: var(--LOGO-COLOR);
+
+  padding: 10px;
+
+}
+
+.outline-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #fff;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+.video-container::after {
+  content: '';
+  position: absolute;
+  top: 75%; 
+  left: 0;
+  right: 0;
+  height: 25%; 
+  background: linear-gradient(to bottom, rgba(11, 51, 85, 0), rgba(11, 51, 85, 0.9));
+  z-index: 1; 
+}
+
+.outline-button:hover::before {
+  transform: scale(1);
+}
+
+@media (max-width: 768px) { 
+  .container {
+      flex-direction: column;
+  }
+  .outline-button{
+    padding: 5px;
+  }
+
+  .column {
+      margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) { 
+  .container {
+      width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .button-container .outline-button:nth-child(2) {
+      margin-left: 20px; 
+  }
+}
+
+/* IBIZA POPULAR DESTINATION*/
+.destination-container {
+  overflow: hidden;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  height: auto; 
+}
+
+.title {
+  position: relative;
+  display: inline-block;
+  font-size: 2em;
+  font-weight: lighter;
+  color: #fff;
+  margin-top: 20px;
+  text-transform: uppercase;
+  overflow: hidden;
+  animation: slideInFromTop 1s ease-out;
+}
+
+.destination-container .title {
+  font-weight: 400;
+  font-size: 2em;
+}
+
+.title2 {
+  font-size: 16px;
+  font-weight: lighter;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  color: var(--LOGO-COLOR);
+  animation: fadeIn 2s;
+}
+
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.image-block {
+  width: calc(33.333% - 10px);
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.destination-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s;
+  max-height: 100%;
+}
+
+.image-wrapper:hover .destination-image {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+.text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  transition: transform 1s;
+  color: white;
+  font-weight: lighter;
+  overflow: hidden;
+}
+
+.new-title {
+  font-size: 1.5em;
+  font-weight: 200;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
+.new-title,
+.new-description {
+  margin: 10px;
+  background-color: transparent;
+}
+@media screen and (max-width: 768px) {
+  .destination-container {
+    width: 100%; 
+  }
+}
+
+.content-box {
+  display: flex;
+  justify-content: center; 
+ align-items: center;
+  text-align: center; 
+}
+
+.content-box p {
+  padding: 10px;
+  margin: 10px;
+  color: #FFF;
+  max-width: 800px;
+}
+
+#unique-yacht-charter {
+  margin-top: 180px;
+}
+
+#unique-yacht-charter .charter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.charter-title {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-align: left;  
+}
+
+.charter-description {
+  color: white;
+  line-height: 1.6;
+  text-align: left;  
+}
+
+.charter-inquiry-btn{
+  border: 1px solid var(--LOGO-COLOR);
+  padding: 2px;
+  margin-top: 5px;
+}
+
+.charter-inquiry-btn:hover {
+  background-color: var(--LOGO-COLOR);
+  color: var(--BG-COLOUR);
+}
+
+#yachts-zenith-section {
+  background: linear-gradient(to bottom, #0B3355, #1A4B75);
+  padding: 40px 0;
+}
+
+.yachts-zenith-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  text-align: center;
+  background-color: transparent;
+}
+.charter-container {
+  max-width: 300px;
+}
+
+.yachts-zenith-title {
+  font-size: 2.2em;
+  color: white;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+.yachts-zenith-description {
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  background-color: transparent;
+}
+.yachts-zenith-container {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+   
+}
+.yachts-zenith-text {
+  background-color: transparent;
+  margin-right: 40px;
+}
+
+.yachts-zenith-text, .yachts-zenith-image {
+  flex: 1; 
+}
+
+.yachts-zenith-image img {
+  width: 100%; 
+  height: auto; 
+}
+@media screen and (max-width: 768px) {
+  .yachts-zenith-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  .image-block {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .image-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .new-title, .new-description {
+    text-align: center;
+  }
+  .additional-description span:hover {
+    background-color: var(--LOGO-COLOR); 
+    transition: background-color 0.5s ease; 
+    border: var(--LOGO-COLOR);
+  }
+}
+
+@media (max-width: 600px) {
+  .image-block {
+    width: 100%;
+    height: auto;
+  }
+  .new-title, .new-description {
+    text-align: center;
+  }
+  .destination-container .title {
+    font-size: 20px;
+  }
+  .image-container {
+    height: auto;
+  }
+  .image-wrapper {
+    overflow: hidden;
+  } 
+}
+
+.image-description-visible {
+  transform: translateY(0) !important;
+}
+
+.image-wrapper:hover .image-description {
+  transform: translateY(0);
+}
+
+ /* YACHTING GUIDE & TIPS  */
+ #yachting-guide {
+  user-select: none; 
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  padding: 120px;
+  color: var(--TEXT-LIGHTCOLOR);
+  opacity: 1;
+  transition: opacity 1s ease;
+  position: relative;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background: linear-gradient(to top, #0B3355, #1A4B75);
+}
+
+
+.guide-title, .accordion {
+  width: 50%;  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+}
+
+.guide-title {
+  text-align: center;
+  margin: 20px;
+  font-size: var(--H1);
+}
+
+.accordion {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+  background-color: inherit;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+  outline: none;  
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+  text-align: left;
+  display: none;
+  background: inherit;
+}
+
+.accordion-content p, strong {
+  background: inherit;
+  margin-top: 8px;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 200px; 
+  padding: 15px;
+  display: block;
+}
+.accordion-header h3 {
+  background-color: inherit;
+}
+
+#yachting-guide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  opacity: 0.4;
+  z-index: -1;
+  animation: gradient-animation 6s infinite linear;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.boat-detail {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+  color: white;
+  border-top: 2px solid #ddd;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  #yachting-guide {
+    padding: 10px;
+    height: auto;
+    
+    padding-bottom: 120px;
+  }
+  .guide-title {
+    font-size: 24px; 
+    margin: 10px;
+  }
+  .accordion {
+    width: 100%;
+  }
+  .accordion-header, .accordion-content {
+    padding: 10px;
+  }
+   #yachting-guide {
+    height: auto;
+  }
+}
+
+/* ABOUT US PAGE STYLING */
+.armada-section, .narrative-section, .purpose-section {
+  text-align: center;
+  padding:  20px;
+}
+
+.armada-section h2, .narrative-section h2, .purpose-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--TEXT-LIGHTCOLOR);
+}
+
+.armada-section p, .narrative-section p, .purpose-section p {
+  color: var(--TEXT-LIGHTCOLOR);
+}
+
+.armada-section p {
+  background-color: transparent;
+  text-align: justify;   
+}
+
+.gallery-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; 
+}
+
+.gallery-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item {
+  flex: 0 0 100%; 
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.gallery-item img {
+  max-width: 100%; 
+  height: auto; 
+  max-height: 500px; 
+}
+
+.narrative-section {
+  text-align: center;
+  height: 100vh;
+  max-width: 1000px; 
+  margin: auto; 
+}
+
+.gallery-item img, .gallery-item h3 {
+  background-color: transparent;
+}
+
+.narrative-section h2 {
+  font-size: 2.5em; 
+  margin-bottom: 30px; 
+  margin-top: 150px;
+}
+
+.narrative-section p {
+  font-size: 1.2em; 
+  line-height: 1.8; 
+  text-align: justify; 
+  padding: 15px 0; 
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease-out;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 600px) {
+  .narrative-section h2 {
+    font-size: 1.5em; 
+    margin-top: 75px; 
+    margin-bottom: 15px;
+  }
+
+  .narrative-section p {
+    font-size: 1em; 
+    margin: 0 15px; 
+  }
+}
+
+.armada-section p{
+  margin-bottom: 40px;
+}
+
+.animated-h2 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  white-space: nowrap;
+}
+
+.animated-h2.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animated-h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 120px;
+}
+
+.animated-h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; 
+  left: 0;
+  width: 0;
+  height: 2px; 
+  background: var(--LOGO-COLOR); 
+  transition: width 0.5s ease;
+}
+
+.animated-h2.animate::after {
+  width: 100%; 
+}
+@media (max-width: 768px) {
+  .narrative-section p {
+    font-size: 1.1em; 
+    line-height: 1.6; 
+    margin: 0 15px;
+    padding: 10px 0; 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+}
+/* Navigation buttons */
+button.prev, button.next {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+button.prev {
+  left: 210px;
+}
+button.next {
+  right: 210px;
+}
+@media (max-width: 640px) {
+  .gallery-item img {
+      max-height: none; 
+  }
+  .armada-section h2, .narrative-section h2, .purpose-section h2 {
+      font-size: 1.5em;
+  }
+  .armada-section p, .narrative-section p, .purpose-section p {
+      font-size: 1em;
+  }
+  button.prev {
+    left: 10px;
+  }
+  button.next {
+    right: 10px;
+  }
+}
+
+/* CONTACT US AND LOGO */
+.wrapper {
+  display: flex;
+  height: 70vh;
+  justify-content: space-between;
+  flex-direction: column;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('IbizaPortPanorama.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  color: #fff;
+  font-size: 20px;
+}
+
+.half {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: transparent;
+}
+
+.half h2 {
+  background-color: transparent;
+}
+
+.branding {
+  align-items: center;
+}
+
+.contact {
+  align-items: center;
+}
+
+a {
+  margin: 0;
+  color: white;
+  text-decoration: none;
+}
+
+.contact-links {
+  background-color: transparent;
+}
+
+.broker1 {
+  background-color: transparent;
+}
+
+.broker2 {
+  background-color: transparent;
+}
+
+.contact-links a {
+  background-color: transparent;
+  color: #fff; 
+  font-weight: bold; 
+  text-decoration: none; 
+  display: flex; 
+  align-items: center; 
+}
+
+.contact-links a:hover {
+  color: var(--LOGO-COLOR); 
+  transition: color 0.3s ease; 
+}
+
+.contact-links p {
+  background-color: transparent;
+}
+
+.contact-links {
+  display: flex;
+  gap: 85px;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    background-attachment: scroll;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('IbizaPortPanoramaIphone.jpg');
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    white-space: nowrap; 
+  }
+
+  .branding h2, .contact h2 {
+    font-size: 18px; 
+    font-weight: lighter;
+    line-height: 1.4; 
+  }
+
+  .half.contact h2 {
+    margin-bottom: 150px;
+  }
+
+  .contact-links {
+    display: flex;
+    gap: 40px; 
+    flex-direction: row;
+    transform: translateY(-120px);
+    font-weight: bolder;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .half {
+    width: 50%;
+    height: 100%;
+  }
+
+  .branding {
+    align-items: flex-start;
+  }
+
+  .contact {
+    align-items: flex-start;
+  }
+
+  .contact-links {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+ @media only screen and (max-width: 375px) {
+  .video-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .card-titles,
+  .social-icons {
+    position: static;
+    text-align: center;
+  }
+
+  .h-iphone {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  .h-iphone {
+    font-size: 14px;
+  }
+
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .video-container {
+     height: 100vh; 
+     width: 100vw;
+   }
+ 
+   .video-container video {
+     position: absolute;
+     top: 0;
+     left: 0;
+     min-height: 100%; 
+     min-width: 100%;
+     object-fit: cover;
+   }
+}
+@media only screen 
+  and (min-width: 376px) 
+  and (max-width: 667px) { 
+
+  .video-container {
+    height: calc(100vh - 70px);
+    width: 100%;
+  }
+
+  .video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .h-iphone {
+    margin-bottom: 30px; 
+  }
+
+  .card-titles {
+    text-align: center;
+  }
+}
+
+/* CONTACT US FORM  */
+.contact-bg {
+  height: 100vh;
+  background-image: url('EsVedra.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(29, 28, 28, 0.82);
+  background-blend-mode: overlay;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  width: 80%;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 3rem;
+  border-radius: 10px;
+}
+.contact-form-container{
+  background-color: transparent;
+}
+.contact-form-container .checkbox-container {
+  background-color: transparent;
+}
+
+.contact-form-container button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+}
+
+.contact-message h1 {
+  font-weight: 300;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+}
+
+.contact-message{
+  background-color: transparent;
+}
+
+.contact-message p {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.contact-message span {
+  color: #AA8759;
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+.new-checkbox-area {
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+  flex-wrap: wrap; 
+  background-color: transparent;
+}
+
+.new-checkbox-area input[type="checkbox"] { 
+  margin: 0;
+  padding-right: 5px; 
+}
+
+.new-consent-label {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  align-items: center; 
+}
+
+.new-policy-link {
+  color: #AA8759;
+  margin-left: 5px;                       
+  background-color: transparent;
+}
+
+.contact-form-container input[type="text"], 
+.contact-form-container input[type="email"], 
+.contact-form-container input[type="tel"], 
+.contact-form-container textarea {
+  color: #FFF; 
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none; 
+  padding: 10px; 
+  margin-bottom: 15px; 
+  outline: 1px solid white;
+}
+
+.contact-form-container input::placeholder, 
+.contact-form-container textarea::placeholder {
+  color: #CCC; 
+  opacity: 1; 
+}
+
+.contact-form-container input:focus, 
+.contact-form-container textarea:focus {
+  outline: 1px solid var(--LOGO-COLOR); 
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+.new-checkbox-area input[type="checkbox"] { 
+  margin: 0;
+  padding-right: 5px; 
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 90%;
+    padding: 1.5rem;
+  }
+  .new-checkbox-area {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-message h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .new-contact-form textarea, .new-contact-form input, .new-contact-form label {
+    font-size: smaller; 
+  }
+  .contact-message p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .new-consent-label {
+    display: block; 
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form-container .checkbox-container {
+    display: flex; 
+    flex-direction: row;
+    gap: 10px;
+  }
+  .checkbox-container label.privacy {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr; 
+    padding: 2rem;  
+  }
+}
+
+/* ABOUT US PAGE STYLE  */
+.header-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+main {
+  padding: 50px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.story-section, .safety-section {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  color: var(--TEXT-LIGHTCOLOR);
+}
+
+.story-section h2 {
+font-size: 36px;
+}
+
+.story-section p{
+  margin-top: 20px;
+}
+
+.mission-section h2 {
+  font-size: var(--H3-YACHTMAIN);
+  color: var(--TEXT-LIGHTCOLOR);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mission-section p {
+  color: var(--TEXT-LIGHTCOLOR);
+}
+
+.fleet-section {
+  text-align: center;
+  color: var(--TEXT-LIGHTCOLOR);
+  height: 100vh;
+}
+
+.fleet-section h2 {
+  margin-bottom: 20px;
+}
+
+.team-section {
+  text-align: center;
+  color: var(--TEXT-LIGHTCOLOR);
+}
+
+.testimonials-section {
+  text-align: center;
+  color: var(--TEXT-LIGHTCOLOR);
+}
+
+.narrative-section, .purpose-section, .armada-section, .cta-section {
+  overflow: hidden;
+  position: relative;
+  transition: opacity 0.3s ease-out;
+}
+.cta-button {
+  display: inline-block;
+  background-color: var(--LOGO-COLOR); 
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none; 
+}
+#call-to-action{
+  height: 100vh;
+}
+
+.purpose-section {
+  background: linear-gradient(to bottom, #0B3355, #1A4B75);
+}
+.mission-content {
+  background-color: inherit;
+}
+.mission-content p {
+  background-color: inherit;
+  font-size: 20px; 
+  text-align: justify; 
+  padding: 5px;
+}
+.scroll-effect {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+  /* COOKIES CONSENT BANNER  */
+.yz-cookie-consent-container {
+  display: none; 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 10px 5px;
+  text-align: center;
+  z-index: 10001;
+}
+
+.show-cookie-consent {
+  display: block;
+}
+
+.yz-cookie-consent-content p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.yz-cookie-btn-container {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.yz-cookie-btn {
+  color: white;
+  border: none;
+  padding: 5px 10px; 
+  font-size: 14px;
+  margin: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* COOKIES SETTINGS MODAL */
+.cookie-settings-modal {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1010;
+  width: 80%; 
+  max-width: 600px; 
+  min-height: 300px;
+}
+
+.cook-bold {
+  color: var(--LOGO-COLOR);
+}
+
+.yz-cookie-consent-container {
+  display: none;
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 101001;
+  transition: bottom 0.8s ease; 
+}
+
+@media (max-width: 600px) {
+  .cookie-settings-modal {
+    width: 95%; 
+    min-height: 200px;
+  }
+}
+
+/* COOKIES POLICY*/
+.cookies-top-space {
+  margin-top: 25px;
+  color: white;
+}
+
+.cookies-personalised {
+  color: white;
+}
+.cookies-main {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.cookies-section {
+  background: rgba(255, 255, 255, 0.08); 
+  margin-bottom: 25px;
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 4px solid #add8e6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+}
+
+.cookies-title {
+  color: #add8e6;
+  margin-bottom: 0.8em;
+  font-size: 1.8em;
+  background-color: transparent;
+}
+
+.cookies-heading {
+  color: #add8e6;
+  margin-bottom: 0.8em;
+  font-size: 1.4em;
+}
+
+.cookies-text {
+  margin-bottom: 18px;
+  font-size: 1.0em;
+  color: #dcdcdc;
+}
+
+.cookies-link {
+  color: #add8e6;
+  text-decoration: none;
+}
+
+.cookies-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.cta-section {
+  background-image: url('FormenteraAerial.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: #ffffff; 
+  text-align: center; 
+  margin: 0;
+}
+
+.cta-section:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.cta-section * {
+  position: relative;
+  z-index: 2;
+}
+.cta-section {
+  width: 100vw;
+  margin-right: -17px; 
+  margin-left: -20px;
+}
+
+.animated-h2 {
+  background-color: transparent;
+}
+
+.gallery-item h3{
+  color: var(--TEXT-LIGHTCOLOR);
+  margin-top: 20px;
+}
+
+.mission-section, .team-section, .global-section, .testimonials-section {
+  padding: 20px;
+}
+
+.mission-content, .team-gallery, .testimonials-gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mission-content p, .team-gallery div, .testimonials-gallery div {
+  flex: 1;
+}
+
+.mission-image {
+  max-width: 50%;
+  margin-left: 20px;
+}
+
+.gallery-container {
+  position: relative;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px; 
+  color: var(--LOGO-COLOR); 
+  background-color: transparent;
+  z-index: 10; 
+}
+
+.prev {
+  left: 10px; 
+}
+
+.next {
+  right: 10px; 
+}
+
+.team-gallery div, .testimonials-gallery div {
+  margin: 10px;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.cta-section p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+}
+
+@media (max-width: 768px) {
+  .mission-content, .team-gallery, .testimonials-gallery {
+      flex-direction: column;
+  }
+  .mission-image {
+      max-width: 100%;
+      margin: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .armada-section h2, .armada-section p {
+    margin-bottom: 15px; 
+  }
+
+  .gallery-container {
+    margin: 0; 
+  }
+
+  .narrative-section {
+    padding: 0;
+    height: 100vh;
+  }
+ .purpose-section {
+  margin-bottom: 120px;
+ }
+ .mission-content p {
+  font-size: 16px;
+ }
+}
+
+/* YACHT ROUTES */ 
+.carousel {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #f5f5f5;
+  text-shadow: 2px 2px 4px rgba(14, 13, 13, 0.7);
+  padding-top: 10%; 
+  background-position: center center; 
+}
+
+.carousel-slide h2 {
+  background-color: transparent;
+}
+
+.carousel-slide.active h2 {
+  background-color: transparent;
+}
+.carousel-slide.active a {
+  background-color: transparent;
+}
+
+.carousel button {
+ font-weight: lighter;
+}
+
+.control-btn {
+  background: rgba(0, 0, 0, 0.9); 
+  border: none; 
+  outline: none; 
+  padding: 10px 20px; 
+  cursor: pointer;
+  color: var(--LOGO-COLOR);
+  transition: background-color 0.3s ease; 
+}
+
+.carousel {
+  height: 100vh;
+}
+.carousel-slide {
+  background-position: center center;
+  height: 600px;
+  margin-top: 40px;
+}
+
+.carousel-slide button {
+  margin-bottom: 120px;
+}
+
+.carousel-slide.active {
+  display: flex;
+}
+.carousel-slide {
+  background-color: transparent;
+}
+.carousel-slide h1{
+  background-color: transparent;
+  font-size: 48px;
+  font-weight: lighter;
+}
+
+.carousel-controls button {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: transparent;
+}
+
+.fas.fa-angle-left{
+  background-color: transparent;
+}
+.fas.fa-angle-right{
+  background-color: transparent;
+}
+
+.control-btn[data-dir="prev"], .control-btn[data-dir="next"] {
+  font-size: 24px; 
+}
+
+
+
+.carousel-slide h2,
+.carousel-slide button {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.carousel-slide.active h2 {
+  animation: slideInFromBottom 0.5s forwards;
+}
+
+.carousel-slide.active button {
+  animation: slideInFromBottom 0.5s forwards 0.3s;
+}
+
+.carousel-slide h2 {
+  font-size: 48px; 
+  font-weight: lighter;
+}
+
+.carousel-slide button {
+  font-size: 20px; 
+  margin-top: 15px; 
+}
+
+
+@media (max-width: 768px) {
+  .carousel-slide h2 {
+    font-size: 28px; 
+  }
+  .carousel-slide h1{
+    font-size: 28px;
+  
+  }
+  
+  .carousel-slide button {
+    font-size: 18px; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .carousel-slide h2 {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+  }
+  .carousel-slide button {
+    font-size: 10px; 
+    margin-bottom: 150px;
+  }
+  .carousel-controls .control-btn[data-dir="prev"],
+  .carousel-controls .control-btn[data-dir="next"] {
+    font-size: 22px; 
+    margin-right: 5px;
+  }
+  .control-btn {
+    background: rgba(0, 0, 0, 0.4); 
+    border: none; 
+    outline: none; 
+    padding: 10px 20px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+}
+
+
+/* TEXT AND TITLE UNDEARNEATH SLIDE PICTURE PRESENTING DESTINATIONS */
+.yachtContainer {
+  width: 100%;              
+  padding: 20px;             
+}
+
+.breadcrumb {
+  width: 100%;               
+  margin-bottom: 10px;       
+  font-size: 14px;           
+}
+
+.breadcrumb a {
+  color: var(--LOGO-COLOR);            
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  color: #fff;            
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.separator {
+  margin: 0 5px;          
+}
+
+
+
+.contentWrapper {
+  display: flex;
+  align-items: center;       
+  justify-content: space-evenly;
+}
+
+.title {
+  flex: 0 0 40%;             
+  font-size: 24px;           
+  font-weight: bold;         
+  padding-right: 20px;       
+}
+
+.text {
+  flex: 0 0 60%;             
+  font-size: 16px;  
+  margin-right: 10px;  
+  color: var(--TEXT-LIGHTCOLOR);   
+}
+
+
+@media (max-width: 768px) {
+  .contentWrapper {
+      flex-direction: column;   
+  }
+  
+  .title, .text {
+      flex: none;              
+      width: 100%;             
+      text-align: center;      
+      margin-right: 0;         
+  }
+
+  .title {
+      padding-right: 0;       
+  }
+}
+
+.yacht-charter-wrapper {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+}
+
+.yacht-charter-title {
+  width: 100%; 
+  margin-bottom: 20px;
+}
+
+.yacht-charter-info, .yacht-charter-image {
+  flex: 1; 
+  padding: 10px; 
+}
+
+.yacht-charter-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .yacht-charter-wrapper {
+      display: block;
+  }
+
+  .yacht-charter-info, .yacht-charter-image {
+      width: 100%; 
+  }
+}
+
+
+
+
+/* DISCOVER FORMENTERA  */
+.about {
+  text-align: center;
+  max-width: 80%; 
+  margin: 0 auto;
+  padding: 80px;
+  color: #FFF;
+}
+.about h2, .about p {
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+.image-text {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center;
+  max-width: 95%;
+  margin: 20px auto;
+}
+
+.image-left,
+.image-right {
+  flex: 1;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.text-left,
+.text-right {
+  flex: 1;
+  margin: 20px;
+  color: #FFF;
+}
+
+.text-left h2,
+.text-right h2 {
+  margin-bottom: 5px;
+}
+
+.image-left img,
+.image-right img {
+  max-width: 100%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 0;
+  }
+  
+  .about h2, .about p {
+    padding: 10px;
+  }
+
+  .image-text {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto; 
+  }
+
+  .image-left,
+  .image-right {
+    grid-row: 1 / span 1; 
+  }
+
+  .text-left,
+  .text-right {
+    grid-row: 2 / span 1; 
+  }
+}
+
+/* VIDEO MIDDLE PAGE */
+.seasonal-guide-new {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  margin-top: 120px;
+}
+
+.seasonal-guide-new video {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+
+.seasonal-guide-new::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50px; 
+  background: linear-gradient(to bottom, rgba(11, 51, 85, 0), #0b3255f5); 
+  z-index: 2; 
+}
+
+.seasonal-guide-new::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50px; 
+  background: linear-gradient(to top, rgba(11, 51, 85, 0), #0b3255f5); 
+  z-index: 2; 
+}
+
+.seasonal-guide-new::before {
+  top: 0;
+}
+
+.seasonal-guide-new::after {
+  bottom: 0;
+}
+
+
+
+.seasonal-guide-new video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.seasonal-guide-new h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.seasonal-guide-new p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  background-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);  
+}
+.new-container h2{
+  background-color: transparent;
+}
+
+.text-right h2 {
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block; 
+}
+
+.text-left h2 {
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block; 
+}
+
+.text-left h2::after, .text-right h2::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px; 
+  bottom: -5px;
+  left: 0;
+  background-color: var(--LOGO-COLOR); 
+  transition: width 0.3s ease-in-out; 
+}
+.text-left h2::after, .text-right h2::after{
+  width: 100%;
+}
+
+.new-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+.btn {
+  background-color: var(--LOGO-COLOR); 
+  padding: 10px 15px; 
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: background-color 0.3s; 
+}
+
+.btn:hover {
+  background-color: var(--BG-COLOUR); 
+}
+
+
+.seasonal-guide-new, .image-text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.seasonal-guide-new.visible, .image-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.guide-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.guide-section:hover {
+  transform: scale(1.02); 
+}
+
+.guide-section h1, .guide-section h2 {
+  color: #e6e6e6; 
+  margin-bottom: 20px;
+}
+
+.guide-section h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.guide-section h2 {
+  font-size: 1.5rem;
+}
+
+.guide-section p {
+  font-size: 1.1rem;
+  color: #dcdcdc;
+  line-height: 1.7;
+  text-align: justify;
+}
+.guide-section p:first-of-type {
+  color: var(--LOGO-COLOR); 
+}
+
+.guide-section img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.guide-section {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.guide-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+  .guide-section {
+    padding: 25px;
+  }
+
+  .guide-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .guide-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .guide-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .guide-section {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 768px) {
+  .guide-section {
+    max-width: 560px;
+    margin: 30px auto;
+    padding: 20px;
+  }
+  
+  .guide-section h1 {
+    font-size: 1.6rem;
+    margin-top: 60px;
+    text-wrap: wrap;
+    text-transform: capitalize;
+  }
+
+  .guide-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .guide-section p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .guide-section {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .guide-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .guide-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .guide-section p {
+    font-size: 0.9rem;
+  }
+}
+
+.nav-bar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 30px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.call-to-action {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.call-to-action p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.call-to-action .cta-button-link {
+  color: var(--LOGO-COLOR);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid var(--LOGO-COLOR);
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+.call-to-action .cta-button-link:hover {
+  background-color: var(--LOGO-COLOR);
+  color: var(--BG-COLOUR);
+}
+
+@media screen and (max-width: 768px) {
+  .call-to-action p {
+    font-size: 0.9rem;
+  }
+
+  .call-to-action {
+    padding: 15px;
+  }
+}
+
+/* DESTINATION PICTURE AND TEXT */
+.charter-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  margin: 0; 
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0B3355, #1A4B75);
+  color: white;
+}
+
+.charter-text {
+  padding: 40px; 
+  max-width: 480px; 
+  box-sizing: border-box;
+}
+
+.charter-text  {
+  background-color: inherit;
+} 
+
+.charter-text p {
+  background: transparent;
+}
+
+.charter-text,
+.charter-image {
+  flex: 1; 
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.charter-text.visible,
+.charter-image.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.charter-text {
+  max-width: 50%; 
+  transform: translateY(-20px);
+  color: var(--TEXT-LIGHTCOLOR);
+  font-size: var(--H3-YACHTMAIN);
+}
+
+.charter-image {
+  max-width: 50%; 
+  transform: translateY(20px);
+}
+
+.charter-image img {
+  width: 100%; 
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .charter-section {
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 0; 
+    min-height: 50vh; 
+    background: linear-gradient(to bottom, #0B3355, #1A4B75);
+  }
+
+  .charter-text,
+  .charter-image {
+    max-width: 100%; 
+    flex-basis: auto; 
+    margin: 0; 
+  }
+
+  .charter-text {
+    margin-top: 20px; 
+    order: 1; 
+    padding: 20px; 
+    text-align: center; 
+  }
+
+  .charter-image {
+    order: 2; 
+    width: 100%; 
+    margin-top: 20px; 
+  }
+
+  .charter-image img {
+    width: 100%; 
+    height: auto;
+  }
+}
+
+/* POP UP LARGE IMAGE WHEN CLICKED  */
+.modal {
+  display: none; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7); 
+  z-index: 20; 
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px;
+  width: 80%;
+  max-height: 90%;
+  overflow-y: auto; 
+}
+
+.modal img {
+  width: 100%;
+  height: auto;
+}
+
+.modal p {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+/* CONTACT US FORM FOR YACHT DETAIL */
+.modal-content {
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%; 
+  max-width: 500px; 
+}
+
+#enquiry-form input[type="text"],
+#enquiry-form input[type="email"],
+#enquiry-form input[type="tel"],
+#enquiry-form input[type="date"], 
+#enquiry-form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid white;
+  color: #CCC;
+  border-radius: 4px;
+  background-color: transparent; 
+}
+
+#enquiry-form button { 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; 
+  margin: 10px 0;
+  align-self: center; 
+  background-color: var(--BUTTON-COLOR); 
+}
+
+#enquiry-form input:focus, 
+#enquiry-form textarea:focus {
+  outline: none;
+  border-color: var(--HIGHLIGHT-COLOR); 
+}
+
+.modal-content h2 {
+  color: var(--LOGO-COLOR);
+  font-size: clamp(18px, 2.5vw, 22px); 
+  word-wrap: break-word;
+  margin: 0 0 15px 0;
+}
+
+.start-date-header {
+  margin-bottom: 15px;
+  color: var(--TEXT-DARKCOLOR);
+}
+
+.data-policy-overview {
+  display: none;
+  position: fixed;
+  left: 50%; 
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  padding: 15px;
+  z-index: 10000; 
+  width: 90%; 
+  max-width: 500px; 
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+
+.close-policy-overview {
+  cursor: pointer;
+  float: right;
+  font-size: 20px;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%; 
+  }
+
+  #enquiry-form button {
+    width: 100%; 
+  }
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+#caption {
+  margin: 0;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+.modal-content, #caption { 
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+.modal-content span {
+  color:  white;
+}
+
+.close {
+  position: fixed;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: transparent;
+  transform: translateY(-2px);
+}
+
+.close {
+  z-index: 21; 
+}
+
+.close:hover, .close:focus {
+  color: var(--LOGO-COLOR);
+  text-decoration: none;
+  cursor: pointer;
+}
+/* YACHT CHARTER PAGE */
+.yachtListContainer {
+  margin: 0 15%; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  margin-top: 200px;
+}
+
+.yachtCard {
+  flex-basis: calc(30% - 20px); 
+  margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .yachtCard {
+    flex-basis: 100%;
+  }
+  .yachtListContainer {
+    margin: 0; 
+  }
+}
+
+.yachtImage {
+  width: 100%;
+  height: 300px;  
+  overflow: hidden;  
+}
+
+.yachtImage img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.yachtDetail {
+  padding: 20px;
+}
+
+/* FOOTER STYLES */
+footer {
+  flex-shrink: 0;
+  bottom: 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 20px;
+  background:var(--BG-COLOUR);
+  position: relative;
+}
+
+.footer-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
+  z-index: 2;
+}
+
+.footer-logo img {
+  width: 180px;
+  height: auto;
+}
+
+h4 {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.policy-links, .company, .social-media, .footer-logo {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.policy-links div, .company div {
+  margin-bottom: 5px;
+}
+
+.policy-links a, .company a {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+}
+
+.policy-links a:hover, .company a:hover {
+  text-decoration: underline;
+}
+.policy-links {
+  transform: translateY(45%);
+}
+
+.company {
+  transform: translateY(45%);
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: translateY(55%);
+  margin-right: 30px;
+ 
+}
+
+
+.social-media a {
+  color: var(--LOGO-COLOR);
+  font-size: 24px;
+  border: none;
+  padding: 0;
+  margin-right: 20px;
+}
+
+.social-media a:hover {
+  opacity: 0.7;
+}
+
+.copy {
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  align-self: flex-start;
+  margin-top: 20px;
+}
+.company-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transform: translateY(22%); 
+}
+.company-info h4 {
+  font-size: 16px; 
+  color: white;
+  margin-bottom: 10px;
+}
+
+.company-info p {
+  margin-bottom: 5px;
+  font-size: 14px; 
+  color: white;
+}
+
+.company-info address {
+  color: #FFF;
+  font-weight: lighter;
+}
+@media (max-width: 768px) {
+  .company-info {
+    grid-column: 1 / 3; 
+    grid-row: 4 / 5; 
+    transform: translateY(0%); 
+  }
+  .company-info h4 {
+    font-size: 14px; 
+  }
+  .company-info p {
+    font-size: 12px; 
+  }
+}
+@media (max-width: 768px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 15px;
+    overflow: hidden;
+  }
+  .footer-logo {
+    grid-column: 1 / 3; 
+    grid-row: 1 / 2;    
+    margin-bottom: 15px; 
+  }
+  .policy-links {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;    
+    margin-bottom: -10px;
+  }
+  .company {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;    
+  }
+  .social-media {
+    grid-column: 1 / 2; 
+    grid-row: 3 / 4;    
+    padding-bottom: 40px; 
+  }
+  h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .policy-links a, .company a {
+    font-size: 12px;
+  }
+  .social-icons {
+    gap: 20px;
+  }
+  .social-media a {
+    font-size: 20px;
+  }
+  .copy {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  .policy-links, .company, .social-media, .footer-logo {
+    margin-bottom: 15px;
+  }
+  .footer-logo {
+    align-items: center;
+  }
+}
