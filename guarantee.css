@@ -1,0 +1,334 @@
+section {
+    padding: 20px;
+    margin: 20px 0;
+    
+}
+
+h2 {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+p, ol, blockquote {
+    margin-bottom: 15px;
+}
+
+#testimonials blockquote {
+    background: transparent;
+    border-left: 5px solid #333;
+    margin: 20px 0;
+    padding: 10px;
+    font-style: italic;
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    margin-bottom: 5px;
+}
+
+header {
+    position: relative; 
+    background-image: url('89Leopard6.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin-top: 60px;
+    height: 300px; 
+    display: flex; 
+    align-items: flex-end; 
+    justify-content: center; 
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background: linear-gradient(to top, rgba(11, 51, 85, 0.9) 0%, transparent 80%);
+    z-index: 1; 
+}
+
+header h1 {
+    position: relative; 
+    color: white; 
+    z-index: 2; 
+    padding: 20px 0;
+    text-align: center;
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    header {
+    display: flex; 
+    align-items: flex-end; 
+    justify-content: center; 
+    }
+    header h1 {
+    font-size: 16px;
+}
+}
+
+#introduction {
+    padding: 20px;
+    margin: 20px 0;
+    color: #ccc;
+    text-align: justify;
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#guarantee-components {
+    color: #F5F5F5;
+    font-family: 'Lato', sans-serif;
+    padding: 60px 5%;
+  }
+  
+  #guarantee-components h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #5C8DAA; 
+    display: inline-block;
+  }
+  
+  #guarantee-components h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    margin: 20px 0;
+  }
+
+  #guarantee-components div {
+    padding: 20px;
+    border-left: 4px solid #5C8DAA; 
+    margin: 20px 0;
+  }
+  
+  #guarantee-components p {
+    line-height: 1.6;
+  }
+  #guarantee-components p {
+    font-size: 1.2rem;
+  }
+  @media only screen and (max-width: 768px) {
+    #guarantee-components {
+      padding: 30px 20px; 
+    }
+  
+    #guarantee-components h2 {
+      font-size: 1.5rem; 
+      margin-bottom: 20px;
+    }
+  
+    #guarantee-components h3 {
+      font-size: 1.5rem; 
+    }
+    #guarantee-components p {
+
+        font-size: 1rem;
+    }
+    #guarantee-components div {
+      padding: 15px; 
+    }
+  
+    .button {
+      padding: 8px 15px; 
+      font-size: 0.6rem; 
+    }
+  }
+   
+  #process {
+    color: #F5F5F5; 
+    font-family: 'Lato', sans-serif;
+    padding: 60px 5%;
+    background: linear-gradient(to bottom, #0B3355, #1A4B75);
+  }
+
+  #process li a{
+    background-color: transparent;
+  }
+  #process li a:hover{
+    color: #B89769;
+  }
+
+  #process h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    background-color: transparent;
+  }
+  
+  #process ol {
+    counter-reset: step;
+    list-style-type: none;
+    padding: 0;
+    background-color: transparent;
+  }
+  
+  #process ol li {
+    counter-increment: step;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    background-color: transparent;
+  }
+  
+  #process ol li:before {
+    content: counter(step) ". ";
+    font-weight: bold;
+    color:  #B89769; 
+  }
+  @media only screen and (max-width: 768px) {
+    #process {
+      padding: 30px 20px; 
+    }
+  
+    #process h2 {
+      font-size: 2rem; 
+    }
+  
+    #process ol li {
+      font-size: 1rem; 
+      margin-bottom: 10px; 
+    }
+  }
+  
+  #weather-rescheduling {
+    color: #F5F5F5; 
+    font-family: 'Lato', sans-serif;
+    padding: 60px 5%;
+  }
+  
+  #weather-rescheduling h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+  }
+  
+  #weather-rescheduling p, #weather-rescheduling ul {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  #weather-rescheduling ul {
+    list-style: inside square; 
+  }
+  
+  #weather-rescheduling ul li {
+    margin-bottom: 10px; 
+  }
+  
+  #weather-rescheduling ul li strong {
+    color:  #B89769; 
+  }
+  @media only screen and (max-width: 768px) {
+    #weather-rescheduling {
+      padding: 30px 20px; 
+    }
+  
+    #weather-rescheduling h2 {
+      font-size: 2rem; 
+    }
+  
+    #weather-rescheduling p, #weather-rescheduling ul {
+      font-size: 1rem;
+    }
+  
+    #weather-rescheduling ul li {
+      margin-bottom: 8px; 
+    }
+  }
+  
+  #testimonials {
+    font-family: 'Lato', sans-serif;
+    padding: 60px 5%;
+    text-align: center; 
+    background: linear-gradient(to bottom, #0B3355, #1A4B75);
+  }
+  
+  #testimonials h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    background-color: transparent;
+  }
+  
+  #testimonials blockquote {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-style: italic; 
+    margin: 0 auto; 
+    max-width: 800px; 
+    position: relative;
+  }
+  @media only screen and (max-width: 768px) {
+    #testimonials {
+      padding: 30px 20px; 
+    }
+  
+    #testimonials h2 {
+      font-size: 2rem; 
+    }
+    #testimonials blockquote {
+        font-size: 1.25rem; 
+        padding: 0 15px; 
+      }
+  }
+  
+  #faq {
+    color: #F5F5F5;
+    font-family: 'Lato', sans-serif;
+    padding: 60px 5%;
+  }
+  
+  #faq h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    text-align: center; 
+  }
+  
+  .faq-item h3 {
+    font-size: 1.2rem;
+    margin: 20px 0 10px;
+    cursor: pointer; 
+  }
+  
+  .faq-item p {
+    font-size: 0.9rem;
+    display: none; 
+    margin-bottom: 15px; 
+  }
+  
+  @media only screen and (max-width: 768px) {
+    #faq {
+      padding: 30px 20px; 
+    }
+  
+    #faq h2 {
+      font-size: 1.6rem; 
+    }
+  
+    .faq-item h3 {
+      font-size: 1.2rem; 
+    }
+  
+    .faq-item p {
+      font-size: 0.9rem; 
+    }
+  }
+  
+  
+ 
