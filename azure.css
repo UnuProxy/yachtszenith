@@ -80,6 +80,39 @@
 }
 
 
+/*PARTNERS ROLL*/
+.partners-section {
+  text-align: center;
+  margin: 40px 0;
+  overflow: hidden;
+}
+
+.partners-section h3 {
+  color: #f1f1f1;
+}
+
+.logo-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100px; 
+}
+
+.logo-group {
+  position: absolute;
+  left: 0; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-out;
+}
+
+.logo-group img {
+  height: 100px; 
+  margin: 0 10px;
+}
+
 #sticky-section {
   position: fixed;
   top: 0;
@@ -94,14 +127,62 @@
   transition: transform 1s ease;
 }
 
-.mainMenu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  transition: top 0.7s ease;
-  top: -100%;
+.mainMenu .submenu-parent .submenu {
+  display: none;
+  position: absolute;
+  min-width: 150px; 
+  z-index: 1000;
+}
+
+.mainMenu .submenu-parent .submenu li {
+  display: block;
+}
+
+.mainMenu .submenu-parent .submenu li a {
+  color: white; 
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.mainMenu .submenu-parent:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  right: 0;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+  .mainMenu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+   
+  }
+  .mainMenu .submenu-parent {
+    transform: translateY(-60px);
+  }
+  .mainMenu 
+  
+  .submenu {
+    /* position: static; */ 
+    display: none; 
+    width: 100%; 
+    background-color: transparent;
+    box-shadow: none; 
+  }
+
+  .submenu-parent:hover .submenu,
+  .submenu-parent:focus-within .submenu {
+    display: flex; 
+    flex-direction: column;
+  }
 }
 
 .mainMenu li:last-child {
@@ -196,56 +277,35 @@ nav .mainMenu .closeMenu,
 /* HAMBURGER MENU FOR TABLET AND MOBILE  */
 @media (max-width: 800px) {
     nav .mainMenu {
-      height: 100%;
-      position: fixed;
-      top: -100%; 
-      right: 0;
-      left: 0;
-      z-index: 20;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: white;
-      display: none;
-      overflow: hidden;
-     
-    } 
+        height: 100%;
+        position: fixed;
+        top: -100%; 
+        right: 0;
+        left: 0;
+        z-index: 20;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: top 0.5s ease; 
+    }
+
     nav .mainMenu li a {
-      background-color: transparent;
-      
+        background-color: transparent;
     }
-  
-   
+
     nav .mainMenu .closeMenu {
-      display: block;
-      position: absolute;
-      top: 20px;
-      right: 20px;
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
+
     nav .openMenu {
-      display: block;
+        display: block;
     }
-
-    .icons i {
-      display: inline-block;
-      padding: 12px;
-    }
-  
-  nav .openMenu li a {
-    background-color: transparent;
-  }
-
-  .card-titles {
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-  }
-
-  nav .mainMenu {
-    top: 0;
-    background-color: var(--BG-COLOUR);
-  }
 }
+
+
 
   /*VIDEO START WEB, TITLE AND SUBTITLES*/
   .video-container {
@@ -290,7 +350,6 @@ nav .mainMenu .closeMenu,
   }
 }
  
-  
   .card-titles {
     position: absolute;
     left: 0;
@@ -874,8 +933,8 @@ button:hover {
 }
 /* YACHT CHARTER BROWSER */
 .filter-bar {
-  margin: 10px auto; /* Auto margins for horizontal centering */
-  max-width: 1200px; /* Max width of 1200px */
+  margin: 10px auto 60px; /* Consolidated margin-bottom here */
+  max-width: 1200px;
   padding: 10px;
   background-color: transparent;
   display: flex;
@@ -883,14 +942,13 @@ button:hover {
   flex-direction: row;
   gap: 40px;
   align-items: center;
-  margin-bottom: 60px;
 }
-
 
 .filter-bar div {
   display: flex;
   align-items: center;
 }
+
 .card-titles p {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   padding: 5px;
@@ -898,31 +956,31 @@ button:hover {
 
 .filter-bar label {
   margin-right: 20px;
-  font-weight: 350; 
-  color: var(--TEXT-LIGHTCOLOR); 
+  font-weight: 400; /* Adjusted to a standard value */
+  color: var(--TEXT-LIGHTCOLOR);
   background-color: transparent;
 }
 
 #priceFilter, #lengthFilter, #nameSearch {
   outline: none;
   padding: 4px 20px;
-  border: 1px solid var(--LOGO-COLOR); 
-  border-radius: 3px; 
-  background: transparent; 
-  color: var(--TEXT-LIGHTCOLOR); 
+  border: 1px solid var(--LOGO-COLOR);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--TEXT-LIGHTCOLOR);
   font-size: 16px;
+}
+
+#nameSearch {
+  width: 240px; /* Specific styles for #nameSearch are fine */
 }
 
 .available-yachts {
   color: var(--LOGO-COLOR);
-  margin-bottom: 40px ;
+  margin: 0 0 40px 75px; /* Adjusted to include margin-left */
   padding: 10px;
-  margin-left: 75px;
 }
 
-#nameSearch {
-  width: 240px; 
-}
 
 .yachtWrapper h2 {
   color: var(--LOGO-COLOR);
@@ -5079,6 +5137,47 @@ h4 {
     font-size: 12px; 
   }
 }
+
+.resources {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+ transform: translateY(27px);
+}
+
+.resources h4 {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.resources div {
+  margin-bottom: 5px;
+}
+
+.resources a {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+}
+
+.resources a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .resources {
+    grid-column: 1 / 3; 
+    grid-row: auto; 
+    transform: translateY(0); 
+    margin-bottom: 15px; 
+  }
+
+  .resources a {
+    font-size: 12px; 
+  }
+}
+
 @media (max-width: 768px) {
   .footer-container {
     display: grid;

@@ -40,12 +40,33 @@
             "addressCountry": "Spain"
         },
         "sameAs": [
-            "https://www.instagram.com/yachtszenith"
+            "https://www.instagram.com/yachtszenith",
+            "https://www.facebook.com/yachtszenith",
+            "https://twitter.com/@yachtszenith"
         ]
     }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://yachtszenith.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Formentera Yacht Charter",
+            "item": "https://yachtszenith.com/Formentera-yacht-charter"
+          }
+        ]
+      }
+      </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- <link rel="stylesheet" href="https://yachtszenith.com/azure.css"> -->
     <link rel="stylesheet" href="azure.css">
 </head>
 
@@ -53,23 +74,28 @@
     <div class="page-container">
         <div class="content-wrap">
   <!--  HEADER  -->
-    <div class="black-bg" id="sticky-section">
-      <nav class="position-header ">
-        <div class="logo">
-          <a href="./"><p>Yachts Zenith</p></a>
+  <div class="black-bg" id="sticky-section">
+    <nav class="position-header">
+      <div class="logo">
+        <a href="./">
+          <p class="logo-text">Yachts Zenith</p>
+        </a>
       </div>
       <div class="openMenu"><i class="fa fa-bars"></i></div>
-      <ul class="mainMenu"> 
-        <li><a href="boat-rental-ibiza">Yacht Charter</a></li>
-        <li><a href="Yacht-routes-ibiza">Destinations</a></li>
-        <li><a href="Contact-us">Contact us</a></li>
-        <li><a href="about-us">About us</a></li>
+      <ul class="mainMenu">
+        <li class="submenu-parent"><a href="boat-rental-ibiza">Yacht Charter</a></li>
+        <li class="submenu-parent"><a href="Yacht-routes-ibiza">Destinations</a></li>
+        <li class="submenu-parent"><a href="Contact-us">Contact us</a></li>
+        <li class="submenu-parent"><a href="about-us">About</a>
+          <ul class="submenu">
+            <li><a href="about-us">Yachts Zenith</a></li>
+            <!-- <li><a href="partners">Partners</a></li> -->
+          </ul>
+        </li>
         <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
-    </ul>
-  </nav>
+      </ul>
+    </nav>
   </div>
-
-
  <section>
   <div class="video-container">
     <video muted loop autoplay playsinline></video>
@@ -81,48 +107,54 @@
   </div>
 </section>
 
-
-
-<section class="about">
-  <h2>Discover Formentera's Splendor with a <strong>Luxury Yacht Rental from Ibiza</strong></h2>
+<article class="about">
+  <header>
+    <h1>Discover Formentera's Splendor with a <strong>Luxury Yacht Rental from Ibiza</strong></h1>
+  </header>
   <p>
-    Discover the Mediterranean's charm aboard a luxury yacht from Yachts Zenith. Explore Formentera's exclusive beaches and serene beauty, ideal for yacht exploration. Our Ibiza yacht charters offer privacy and luxury, perfect for sunbathing or cove exploration. Choose from our fleet for an unforgettable Ibiza yacht hire experience. Enjoy the best of the Mediterranean with our exclusive yacht rentals in Ibiza, tailored for unforgettable sea adventures.
+    Embark on a bespoke yachting journey with Yachts Zenith, where luxury meets the pristine Mediterranean. Our tailored Ibiza yacht charters unlock exclusive access to Formentera's secluded beaches and serene beauty, offering unparalleled privacy and comfort. Choose from our exquisite fleet for an unforgettable yacht hire experience. Let us guide you through the best of the Mediterranean for a truly unforgettable sea adventure.
   </p>
-</section>
+</article>
 
 
 <section class="image-text">
-  <div class="image-left">
-    <img src="FormenteraIlletes.jpg" alt="Luxury Yacht Anchored near Ses Illetes Beach, Formentera">
-</div>
+  <figure class="image-left">
+    <img src="PlayaIlletes.jpg" alt="Luxury Yacht Anchored near Ses Illetes Beach, Formentera">
+  </figure>
   <div class="text-right">
-      <h2>Ses Illetes</h2>
-      <p>There's no place like Ses Illetes, which feels like a piece of the Caribbean in the Mediterranean. The experience of the turquoise waters and white sands is unparalleled. It’s a top destination for anyone on an <strong>Ibiza yacht rental</strong>, offering a slice of paradise. It’s a must-visit for the ultimate Mediterranean yachting experience.</p>
+      <h2>Discover Ses Illetes</h2>
+      <p>
+        Ses Illetes is like a piece of the Caribbean. It's a top spot for luxury yachting with its clear blue waters and white sands. It's a peaceful getaway, perfect for a unique trip from Ibiza. Enjoy unmatched peace and beauty, great for those looking for a special Mediterranean experience.
+      </p>
   </div>
 </section>
 
 <section class="image-text">
   <div class="text-left">
-      <h2>Es Migjorn Beach</h2>
-      <p>Es Migjorn is a haven for those seeking peace and quiet, a gem well worth visiting while on a <strong>yacht rental journey from Ibiza</strong>. It’s perfect for basking in the sun, taking leisurely strolls, or just soaking in the calmness. Picture sitting by the shore, the gentle sound of waves in the background, feeling the exclusivity on your <strong>private yacht </strong> can offer.</p>
+      <h2>Explore Es Migjorn Beach</h2>
+      <p>
+        Es Migjorn, a tranquil haven for peace-seekers, offers a unique blend of calmness and natural beauty. Perfect for leisurely strolls or sunbathing, it provides an exclusive yachting experience away from the crowds. Discover the gentle sound of waves and the soothing atmosphere of Es Migjorn with our private yacht charters.
+      </p>
   </div>
-  <div class="image-right">
-      <img src="EsMIgjorn.jpg" alt="Es Migjorn Beach">
-  </div>
+  <figure class="image-right">
+    <img src="EsMIgjorn.jpg" alt="Boat rental in Ibiza - Es Migjorn Beach serene view" >
+  </figure>
 </section>
+
 
 <section class="seasonal-guide-new">
   <video autoplay loop muted playsinline>
-      <source src="video/FormenteraIlletas.mp4" type="video/mp4">
+      <source src="video/FormenteraIlletas.mp4" type="video/mp4" alt="Aerial view of Formentera's coastline">
       Your browser does not support the video tag.
   </video>
   <div class="new-container">
-      <h2>The Best Times for <strong>Yacht Rentals in Ibiza</strong>: A Seasonal Guide</h2>
-      <p>Deciding when to embark on your <strong>yacht rental adventure from Ibiza</strong> can be crucial. Every season offers something unique. Our guide provides all the insights for planning that perfect <strong>yacht trip from Ibiza to Formentera</strong>.</p>
-      <a href="Ibiza-guide" class="btn">Our Guide</a>
+      <h2>Yacht Rental Seasons in Ibiza: An Insider's Guide</h2>
+      <p>
+        Timing your yacht rental adventure is key to experiencing the best of Ibiza and Formentera. Our seasonal guide offers insights into each period, ensuring you plan the ideal trip. From the vibrant summer months to the tranquil off-season, discover the unique charm Ibiza yacht rentals offer throughout the year.
+      </p>
+      <a href="Ibiza-guide" class="btn" aria-label="Explore our detailed guide to yacht rental seasons in Ibiza">Explore Our Guide</a>
   </div>
 </section>
-
 
   <section class="spacer">
     <div class="centered-paragraph">
@@ -135,7 +167,6 @@
    </div>
    <h3 class="custom-title"> Your desire, our mission </h3> 
   </section>
-  
   <!-- YACHT LISTINGS  -->
   <section id="yacht-listings" class="yacht-listings">
     <div class="yacht">
@@ -154,7 +185,6 @@
         <button class="inquiry-button" data-yacht-name="Mangusta 108" aria-label="Inquiry for Mangusta 108">Enquiry here</button>
       </div>
     </div>
-  
     <div class="yacht">
       <div class="yacht-image">
         <img src="Bunker/CRN130Exterior28.jpg" alt="Yacht CRN 130" loading="lazy">
@@ -171,7 +201,6 @@
         <button class="inquiry-button" data-yacht-name="CRN 130" aria-label="Inquiry for CRN 130">Enquiry here</button>
       </div>
     </div>
-  
     <div class="yacht">
       <div class="yacht-image">
         <img src="Danzas/PershingNavigating(90)45.jpg" alt="Yacht Persing 90" loading="lazy">
@@ -189,7 +218,6 @@
       </div>
     </div>
   </section>
-  
   <!-- The form popup -->
 <div id="inquiryPopup" class="popup">
   <div class="popup-content">
@@ -219,7 +247,6 @@
   </div>
 </div>
 </div>
-
 <div id="dataPolicyOverview" class="data-policy-overview">
   <span class="close-policy-overview" onclick="closeDataPolicyOverview()">&times;</span>
   <section class="cookies-section cookies-top-space">
@@ -228,14 +255,12 @@
 </section>
 <a href="data-policy">Read more here</a>
 </div>
-  
     <div class="see-all-container">
       <a href="boat-rental-ibiza" class="see-all-link"> View all Yachts for Charter </a>
     </div>
 <script>
 function showOnScroll() {
     const elementsToShow = document.querySelectorAll('.seasonal-guide-new, .image-text');
-
     for (let i = 0; i < elementsToShow.length; i++) {
         const elem = elementsToShow[i];
         const rect = elem.getBoundingClientRect();
@@ -248,11 +273,9 @@ function showOnScroll() {
         }
     }
 }
-
 window.addEventListener('scroll', showOnScroll);
 window.addEventListener('load', showOnScroll);
 </script>
-
     <script>
        function showDataPolicyOverview() {
     document.getElementById('dataPolicyOverview').style.display = 'block';
@@ -293,7 +316,6 @@ function closeDataPolicyOverview() {
     });
 });
     </script>
- 
 </div>
 <script>
   (function() {
@@ -304,46 +326,52 @@ function closeDataPolicyOverview() {
 </script>
 <footer>
   <div class="footer-container">
-    <div class="footer-logo">
-      <img src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/ef6abc91-76d1-42e5-3358-ab391e2df600/680x1200" width="57" height="100" alt="Yachts Zenith Logo" loading="lazy">
-    </div>
-
-    <div class="policy-links">
-      <h4>Data Policies</h4>
-      <div><a href="cookies-policy">Cookies Policy</a></div>
-      <div><a href="data-policy">Data Policy</a></div>
-    </div>
-
-    <div class="company">
-      <h4>Company</h4>
-      <div><a href="Contact-us">Contact Us</a></div>
-      <div><a href="about-us">About Us</a></div>
-    </div>
-    <div class="social-media">
-      <h4>Social Media</h4>
-      <div class="socials">
-        <a href="https://facebook.com/Yachtszenith/" aria-label="Follow us on Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://twitter.com/YachtsZenith" aria-label="Follow us on Twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://instagram.com/yachtszenith" aria-label="Follow us on Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
+      <div class="footer-logo">
+          <img src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/ef6abc91-76d1-42e5-3358-ab391e2df600/680x1200" width="57" height="100" alt="Yachts Zenith Logo" loading="lazy">
       </div>
-    </div>
-    <div class="company-info">
-      <h4>Yachts Zenith Nautic S.L</h4>
-      <p>VAT Number: B56880875</p>
-      <p>Address:</p>
-      <address>
-        Avenida Sant Jordi, 48<br>
-        Ibiza,<br>
-        Spain
-      </address>
-    </div>
-    </div>
+
+      <div class="policy-links">
+          <h4>Data Policies</h4>
+          <div><a href="cookies-policy">Cookies Policy</a></div>
+          <div><a href="data-policy">Data Policy</a></div>
+      </div>
+
+      <div class="company">
+          <h4>Company</h4>
+          <div><a href="Contact-us">Contact Us</a></div>
+          <div><a href="about-us">About Us</a></div>
+      </div>
+      <div class="social-media">
+          <h4>Social Media</h4>
+          <div class="socials">
+              <a href="https://facebook.com/Yachtszenith/" aria-label="Follow us on Facebook">
+                  <i class="fab fa-facebook"></i>
+              </a>
+              <a href="https://twitter.com/YachtsZenith" aria-label="Follow us on Twitter">
+                  <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://instagram.com/yachtszenith" aria-label="Follow us on Instagram">
+                  <i class="fab fa-instagram"></i>
+              </a>
+          </div>
+      </div>
+      <div class="resources">
+          <h4>Resources</h4>
+          <div><a href="boat-fuel-calculator">Fuel Calculator</a></div>
+          <div><a href="our-commitment">Our Commitment</a></div>
+          <!-- <div><a href="blog">Blog</a></div> -->
+      </div>
+      <div class="company-info">
+          <h4>Yachts Zenith Nautic S.L</h4>
+          <p>VAT Number: B56880875</p>
+          <p>Address:</p>
+          <address>
+              Avenida Sant Jordi, 48<br>
+              Ibiza,<br>
+              Spain
+          </address>
+      </div>
+  </div>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>

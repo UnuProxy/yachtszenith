@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boat Fuel Calculator and Consumption List | Yachts Zenith</title>
+    <meta name="description" content="Discover accurate boat fuel consumption with our Boat Fuel Calculator and comprehensive list, helping you plan your yacht charter fuel costs effectively.">
+    <link rel="stylesheet" href="azure.css">
+    <link rel="stylesheet" href="fuel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    
+</head>
+<body>
+  <div class="black-bg" id="sticky-section">
+    <nav class="position-header">
+      <div class="logo">
+        <a href="./">
+          <p class="logo-text">Yachts Zenith</p>
+        </a>
+      </div>
+      <div class="openMenu"><i class="fa fa-bars"></i></div>
+      <ul class="mainMenu">
+        <li class="submenu-parent"><a href="boat-rental-ibiza">Yacht Charter</a></li>
+        <li class="submenu-parent"><a href="Yacht-routes-ibiza">Destinations</a></li>
+        <li class="submenu-parent"><a href="Contact-us">Contact us</a></li>
+        <li class="submenu-parent"><a href="about-us">About</a>
+          <ul class="submenu">
+            <li><a href="about-us">Yachts Zenith</a></li>
+            <!-- <li><a href="partners">Partners</a></li> -->
+          </ul>
+        </li>
+        <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
+      </ul>
+    </nav>
+  </div>
+
+      <div class="content-wrapper">
+        <div class="boat-list" style="flex: 2;">
+            <h1>Boat Fuel Consumption List</h1>
+            <p>The fuel consumption of any yacht, can vary widely based on several factors including the yacht's size, engine type, cruising speed, and conditions under which it is operated.</p>
+            <p>The figures above are average calculated.</p>
+            <table id="boatFuelTable" class="display">
+              <thead>
+                <tr>
+                  <th>Boat Name</th>
+                  <th>Average Fuel Consumption (liters per hour)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Waterdream</td>
+                  <td>200-300L</td>
+                </tr>
+                <tr>
+                  <td>Mangusta 108</td>
+                  <td>990L</td>
+                </tr>
+                <tr>
+                  <td>CRN 130</td>
+                  <td>650L</td>
+                </tr>
+                <tr>
+                  <td>Astondoa 102 GLX</td>
+                  <td>650L</td>
+                </tr>
+                <tr>
+                  <td>Pershing 5X</td>
+                  <td>250L</td>
+                </tr>
+                <tr>
+                  <td>Pardo 50</td>
+                  <td>200L</td>
+                </tr>
+                <tr>
+                  <td>Princess V72</td>
+                  <td>400L</td>
+                </tr>
+                <tr>
+                  <td>Mangusta 92</td>
+                  <td>700L</td>
+                </tr>
+                <tr>
+                  <td>Sunseeker Predator 84</td>
+                  <td>600L</td>
+                </tr>
+                <tr>
+                  <td>Leopard 27</td>
+                  <td>550L</td>
+                </tr>
+                <tr>
+                  <td>VanDutch 55</td>
+                  <td>200L</td>
+                </tr>
+                <tr>
+                  <td>Pershing 72</td>
+                  <td>600L</td>
+                </tr>
+                <tr>
+                  <td>Vanquish 82</td>
+                  <td>350L</td>
+                </tr>
+                <tr>
+                  <td>Pershing 90</td>
+                  <td>900L</td>
+                </tr>
+                <tr>
+                  <td>Vanquish 52</td>
+                  <td>200L</td>
+                </tr>
+                <tr>
+                  <td>Riva Rivale 56</td>
+                  <td>250L</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        <div id="fuelCalculator" class="fuel-calculator">
+              <h2>Boat Fuel Cost Calculator</h2>
+              <div><label for="distance">Distance (nautical miles):</label>
+              <input type="number" id="distance" placeholder="Enter distance"></div>
+              <div><label for="fuelConsumption">Fuel Consumption (liters per hour):</label>
+              <input type="number" id="fuelConsumption" placeholder="Enter fuel consumption"></div>
+              <div><label for="fuelPrice">Fuel Price (per liter):</label>
+              <input type="number" step="0.01" id="fuelPrice" placeholder="Enter fuel price"></div>   
+              <div><label for="speed">Speed (knots):</label>
+              <input type="number" id="speed" placeholder="Enter speed"></div> 
+              <button onclick="calculateFuelCost()">Calculate Cost</button>
+              <button type="button" onclick="resetCalculator()">Reset</button>
+              <div id="result"></div>
+            </div>
+      </div>
+      <script>
+        function calculateFuelCost() {
+  const distance = document.getElementById('distance').value;
+  const fuelConsumption = document.getElementById('fuelConsumption').value;
+  const fuelPrice = document.getElementById('fuelPrice').value;
+  const speed = document.getElementById('speed').value;
+  if (!distance || !fuelConsumption || !fuelPrice || !speed) {
+    alert('Please fill in all fields.');
+    return;
+  }
+  const hours = distance / speed;
+  const totalFuel = hours * fuelConsumption;
+  const totalCost = totalFuel * fuelPrice;
+  const resultContainer = document.getElementById('result');
+  resultContainer.innerHTML = `
+    <div class="result-display">
+      <p>Distance: <strong>${distance} nautical miles</strong></p>
+      <p>Total Fuel Needed: <strong>${totalFuel.toFixed(2)} liters</strong></p>
+      <p>Estimated Fuel Cost: <strong>€${totalCost.toFixed(2)}</strong></p>
+    </div>
+  `;
+}
+function resetCalculator() {
+  document.getElementById('distance').value = '';
+  document.getElementById('fuelConsumption').value = '';
+  document.getElementById('fuelPrice').value = '';
+  document.getElementById('speed').value = '';
+
+  const resultContainer = document.getElementById('result');
+  resultContainer.innerHTML = '';
+}
+      </script>
+        <script>
+            $(document).ready(function() {
+                $('#boatFuelTable').DataTable({
+                    "pageLength": 7, 
+                    "paging": true, 
+                    "ordering": true, 
+                    "info": true, 
+                    "searching": true 
+                });
+            });
+            </script>
+      <script src="script.js"></script>
+      <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/ef6abc91-76d1-42e5-3358-ab391e2df600/680x1200" width="57" height="100" alt="Yachts Zenith Logo" loading="lazy">
+            </div>
+      
+            <div class="policy-links">
+                <h4>Data Policies</h4>
+                <div><a href="cookies-policy">Cookies Policy</a></div>
+                <div><a href="data-policy">Data Policy</a></div>
+            </div>
+      
+            <div class="company">
+                <h4>Company</h4>
+                <div><a href="Contact-us">Contact Us</a></div>
+                <div><a href="about-us">About Us</a></div>
+            </div>
+            <div class="social-media">
+                <h4>Social Media</h4>
+                <div class="socials">
+                    <a href="https://facebook.com/Yachtszenith/" aria-label="Follow us on Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/YachtsZenith" aria-label="Follow us on Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com/yachtszenith" aria-label="Follow us on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="resources">
+                <h4>Resources</h4>
+                <div><a href="boat-fuel-calculator">Fuel Calculator</a></div>
+                <div><a href="our-commitment">Our Commitment</a></div>
+                <!-- <div><a href="blog">Blog</a></div> -->
+            </div>
+            <div class="company-info">
+                <h4>Yachts Zenith Nautic S.L</h4>
+                <p>VAT Number: B56880875</p>
+                <p>Address:</p>
+                <address>
+                    Avenida Sant Jordi, 48<br>
+                    Ibiza,<br>
+                    Spain
+                </address>
+            </div>
+        </div>
+</body>
+</html>
