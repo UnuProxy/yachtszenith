@@ -305,8 +305,6 @@ nav .mainMenu .closeMenu,
     }
 }
 
-
-
   /*VIDEO START WEB, TITLE AND SUBTITLES*/
   .video-container {
     position: relative;
@@ -5142,7 +5140,7 @@ h4 {
   display: flex;
   flex-direction: column;
   text-align: left;
- transform: translateY(27px);
+ transform: translateY(45px);
 }
 
 .resources h4 {
@@ -5159,6 +5157,7 @@ h4 {
   text-decoration: none;
   font-size: 14px;
   color: white;
+  line-height: 1.2;
 }
 
 .resources a:hover {
