@@ -221,14 +221,14 @@ document.addEventListener("DOMContentLoaded", function() {
   // Function to populate carousel with yachts
   function populateYachts(yachts) {
     const carouselContainer = document.getElementById('carousel-container');
-    carouselContainer.innerHTML = ''; // Clear existing content
+    carouselContainer.innerHTML = ''; 
   
     yachts.forEach(yacht => {
         const yachtItem = document.createElement('div');
         yachtItem.className = 'carousel-item';
   
         const yachtLink = document.createElement('a');
-        yachtLink.href = yacht.link; // Use the link from the yacht data
+        yachtLink.href = yacht.link; 
   
         const yachtImage = document.createElement('img');
         yachtImage.src = yacht.image;
