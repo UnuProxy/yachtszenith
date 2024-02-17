@@ -4284,14 +4284,16 @@ font-size: 36px;
 }
 
 .yacht-charter-wrapper {
-  margin-top: 120px;
-  margin-bottom: 120px;
   text-align: center;
   display: flex;
   flex-wrap: wrap; 
   justify-content: center;
   align-items: center;
   color: #FFF;
+  max-width: 1200px;
+  margin: auto; 
+  margin-bottom: 120px;
+  margin-top: 120px;
 }
 
 .yacht-charter-title {
@@ -5140,7 +5142,7 @@ h4 {
   display: flex;
   flex-direction: column;
   text-align: left;
- transform: translateY(45px);
+  transform: translateY(40px);
 }
 
 .resources h4 {

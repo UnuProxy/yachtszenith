@@ -1,0 +1,73 @@
+h2 {
+    color: #B89769; 
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.section {
+    opacity: 0;
+  transform: translateX(-50px);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+.section:nth-child(1) { transition-delay: 0.2s; }
+.section:nth-child(2) { transition-delay: 1s; }
+.section:nth-child(3) { transition-delay: 1.4s; }
+.section:nth-child(4) { transition-delay: 1.6s; }
+.section:nth-child(5) { transition-delay: 1.8s; }
+  .section.in-view {
+    opacity: 1; 
+    transform: translateX(0);
+  }
+  @media (max-width: 768px) {
+    .section {
+      transform: translateX(-20px);
+    }
+  }
+    
+.dining-section, .in-the-know, .charter-enquiry, .yachts-gallery, .best-of-ibiza, .must-see, .activities{
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.dining-list, .must-see ul, .activities ul, .best-of-ibiza ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.dining-list li, .must-see ul li, .activities ul li, .best-of-ibiza ul li {
+    margin-bottom: 15px; 
+    line-height: 1.6; 
+    color: #f1f1f1;
+}
+
+.dining-list li strong, .must-see ul li strong, .activities ul li strong, .best-of-ibiza ul li strong {
+    color: #B89769; 
+    font-weight: bold;
+}
+
+
+.dining-section h2, .must-see h2, .activities h2, .in-the-know h2, .best-of-ibiza h2 {
+    color: #B89769; 
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+.dining-section p, .must-see p, .activities p, .in-the-know p, .best-of-ibiza p {
+    line-height: 1.6;
+    color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+    .dining-section, .must-see, .activities, .in-the-know, .best-of-ibiza {
+        padding: 15px;
+    }
+
+    .dining-section h2, .must-see h2, .activities h2, .in-the-know h2, .best-of-ibiza h2 {
+        font-size: 20px; 
+    }
+}
