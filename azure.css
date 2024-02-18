@@ -4108,6 +4108,9 @@ font-size: 36px;
   font-size: 48px;
   font-weight: lighter;
 }
+.carousel-slide h2{
+  color: #fff;
+}
 
 .carousel-controls button {
   margin-right: 8px;
