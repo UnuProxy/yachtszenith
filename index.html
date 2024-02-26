@@ -51,7 +51,7 @@
         ],
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Puerto Botafoch",
+            "streetAddress": "Avenida de Sant Jordi, 48",
             "addressLocality": "Ibiza Town",
             "addressRegion": "Balearic Islands",
             "postalCode": "07800",
@@ -538,7 +538,6 @@
   </div>
 </div>
 </div>
-
 <script>
   document.addEventListener('DOMContentLoaded', function() {
   const carousel = document.querySelector('.logo-carousel');
@@ -585,7 +584,6 @@ window.onload=function(){var e=document.getElementById("yzCookieConsentContainer
 <script>
   $(document).ready(function(){var t;t=(new Date).toISOString().split("T")[0],$("#startDate, #endDate").attr("min",t),$("#inquiryForm").submit(function(t){t.preventDefault(),function(t){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t)}($("#email").val())?$.ajax({url:$(this).attr("action"),method:"POST",data:$(this).serialize(),dataType:"json",headers:{Accept:"application/json"},success:function(t){alert("Thank you for your inquiry!"),$("#inquiryForm").trigger("reset"),$("#inquiryPopup").hide()},error:function(t){alert("Something went wrong, please try again.")}}):alert("Please enter a valid email address.")}),$(".inquiry-button").on("click",function(){var t=$(this).data("yacht-name");$("#yachtNameInput").val(t),$("#inquiryPopup").show()}),$(".close-popup").on("click",function(){$("#inquiryPopup").hide()})});
 </script>
-    
 <script src="script.js" defer></script>
  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
@@ -626,7 +624,7 @@ window.onload=function(){var e=document.getElementById("yzCookieConsentContainer
           <h4>Resources</h4>
           <div><a href="boat-fuel-calculator">Fuel Calculator</a></div>
           <div><a href="our-commitment">Our Commitment</a></div>
-          <!-- <div><a href="blog">Blog</a></div> -->
+          <div><a href="blog">Blog</a></div>
       </div>
 
       <div class="company-info">
