@@ -1,0 +1,166 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #0B3355; 
+    color: #fff; 
+}
+
+.main-article-container h2{
+    margin-bottom: 20px;
+}
+.main-article h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.article-content {
+    margin-top: 40px;
+    text-align: justify;
+}
+.content-wrap {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.blog-container {
+    display: flex;
+    align-items: center; 
+    margin: 40px auto; 
+    max-width: 1400px; 
+}
+
+p {
+    font-size: 16px; 
+    line-height: 1.7; 
+    margin-bottom: 25px;
+    padding-top: 10px;
+}
+.main-article-container {
+    width: 70%;
+    margin: 0 20px; 
+}
+
+.main-article {
+    padding: 40px; 
+}
+
+img {
+    width: 100%;
+    display: block; 
+    height: 650px; 
+}
+.back-to-default {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    position: fixed; 
+    top: 0;         
+    left: 0;          
+}
+.back-to-default a{
+    padding-left: 15px;
+}
+.back-to-default a:hover {
+    color: #B89769;
+}
+.side-panel {
+    width: 30%;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 60px;
+    border-radius: 5px;
+}
+
+.side-article {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; 
+    padding: 20px; 
+    border-radius: 8px; 
+   background-color: hsl(0, 0%, 0%, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.main-article, .side-article h2, .side-article p {
+    line-height: 1.4;
+}
+
+.side-article h2, .side-article p {
+    background-color: transparent;
+}
+
+.side-article:hover {
+    background-color: #102D45; 
+}
+
+.side-article h2 { 
+    font-size: 20px;  
+    margin-bottom: 10px;
+}
+
+.side-article p {
+    font-size: 16px; 
+    color: #B89769;
+    margin-bottom: 0px; 
+    padding: 10px;
+}
+
+
+.share-icon {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .blog-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px auto; 
+        margin-top: 70px;
+    }
+
+    .main-article-container, .side-panel {
+        width: 100%;
+        padding: 0 10px; 
+        position: relative;
+    }
+
+    .main-article, .side-panel {
+        padding: 20px 5px;
+    }
+    .share-icon{
+        display: none;
+    }
+    img {
+        width: 100%; 
+        max-width: 400px; 
+        display: block; 
+        height: 300px; 
+    }
+}
+
+.page-container .footer {
+    margin-top: auto;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+
