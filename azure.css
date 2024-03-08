@@ -4143,11 +4143,10 @@ font-size: 36px;
 .button-link {
   display: inline-block;
   text-decoration: none;
-  padding: 10px 20px; 
-  border: 2px solid white; 
+  padding: 10px 10px; 
+  border: 1px solid white; 
   color: white;
   background-color: rgba(0, 0, 0, 0.5); 
-  font-weight: bold;
   transition: all 0.3s ease;
 }
 
@@ -4206,9 +4205,12 @@ font-size: 36px;
     font-size: 28px;
   
   }
-  
+
   .carousel-slide button {
     font-size: 18px; 
+  }
+  .button-link {
+    padding: 5px 5px; 
   }
 }
 
