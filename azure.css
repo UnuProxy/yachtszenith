@@ -4039,6 +4039,7 @@ font-size: 36px;
   width: 100vw;
   height: 50vh;
   overflow: hidden;
+  background-color: transparent;
 }
 
 .carousel-slide {
@@ -4139,6 +4140,26 @@ font-size: 36px;
   font-size: 24px; 
 }
 
+.button-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px; 
+  border: 2px solid white; 
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); 
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.button-link:hover, .button-link:focus {
+  background-color: rgba(255, 255, 255, 0.5); 
+  color: var(--LOGO-COLOR); 
+  border-color: var(--LOGO-COLOR); 
+}
+
+.video-container h1 {
+  display: none;
+}
 
 
 .carousel-slide h2,
