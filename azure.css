@@ -3457,12 +3457,10 @@ a {
     font-weight: bolder;
   }
 }
-
 @media (min-width: 768px) {
   .wrapper {
     flex-direction: row;
   }
-
   .half {
     width: 50%;
     height: 100%;
