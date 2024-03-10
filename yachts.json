@@ -14,7 +14,7 @@
       "Guests": "12",
       "Crew": "3",
       "Cruising Area": "Balearics",
-      "Price": "11.000/per day",
+      "Price": "€11.000/per day",
       "Cruising Speed": "28 knots",
       "Max Speed": "36 knots",
       "Class": "Motoryacht",
@@ -42,7 +42,7 @@
       "Guests": "12",
       "Crew": "3",
       "Cruising Area": "Balearics",
-     "Price": "11.000/per day",
+     "Price": "€11.000/per day",
       "Cruising Speed": "39 knots",
       "Max Speed": "44 knots",
       "Class": "Motoryacht",
@@ -125,7 +125,7 @@
       "Guests": "6",
       "Crew": "4",
       "Cruising Area": "Balearics",
-      "Price": "8,000 per day",
+      "Price": "€8,000 per day",
        "Cruising Speed": "16 knots",
        "Max Speed": "20 knots",
        "Class": "Motoryacht",
@@ -152,7 +152,7 @@
       "Guests": "12",
       "Crew": "4",
       "Cruising Area": "Balearics",
-      "Price": "8,000 per day",
+      "Price": "€8,000 per day",
        "Cruising Speed": "16 knots",
        "Max Speed": "20 knots",
        "Class": "Motoryacht",
@@ -179,7 +179,7 @@
       "Guests": "12",
       "Crew": "3",
       "Cruising Area": "Balearics",
-      "Price": "6,500 per day",
+      "Price": "€6,500 per day",
        "Cruising Speed": "38 knots",
        "Max Speed": "45 knots",
        "Class": "Motoryacht",
@@ -205,7 +205,7 @@
       "Guests": "12",
       "Crew": "2",
       "Cruising Area": "Ibiza - Formentera",
-      "Price": "6,500 per day",
+      "Price": "€6,500 per day",
       "Cruising Speed": "16 knots",
       "Max Speed": "38 knots",
       "Class": "Motoryacht",
@@ -232,7 +232,7 @@
       "Guests": "12",
       "Crew": "3",
       "Cruising Area": "Balearics",
-      "Price": "7,650 per day",
+      "Price": "€7,650 per day",
       "Cruising Speed": "25 knots",
       "Max Speed": "34 knots",
       "Class": "Motoryacht",
@@ -260,7 +260,7 @@
       "Guests": "12",
       "Crew": "3",
       "Cruising Area": "Ibiza - Formentera",
-      "Price": "7,000 per day",
+      "Price": "€7,000 per day",
       "Cruising Speed": "24 knots",
       "Max Speed": "32 knots",
       "Class": "Motoryacht",
@@ -275,7 +275,7 @@
   },
   {
     "id": 11,
-    "name": "58 Vanquish",
+    "name": "Vanquish VQ58",
     "image": "MiParaiso/58Vanquish10.jpg",
     "specs": "17,95 m, 12 guests, 2 crew",
     "price": "€4,000 per day",
@@ -286,7 +286,7 @@
       "Guests": "12",
       "Crew": "2",
       "Cruising Area": "Ibiza - Formentera",
-      "Price": "4,000 per day",
+      "Price": "€4,000 per day",
       "Max Speed": "38 knots",
       "Class": "Motoryacht",
       "Engine": "2 X VOLVO PENTA IPS950"
@@ -310,7 +310,7 @@
       "Guests": "10",
       "Crew": "2",
       "Cruising Area": "Ibiza - Formentera",
-      "Price": "3,600 per day",
+      "Price": "€3,600 per day",
       "Max Speed": "38 knots",
       "Class": "Motoryacht",
       "Engine": "2 X VOLVO D11 IPS 950"
@@ -334,7 +334,7 @@
       "Guests": "12",
       "Crew": "1",
       "Cruising Area": "Ibiza - Formentera",
-      "Price": "2,850 per day",
+      "Price": "€2,850 per day",
       "Cruising Speed": "35 knots",
       "Max Speed": "52 knots",
       "Class": "Motoryacht",
@@ -360,7 +360,7 @@
       "Guests": "12",
       "Crew": "2",
       "Cruising Area": "Ibiza - Formentera",
-      "Price": "2,850 per day",
+      "Price": "€2,850 per day",
       "Cruising Speed": "35 knots",
       "Max Speed": "52 knots",
       "Class": "Motoryacht",
@@ -385,7 +385,7 @@
       "Guests": "12",
       "Crew": "2",
       "Cruising Area": "Ibiza - Formentera",
-      "Price": "5,450 per day",
+      "Price": "€5,450 per day",
       "Cruising Speed": "25 knots",
       "Max Speed": "35 knots",
       "Class": "Motoryacht",
@@ -411,7 +411,7 @@
       "Guests": "10",
       "Crew": "2",
       "Cruising Area": "Ibiza - Formentera",
-      "Price": "2,650 per day",
+      "Price": "€2,650 per day",
       "Cruising Speed": "25 knots",
       "Max Speed": "45 knots",
       "Class": "Motoryacht",
@@ -422,6 +422,136 @@
        "May / October": "€2,900 per day / €2,650 per day",
        "June / September": "€3,300 per day / €3,150 per day",
        "July / August": "€3,600 per day / €3,800 per day"
+    }
+  },
+  {
+    "id": 17,
+    "name": "STEELER BRONSON 50",
+    "image": "BronsonSteeler/1.jpeg",
+    "specs": "15 m, 12 guests, 2 crew",
+    "price": "€3,150 per day",
+    "description": "Make the most of your Ibiza getaway on the luxurious Bronson Steeler 50. Designed for pure comfort, this yacht offers expansive sunbathing areas, plush seating, and a hydraulic bimini for perfect shade. Relax, unwind, and let the stunning scenery of Ibiza be your backdrop.",
+    "interiorImages": ["BronsonSteeler/1.jpeg", "BronsonSteeler/50BRONSON12.jpg","BronsonSteeler/50BRONSON7.jpg","BronsonSteeler/50BRONSON4.jpg","BronsonSteeler/50BRONSON2.jpg","BronsonSteeler/50BRONSON8.jpg","BronsonSteeler/50BRONSON3.jpg"],
+    "detailedSpecs": {
+      "Length": "15 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€3,150 per day",
+      "Cruising Speed": "25 knots",
+      "Max Speed": "40 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x VOLVO PENTA IPS800",
+      "HP": "2 x 800"
+     },
+     "seasonalPrices": {
+       "May / October": "€3,450 per day / €3,150 per day",
+       "June / September": "€3,950 per day / €3,800 per day",
+       "July / August": "€4,250 per day / €4,550 per day"
+    }
+  },
+  {
+    "id": 18,
+    "name": "56 Riva Rivale",
+    "image": "RivaRivale/56Rivale11.jpg",
+    "specs": "17 m, 12 guests, 2 crew",
+    "price": "€3,200 per day",
+    "description": "Experience the thrill of the open sea on the magnificent Riva Rivale 56. This masterpiece of design blends luxurious comfort, spacious interiors, and breathtaking speed and handling. Indulge in the finest amenities while making waves in the crystal-clear waters of Ibiza.",
+    "interiorImages": ["BronsonSteeler/1.jpeg", "BronsonSteeler/50BRONSON12.jpg","BronsonSteeler/50BRONSON7.jpg","BronsonSteeler/50BRONSON4.jpg","BronsonSteeler/50BRONSON2.jpg","BronsonSteeler/50BRONSON8.jpg","BronsonSteeler/50BRONSON3.jpg"],
+    "detailedSpecs": {
+      "Length": "17 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€3,200 per day",
+      "Cruising Speed": "31 knots",
+      "Max Speed": "38 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x MAN",
+      "HP": "2 x 1200"
+     },
+     "seasonalPrices": {
+       "May / October": "€3,500 per day / €3,200 per day",
+       "June / September": "€3,950 per day / €3,800 per day",
+       "July / August": "€4,350 per day / €4,650 per day"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Vanquish VQ45",
+    "image": "Vanquish45/45Vanquish8.jpg",
+    "specs": "13.1 m, 11 guests, 1 crew",
+    "price": "€2,100 per day",
+    "description": "Sleek, powerful, and undeniably stylish – the Vanquish 45 is the ultimate vessel for your Ibiza charter. Experience the thrill of open water, secluded coves, and the vibrant energy of the island in true luxury.",
+    "interiorImages": ["Vanquish45/45Vanquish6.jpg", "Vanquish45/45Vanquish5.jpg","Vanquish45/45Vanquish4.jpg","Vanquish45/45Vanquish3.jpg","Vanquish45/45Vanquish1.jpg","Vanquish45/45Vanquish7.jpg"],
+    "detailedSpecs": {
+      "Length": "13.1 m",
+      "Guests": "11",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€2,100 per day",
+      "Cruising Speed": "32 knots",
+      "Max Speed": "40 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x YANMAR",
+      "HP": "2 x 370"
+     },
+     "seasonalPrices": {
+       "May / October": "€2,300 per day / €2,100 per day",
+       "June / September": "€2,600 per day / €2,500 per day",
+       "July / August": "€2,750 per day / €3,100 per day"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Vanquish VQ52",
+    "image": "Vanquish52/52Vanquish10.jpg",
+    "specs": "16.2 m, 12 guests, 2 crew",
+    "price": "€3,250 per day",
+    "description": "Experience Ibiza's magic aboard the Vanquish 52. This spacious and luxurious yacht offers ample room for sunbathing, socialising, or dining alfresco. Explore hidden coves by day and indulge in Ibiza's vibrant nightlife – all in impeccable style.",
+    "interiorImages": ["Vanquish52/52Vanquish14.jpg", "Vanquish52/52Vanquish12.jpg","Vanquish52/52Vanquish13.jpg","Vanquish52/52Vanquish5.jpg","Vanquish52/52Vanquish11.jpg"],
+    "detailedSpecs": {
+      "Length": "16.2 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€3,250 per day",
+      "Cruising Speed": "32 knots",
+      "Max Speed": "40 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x CUMMINS",
+      "HP": "2 x 600"
+     },
+     "seasonalPrices": {
+       "May / October": "€3,600 per day / €3,250 per day",
+       "June / September": "€4,000 per day / €3,900 per day",
+       "July / August": "€4,400 per day / €4,750 per day"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Riva Argo 90",
+    "image": "RivaArgo90/90RivaArgo3.jpg",
+    "specs": "28.70 m, 12 guests, 4 crew",
+    "price": "€12,950 per week",
+    "description": "The magnificent Riva Argo 90' , awaits your next adventure. Her powerful profile and sporty design promise thrilling journeys, while her elegant interiors provide the ultimate retreat. Experience the thrill of the open sea in timeless Italian style",
+    "interiorImages": ["RivaArgo90/90RivaArgo2.jpg", "RivaArgo90/90RivaArgo5.jpg","RivaArgo90/90RivaArgo6.jpg","RivaArgo90/90RivaArgo9.jpg","RivaArgo90/90RivaArgo8.jpg", "RivaArgo90/90RivaArgo13.jpg","RivaArgo90/90RivaArgo17.jpg", "RivaArgo90/90RivaArgo15.jpg","RivaArgo90/90RivaArgo14.jpg"],
+    "detailedSpecs": {
+      "Length": "28.70 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Balearics",
+      "Price": "€12,950 per week",
+      "Cruising Speed": "22 knots",
+      "Max Speed": "28 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x MTU",
+      "HP": "2 x 2650"
+     },
+     "seasonalPrices": {
+       
+       "Off-Peak Season": "€12,950 per week",
+       "High Season": "€14,950 per week"
     }
   }
 ]
