@@ -28,32 +28,6 @@
     }
   },
   {
-    "id": 21,
-    "name": "Riva Argo 90",
-    "image": "RivaArgo90/90RivaArgo3.jpg",
-    "specs": "28.70 m, 12 guests, 4 crew",
-    "price": "€12,950 per week",
-    "description": "The magnificent Riva Argo 90' , awaits your next adventure. Her powerful profile and sporty design promise thrilling journeys, while her elegant interiors provide the ultimate retreat. Experience the thrill of the open sea in timeless Italian style",
-    "interiorImages": ["RivaArgo90/90RivaArgo2.jpg", "RivaArgo90/90RivaArgo5.jpg","RivaArgo90/90RivaArgo6.jpg","RivaArgo90/90RivaArgo9.jpg","RivaArgo90/90RivaArgo8.jpg", "RivaArgo90/90RivaArgo13.jpg","RivaArgo90/90RivaArgo17.jpg", "RivaArgo90/90RivaArgo15.jpg","RivaArgo90/90RivaArgo14.jpg"],
-    "detailedSpecs": {
-      "Length": "28.70 m",
-      "Guests": "12",
-      "Crew": "2",
-      "Cruising Area": "Balearics",
-      "Price": "€12,950 per week",
-      "Cruising Speed": "22 knots",
-      "Max Speed": "28 knots",
-      "Class": "Motoryacht",
-      "Engine": "2 x MTU",
-      "HP": "2 x 2650"
-     },
-     "seasonalPrices": {
-       
-       "Off-Peak Season": "€12,950 per week",
-       "High Season": "€14,950 per week"
-    }
-  },
-  {
     "id": 2,
     "name": "Pershing 90",
     "image": "Danzas/PershingNavigating(90)16.jpg",
@@ -552,6 +526,32 @@
        "May / October": "€3,600 per day / €3,250 per day",
        "June / September": "€4,000 per day / €3,900 per day",
        "July / August": "€4,400 per day / €4,750 per day"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Riva Argo 90",
+    "image": "RivaArgo90/90RivaArgo3.jpg",
+    "specs": "28.70 m, 12 guests, 4 crew",
+    "price": "€12,950 per week",
+    "description": "The magnificent Riva Argo 90' , awaits your next adventure. Her powerful profile and sporty design promise thrilling journeys, while her elegant interiors provide the ultimate retreat. Experience the thrill of the open sea in timeless Italian style",
+    "interiorImages": ["RivaArgo90/90RivaArgo2.jpg", "RivaArgo90/90RivaArgo5.jpg","RivaArgo90/90RivaArgo6.jpg","RivaArgo90/90RivaArgo9.jpg","RivaArgo90/90RivaArgo8.jpg", "RivaArgo90/90RivaArgo13.jpg","RivaArgo90/90RivaArgo17.jpg", "RivaArgo90/90RivaArgo15.jpg","RivaArgo90/90RivaArgo14.jpg"],
+    "detailedSpecs": {
+      "Length": "28.70 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Balearics",
+      "Price": "€12,950 per week",
+      "Cruising Speed": "22 knots",
+      "Max Speed": "28 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x MTU",
+      "HP": "2 x 2650"
+     },
+     "seasonalPrices": {
+       
+       "Off-Peak Season": "€12,950 per week",
+       "High Season": "€14,950 per week"
     }
   }
 ]
