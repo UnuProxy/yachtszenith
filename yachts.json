@@ -397,6 +397,32 @@
        "June / September": "€5,450 per day",
        "July / August": "€6,800 per day / €3,650 per day"
     }
+  },
+  {
+    "id": 16,
+    "name": "CNM 50",
+    "image": "CNM50/50CNM19.jpg",
+    "specs": "16.03 m, 10 guests, 2 crew",
+    "price": "€2,650 per day",
+    "description": "Fancy a brilliant day out on the Ibiza waters? The CNM Continental Tender 50 awaits! This beauty offers space galore for lounging in the sun, a powerful engine for zipping about, and all the comforts you could need. Your Mediterranean adventure starts here.",
+    "interiorImages": ["CNM50/50CNM20.jpg", "CNM50/50CNM13.jpg","CNM50/50CNM14.jpg","CNM50/50CNM15.jpg","CNM50/50CNM21.jpg","CNM50/50CNM18.jpg","CNM50/50CNM16.jpg","CNM50/50CNM7.jpg","CNM50/50CNM1.jpg", "CNM50/50CNM11.jpg"],
+    "detailedSpecs": {
+      "Length": "16.03 m",
+      "Guests": "10",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "2,650 per day",
+      "Cruising Speed": "25 knots",
+      "Max Speed": "45 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x MAN",
+      "HP": "2 x 800"
+     },
+     "seasonalPrices": {
+       "May / October": "€2,900 per day / €2,650 per day",
+       "June / September": "€3,300 per day / €3,150 per day",
+       "July / August": "€3,600 per day / €3,800 per day"
+    }
   }
 ]
 
