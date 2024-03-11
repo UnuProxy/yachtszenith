@@ -216,30 +216,28 @@ function setMinVoyageDate() {
     }
   </script>
   <script>
-    function setMinVoyageDate() {
-            var today = new Date().toISOString().split('T')[0];
-            document.getElementById("startVoyageDate").setAttribute("min", today);
-            document.getElementById("endVoyageDate").setAttribute("min", today);
+   document.getElementById('voyageForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    var form = this;
+    var formData = new FormData(form);
+
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+    }).then(response => {
+        if (response.ok) {
+            alert("Thank you for your submission. We will be in touch soon.");
+
+            window.location.href = 'https://yachtszenith.com/about-us';
+        } else {
+          
+            alert("There was an error submitting the form. Please try again.");
         }
-        document.addEventListener('DOMContentLoaded', setMinVoyageDate);
-        document.getElementById('voyageForm').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-            var form = this;
-            var formData = new FormData(form);
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-            }).then(response => {
-                if (response.ok) {            
-                    document.getElementById('successMessage').style.display = 'block';
-                    form.reset();
-                } else {                
-                    alert("There was an error submitting the form. Please try again.");
-                }
-            }).catch(error => {            
-                alert("There was a network error. Please try again.");
-            });
-        });
+    }).catch(error => {
+        console.error("Network error:", error);
+        alert("There was a network issue. Please try again later.");
+    });
+});
   </script>   
     <script>
         let currentIndex = 0;

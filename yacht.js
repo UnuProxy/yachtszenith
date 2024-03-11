@@ -67,6 +67,17 @@ document.addEventListener("DOMContentLoaded", function() {
   nameSearch.addEventListener("keyup", applyFilters);
 });
 
+document.getElementById('yachtsContainer').addEventListener('touchstart', function() {
+  document.querySelector('.swipe-indicator').style.display = 'none';
+});
+var swiper = new Swiper('.swiper-container', {
+  // Swiper options...
+  on: {
+    slideChange: function () {
+      document.querySelector('.swipe-indicator').style.display = 'none';
+    }
+  }
+});
 
 
 

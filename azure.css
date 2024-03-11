@@ -1354,6 +1354,31 @@ button:hover {
   overflow: hidden;
   padding: 10px;
 }
+@keyframes shiftGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes slideRight {
+  0%, 100% { transform: translateX(0); opacity: 0.8; }
+  50% { transform: translateX(10px); opacity: 1; }
+}
+
+.swipe-indicator {
+  
+  bottom: 20px;
+  right: 20px;
+  font-size: 12px; /* Adjust for visibility */
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% 200%;
+  background-image: linear-gradient(90deg, var(--LOGO-COLOR) 0%, #fff 50%, var(--LOGO-COLOR) 100%);
+  animation: shiftGradient 6s infinite linear, slideRight 3s infinite ease-in-out;
+}
+
+
 
 
 .title-container {
