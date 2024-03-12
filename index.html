@@ -437,6 +437,40 @@
   </section>
   <a href="data-policy">Read more here</a>
 </div>
+<section id="yacht-guide" class="yacht-guide-container">
+  <div class="column">
+      <h2>The Ultimate Guide to Luxury Yacht Rentals in Ibiza</h2>
+      <p>Ibiza, with its dazzling shores, sapphire waters, and legendary nightlife, holds a timeless allure. This introduction to luxury yacht rentals in Ibiza will help you unlock the world of high-end sea voyages, offering unparalleled freedom and exclusivity.</p>
+      <h3 onclick="toggleSection('allure')">The Allure of Ibiza by Yacht &#9662;</h3>
+      <div class="expandable-content" id="allure">
+          <p>Renting a luxury yacht in Ibiza grants you unparalleled freedom and exclusivity. Escape the crowds and uncover the island's hidden gems, from secluded beaches with powdery sands to vibrant marine life teeming beneath the waves. Indulge in onboard gourmet dining with panoramic views, or sip cocktails as the sun dips below the horizon. A yacht becomes your floating haven, designed to fulfill your every desire.</p>
+      </div>
+      <h3 onclick="toggleSection('types')">Types of Luxury Yachts &#9662;</h3>
+      <div class="expandable-content" id="types">
+          <ul>
+              <li>Motor Yachts: Sleek and powerful, motor yachts are ideal for speed and comfort. They offer spacious accommodations and luxurious amenities.</li>
+              <li>Sailing Yachts: For a classic experience, sailing yachts harness the power of the wind. Enjoy a relaxing pace and the thrill of sailing the Mediterranean.</li>
+              <li>Superyachts: The epitome of luxury, superyachts boast opulent amenities like swimming pools, cinemas, and even helipads.</li>
+          </ul>
+      </div>
+      <h3 onclick="toggleSection('departure')">Departure Points &#9662;</h3>
+      <div class="expandable-content" id="departure">
+          <p>The most popular marinas for luxury yacht rentals in Ibiza include Marina Ibiza, Marina Botafoch, and San Antonio Marina. Each offers unique gateways to the Mediterranean's enchanting waters.</p>
+      </div>
+      <h3 onclick="toggleSection('itineraries')">Ibiza Itineraries & Destinations &#9662;</h3>
+      <div class="expandable-content" id="itineraries">
+          <p>Unleash your inner explorer with bespoke itineraries tailored to your desires. Discover stunning destinations around Ibiza and its sister island, Formentera, including Cala Bassa, Es Vedra, and the pristine beaches of Formentera itself.</p>
+      </div>
+      <h3 onclick="toggleSection('costs')">Costs and Considerations &#9662;</h3>
+      <div class="expandable-content" id="costs">
+          <p>Luxury yacht rental prices vary based on the yacht type, season, and rental duration. Expect daily rates to start from several thousand euros, with superyachts commanding tens of thousands.</p>
+      </div>
+      <h3 onclick="toggleSection('companies')">Finding Reputable Companies &#9662;</h3>
+      <div class="expandable-content" id="companies">
+          <p>Choosing a reputable yacht rental company is crucial for a seamless experience. Conduct thorough research, read client reviews, and opt for companies that specialize in luxury rentals to ensure the highest standards of service and safety.</p>
+      </div>
+  </div>
+</section>
 <!-- IBIZA POPULAR YACHT DESTINATION -->
 <section>
   <div class="destination-container">
@@ -583,6 +617,26 @@
 </div>
 </div>
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.column h3').forEach(function(h3) {
+          h3.addEventListener('click', function() {
+              var content = this.nextElementSibling;
+              if (content.style.maxHeight) {
+                  content.style.maxHeight = null;
+              } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+              }
+              document.querySelectorAll('.expandable-content').forEach(function(el) {
+                  if (el !== content) {
+                      el.style.maxHeight = null;
+                  }
+              });
+          });
+      });
+  });
+  </script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
   const faqQuestions = document.querySelectorAll('.faq-question');
