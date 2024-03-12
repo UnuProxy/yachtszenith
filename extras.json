@@ -84,7 +84,19 @@
   },
   {
     "id": 21,
-    "extras": ["Tender Jet","Water Skies","1 x SeaBob","Snorkel Equipment", "Air Conditioning", "Music equipment", "Stand up paddle board", "Wakeboard" ]
+    "extras": ["Tender Jet","Water Skies"," x SeaBob","Snorkel Equipment", "Air Conditioning", "Music equipment", "Stand up paddle board", "Wakeboard" ]
+  },
+  {
+    "id": 22,
+    "extras": ["Tender Jet","2 x SeaBob","Snorkel Equipment", "Air Conditioning", "Music equipment", "Stand up paddle board" ]
+  },
+  {
+    "id": 23,
+    "extras": ["Snorkel Equipment", "Air Conditioning", "Music equipment", "Stand up paddle board" ]
+  },
+  {
+    "id": 24,
+    "extras": [ "Music equipment", "Stand up paddle board" ]
   }
 ]
 

@@ -8,7 +8,7 @@
     "cruisingArea": "Balearics",
     "description": "The Mangusta 108 charter yacht epitomises Italian elegance, ideal for luxury yachting holidays with friends or family. Designed for relaxation, this open yacht doubles as a floating lounge, offering spacious outdoor areas for sunbathing or shade. She accommodates up to 10 guests overnight in three double cabins and a four-single-bed cabin.Available for day charters for up to 12 guests around Ibiza and Formentera, the Mangusta 108 includes a Jet RIB tender for watersports and features a BOSE surround sound system and onboard WiFi.",
     "additionalImages": ["No need"],
-    "interiorImages": ["Belisa/Mangusta2.jpg","Belisa/Mangusta3.jpg","Belisa/Mangusta6.jpg","Belisa/Mangusta7.jpg","Belisa/Mangusta8.jpg","Belisa/Mangusta9.jpg","Belisa/Mangusta10.jpg","Belisa/Mangusta13.jpg","Belisa/Mangusta24.jpg"],
+    "interiorImages": ["Belisa/Mangusta2.jpg","Belisa/Mangusta3.jpg","Belisa/Mangusta7.jpg","Belisa/Mangusta8.jpg","Belisa/Mangusta9.jpg","Belisa/Mangusta10.jpg","Belisa/Mangusta13.jpg","Belisa/Mangusta24.jpg"],
     "detailedSpecs": {
       "Length": "32,92 m",
       "Guests": "12",
@@ -360,16 +360,16 @@
       "Guests": "12",
       "Crew": "2",
       "Cruising Area": "Ibiza - Formentera",
-      "Price": "€2,850 per day",
-      "Cruising Speed": "35 knots",
-      "Max Speed": "52 knots",
+      "Price": "€3,499 per day",
+      "Cruising Speed": "24 knots",
+      "Max Speed": "37 knots",
       "Class": "Motoryacht",
-      "Engine": "2 x IPS 800"
+      "Engine": "2 x VOLVO D13"
      },
      "seasonalPrices": {
-       "May / October": "€2,850 per day / €2,750 per day",
-       "June / September": "€3,050 per day /€2,850 per day",
-       "July / August": "€3,450 per day / €3,650 per day"
+       "May / October": "€3,499 per day / €2,844 per day",
+       "June / September": "€3,850 per day /€3,850 per day",
+       "July / August": "€4,400 per day / €4,400 per day"
     }
   },
   {
@@ -552,6 +552,82 @@
        
        "Off-Peak Season": "€12,950 per week",
        "High Season": "€14,950 per week"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Riva Perseo 76",
+    "image": "RivaPerseo76/76RivaPerseo42.jpg",
+    "specs": "23.25 m, 12 guests, 3 crew",
+    "price": "€5,800 per day (VAT included)",
+    "description": "Experience the best of Ibiza with the Riva Perseo 76. This luxurious yacht is perfect for families, friends or business meetings, offering a spacious sundeck, comfortable cabins, and the freedom to explore. Book your dream charter today!",
+    "interiorImages": ["RivaPerseo76/76RivaPerseo40.jpg", "RivaPerseo76/76RivaPerseo1.jpg","RivaPerseo76/76RivaPerseo41.jpg","RivaPerseo76/76RivaPerseo27.jpg","RivaPerseo76/76RivaPerseo24.jpg", "RivaPerseo76/76RivaPerseo25.jpg","RivaPerseo76/76RivaPerseo23.jpg", "RivaPerseo76/76RivaPerseo20.jpg","RivaPerseo76/76RivaPerseo17.jpg","RivaPerseo76/76RivaPerseo12.jpg","RivaPerseo76/76RivaPerseo11.jpg","RivaPerseo76/76RivaPerseo10.jpg"],
+    "detailedSpecs": {
+      "Length": "23.25 m",
+      "Guests": "12",
+      "Crew": "3",
+      "Cruising Area": "Balearics",
+      "Price": "€5,800 per day",
+      "Cruising Speed": "25 knots",
+      "Max Speed": "38 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x MAN"
+     },
+     "seasonalPrices": {
+      "May / October": "€5,800 per day",
+      "June / September": "€6,800 per day",
+      "July / August": "€8,200 per day"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Fjord 48",
+    "image": "Fjord48/48Fjord6.jpg",
+    "specs": "15.98 m, 12 guests, 2 crew",
+    "price": "€3,000 per day  (VAT included)",
+    "description": "Whether you desire a relaxing day soaking up the Mediterranean sun or an adrenaline-fueled adventure, the Fjord 48 yacht charter in Ibiza delivers.  Spacious decks, stylish amenities, and incredible performance make it your ultimate escape",
+    "interiorImages": ["Fjord48/48Fjord41.jpg", "Fjord48/48Fjord33.jpg","Fjord48/48Fjord28.jpg","Fjord48/48Fjord26.jpg","Fjord48/48Fjord23.jpg","Fjord48/48Fjord8.jpg","Fjord48/48Fjord2.jpg"],
+    "detailedSpecs": {
+      "Length": "15.98 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€3,000 per day",
+      "Cruising Speed": "24 knots",
+      "Max Speed": "34 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x IPS"
+     },
+     "seasonalPrices": {
+      "May / October": "€3,000 per day",
+      "June / September": "€3,800 per day",
+      "July / August": "€4,200 per day"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Pardo 43",
+    "image": "Pardo43/43Pardo4.jpg",
+    "specs": "14 m, 12 guests, 1 crew",
+    "price": "€2,300 per day (VAT included)",
+    "description": "The Pardo 43 yacht charter in Ibiza offers the perfect balance of relaxation and adventure. Its expansive sundecks, luxurious amenities, and impressive performance make it ideal for both leisurely cruises and exploring hidden coves.",
+    "interiorImages": ["Pardo43/43Pardo4.jpg", "Pardo43/43Pardo7.jpg","Pardo43/43Pardo6.jpg","Pardo43/43Pardo2.jpg","Pardo43/43Pardo1.jpg"],
+    "detailedSpecs": {
+      "Length": "14 m",
+      "Guests": "12",
+      "Crew": "1",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€2,300 per day",
+      "Cruising Speed": "24 knots",
+      "Max Speed": "34 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x IPS",
+      "HP": "2 x 600"
+     },
+     "seasonalPrices": {
+      "May / October": "€3,000 per day",
+      "June / September": "€2,700 per day",
+      "July / August": "€3,200 per day"
     }
   }
 ]
