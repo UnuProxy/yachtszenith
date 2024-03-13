@@ -1395,6 +1395,17 @@ button:hover {
   gap: 20px;
   justify-content: center; 
   width: 100%; 
+  margin-left: 80px;
+}
+
+.yacht-guide-container p{
+  max-width: 600px;
+  text-align: justify;
+}
+
+.short-paragraph{
+ max-width: 800px;
+
 }
 
 .column {
@@ -1423,6 +1434,9 @@ h3 {
   .column {
       width: 100%;
       min-width: 0; 
+  }
+  .yacht-guide-container{
+    margin-left: 0;
   }
 }
 
@@ -2580,6 +2594,7 @@ button {
 .column {
   flex: 1;
   padding-top: 20px;
+  color: white;
 }
 
 .column p {
