@@ -1398,8 +1398,7 @@ button:hover {
 }
 
 .column {
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  padding: 10px;
   border-radius: 5px;
   margin-bottom: 20px; 
   width: calc(25% - 20px); 
@@ -2571,7 +2570,6 @@ button {
   transform: translateX(0);
 }
 
-
 .container {
   display: flex;
   margin: auto;
@@ -2581,8 +2579,6 @@ button {
 
 .column {
   flex: 1;
-  margin: 0 30px;
-  color: #fff;
   padding-top: 20px;
 }
 
@@ -2590,22 +2586,17 @@ button {
 margin-top: 10px;
 }
 
-
 .button-container {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 
-
 /* LOGO STYLE */
 .footer-logo img {
   width: 150px; 
   height: auto; 
 }
-
-
-
 
 /* PLAN YOUR VOYAGE FORM */
 .voyageFormPopup {
