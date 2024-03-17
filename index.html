@@ -733,9 +733,9 @@ document.addEventListener('DOMContentLoaded', function() {
           section.classList.add('is-visible');
       }
   });
-  </script>
-  
-<script>document.addEventListener("DOMContentLoaded", function() {
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -757,7 +757,8 @@ document.addEventListener('DOMContentLoaded', function() {
   observer.observe(section);
 });
 </script>
-<script>document.addEventListener("DOMContentLoaded", function() {
+<script>
+document.addEventListener("DOMContentLoaded", function() {
   const articles = document.querySelectorAll('.yachting-row article');
   let delay = 0; 
   const delayIncrement = 150; 
@@ -801,7 +802,7 @@ document.addEventListener('DOMContentLoaded', function() {
           });
       });
   });
-  </script>
+</script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
   const faqQuestions = document.querySelectorAll('.faq-question');
@@ -863,7 +864,40 @@ function showDataPolicyOverview(){document.getElementById("dataPolicyOverview").
 window.onload=function(){var e=document.getElementById("yzCookieConsentContainer");localStorage.getItem("yzCookieConsent")?e.style.display="none":(e.style.display="block",setTimeout(function(){e.style.bottom="0"},10)),document.getElementById("yzAcceptCookies").onclick=function(){localStorage.setItem("yzCookieConsent","true"),e.style.bottom="-100%",setTimeout(function(){e.style.display="none"},500)},document.getElementById("yzCookieSettings").onclick=function(){document.getElementById("cookieSettingsModal").style.display="block"},document.getElementById("saveCookieSettings").onclick=function(){var e=document.getElementById("analyticsCookies").checked,t=document.getElementById("functionalCookies").checked;localStorage.setItem("yzAnalyticsConsent",e),localStorage.setItem("yzFunctionalConsent",t),localStorage.setItem("yzCookieConsent","true"),document.getElementById("cookieSettingsModal").style.display="none"}};
 </script>
 <script>
-  $(document).ready(function(){var t;t=(new Date).toISOString().split("T")[0],$("#startDate, #endDate").attr("min",t),$("#inquiryForm").submit(function(t){t.preventDefault(),function(t){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t)}($("#email").val())?$.ajax({url:$(this).attr("action"),method:"POST",data:$(this).serialize(),dataType:"json",headers:{Accept:"application/json"},success:function(t){alert("Thank you for your inquiry!"),$("#inquiryForm").trigger("reset"),$("#inquiryPopup").hide()},error:function(t){alert("Something went wrong, please try again.")}}):alert("Please enter a valid email address.")}),$(".inquiry-button").on("click",function(){var t=$(this).data("yacht-name");$("#yachtNameInput").val(t),$("#inquiryPopup").show()}),$(".close-popup").on("click",function(){$("#inquiryPopup").hide()})});
+ document.addEventListener('DOMContentLoaded', function() {
+  var inquiryForm = document.getElementById('inquiryForm');
+  inquiryForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent the standard form submission
+
+    var formData = new FormData(inquiryForm);
+    var object = {};
+    formData.forEach((value, key) => object[key] = value);
+    var json = JSON.stringify(object);
+
+    fetch(inquiryForm.getAttribute('action'), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json', // Assuming the server expects JSON
+        'Accept': 'application/json'
+      },
+      body: json
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Thank you for your inquiry!'); // Show success message
+        inquiryForm.reset(); // Reset form fields
+        document.getElementById('inquiryPopup').style.display = 'none'; // Close the popup
+      } else {
+        alert('There was a problem with your submission. Please try again.'); // Error message
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('There was a problem with your submission. Please try again.'); // Error message for fetch failure
+    });
+  });
+});
+
 </script>
 <script src="script.js" defer></script>
  
