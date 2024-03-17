@@ -1209,8 +1209,7 @@ button:hover {
 
 @media (max-width: 768px) {
   .yacht-card {
-    width: 100%; /* Full width for single column layout */
-    /* Remove margin-right rule if not necessary */
+    width: 100%; 
   }
 }
 
@@ -1478,6 +1477,409 @@ h3 {
 @media (max-width: 768px){
   .section-title{
     font-size: 25px !important;
+  }
+}
+
+
+.yachting-row {
+  margin-bottom: 120px;
+}
+#luxury-yachting-journey {
+  margin-bottom: 70px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(to top, #0B3355, #1A4B75)
+}
+
+#luxury-yachting-journey h2 {
+  color: var(--LOGO-COLOR);
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: transparent;
+}
+
+.yachting-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center; 
+  background-color: transparent;
+}
+
+.yachting-gems,
+.yachting-beaches,
+.yachting-parties {
+
+  padding: 20px;
+  flex: 1; 
+  min-width: 300px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#luxury-yachting-journey, .yachting-row {
+  overflow: hidden;
+}
+
+
+#luxury-yachting-journey h3 {
+  color: var(--LOGO-COLOR);
+}
+
+#luxury-yachting-journey p {
+  color: #dad8d8;
+  line-height: 1.6;
+}
+
+#luxury-yachting-journey strong {
+  color: var(--LOGO-COLOR);
+}
+.yachting-row article {
+  opacity: 0;
+  transform: translate(50px, 30px); 
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.yachting-row article.visible {
+  opacity: 1;
+  transform: translate(0, 0); 
+}
+
+
+/* Base Styles */
+.charter-experiences {
+  padding: 60px 20px; 
+}
+
+.charter-title h2 {
+  color: var(--TEXT-LIGHTCOLOR);
+  text-align: center;
+  margin-bottom: 80px; 
+  font-size: 36px;
+  font-weight: lighter;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; 
+}
+
+.text-content {
+  width: 60%;
+  text-align: left;
+  padding: 30px;
+}
+
+.text-content h3, .text-content p, .text-content li {
+  color: var(--TEXT-LIGHTCOLOR);
+  margin-bottom: 20px; 
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.text-content h3{
+  color: var(--LOGO-COLOR);
+}
+.text-content li {
+  margin-top: 15px;
+}
+
+.image-content {
+  width: 40%;
+  text-align: right;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cta-button { 
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  border: 1px solid var(--LOGO-COLOR);
+  color: var(--LOGO-COLOR);
+  background-color: transparent;
+}
+.image-content {
+  width: 40%; 
+  position: relative; 
+  text-align: center; 
+}
+
+.image-content > img {
+  max-width: 90%; 
+  height: auto;
+  display: block;
+  margin: auto; 
+  position: relative; 
+  z-index: 0; 
+}
+
+.top-image {
+  position: absolute;
+  top: 10%; 
+  left: 10%;
+  z-index: 1; 
+  background-color: transparent;
+  transform: translateY(30%);
+}
+
+.top-image img {
+  max-width: 70%; 
+  height: auto;
+}
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; 
+  }
+
+  .text-content, .image-content {
+    width: 100%; 
+    text-align: center;
+    padding: 15px; 
+  }
+
+  .text-content {
+    order: 1; 
+  }
+
+  .image-content {
+    display: none;
+  }
+
+  .charter-title h2 {
+    font-size: 28px;
+    margin-bottom: 40px; 
+  }
+
+  .cta-button {
+    margin-top: 20px; 
+  }
+}
+/*NEWS AND BLOG*/
+.yacht-news-section {
+  text-align: center;
+  background: linear-gradient(to top, #0B3355, #1A4B75);
+}
+
+.titles-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%; 
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.title-blog, .title-ibiza-yacht-news {
+  margin: 10px 0;
+  color: var(--LOGO-COLOR);
+  background-color: transparent;
+}
+
+.column-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+  margin-top: 20px;
+  background-color: transparent;
+}
+
+.news-column {
+  width: 30%; 
+  padding: 10px;
+  box-sizing: border-box; 
+  background-color: transparent;
+}
+
+.news-column img {
+  width: 100%; 
+  height: auto; 
+  max-height: 250px;
+  object-fit: cover; 
+  background-color: transparent;
+}
+
+.date, .description {
+  margin: 10px 0;
+  text-align: left;
+  background-color: transparent;
+}
+.date{
+  color: var(--LOGO-COLOR);
+}
+.description{
+  color: var(--TEXT-LIGHTCOLOR);
+}
+
+/* Initial state of the yacht-news-section */
+.yacht-news-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .titles-container {
+      flex-direction: column; 
+      text-align: center;
+  }
+  
+
+  .title-blog, .title-ibiza-yacht-news {
+      margin: 10px 0;
+      font-size: 16px;
+  
+  }
+  .yacht-news-section{
+    margin-top: 120px;
+  }
+
+  .column-container {
+      flex-direction: column;
+  }
+
+  .news-column {
+      width: 90%; 
+      margin: 0 auto; 
+  }
+}
+
+
+
+.image-content > img, .top-image > img, .text-content {
+  opacity: 0;
+  transform: translateX(-100px); 
+  will-change: transform, opacity;
+}
+
+.yachting-row article {
+  opacity: 0;
+  /* transform: translateY(20px);  */
+  will-change: transform, opacity;
+}
+
+/* Animation for sliding in */
+.animate-slide-in {
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.visible {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+/*SUBSCRIBE*/
+.sea-contact-wrapper {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  margin-top: 160px;
+  
+}
+
+.sea-container {
+  background: linear-gradient(to bottom, #0B3355, #1A4B75);
+  padding: 20px;
+  border-radius: 10px; 
+}
+
+.voyage-title {
+  text-align: center;
+  color: var(--LOGO-COLOR);
+  margin-bottom: 30px;
+  font-size: 24px; 
+}
+
+.anchor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.harbor-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ocean-label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--TEXT-LIGHTCOLOR);
+}
+
+.marine-input,
+.nautical-submit {
+  padding: 10px;
+  border: 2px solid var(--LOGO-COLOR);
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent; 
+  color: var(--TEXT-LIGHTCOLOR);
+}
+
+.marine-input:focus,
+.nautical-submit:focus {
+  border-color: var(--TEXT-LIGHTCOLOR);
+  box-shadow: 0 0 0 3px rgba(26, 75, 117, 0.25); 
+  outline: none;
+}
+
+.nautical-submit {
+  color: white;
+  background-color: var(--LOGO-COLOR);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nautical-submit:hover {
+  background-color: darken(var(--LOGO-COLOR), 10%); 
+}
+
+@media (max-width: 768px) {
+  .sea-contact-wrapper {
+    padding: 10px;
+    margin-top: 80px; 
+  }
+
+  .marine-input,
+  .nautical-submit {
+    font-size: 14px;
   }
 }
 
@@ -2815,8 +3217,6 @@ margin-top: 10px;
 .destination-container {
   overflow: hidden;
   text-align: center;
-  width: 90%;
-  margin: 0 auto;
   height: auto; 
 }
 
@@ -3468,17 +3868,6 @@ a {
   text-decoration: none;
 }
 
-.contact-links {
-  background-color: transparent;
-}
-
-.broker1 {
-  background-color: transparent;
-}
-
-.broker2 {
-  background-color: transparent;
-}
 
 .contact-links a {
   background-color: transparent;
@@ -3504,6 +3893,59 @@ a {
   flex-direction: column;
   margin-top: 5px;
 }
+
+.testimonials-section {
+  color: #fff; 
+  text-align: center;
+  margin-top: 40px;
+  background: transparent;
+}
+.testimonials-section h3{
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+  background: transparent;
+}
+
+.testimonial-item {
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 5px solid var(--LOGO-COLOR); 
+  background: transparent;
+}
+
+.testimonial-text {
+  font-style: italic;
+  background: transparent;
+}
+
+.testimonial-author {
+  margin-top: 10px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+
+@media (min-width: 768px) {
+  .testimonials-container {
+    flex-direction: row; 
+    justify-content: space-around;
+  }
+
+  .testimonial-item {
+    max-width: 45%; 
+  }
+  .testimonial-text{
+    font-size: 1.2em;
+    text-wrap: wrap;
+  }
+}
+
 
 @media screen and (max-width: 600px) {
   .wrapper {
@@ -3568,7 +4010,21 @@ a {
     background-attachment: scroll; 
   }
 }
+@media screen and (max-width: 768px) {
+  .testimonial-text {
+    font-size: 16px; 
+  }
 
+  .wrapper {
+    white-space: normal; 
+  }
+}
+
+/* Ensuring text wraps within its container */
+.testimonial-text {
+  font-style: italic;
+  word-wrap: break-word; 
+}
 
  @media only screen and (max-width: 375px) {
   .video-container {
@@ -3945,7 +4401,6 @@ font-size: 36px;
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  border-radius: 5px;
   z-index: 1010;
   width: 80%; 
   max-width: 600px; 
