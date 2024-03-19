@@ -629,6 +629,32 @@
       "June / September": "€2,700 per day",
       "July / August": "€3,200 per day"
     }
+  },
+  {
+    "id": 25,
+    "name": "Hanstaiger X1",
+    "image": "HanstaigerX1/X1Hanstaiger44.jpg",
+    "specs": "22 m, 12 guests, 3 crew",
+    "price": "€6,250 per day (VAT not included)",
+    "description": "The Hanstaiger X1 is a marvel of modern yacht engineering, blending luxurious design with cutting-edge technology to offer an unparalleled sailing experience. Crafted for those who seek both adventure and comfort, this vessel stands out with its unique hydrofoil design, allowing for smooth and efficient navigation through the waters around Ibiza. The yacht's spacious interiors are meticulously designed to provide maximum comfort and elegance, featuring state-of-the-art amenities that cater to every need of its guests. With ample deck space, guests can bask in the Mediterranean sun or enjoy alfresco dining with breathtaking views of Ibiza's stunning coastline. The Hanstaiger X1 is not just a yacht; it's a statement of sophistication and innovation, making it an ideal choice for those looking to charter a vessel that offers an unforgettable journey in the lap of luxury.",
+    "interiorImages": ["HanstaigerX1/X1Hanstaiger41.jpg", "HanstaigerX1/X1Hanstaiger40.jpg","HanstaigerX1/X1Hanstaiger42.jpg","HanstaigerX1/X1Hanstaiger38.jpg","HanstaigerX1/X1Hanstaiger25.jpg","HanstaigerX1/X1Hanstaiger24.jpg","HanstaigerX1/X1Hanstaiger23.jpg","HanstaigerX1/X1Hanstaiger22.jpg","HanstaigerX1/X1Hanstaiger21.jpg","HanstaigerX1/X1Hanstaiger20.jpg","HanstaigerX1/X1Hanstaiger18.jpg","HanstaigerX1/X1Hanstaiger17.jpg","HanstaigerX1/X1Hanstaiger16.jpg","HanstaigerX1/X1Hanstaiger15.jpg","HanstaigerX1/X1Hanstaiger14.jpg","HanstaigerX1/X1Hanstaiger13.jpg","HanstaigerX1/X1Hanstaiger12.jpg","HanstaigerX1/X1Hanstaiger11.jpg","HanstaigerX1/X1Hanstaiger10.jpg","HanstaigerX1/X1Hanstaiger9.jpg","HanstaigerX1/X1Hanstaiger8.jpg","HanstaigerX1/X1Hanstaiger7.jpg","HanstaigerX1/X1Hanstaiger6.jpg","HanstaigerX1/X1Hanstaiger5.jpg","HanstaigerX1/X1Hanstaiger4.jpg","HanstaigerX1/X1Hanstaiger3.jpg","HanstaigerX1/X1Hanstaiger2.jpg","HanstaigerX1/X1Hanstaiger1.jpg"],
+    "detailedSpecs": {
+      "Length": "22 m",
+      "Guests": "12",
+      "Crew": "3",
+      "Cruising Area": "Balearics",
+      "Price": "€6,250 per day",
+      "Cruising Speed": "8 knots",
+      "Max Speed": "14 knots",
+      "Class": "Catamaran",
+      "Engine": "2 x Volvo",
+      "HP": "2 x 225"
+     },
+     "seasonalPrices": {
+      "May / October": "€6,250 per day",
+      "June / September": "€7,850 per day",
+      "July / August": "€8,950 per day"
+    }
   }
 ]
 
