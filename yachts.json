@@ -655,6 +655,162 @@
       "June / September": "€7,850 per day",
       "July / August": "€8,950 per day"
     }
+  },
+  {
+    "id": 26,
+    "name": "Sunseeker Predator 72",
+    "image": "SunseekerPredator72/72SunseekerPredator1.jpg",
+    "specs": "22,25 m, 12 guests, 2 crew",
+    "price": "€4,700 per day (VAT not included)",
+    "description": "Embark on an unforgettable voyage around the enchanting waters of Ibiza aboard the magnificent Sunseeker Predator 72. This masterpiece of engineering and design combines speed, agility, and grace, offering an unparalleled yachting experience. With its sleek, aerodynamic silhouette, the Predator 72 is a vision of modern nautical elegance, equipped to deliver the ultimate in comfort, luxury, and adventure.",
+    "interiorImages": ["SunseekerPredator72/72SunseekerPredator10.jpg", "SunseekerPredator72/72SunseekerPredator18.jpg","SunseekerPredator72/72SunseekerPredator17.jpg","SunseekerPredator72/72SunseekerPredator16.jpg","SunseekerPredator72/72SunseekerPredator14.jpg","SunseekerPredator72/72SunseekerPredator15.jpg"],
+    "detailedSpecs": {
+      "Length": "22,25 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€4,700 per day",
+      "Cruising Speed": "22 knots",
+      "Max Speed": "35 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x MAN",
+      "HP": "2 x 1550"
+     },
+     "seasonalPrices": {
+      "May / October": "€4,700 per day",
+      "June / September": "€4,700 per day",
+      "July / August": "€6,000 per day"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Princess V53",
+    "image": "PrincessV53/52Princess9.jpg",
+    "specs": "16,12 m, 12 guests, 1 crew",
+    "price": "€2,500 per day (VAT not included)",
+    "description": "Set sail on the pristine waters of Ibiza with the exquisite Princess V53, a luxurious and elegant motoryacht, with high-performance boating. With its striking profile and sleek lines, the V53 stands as a beacon of modern yacht design, offering an blend of speed, comfort, and style.",
+    "interiorImages": ["PrincessV53/52Princess4.jpg", "PrincessV53/52Princess3.jpg","PrincessV53/52Princess8.jpg","PrincessV53/52Princess5.jpg","PrincessV53/52Princess7.jpg"],
+    "detailedSpecs": {
+      "Length": "16,12 m",
+      "Guests": "12",
+      "Crew": "1",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€2,500 per day",
+      "Cruising Speed": "22 knots",
+      "Max Speed": "36 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x MAN",
+      "HP": "2 x 800"
+     },
+     "seasonalPrices": {
+      "May / October": "€2,500 per day",
+      "June / September": "€2,500 per day",
+      "July / August": "€3,000 per day"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Seanafinity 47",
+    "image": "Seanafinity47/47Seanafinity5.jpg",
+    "specs": "13,30 m, 11 guests, 1 crew",
+    "price": "€2,250 per day (VAT not included)",
+    "description": "Embark on a journey aboard the Seanfinity 47, a yacht that redefines the essence of maritime elegance. With its innovative design and cutting-edge technology, the Seanfinity 47 is a masterpiece of modern yachting, offering an unrivalled on-water experience.As you step aboard, you're greeted by it's sleek, contemporary lines and expansive open spaces, designed for comfort and relaxation. The yacht’s deck is a haven for sun-seekers and those who delight in outdoor living, offering ample lounging areas and an inviting dining space for memorable meals against the backdrop of the sea.",
+    "interiorImages": ["Seanafinity47/47Seanafinity2.jpg", "Seanafinity47/47Seanafinity1.jpg","Seanafinity47/Seanafinity.jpg"],
+    "detailedSpecs": {
+      "Length": "16,12 m",
+      "Guests": "12",
+      "Crew": "1",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€2,500 per day",
+      "Cruising Speed": "22 knots",
+      "Max Speed": "36 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x MAN",
+      "HP": "2 x 800"
+     },
+     "seasonalPrices": {
+      "May / October": "€2,500 per day",
+      "June / September": "€2,500 per day",
+      "July / August": "€3,000 per day"
+    }
+  },
+  {
+    "id": 29,
+    "name": "Sunseeker Predator 82",
+    "image": "SunseekerPredator82/82SunseekerPredator9.jpg",
+    "specs": "24 m, 12 guests, 3 crew",
+    "price": "€6,050 per day (VAT not included)",
+    "description": "Experience the pinnacle of yachting excellence aboard the Sunseeker Predator 82, a vessel that exemplifies speed, luxury, and sophistication. As you embark on a lavish voyage around the stunning shores of Ibiza, the Predator 82 stands ready to deliver an unmatched nautical adventure, blending performance with unparalleled comfort.With its commanding presence and sleek profile, the Sunseeker Predator 82 cuts through the waters with grace and agility. This yacht is an architectural marvel, designed for those who demand the best in life. Its expansive outdoor spaces are perfect for soaking up the Ibiza sun, offering sumptuous seating, sunbathing areas, and an outdoor dining setup for enjoying meals with a view.",
+    "interiorImages": ["SunseekerPredator82/82SunseekerPredator5.jpg", "SunseekerPredator82/82SunseekerPredator10.jpg","SunseekerPredator82/82SunseekerPredator16.jpg", "SunseekerPredator82/82SunseekerPredator14.jpg", "SunseekerPredator82/82SunseekerPredator4.jpg", "SunseekerPredator82/82SunseekerPredator2.jpg"],
+    "detailedSpecs": {
+      "Length": "24 m",
+      "Guests": "12",
+      "Crew": "3",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€6,050 per day",
+      "Cruising Speed": "22 knots",
+      "Max Speed": "35 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x MTU",
+      "HP": "2 x 1820"
+     },
+     "seasonalPrices": {
+      "May / October": "€6,050 per day",
+      "June / September": "€6,050 per day",
+      "July / August": "€7,400 per day"
+    }
+  },
+  {
+    "id": 30,
+    "name": "VanDutch 40",
+    "image": "VanDutch40/MAJESTIC.jpg",
+    "specs": "11,98 m, 9 guests, 1 crew",
+    "price": "€1,600 per day (VAT not included)",
+    "description": "Step aboard the VanDutch 40, an epitome of nautical engineering and sleek design, for an exclusive charter experience in the waters of Ibiza. Known for its striking appearance and remarkable performance, the VanDutch 40 offers a blend of luxury and functionality that is unparalleled in the world of yacht charters.The yacht’s minimalist yet sophisticated design makes it a head-turner in any marina, while its spacious layout provides ample room for relaxation and entertainment. The deck of the VanDutch 40 is thoughtfully designed to maximize comfort, featuring a large sunbathing area and an outdoor seating space perfect for enjoying the panoramic views of Ibiza’s coastline or dining under the stars.",
+    "interiorImages": ["VanDutch40/MAJESTIC5.jpg", "VanDutch40/MAJESTIC4.jpg","VanDutch40/MAJESTIC2.jpg","VanDutch40/MAJESTIC1.jpg"],
+    "detailedSpecs": {
+      "Length": "11,98 m",
+      "Guests": "9",
+      "Crew": "1",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€1,600 per day",
+      "Cruising Speed": "22 knots",
+      "Max Speed": "34 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x YANMAR",
+      "HP": "2 x 480"
+     },
+     "seasonalPrices": {
+      "May / October": "€1,600 per day",
+      "June / September": "€1,600 per day",
+      "July / August": "€1,750 per day"
+    }
+  },
+  {
+    "id": 31,
+    "name": "EVO R4",
+    "image": "EvoR4/R4Evo25.jpeg",
+    "specs": "13,04 m, 11 guests, 1 crew",
+    "price": "€2,300 per day (VAT included)",
+    "description": "Discover the essence of luxury and innovation with the Evo R4 yacht charter in Ibiza, a vessel that redefines the boundaries of modern yachting. With its revolutionary design and cutting-edge technology, the Evo R4 offers a seamless blend of performance, elegance, and comfort, ensuring a memorable voyage across the azure waters of Ibiza.The Evo R4 stands out with its bold, contemporary lines and a layout designed and with a great onboard comfort and relaxation. The yacht's expansive deck is a haven for sun-seekers, featuring generous sunbathing areas and a versatile outdoor lounge that transforms into a dining area, perfect for savoring al fresco meals with breathtaking views.",
+    "interiorImages": [ "EvoR4/R4Evo28.jpeg","EvoR4/R4Evo2.jpeg","EvoR4/R4Evo34.jpeg","EvoR4/R4Evo1.jpeg"],
+    "detailedSpecs": {
+      "Length": "13,04 m",
+      "Guests": "11",
+      "Crew": "1",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€2,300 per day",
+      "Cruising Speed": "24 knots",
+      "Max Speed": "34 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x IPS 650",
+      "HP": "2 x 480"
+     },
+     "seasonalPrices": {
+      "May / October": "€2,300 per day",
+      "June / September": "€2,700 per day",
+      "July / August": "€3,200 per day"
+    }
   }
 ]
 
