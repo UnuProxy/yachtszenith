@@ -101,6 +101,30 @@
   {
     "id": 25,
     "extras": [ "Stabilisers","Music equipment", "Stand up paddle board", "Smart Home", "360 degree ceiling TV" , "4 motorised TV set", "Wi-Fi","Air Conditioning","Jacuzzi with wet bar","Sauna", "Piano", "Snorkel Equipment", "Water Skies", "Wakeboard", "Tender", "SeaBob - on request" ]
+  },
+  {
+    "id": 26,
+    "extras": [ "Music equipment", "Stand up paddle board" ,"Hydraulic Platform","Wi-Fi","Air Conditioning", "Snorkel Equipment", "Wakeboard", "Tender", "SeaBob - on request" ]
+  },
+  {
+    "id": 27,
+    "extras": [ "Music equipment", "Stand up paddle board" ,"Wi-Fi","Air Conditioning", "Snorkel Equipment", "Wakeboard", "SeaBob - on request" ]
+  },
+  {
+    "id": 28,
+    "extras": [ "Music equipment", "Stand up paddle board" ,"Wi-Fi", "Snorkel Equipment", "SeaBob - on request" ]
+  },
+  {
+    "id": 29,
+    "extras": [ "Music equipment", "Stand up paddle board" ,"Wi-Fi", "Snorkel Equipment", "SeaBob - on request", "Tender", "Wakeboard", "Water Skies", "Hydraulic Bathing System" ]
+  },
+  {
+    "id": 30,
+    "extras": [ "Music equipment", "Snorkel Equipment", "SeaBob - on request","Wi-Fi","Stand up paddle board" ]
+  },
+  {
+    "id": 31,
+    "extras": [ "Music equipment", "Snorkel Equipment", "SeaBob","Wi-Fi","Stand up paddle board", "Air Conditioning" ]
   }
 ]
 
