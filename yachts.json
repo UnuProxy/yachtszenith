@@ -32,7 +32,7 @@
     "name": "Pershing 90",
     "image": "Danzas/PershingNavigating(90)16.jpg",
     "specs": "28 m, 12 guests, 3 crew",
-    "price": "€8,000 per day (VAT not included)",
+    "price": "€10,000 per day (VAT not included)",
     "description": "Experience the epitome of speed and luxury aboard the Pershing 90, a stunning masterpiece of modern yachting design. This sleek and elegant vessel, stretching 90 feet in length, blends high performance with unparalleled comfort. Capable of impressive speeds thanks to its powerful engines, the Pershing 90 ensures an exhilarating cruising experience. Inside, the yacht boasts a sophisticated and contemporary interior, featuring state-of-the-art amenities and luxurious accommodations. With spacious cabins, the Pershing 90 can comfortably host guests for overnight stays, making it ideal for both short and extended voyages.",
     "additionalImages": ["Danzas/Pershing(90)1.jpg", "Danzas/Pershing(90)2.jpg"],
     "interiorImages": ["Danzas/Pershing(90)6.jpg", "Danzas/Pershing(90)8.jpg", "Danzas/PershingNavigating(90)45.jpg","Danzas/InteriorPershing5.jpg", "Danzas/InteriorPershing2.jpg", "Danzas/InteriorPershing9.jpg"],
@@ -42,7 +42,7 @@
       "Guests": "12",
       "Crew": "3",
       "Cruising Area": "Balearics",
-     "Price": "€11.000/per day",
+     "Price": "€10.000/per day",
       "Cruising Speed": "39 knots",
       "Max Speed": "44 knots",
       "Class": "Motoryacht",
@@ -50,9 +50,9 @@
       "HP": "4,900"
     },
     "seasonalPrices": {
-      "May / October": "€8,000 per day",
-      "June / September": "€9,500 per day",
-      "July / August": "€11,500 per day"
+      "May / October": "€10,000 per day",
+      "June / September": "€10,000 per day",
+      "July / August": "€12,000 per day"
     }
   },
   {
@@ -144,7 +144,7 @@
     "name": "Mangusta 92",
     "image": "ChillOut/92Mangusta10.jpg",
     "specs": "28,30 m, 12 guests, 3 crew",
-    "price": "€6,800 per day (VAT not included)",
+    "price": "€6,950 per day (VAT not included)",
     "description": "The Mangusta 92 yacht, a splendid masterpiece of nautical engineering, offers an unmatched charter experience, blending exhilarating performance with luxurious comfort. This 28.3m marvel, crafted in Italy, boasts a sleek GRP hull and superstructure, accented with teak decks. Her design is a symphony of style and speed, capable of reaching a breathtaking top speed of 37 knots, while a shallow draft of just 1.2m allows access to secluded shorelines and bays. Inside, the Mangusta 92 exudes elegance and tranquility. The modern, airy interior is bathed in natural light, offering panoramic views of the seascape. Guests are enveloped in an atmosphere of refined comfort, with a choice of two layout options: either three guest cabins with a relaxation room or four guest cabins, each outfitted with high-tech entertainment centers. The yacht comfortably accommodates up to 10 guests, featuring luxurious accommodations including a spacious master cabin with a sauna, a stylish VIP cabin, and additional guest cabins with versatile bedding arrangements.",
     "interiorImages": ["ChillOut/92Mangusta45.jpg","ChillOut/92Mangusta31.jpg","ChillOut/92Mangusta25.jpg","ChillOut/92Mangusta23.jpg","ChillOut/92Mangusta21.jpg","ChillOut/92Mangusta20.jpg","ChillOut/92Mangusta15.jpg","ChillOut/92Mangusta14.jpg","ChillOut/92Mangusta13.jpg","ChillOut/92Mangusta12.jpg"],
     "detailedSpecs": {
@@ -152,7 +152,7 @@
       "Guests": "12",
       "Crew": "4",
       "Cruising Area": "Balearics",
-      "Price": "€8,000 per day",
+      "Price": "€6,950 per day",
        "Cruising Speed": "16 knots",
        "Max Speed": "20 knots",
        "Class": "Motoryacht",
@@ -160,9 +160,9 @@
        "HP": "2,050"
      },
      "seasonalPrices": {
-       "May / October": "€8,000 per day",
-       "June / September": "€9,250 per day",
-       "July / August": "€10,500 per day"
+       "May / October": "€6,950 per day",
+       "June / September": "€8,950 per day",
+       "July / August": "€9,950 per day"
     
     }
   },
@@ -395,7 +395,7 @@
      "seasonalPrices": {
        "May / October": "€5,450 per day",
        "June / September": "€5,450 per day",
-       "July / August": "€6,800 per day / €3,650 per day"
+       "July / August": "€6,800 per day"
     }
   },
   {
