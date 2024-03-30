@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier Yacht Rental Ibiza | Yachts Zenith</title>
+    <meta name="description" content="Yachts Zenith offers first-rate yacht rentals in Ibiza. Explore our vast array of luxurious yachts and treat yourself to specially designed services for an unforgettable journey.">
+    <meta property="og:description" content="With Yachts Zenith, enjoy the best of Ibiza yacht charter.  Pick from our best-rated fleet and start creating your ideal Mediterranean journey right now!">
+    <meta property="og:image" content="https://yachtszenith.com/MiParaiso/58Vanquish10.jpg">
+    <meta property="og:url" content="https://yachtszenith.com/luxury-yacht-rental-ibiza">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://yachtszenith.com/luxury-yacht-rental-ibiza">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">  
+    <link rel="stylesheet" href="azure.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+  <body>
+    
+  <!--  HEADER  -->
+  <div class="black-bg" id="sticky-section">
+    <nav class="position-header">
+      <div class="logo">
+        <a href="./">
+          <p class="logo-text">Yachts Zenith</p>
+        </a>
+      </div>
+      <div class="openMenu"><i class="fa fa-bars"></i></div>
+      <ul class="mainMenu">
+        <li class="submenu-parent"><a href="boat-rental-ibiza">Yacht Charter</a></li>
+        <li class="submenu-parent"><a href="Yacht-routes-ibiza">Destinations</a></li>
+        <li class="submenu-parent"><a href="Contact-us">Contact us</a></li>
+        <li class="submenu-parent"><a href="about-us">About</a>
+          <ul class="submenu">
+           <!--  <li><a href="about-us">Yachts Zenith</a></li> -->
+            <!-- <li><a href="partners">Partners</a></li> -->
+          </ul>
+        </li>
+        <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
+      </ul>
+    </nav>
+  </div>
+  <section>
+    <div class="video-container">
+      <video src="video/VQ82SeaStory.mp4" loop autoplay muted playsinline></video>
+      <div class="gradient-overlay"></div>
+      <div class="card-titles">
+        <h1 class="h-iphone">Premier Yacht Rentals Ibiza</h1>
+    </div>
+    </div>
+  </section>
+
+  <div class="main-wrapper">
+    <header class="page-heading">
+      <h2>Exclusive Yacht Rentals in Ibiza</h2> 
+      <div class="title-accent-line"></div>
+    </header>
+    <div class="details-wrapper">
+        <div class="charter-details">
+            <h2>Luxury and Personalised Service</h2> 
+            <p>Welcome to the pinnacle of Ibiza's luxury yacht charters. Here at Yachts Zenith, we reimagine what it means to go on custom trips around the Mediterranean's pristine waterways. Every yacht in our illustrious fleet radiates style, refinement, and unmatched comfort, guaranteeing not just a voyage but an experience crafted to the highest levels of exclusivity and luxury. Our committed concierge service makes sure every aspect of your charter is perfectly performed, from carefully chosen itineraries to fine dining options catered to your preferences, from the first consultation to the last anchor.</p>
+        </div>
+        <div class="yacht-selection">
+            <h2>Curate Your Dream Voyage with Our Premier Fleet</h2> 
+            <p>Take in the finest assortment of luxury yachts, carefully chosen for discriminating voyagers such as yourself. Yachts Zenith has an amazing selection that includes both majestic sailing yachts for peaceful excursions and sleek motor yachts for exhilarating experiences. Every vessel is a shining example of luxury, furnished with cutting-edge conveniences and leisure equipment to provide guests with an amazing maritime experience. Whether you're organising a large celebration, a family holiday, or an intimate get-away, let us guide you on an extraordinary journey across the enchanted seas of Ibiza.</p>
+        </div>
+    </div>
+</div>
+
+  
+<div class="yacht-grid">
+</div>
+<script src="script.js"></script>
+<script src="yacht.js"></script>
+
+<script>
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/65d1d0978d261e1b5f61ff30/1hmtpdkjl';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll('.charter-details, .yacht-selection');
+
+  const isVisible = (elem) => {
+    let bounding = elem.getBoundingClientRect();
+    return (
+      bounding.top < window.innerHeight
+    );
+  };
+  const addVisibleClass = () => {
+    elements.forEach((el) => {
+      if (isVisible(el) && !el.classList.contains('visible')) {
+        requestAnimationFrame(() => {
+          el.classList.add('visible');
+        });
+      }
+    });
+  };
+  window.addEventListener('scroll', addVisibleClass);
+  window.addEventListener('touchmove', addVisibleClass);
+
+  addVisibleClass();
+});
+</script>
+<footer>
+  <div class="footer-container">
+      <div class="footer-logo">
+          <img src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/ef6abc91-76d1-42e5-3358-ab391e2df600/680x1200" width="57" height="100" alt="Yachts Zenith Logo" loading="lazy">
+      </div>
+
+      <div class="policy-links">
+          <h4>Data Policies</h4>
+          <div><a href="cookies-policy">Cookies Policy</a></div>
+          <div><a href="data-policy">Data Policy</a></div>
+      </div>
+
+      <div class="company">
+          <h4>Company</h4>
+          <div><a href="Contact-us">Contact Us</a></div>
+          <div><a href="about-us">About Us</a></div>
+      </div>
+      <div class="social-media">
+          <h4>Social Media</h4>
+          <div class="socials">
+              <a href="https://facebook.com/Yachtszenith/" aria-label="Follow us on Facebook">
+                  <i class="fab fa-facebook"></i>
+              </a>
+              <a href="https://twitter.com/YachtsZenith" aria-label="Follow us on Twitter">
+                  <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://instagram.com/yachtszenith" aria-label="Follow us on Instagram">
+                  <i class="fab fa-instagram"></i>
+              </a>
+          </div>
+      </div>
+      <div class="resources">
+          <h4>Resources</h4>
+          <div><a href="boat-fuel-calculator">Fuel Calculator</a></div>
+          <div><a href="our-commitment">Our Commitment</a></div>
+          <div><a href="Blog">Blog</a></div>
+      </div>
+      <div class="company-info">
+          <h4>Yachts Zenith Nautic S.L</h4>
+          <p>VAT Number: B56880875</p>
+          <p>Address:</p>
+          <address>
+              Avenida Sant Jordi, 48<br>
+              Ibiza,<br>
+              Spain
+          </address>
+      </div>
+  </div>
+</footer>
+</body>
+</html>
