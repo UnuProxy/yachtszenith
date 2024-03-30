@@ -37,9 +37,10 @@ html, body {
 
 p {
     font-size: 16px; 
-    line-height: 1.7; 
-    margin-bottom: 25px;
+   
     padding-top: 10px;
+    padding-bottom: 5px;
+    
 }
 .main-article-container {
     width: 70%;
@@ -70,13 +71,14 @@ img {
     color: #B89769;
 }
 .side-panel {
-    width: 30%;
-    padding: 20px;
+    width: 27%;
+    padding: 10px;
     position: fixed;
     top: 0;
     right: 0;
     margin-top: 60px;
     border-radius: 5px;
+    z-index: 1000;
 }
 
 .side-article {
@@ -84,9 +86,9 @@ img {
     display: flex;
     align-items: center;
     margin-bottom: 30px; 
-    padding: 20px; 
+    padding: 10px; 
     border-radius: 8px; 
-   background-color: hsl(0, 0%, 0%, 0.5);
+    background-color: hsl(0, 0%, 0%, 0.5);
     transition: background-color 0.3s ease;
 }
 
@@ -147,6 +149,57 @@ img {
         height: 300px; 
     }
 }
+
+.island-expedition {
+    text-align: center;
+    margin-top: 40px;
+}
+.island-expedition p{
+    text-align: justify;
+    background-color: transparent;
+ } 
+ .island-expedition h3{
+    text-align: justify;
+    color: var(--LOGO-COLOR);
+    background-color: transparent;
+ }
+ .island-expedition a{
+    color: #f1f1f1;
+    background-color: transparent;
+    padding: 10px;
+    background-color: #B89769;
+ }
+.ship-fleet {
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+}
+.ship-fleet figure {
+    margin: 20px;
+    max-width: 40%;
+}
+.ship-fleet img {
+    max-width: 100%; 
+    height: auto;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    
+}
+
+.island-expedition figcaption:hover, a:hover {
+   transform: translateY(-5px);
+    transition: transform 0.5s ease;
+}
+.ship-fleet figcaption {
+    text-align: justify;    
+}
+
+@media screen and (max-width: 768px) { 
+    .ship-fleet figure {
+        max-width: 90%; 
+    } 
+} 
+ 
+  
 
 .page-container .footer {
     margin-top: auto;

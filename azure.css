@@ -721,6 +721,106 @@ nav .mainMenu .closeMenu,
   }
 }
 
+.sea-vessel-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 140px;
+}
+
+.category-entry {
+  position: relative;
+  width: calc(33.333% - 20px); 
+  height: 300px; 
+}
+
+
+.category-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease; 
+}
+
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0); 
+  transition: background-color 0.5s ease; 
+}
+
+.category-name {
+  font-size: 34px;
+  color: white;
+  z-index: 2; 
+  margin-bottom: auto; 
+  background-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.category-details {
+  font-size: 18px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease; 
+  transform: translateY(20px); 
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  background-color: transparent;
+}
+.category-details p{
+  background: transparent;
+}
+.category-entry:hover .category-overlay {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.category-entry:hover .category-details   {
+  opacity: 1; 
+  transform: translateY(0); 
+  background-color: transparent;
+}
+
+.category-entry:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .sea-vessel-categories {
+    flex-direction: column;
+  }
+
+  .category-entry {
+    width: 100%; 
+  }
+}
+
+.category-entry {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.5s ease-out;
+}
+
+.category-entry.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
 /* H3 AND PARAGRAPH */
 .spacer {
   margin-top: 160px;
@@ -931,7 +1031,7 @@ button:hover {
 }
 /* YACHT CHARTER BROWSER */
 .filter-bar {
-  margin: 10px auto 60px; /* Consolidated margin-bottom here */
+  margin: 10px auto 60px; 
   max-width: 1200px;
   padding: 10px;
   background-color: transparent;
@@ -970,12 +1070,12 @@ button:hover {
 }
 
 #nameSearch {
-  width: 240px; /* Specific styles for #nameSearch are fine */
+  width: 240px; 
 }
 
 .available-yachts {
   color: var(--LOGO-COLOR);
-  margin: 0 0 40px 75px; /* Adjusted to include margin-left */
+  margin: 0 0 40px 75px; 
   padding: 10px;
 }
 
@@ -1762,8 +1862,6 @@ h3 {
   }
 }
 
-
-
 .image-content > img, .top-image > img, .text-content {
   opacity: 0;
   transform: translateX(-100px); 
@@ -1799,6 +1897,9 @@ h3 {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+
+/*Hire a Boat Ibiza*/
 
 
 /*SUBSCRIBE*/
