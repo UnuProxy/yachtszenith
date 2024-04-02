@@ -485,6 +485,12 @@ nav .mainMenu .closeMenu,
       margin-bottom: 120px;
     }
   }
+  @media  screen and (max-width: 385px) {
+    
+    .h-iphone{
+      font-size: 36px;
+    }
+  }
 
 @media screen and (max-width: 480px) { 
   .subtitles {
@@ -511,7 +517,7 @@ nav .mainMenu .closeMenu,
       padding-top: 100%;
     }
     .h-iphone {
-      font-size: 18px; 
+      font-size: 36px; 
       margin-bottom: 90px; 
     }
     .subtitle-header h2 {
@@ -1496,6 +1502,7 @@ button:hover {
   justify-content: center; 
   width: 100%; 
   margin-left: 80px;
+  overflow: hidden;
 }
 
 .yacht-guide-container p{
@@ -1667,7 +1674,7 @@ h3 {
 }
 
 .text-content {
-  width: 60%;
+  width: 50%;
   text-align: left;
   padding: 30px;
 }
@@ -1689,6 +1696,7 @@ h3 {
 .image-content {
   width: 40%;
   text-align: right;
+  margin-top: 120px;
 }
 
 .image-content img {
