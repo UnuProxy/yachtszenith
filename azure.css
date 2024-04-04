@@ -1928,6 +1928,11 @@ h3 {
   border-radius: 10px; 
 }
 
+.response-time{
+  color: white;
+  margin-bottom: 20px;
+}
+
 .voyage-title {
   text-align: center;
   color: var(--LOGO-COLOR);
