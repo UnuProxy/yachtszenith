@@ -435,16 +435,16 @@
   <a href="boat-rental-ibiza" class="see-all-link"> Explore Yachts in Ibiza </a>
 </div>
 
-<section class="spacer">
+  <section class="spacer">
   <div class="centered-paragraph">
     <h2 class="custom-text">
      Ibiza Fleet Selection
     </h2>
    </div>
   <h3 class="custom-title"> Your experience, our priority  </h3> 
-   </section>
+  </section>
 
-   <section id="category-listings" class="sea-vessel-categories">
+  <section id="category-listings" class="sea-vessel-categories">
     <div class="category-entry vessel-rise">
       <a href="https://yachtszenith.com/boat-rental-ibiza">
         <div class="category-image">
@@ -556,7 +556,7 @@
   </div>
 </section>
 
-  <section id="charter-experiences" class="charter-experiences">
+<section id="charter-experiences" class="charter-experiences">
     <div class="charter-title">
       <h2>Charter Experiences</h2>
     </div>
@@ -579,7 +579,7 @@
         <img src="https://imagedelivery.net/GnZe6htJC9zsz6pGbJNnqw/b93e182d-8f7a-48fe-6bb7-7a540eda7e00/680x1200" alt="Luxury Yachting Ibiza" loading="lazy">
       </div>
     </div>
-  </section>
+</section>
 
 <section class="yacht-news-section">
   <div class="titles-container">
@@ -607,7 +607,8 @@
 
 <section class="sea-container">
   <div class="sea-contact-wrapper" id="contactFormWrapper">
-    <h2 class="voyage-title">Contact Us</h2>
+    <h2 class="voyage-title">Talk to Us - We're Here for You</h2>
+    <p class="response-time">Your time is precious to us! Expect a response within minutes.</p>
     <form class="anchor-form" id="contactForm">
       <div class="harbor-input-container">
         <label for="name" class="ocean-label">Name</label>
@@ -615,8 +616,32 @@
       </div>
       <div class="harbor-input-container">
         <label for="email" class="ocean-label">Email</label>
-        <input type="email" id="newsletterEmail" name="email" class="marine-input" placeholder="Your Email">
+        <input type="email" id="email" name="email" class="marine-input" placeholder="Your Email">
       </div>
+      <div class="harbor-input-container">
+        <label for="boatType" class="ocean-label">Type of Boat Interested In</label>
+        <select id="boatType" name="boatType" class="marine-input">
+          <option value="">Select</option>
+          <option value="motorYacht">Motor Yacht</option>
+          <option value="SuperYacht">Super Yacht</option>
+          <option value="sailingYacht">Sailing Yacht</option>
+          <option value="gulet">Gulet</option>
+          <option value="catamaran">Catamaran</option>
+          
+          <!-- Add more boat types as needed -->
+          <option value="other">Other</option>
+        </select>
+        <input type="text" id="otherBoatType" name="otherBoatType" class="marine-input" placeholder="If other, please specify" style="margin-top: 10px; display: none;">
+      </div>
+      <div class="harbor-input-container">
+        <label for="budget" class="ocean-label">Budget</label>
+        <div class="currency-input-container" style="display: flex; align-items: center;">
+          <input type="text" id="budget" name="budget" class="marine-input" placeholder="e.g., 5,000" style="flex-grow: 1;">
+          <span class="currency-indicator" style="margin-left: 8px; color: white;">EUR</span>
+        </div>
+      </div>
+      
+      
       <div class="harbor-input-container">
         <label for="message" class="ocean-label">Message</label>
         <textarea id="message" name="message" class="marine-input" placeholder="Your Message"></textarea>
@@ -744,7 +769,13 @@
   </div> 
 </div> 
 
-
+<script>document.getElementById('budget').addEventListener('input', function (e) {
+  var value = e.target.value.replace(/,/g, ''); // Remove existing commas
+  var numericValue = value.replace(/\D/g, ''); // Keep only digits
+  var formattedValue = numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, ','); // Add commas
+  e.target.value = formattedValue; // Update the value in the input
+});
+</script>
 <div class="faq-section">
   <h2>FAQs</h2>
   <p class="faq-color">This section addresses common queries, offering expert advice on everything from the cost of chartering a yacht in Ibiza to the best times to visit. Whether you're curious about the specific amenities onboard, safety protocols, or how to personalize your sailing itinerary, our FAQs are designed to provide you with the clarity and confidence to book your luxury yacht charter in Ibiza.</p><br>
@@ -868,38 +899,15 @@
 });
 </script>
 <script>
-  window.addEventListener('scroll', function() {
-  var form = document.getElementById('contactForm');
-  var position = form.getBoundingClientRect();
-  if(position.top < window.innerHeight - 100 && position.bottom >= 100) {
-    form.style.opacity = '1';
-    form.style.transform = 'translateY(0)';
-  } else {
-    form.style.opacity = '0';
-    form.style.transform = 'translateY(20px)';
-  }
-});
-
-/*FORM SUBMISSION*/
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
   var form = document.querySelector('.anchor-form');
   form.addEventListener('submit', function(e) {
     e.preventDefault(); 
-
     var formData = new FormData(form);
-    var object = {};
-    formData.forEach(function(value, key) {
-      object[key] = value;
-    });
-    var json = JSON.stringify(object);
-
-    fetch('https://usebasin.com/f/5901228062f3', {
+    fetch('https://usebasin.com/f/5901228062f3', { 
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: json
+      body: formData 
+      
     })
     .then(response => {
       if (response.ok) {
@@ -915,6 +923,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
   </script>
 <script>
   // Function for blog
