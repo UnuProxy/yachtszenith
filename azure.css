@@ -171,7 +171,6 @@
   .mainMenu 
   
   .submenu {
-    /* position: static; */ 
     display: none; 
     width: 100%; 
     background-color: transparent;
@@ -184,7 +183,6 @@
     flex-direction: column;
   }
 }
-
 .mainMenu li:last-child {
   margin-right: 0;
 }
