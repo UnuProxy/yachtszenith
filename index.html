@@ -126,20 +126,29 @@
   <!-- Event snippet for Page view conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
-  function gtag_report_conversion(url) {
+function gtag_report_conversion(url) {
     var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
+        if (typeof(url) != 'undefined') {
+            window.location = url;
+        }
     };
+
+    gtag('event', 'form_submit', {
+        'event_category': 'Form', 
+        'event_label': 'Submission', 
+        'value': 1.0 
+    });
+
     gtag('event', 'conversion', {
         'send_to': 'AW-11301463097/4DDoCL3mgaUZELnI-owq',
         'value': 1.0,
         'currency': 'EUR',
         'event_callback': callback
     });
-    return false;
-  }
+
+    return false; 
+}
+
   </script>
   
 <script>
