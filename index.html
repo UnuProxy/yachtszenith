@@ -123,6 +123,25 @@
     gtag('js', new Date());
     gtag('config', '  ');
   </script>  
+  <!-- Event snippet for Page view conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-11301463097/4DDoCL3mgaUZELnI-owq',
+        'value': 1.0,
+        'currency': 'EUR',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+  
 <script>
   function loadGTM() {
       (function(w, d, s, l, i) {
@@ -171,8 +190,8 @@
         <li class="submenu-parent"><a href="Contact-us">Contact us</a></li>
         <li class="submenu-parent"><a href="about-us">About</a>
           <ul class="submenu">
-           <!--  <li><a href="about-us">Yachts Zenith</a></li> -->
-            <!-- <li><a href="partners">Partners</a></li> -->
+            <!-- <li><a href="about-us">Yachts Zenith</a></li>
+            <li><a href="partners">Partners</a></li> -->
           </ul>
         </li>
         <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
@@ -247,7 +266,7 @@
       <div class="column">
 
         <h2 class="animate slide-in-1">Start your dream luxury yacht charter Ibiza with Yachts Zenith</h2>
-        <p>Book a <a href="luxury-yacht-rental-ibiza"><strong>yacht rental in Ibiza</strong></a> effortlessly now, or <a href="boat-rental-ibiza"><strong>boat rental in Ibiza</strong></a> with ease. Our company's premier fleet portfolio of <a href="luxury-yacht-rental-ibiza"><strong>yachts</strong></a> offers a selection of comfortable and superb <a href="luxury-yacht-rental-ibiza.html"><strong>motorboats</strong></a>, superyachts, and spacious catamarans for your dream of an Ibiza yacht charter holiday. Our team of professionals aims to ensure that your experience chartering our yachts is unique. We prioritise our customers above anything else, offering the “Best Experience Guarantee,” which is our company motto.
+        <p>Book a <a href="luxury-yacht-rental-ibiza"><strong>yacht rental in Ibiza</strong></a> effortlessly now, or <a href="boat-rental-ibiza"><strong>boat rental in Ibiza</strong></a> with ease. Our company's premier fleet portfolio of <a href="luxury-yacht-rental-ibiza"><strong>yachts</strong></a> offers a selection of comfortable and superb <a href="luxury-yacht-rental-ibiza.html"><strong>motorboats</strong></a>, superyachts, and catamarans for your dream of an Ibiza yacht charter holiday. Our team of professionals aims to ensure that your experience chartering our yachts is unique. We prioritise our customers above anything else, offering the “Best Experience Guarantee”
         </p>
 
       </div>
