@@ -123,6 +123,25 @@
     gtag('js', new Date());
     gtag('config', '  ');
   </script>  
+  <!-- Event snippet for Page view conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-11301463097/4DDoCL3mgaUZELnI-owq',
+        'value': 1.0,
+        'currency': 'EUR',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+  
 <script>
   function loadGTM() {
       (function(w, d, s, l, i) {
@@ -171,8 +190,8 @@
         <li class="submenu-parent"><a href="Contact-us">Contact us</a></li>
         <li class="submenu-parent"><a href="about-us">About</a>
           <ul class="submenu">
-           <!--  <li><a href="about-us">Yachts Zenith</a></li> -->
-            <!-- <li><a href="partners">Partners</a></li> -->
+            <!-- <li><a href="about-us">Yachts Zenith</a></li>
+            <li><a href="partners">Partners</a></li> -->
           </ul>
         </li>
         <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
