@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>http://yachtszenith.com/</loc>
-        <lastmod>2024-03-30</lastmod>
+        <lastmod>2024-08-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://yachtszenith.com/boat-rental-ibiza</loc>
-        <lastmod>2024-03-30</lastmod>
+        <lastmod>2024-04-18</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
@@ -65,6 +65,12 @@
     <url>
         <loc>http://yachtszenith.com/Ibiza2024</loc>
         <lastmod>2024-03-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>http://yachtszenith.com/Santa-eulalia2024</loc>
+        <lastmod>2024-04-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.90</priority>
     </url>
