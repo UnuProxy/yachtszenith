@@ -811,6 +811,58 @@
       "June / September": "€2,700 per day",
       "July / August": "€3,200 per day"
     }
+  },
+  {
+    "id": 32,
+    "name": "Sunseeker Portofino 53",
+    "image": "Portofino53/53Portofino9.jpg",
+    "specs": "17,40 m, 12 guests, 1 crew",
+    "price": "€1,800 per day (VAT not included)",
+    "description": "Embark on a luxurious escape to Formentera with the Sunseeker Portofino 53, your perfect companion for a day of sea, sun, and sophistication. This sleek yacht offers speed and style, with spacious sunbathing areas and a comfortable dining deck, ideal for savoring views and vintages alike. Dive into the crystal-clear waters or relax in plush comfort as you discover the hidden gems of Formentera’s coastline. The Sunseeker Portofino 53 promises an unforgettable day of adventure and relaxation in the most picturesque surroundings.",
+    "interiorImages": [ "Portofino53/53Portofino23.jpg","Portofino53/53Portofino13.jpg","Portofino53/53Portofino12.jpg","Portofino53/53Portofino9.jpg","Portofino53/53Portofino7.jpg","Portofino53/53Portofino21.jpg","Portofino53/53Portofino20.jpg", "Portofino53/53Portofino19.jpg"],
+    "detailedSpecs": {
+      "Length": "17,40 m",
+      "Guests": "12",
+      "Crew": "1",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€1,800 per day",
+      "Cruising Speed": "24 knots",
+      "Max Speed": "30 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x VOLVO 800",
+      "HP": "2 x 800"
+     },
+     "seasonalPrices": {
+      "May / October": "€1,800 per day",
+      "June / September": "€2,000 per day",
+      "July / August": "€2,400 per day"
+    }
+  },
+  {
+    "id": 33,
+    "name": "Alfamarine 78",
+    "image": "78Alfamarine/78Alfamarine5.jpg",
+    "specs": "24 m, 12 guests, 2 crew",
+    "price": "€4,900 per day (VAT not included)",
+    "description": "Step aboard the Alfamarine 78, a yacht that redefines luxury and performance for an unmatched sailing experience in Ibiza. This stunning vessel boasts a bold design and delivers exhilarating speed, making it perfect for those looking to soak in the vibrant atmosphere of the Balearic seas in style. With spacious interiors that include four luxuriously appointed cabins, the Alfamarine 78 accommodates up to eight guests in supreme comfort. The expansive deck features ample lounging areas and a state-of-the-art sound system, ideal for entertaining and enjoying Ibiza’s iconic sunsets.",
+    "interiorImages": [ "78Alfamarine/78Alfamarine7.jpg","78Alfamarine/78Alfamarine19.jpg","78Alfamarine/78Alfamarine20.jpg","78Alfamarine/78Alfamarine21.jpg","78Alfamarine/78Alfamarine26.jpg","78Alfamarine/78Alfamarine23.jpg","78Alfamarine/78Alfamarine30.jpg", "78Alfamarine/78Alfamarine12.jpg", "78Alfamarine/78Alfamarine11.jpg"],
+    "detailedSpecs": {
+      "Length": "24 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€4,900 per day",
+      "Cruising Speed": "25 knots",
+      "Max Speed": "30 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x CAT",
+      "HP": "2 x 1650"
+     },
+     "seasonalPrices": {
+      "May / October": "€4,900 per day",
+      "June / September": "€5,900 per day",
+      "July / August": "€6,900 per day"
+    }
   }
 ]
 
