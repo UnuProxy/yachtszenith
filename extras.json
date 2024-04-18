@@ -125,6 +125,14 @@
   {
     "id": 31,
     "extras": [ "Music equipment", "Snorkel Equipment", "SeaBob","Wi-Fi","Stand up paddle board", "Air Conditioning" ]
+  },
+  {
+    "id": 32,
+    "extras": [ "Music equipment", "Snorkel Equipment","Wi-Fi","Stand up paddle board", "Air Conditioning" ]
+  },
+  {
+    "id": 33,
+    "extras": [ "Tender Jet","Music equipment", "Snorkel Equipment","Wi-Fi","Stand up paddle board", "Air Conditioning", "Donut", "Wakeboard" ]
   }
 ]
 
