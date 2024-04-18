@@ -123,8 +123,7 @@
     gtag('js', new Date());
     gtag('config', '  ');
   </script>  
-  <!-- Event snippet for Page view conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+
 <script>
 function gtag_report_conversion(url) {
     var callback = function () {
@@ -134,7 +133,7 @@ function gtag_report_conversion(url) {
     };
 
     gtag('event', 'form_submit', {
-        'event_category': 'Form', 
+        'event_category': 'contactForm', 
         'event_label': 'Submission', 
         'value': 1.0 
     });
@@ -198,13 +197,14 @@ function gtag_report_conversion(url) {
         <li class="submenu-parent"><a href="Yacht-routes-ibiza">Destinations</a></li>
         <li class="submenu-parent"><a href="Contact-us">Contact us</a></li>
         <li class="submenu-parent"><a href="about-us">About</a>
+          <li class="submenu-parent"><a href="#contactFormWrapper" class="enquire-button">ENQUIRE</a>
           <ul class="submenu">
             <!-- <li><a href="about-us">Yachts Zenith</a></li>
             <li><a href="partners">Partners</a></li> -->
           </ul>
         </li>
         <li><div class="closeMenu"><i class="fa fa-times"></i></div></li>
-      </ul>
+    </ul>
     </nav>
   </div>
   
@@ -770,7 +770,7 @@ function gtag_report_conversion(url) {
   </div>
 </section>
  -->
-<!-- CONTACT BROKER   -->
+
 <div class="parallax-wrapper">
   <div class="wrapper">
       <div class="half branding">
@@ -795,14 +795,16 @@ function gtag_report_conversion(url) {
   </div> 
 </div> 
 
-<script>document.getElementById('budget').addEventListener('input', function (e) {
+<script>
+document.getElementById('budget').addEventListener('input', function (e) {
   var value = e.target.value.replace(/,/g, ''); // Remove existing commas
   var numericValue = value.replace(/\D/g, ''); // Keep only digits
   var formattedValue = numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, ','); // Add commas
   e.target.value = formattedValue; // Update the value in the input
 });
 </script>
-<div class="faq-section">
+<div 
+class="faq-section">
   <h2>FAQs</h2>
   <p class="faq-color">This section addresses common queries, offering expert advice on everything from the cost of chartering a yacht in Ibiza to the best times to visit. Whether you're curious about the specific amenities onboard, safety protocols, or how to personalize your sailing itinerary, our FAQs are designed to provide you with the clarity and confidence to book your luxury yacht charter in Ibiza.</p><br>
 
@@ -1157,6 +1159,39 @@ window.onload=function(){var e=document.getElementById("yzCookieConsentContainer
 });
 
 </script>
+<script>
+  function smoothScroll(target, duration) {
+    var target = document.querySelector(target);
+    var targetPosition = target.getBoundingClientRect().top;
+    var startPosition = window.pageYOffset;
+    var startTime = null;
+  
+    function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      var timeElapsed = currentTime - startTime;
+      var run = ease(timeElapsed, startPosition, targetPosition, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+  
+    function ease(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+  
+    requestAnimationFrame(animation);
+  }
+  
+  var enquireButton = document.querySelector('.enquire-button');
+  enquireButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    var targetId = this.getAttribute('href');
+    smoothScroll(targetId, 1000); 
+  });
+  </script>
+  
 <script src="script.js" defer></script>
  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
