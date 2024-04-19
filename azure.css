@@ -1794,7 +1794,10 @@ h3 {
   color: var(--LOGO-COLOR);
   background-color: transparent;
 }
-
+.title-blog a{
+  background-color: transparent;
+  color: var(--LOGO-COLOR);
+}
 .column-container {
   display: flex;
   justify-content: space-around;
