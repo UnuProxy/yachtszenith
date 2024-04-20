@@ -29,6 +29,7 @@
     --H2-FONTSIZE: 1.5em;
     --H3-YACHTMAIN: 36px;
   }
+  
 
   html {
     scroll-behavior: smooth;
@@ -1171,6 +1172,11 @@ button:hover {
   object-fit: cover;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .position-header {
+      margin: 10px 0;  
+  }
+}
 
 @media only screen and (max-width: 1024px) {
   .yachtWrapper {
@@ -1307,8 +1313,7 @@ button:hover {
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .yacht-card {
-    width: calc((100% / 2) - (20px / 2)); /* Adjust for two items per row */
-    /* No need for nth-of-type margin adjustments */
+    width: calc((100% / 2) - (20px / 2)); 
   }
 }
 
@@ -1500,18 +1505,18 @@ button:hover {
   gap: 20px;
   justify-content: center; 
   width: 100%; 
-  margin-left: 80px;
   overflow: hidden;
 }
 
-.yacht-guide-container p{
+.yacht-guide-container p {
   max-width: 600px;
   text-align: justify;
 }
 
+
+
 .short-paragraph{
  max-width: 800px;
-
 }
 
 .column {
@@ -1785,7 +1790,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   padding: 0 5%; 
-  box-sizing: border-box;
+
   background-color: transparent;
 }
 
@@ -1881,7 +1886,6 @@ h3 {
 
 .yachting-row article {
   opacity: 0;
-  /* transform: translateY(20px);  */
   will-change: transform, opacity;
 }
 
@@ -1921,7 +1925,6 @@ h3 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   margin-top: 160px;
-  
 }
 
 .sea-container {
