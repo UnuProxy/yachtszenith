@@ -863,6 +863,81 @@
       "June / September": "€5,900 per day",
       "July / August": "€6,900 per day"
     }
+  },
+  {
+    "id": 34,
+    "name": "Sunreef 70 Yolo",
+    "image": "Sunreef70/70Sunreef2.jpg",
+    "specs": "23,60 m, 12 guests, 2 crew",
+    "price": "€9,350 per day (VAT not included)",
+    "description": "Step aboard the Sunreef 70, a luxurious catamaran celebrated for its exceptional stability and generous space. Perfectly blending performance with comfort, this yacht offers a lavish interior and stunning, wide-open views from its expansive saloon.The Sunreef 70 sleeps up to eight guests in four elegantly designed cabins, each featuring an en-suite bathroom for utmost privacy. Enjoy multiple outdoor lounging areas, including a flybridge with a jacuzzi and an aft deck that’s ideal for dining beneath the stars.With a selection of modern water toys, the Sunreef 70 promises both relaxing and adventurous experiences as you navigate the serene waters of Ibiza.",
+    "interiorImages": [ "Sunreef70/70Sunreef3.jpg","Sunreef70/70Sunreef5.jpg","Sunreef70/70Sunreef6.jpg","Sunreef70/70Sunreef7.jpg","Sunreef70/70Sunreef8.jpg","Sunreef70/70Sunreef9.jpg", "Sunreef70/70Sunreef10.jpg", "Sunreef70/70Sunreef11.jpg","Sunreef70/70Sunreef12.jpg","Sunreef70/70Sunreef13.jpg", "Sunreef70/70Sunreef14.jpg", "Sunreef70/70Sunreef15.jpg", "Sunreef70/70Sunreef16.jpg","Sunreef70/70Sunreef17.jpg","Sunreef70/70Sunreef18.jpg", "Sunreef70/70Sunreef19.jpg", "Sunreef70/70Sunreef20.jpg"],
+    "detailedSpecs": {
+      "Length": "23,60 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Balearics",
+      "Price": "€9,350 per day",
+      "Cruising Speed": "10 knots",
+      "Max Speed": "20 knots",
+      "Class": "Catamaran"
+     },
+     "seasonalPrices": {
+      "May / October": "€9,350 per day",
+      "June / September": "€9,350 per day",
+      "July / August": "€10,500 per day"
+    }
+  },
+  {
+    "id": 35,
+    "name": "Pardo 38",
+    "image": "Pardo38/38Pardo17.jpg",
+    "specs": "12 m, 12 guests, 1 crew",
+    "price": "€1,300 per day (VAT not included)",
+    "description": "Embark on a stylish adventure with the Pardo 38, a sleek and powerful yacht designed for those who love speed and elegance. This 12-meter masterpiece combines high performance with luxury, cruising comfortably at speeds of 25 knots and reaching a top speed of up to 36 knots.The Pardo 38 features a spacious deck with sunbathing areas and a comfortable dining space, ideal for enjoying the Mediterranean sun or dining alfresco. With its state-of-the-art amenities and room for up to 12 guests, this yacht is perfect for day trips exploring Ibiza’s stunning coastlines and secluded bays.",
+    "interiorImages": [ "Pardo38/38Pardo19.jpg", "Pardo38/38Pardo14.jpg","Pardo38/38Pardo13.jpg", "Pardo38/38Pardo85.jpg", "Pardo38/38Pardo64.jpg"],
+    "detailedSpecs": {
+      "Length": "12 m",
+      "Guests": "12",
+      "Crew": "1",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€1,300 per day",
+      "Cruising Speed": "25 knots",
+      "Max Speed": "36 knots",
+      "Class": "Motor boat",
+      "HP": "2 x 380"
+     },
+     "seasonalPrices": {
+      "May / October": "€1,300 per day",
+      "June / September": "€1,550 per day",
+      "July / August": "€1,750 per day"
+    }
+  },
+  {
+    "id": 36,
+    "name": "Fjord 41",
+    "image": "Fjord41/41Fjord11.jpg",
+    "specs": "13,51 m, 11 guests, 1 crew",
+    "price": "€1,610 per day (VAT not included)",
+    "description": "The Fjord 41, a symbol of sophistication and power, is the ideal choice for those looking to cruise with style and comfort. This 12-meter yacht stands out with its innovative design and excellent manoeuvrability, cruising smoothly at speeds of 25 knots and achieving a top speed of 30 knots.Designed for both leisure and entertainment, the Fjord 41 offers an expansive open deck featuring versatile seating and sunbathing areas. Its modern amenities accommodate up to 12 guests, perfect for day excursions or sunset cruises along the breathtaking shores of Ibiza.",
+    "interiorImages": [ "Fjord41/41Fjord10.jpeg","Fjord41/41Fjord1.JPG", "Fjord41/41Fjord9.JPG","Fjord41/41Fjord7.jpg"],
+    "detailedSpecs": {
+      "Length": "13,51 m",
+      "Guests": "11",
+      "Crew": "1",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€1,610 per day",
+      "Cruising Speed": "25 knots",
+      "Max Speed": "30 knots",
+      "Class": "Motor boat",
+      "Engine": "2 x Volvo Penta",
+      "HP": "2 x 440"
+     },
+     "seasonalPrices": {
+      "May / October": "€1,610 per day",
+      "June / September": "€2,100 per day",
+      "July / August": "€2,800 per day"
+    }
   }
 ]
 

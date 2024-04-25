@@ -133,6 +133,18 @@
   {
     "id": 33,
     "extras": [ "Tender Jet","Music equipment", "Snorkel Equipment","Wi-Fi","Stand up paddle board", "Air Conditioning", "Donut", "Wakeboard" ]
+  },
+  {
+    "id": 34,
+    "extras": [ "Tender Jet","Hi-Fi Music System","2 X SEABOB F5S","Fishing gear","Water Skies", "Snorkel Equipment","Wi-Fi","Stand up paddle board", "Air Conditioning", "Donut", "Wakeboard" ]
+  },
+  {
+    "id": 35,
+    "extras": [ "Wi-Fi","Stand up paddle board", "Air Conditioning", "Wakeboard" ]
+  },
+  {
+    "id": 36,
+    "extras": [ "Wi-Fi","Stand up paddle board", "Air Conditioning", "Wakeboard" ]
   }
 ]
 
