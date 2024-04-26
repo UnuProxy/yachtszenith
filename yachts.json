@@ -94,7 +94,7 @@
     "interiorImages": ["Kirios/102AstondoaDron15.jpg", "Kirios/102AstondoaDron5.jpg", "Kirios/102AstondoaDron9.jpg", "Kirios/102AstondoaDron11.jpg","Kirios/102AstondoaBedrooms1.jpg","Kirios/102AstondoaBedrooms3.jpg","Kirios/102AstondoaBedrooms4.jpg","Kirios/102AstondoaBedrooms6.jpg","Kirios/102AstondoaBedrooms7.jpg","Kirios/102AstondoaLiving5.jpg","Kirios/102AstondoaLiving6.jpg","Kirios/102AstondoaLiving8.jpg"],
     "exteriorImages": ["exterior7.jpg", "exterior8.jpg"],
     "detailedSpecs": {
-      "Length": "31,5m",
+      "Length": "31,50m",
       "Guests": "12",
       "Crew": "4",
       "Cruising Area": "Balearics",
@@ -148,7 +148,7 @@
     "description": "The Mangusta 92 yacht, a splendid masterpiece of nautical engineering, offers an unmatched charter experience, blending exhilarating performance with luxurious comfort. This 28.3m marvel, crafted in Italy, boasts a sleek GRP hull and superstructure, accented with teak decks. Her design is a symphony of style and speed, capable of reaching a breathtaking top speed of 37 knots, while a shallow draft of just 1.2m allows access to secluded shorelines and bays. Inside, the Mangusta 92 exudes elegance and tranquility. The modern, airy interior is bathed in natural light, offering panoramic views of the seascape. Guests are enveloped in an atmosphere of refined comfort, with a choice of two layout options: either three guest cabins with a relaxation room or four guest cabins, each outfitted with high-tech entertainment centers. The yacht comfortably accommodates up to 10 guests, featuring luxurious accommodations including a spacious master cabin with a sauna, a stylish VIP cabin, and additional guest cabins with versatile bedding arrangements.",
     "interiorImages": ["ChillOut/92Mangusta45.jpg","ChillOut/92Mangusta31.jpg","ChillOut/92Mangusta25.jpg","ChillOut/92Mangusta23.jpg","ChillOut/92Mangusta21.jpg","ChillOut/92Mangusta20.jpg","ChillOut/92Mangusta15.jpg","ChillOut/92Mangusta14.jpg","ChillOut/92Mangusta13.jpg","ChillOut/92Mangusta12.jpg"],
     "detailedSpecs": {
-      "Length": "28,3m",
+      "Length": "28,30m",
       "Guests": "12",
       "Crew": "4",
       "Cruising Area": "Balearics",
@@ -407,7 +407,7 @@
     "description": "Fancy a brilliant day out on the Ibiza waters? The CNM Continental Tender 50 awaits! This beauty offers space galore for lounging in the sun, a powerful engine for zipping about, and all the comforts you could need. Your Mediterranean adventure starts here.",
     "interiorImages": ["CNM50/50CNM20.jpg", "CNM50/50CNM13.jpg","CNM50/50CNM14.jpg","CNM50/50CNM15.jpg","CNM50/50CNM21.jpg","CNM50/50CNM18.jpg","CNM50/50CNM16.jpg","CNM50/50CNM7.jpg","CNM50/50CNM1.jpg", "CNM50/50CNM11.jpg"],
     "detailedSpecs": {
-      "Length": "16.03 m",
+      "Length": "16,03 m",
       "Guests": "10",
       "Crew": "2",
       "Cruising Area": "Ibiza - Formentera",
@@ -485,7 +485,7 @@
     "description": "Sleek, powerful, and undeniably stylish – the Vanquish 45 is the ultimate vessel for your Ibiza charter. Experience the thrill of open water, secluded coves, and the vibrant energy of the island in true luxury.",
     "interiorImages": ["Vanquish45/45Vanquish6.jpg", "Vanquish45/45Vanquish5.jpg","Vanquish45/45Vanquish4.jpg","Vanquish45/45Vanquish3.jpg","Vanquish45/45Vanquish1.jpg","Vanquish45/45Vanquish7.jpg"],
     "detailedSpecs": {
-      "Length": "13.1 m",
+      "Length": "13,10 m",
       "Guests": "11",
       "Crew": "2",
       "Cruising Area": "Ibiza - Formentera",
@@ -511,7 +511,7 @@
     "description": "Experience Ibiza's magic aboard the Vanquish 52. This spacious and luxurious yacht offers ample room for sunbathing, socialising, or dining alfresco. Explore hidden coves by day and indulge in Ibiza's vibrant nightlife – all in impeccable style.",
     "interiorImages": ["Vanquish52/52Vanquish14.jpg", "Vanquish52/52Vanquish12.jpg","Vanquish52/52Vanquish13.jpg","Vanquish52/52Vanquish5.jpg","Vanquish52/52Vanquish11.jpg"],
     "detailedSpecs": {
-      "Length": "16.2 m",
+      "Length": "16,20 m",
       "Guests": "12",
       "Crew": "2",
       "Cruising Area": "Ibiza - Formentera",
@@ -533,15 +533,15 @@
     "name": "Riva Argo 90",
     "image": "RivaArgo90/90RivaArgo3.jpg",
     "specs": "28.70 m, 12 guests, 4 crew",
-    "price": "€12,950 per week (VAT not included)",
+    "price": "€12,950 per day (VAT not included)",
     "description": "The magnificent Riva Argo 90' , awaits your next adventure. Her powerful profile and sporty design promise thrilling journeys, while her elegant interiors provide the ultimate retreat. Experience the thrill of the open sea in timeless Italian style",
     "interiorImages": ["RivaArgo90/90RivaArgo2.jpg", "RivaArgo90/90RivaArgo5.jpg","RivaArgo90/90RivaArgo6.jpg","RivaArgo90/90RivaArgo9.jpg","RivaArgo90/90RivaArgo8.jpg", "RivaArgo90/90RivaArgo13.jpg","RivaArgo90/90RivaArgo17.jpg", "RivaArgo90/90RivaArgo15.jpg","RivaArgo90/90RivaArgo14.jpg"],
     "detailedSpecs": {
-      "Length": "28.70 m",
+      "Length": "28,70 m",
       "Guests": "12",
       "Crew": "2",
       "Cruising Area": "Balearics",
-      "Price": "€12,950 per week",
+      "Price": "€12,950 per day",
       "Cruising Speed": "22 knots",
       "Max Speed": "28 knots",
       "Class": "Motoryacht",
@@ -549,16 +549,16 @@
       "HP": "2 x 2650"
      },
      "seasonalPrices": {
-       
-       "Off-Peak Season": "€12,950 per week",
-       "High Season": "€14,950 per week"
+        "May / October": "€12,950 per day",
+        "June / September": "€12,950 per day",
+        "July / August": "€14,950 per day"
     }
   },
   {
     "id": 22,
     "name": "Riva Perseo 76",
     "image": "RivaPerseo76/76RivaPerseo42.jpg",
-    "specs": "23.25 m, 12 guests, 3 crew",
+    "specs": "23,25 m, 12 guests, 3 crew",
     "price": "€5,800 per day (VAT included)",
     "description": "Experience the best of Ibiza with the Riva Perseo 76. This luxurious yacht is perfect for families, friends or business meetings, offering a spacious sundeck, comfortable cabins, and the freedom to explore. Book your dream charter today!",
     "interiorImages": ["RivaPerseo76/76RivaPerseo40.jpg", "RivaPerseo76/76RivaPerseo1.jpg","RivaPerseo76/76RivaPerseo41.jpg","RivaPerseo76/76RivaPerseo27.jpg","RivaPerseo76/76RivaPerseo24.jpg", "RivaPerseo76/76RivaPerseo25.jpg","RivaPerseo76/76RivaPerseo23.jpg", "RivaPerseo76/76RivaPerseo20.jpg","RivaPerseo76/76RivaPerseo17.jpg","RivaPerseo76/76RivaPerseo12.jpg","RivaPerseo76/76RivaPerseo11.jpg","RivaPerseo76/76RivaPerseo10.jpg"],
@@ -588,7 +588,7 @@
     "description": "Whether you desire a relaxing day soaking up the Mediterranean sun or an adrenaline-fueled adventure, the Fjord 48 yacht charter in Ibiza delivers.  Spacious decks, stylish amenities, and incredible performance make it your ultimate escape",
     "interiorImages": ["Fjord48/48Fjord41.jpg", "Fjord48/48Fjord33.jpg","Fjord48/48Fjord28.jpg","Fjord48/48Fjord26.jpg","Fjord48/48Fjord23.jpg","Fjord48/48Fjord8.jpg","Fjord48/48Fjord2.jpg"],
     "detailedSpecs": {
-      "Length": "15.98 m",
+      "Length": "15,98 m",
       "Guests": "12",
       "Crew": "2",
       "Cruising Area": "Ibiza - Formentera",
