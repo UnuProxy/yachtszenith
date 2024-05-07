@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     yachtData = filteredYachts;
     loadYachts();
   }
-  // Fetch yachts from yachts.json and populate the grid
+
   fetch('yachts.json')
     .then(response => response.json())
     .then(data => {
@@ -71,7 +71,7 @@ document.getElementById('yachtsContainer').addEventListener('touchstart', functi
   document.querySelector('.swipe-indicator').style.display = 'none';
 });
 var swiper = new Swiper('.swiper-container', {
-  // Swiper options...
+  
   on: {
     slideChange: function () {
       document.querySelector('.swipe-indicator').style.display = 'none';
