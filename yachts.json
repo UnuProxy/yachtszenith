@@ -937,6 +937,32 @@
       "June / September": "€2,100 per day",
       "July / August": "€2,800 per day"
     }
+  },
+  {
+    "id": 37,
+    "name": "Pershing 62",
+    "image": "Pershing62/62Pershing6.jpeg",
+    "specs": "19,90 m, 12 guests, 2 crew",
+    "price": "€3.750 per day (VAT not included)",
+    "description": "Get ready for an unforgettable adventure with the Pershing 62 yacht charter in Ibiza. This stunning yacht is all about luxury and excitement, perfect for those who want to explore the beautiful waters around Ibiza and Formentera. Imagine sunbathing on the spacious deck, speeding through the waves at up to 46 knots, and relaxing in the elegant master suite after a day of fun. With its sleek design and top-notch amenities, the Pershing 62 offers everything you need for a perfect day at sea. Whether you're looking for thrilling water sports or just want to soak up the sun, this yacht has it all.",
+    "interiorImages": [ "Pershing62/62Pershing7.jpeg","Pershing62/62Pershing5.jpeg","Pershing62/62Pershing4.jpeg",  "Pershing62/62Pershing3.jpeg", "Pershing62/62Pershing1.jpeg"],
+    "detailedSpecs": {
+      "Length": "19,90 m",
+      "Guests": "12",
+      "Crew": "2",
+      "Cruising Area": "Ibiza - Formentera",
+      "Price": "€3,750 per day",
+      "Cruising Speed": "32 knots",
+      "Max Speed": "45 knots",
+      "Class": "Motor boat",
+      "Engine": "2 x MTU",
+      "HP": "2 x 1500"
+     },
+     "seasonalPrices": {
+      "May / October": "€3,750 per day",
+      "June / September": "€4,500 per day",
+      "July / August": "€5,500 per day"
+    }
   }
 ]
 
