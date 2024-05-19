@@ -3110,7 +3110,6 @@ button {
       3px 3px 6px rgba(0, 0, 0, 0.1);   
 }
 
-
 .background-introduction::before {
   content: '';
   position: absolute;
@@ -3122,17 +3121,13 @@ button {
   z-index: 1; 
 }
 
-
-
 .background-introduction {
   position: relative;  
   color: #fff; 
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 40px;
   overflow: hidden;
-
 }
-
 
 .animate {
   opacity: 0;
@@ -3168,7 +3163,6 @@ margin-top: 10px;
   margin-top: 20px;
 }
 
-/* LOGO STYLE */
 .footer-logo img {
   width: 150px; 
   height: auto; 
