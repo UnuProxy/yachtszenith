@@ -3129,7 +3129,6 @@ button {
   overflow: hidden;
 }
 
-
 .animate {
   opacity: 0;
   transform: translateX(-100px);
@@ -3164,7 +3163,6 @@ margin-top: 10px;
   margin-top: 20px;
 }
 
-/* LOGO STYLE */
 .footer-logo img {
   width: 150px; 
   height: auto; 
