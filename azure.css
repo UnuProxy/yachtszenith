@@ -3110,7 +3110,6 @@ button {
       3px 3px 6px rgba(0, 0, 0, 0.1);   
 }
 
-
 .background-introduction::before {
   content: '';
   position: absolute;
@@ -3122,15 +3121,12 @@ button {
   z-index: 1; 
 }
 
-
-
 .background-introduction {
   position: relative;  
   color: #fff; 
   padding-top: 20px;
   padding-bottom: 40px;
   overflow: hidden;
-
 }
 
 
