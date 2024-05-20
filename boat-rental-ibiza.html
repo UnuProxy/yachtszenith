@@ -204,7 +204,7 @@
 </div> 
 
   
-      <div id="filter-bar" class="filter-bar">
+   <!--    <div id="filter-bar" class="filter-bar">
       <div>
         <label for="priceFilter">Select Price Range: </label>
         <select id="priceFilter">
@@ -228,7 +228,7 @@
       <div>
         <button id="resetFilters">Reset Filters</button>
       </div>
-      </div>
+      </div> -->
       
     <div class="yacht-grid">
     </div>
@@ -274,6 +274,26 @@
 </script>
 <script>
 </script>
+<script>
+  function switchLanguage() {
+    const selectedLanguage = document.getElementById("languageSwitcher").value;
+    if (selectedLanguage === "es") {
+      window.location.href = "alquiler-barcos-ibiza-es.html";
+    } else if (selectedLanguage === "en") {
+      window.location.href = "boat-rental-ibiza.html"; // Adjust this URL to your English version's URL
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const langSwitcher = document.getElementById("languageSwitcher");
+    if (window.location.href.includes('alquiler-barcos-ibiza-es.html')) {
+      langSwitcher.value = "es";
+    } else {
+      langSwitcher.value = "en";
+    }
+  });
+</script>
+
 <footer>
   <div class="footer-container">
       <div class="footer-logo">

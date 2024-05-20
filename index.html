@@ -875,32 +875,6 @@ class="faq-section">
   </div>
 </div>
 
-
-<script>
-  function setLanguage(lang) {
-    localStorage.setItem('preferredLanguage', lang);
-    const currentPath = window.location.pathname;
-    if (lang === 'es') {
-      const newPath = currentPath === '/' ? '/index-es.html' : `/es${currentPath}`;
-      window.location.href = newPath;
-    } else {
-      const newPath = currentPath.startsWith('/es/') ? currentPath.replace('/es/', '/') : '/';
-      window.location.href = newPath;
-    }
-  }
-  document.addEventListener('DOMContentLoaded', function() {
-    const preferredLanguage = localStorage.getItem('preferredLanguage');
-    const currentPath = window.location.pathname;
-    if (preferredLanguage === 'es' && !currentPath.startsWith('/es/') && currentPath !== '/index.html') {
-      const newPath = currentPath === '/' ? '/index-es.html' : `/es${currentPath}`;
-      window.location.href = newPath;
-    } else if (preferredLanguage !== 'es' && currentPath.startsWith('/es/')) {
-      const newPath = currentPath.replace('/es/', '/');
-      window.location.href = newPath;
-    }
-  });
-</script>
-
 <script>
   document.getElementById('budget').addEventListener('input', function (e) {
     var value = e.target.value.replace(/,/g, ''); 
@@ -1243,12 +1217,6 @@ window.onload=function(){var e=document.getElementById("yzCookieConsentContainer
       </address>
     </div>
 
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-      <h4>Language</h4>
-      <a href="index-es.html" hreflang="es" aria-label="Ver página en español" onclick="setLanguage('es')">ES</a>
-    </div>
-  </div>
 </footer>
 
 </body>

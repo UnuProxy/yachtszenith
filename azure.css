@@ -5991,49 +5991,58 @@ h4 {
   }
 }
 
-/* Language Switcher Styles */
+/* Language Switcher Container */
 .language-switcher {
   display: flex;
-  flex-direction: column;
-  text-align: left;
-  transform: translateY(45%);
+  align-items: center;
+  margin: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.language-switcher h4 {
+/* Label Styling */
+.language-switcher label {
+  margin-right: 10px;
   font-size: 16px;
-  color: white;
-  margin-bottom: 5px;
+  font-weight: bold;
+  color: #FFF;
 }
 
-.language-switcher a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 0.5rem 1rem;
-  background-color: var(--LOGO-COLOR); 
-  border-radius: 0.5rem;
-  transition: background-color 0.3s, transform 0.3s;
+/* Select Box Styling */
+.language-switcher select {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  
+  transition: border-color 0.3s ease;
 }
 
-.language-switcher a:hover {
-  background-color: #104e8b;
-  transform: translateY(-2px);
+/* Select Box Focus and Hover Effects */
+.language-switcher select:focus,
+.language-switcher select:hover {
+  border-color: #007bff;
+  outline: none;
 }
 
-/* Responsive Design for Language Switcher */
-@media (max-width: 768px) {
+/* Mobile Styling */
+@media (max-width: 600px) {
   .language-switcher {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-    padding-bottom: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .language-switcher label {
+    margin-bottom: 5px;
+    margin-right: 0;
   }
 
-  .language-switcher h4 {
-    font-size: 14px;
+  .language-switcher select {
+    width: 100%;
+    color: var(--LOGO-COLOR);
   }
-
-  .language-switcher a {
-    font-size: 12px;
+  .language-switcher{
+    margin-left: 0;
   }
 }
 
